@@ -1,10 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `University of Guelph`,
+    description: `The University of Guelph, and everyone who studies here, explores here, teaches here and works here is committed to one simple purpose: To Improve Life.`,
+    author: `University of Guelph`,
+    ogImage: ``,
+    ogImageAlt: ``,
+    menu: [
+      { title: "Choose U of G", path: "https://www.uoguelph.ca/choose-u-of-g" },
+      { title: "Improve Life",path: "https://www.uoguelph.ca/improve-life/" },
+      { title: "News", path: "https://news.uoguelph.ca" },
+    ],
   },
+
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -19,15 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `University of Guelph`,
+        short_name: `U of G`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#FFFFFF`,
+        theme_color: `#000000`,
+        display: `browser`,
+        icon: `static/favicon.png`, // This path is relative to the root of the site.
       },
     },
   ],
