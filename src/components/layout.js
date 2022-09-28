@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import Footer from "./footer"
 import Header from "./header"
+import '@uoguelph/snowdrop/dist/css/snowdrop.min.css'
 
 const Layout = ({ children }) => {
   return (

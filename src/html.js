@@ -14,8 +14,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <link href="https://cdn.jsdelivr.net/gh/brharp/snowdrop/dist/css/snowdrop.min.css" rel="stylesheet" crossOrigin="anonymous"></link>
-        {/* <link href="https://cdn.jsdelivr.net/npm/@uoguelph/snowdrop/dist/css/snowdrop.min.css" rel="stylesheet" crossOrigin="anonymous"></link> */}
       </head>
       <body {...props.bodyAttributes}>
         <SkipLink mainContent="#content"/>
@@ -30,8 +28,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="https://cdn.jsdelivr.net/gh/brharp/snowdrop/dist/js/snowdrop.bundle.min.js" crossOrigin="anonymous"></script>
-        {/* <script src="https://cdn.jsdelivr.net/npm/@uoguelph/snowdrop/dist/js/snowdrop.bundle.min.js" crossOrigin="anonymous"></script> */}
         <script src={`${withPrefix('/assets/modernizr.js')}`} type="text/javascript"></script>
 
       </body>
