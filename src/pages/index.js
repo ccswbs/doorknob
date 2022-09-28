@@ -18,3 +18,22 @@ const IndexPage = () => (
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
+
+
+// export const query = graphql`
+//   query {
+//     programs: allNodeProgram(sort: {fields: [title], order: ASC}) {
+//       edges {
+//         node {
+//           drupal_id
+//           drupal_internal__nid
+//           title
+//           path {
+//             alias
+//           }
+//           status
+//         }
+//       }
+//     }
+//   }
+// `
