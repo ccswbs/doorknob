@@ -53,5 +53,5 @@ templates define the page layout. Content is defined by components under
 
 ## Front-end Framework
 
-This repository uses [Snowdrop](https://github.com/brharp/snowdrop), a University of Guelph themed front-end framework based on Bootstrap.
+This repository uses [Snowdrop](https://github.com/ccswbs/snowdrop), a University of Guelph themed front-end framework based on Bootstrap.
 
