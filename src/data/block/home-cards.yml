@@ -1,0 +1,10 @@
+id: home_cards
+cards:
+  - title: Future Students
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
+  - title: Current Students
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
+  - title: Faculty & Staff
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
+  - title: Alumni & Friends
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.

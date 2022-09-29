@@ -1,0 +1,17 @@
+id: home_stats
+title: U of G Places 16th in Global Impact in International Ranking
+background_image:
+  src: /images/johnston3-stat.jpg
+  alt: "Johnston Hall"
+link:
+  title: "Learn More: Read the Full Article!"
+  url: https://news.uoguelph.ca/2022/04/u-of-g-places-16th-in-global-impact-in-international-ranking/
+stats:
+  - field_statistic_represents: No Poverty
+    field_statistic_value: 4th in the world
+  - field_statistic_represents: Zero Hunger
+    field_statistic_value: 5th in the world
+  - field_statistic_represents: Life Below Water
+    field_statistic_value: 7th in the world
+  - field_statistic_represents: Clean Water and Sanitation
+    field_statistic_value: 11th in the world
