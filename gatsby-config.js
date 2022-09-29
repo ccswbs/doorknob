@@ -32,13 +32,21 @@ module.exports = {
         icon: `static/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
         path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
       },
     },
     {
@@ -56,5 +64,6 @@ module.exports = {
       },
     },    
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
   ],
 }
