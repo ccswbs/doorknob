@@ -10,7 +10,7 @@ const render = ({ cards }) => {
         return <div className="col" key={index}>
           <div className="card h-100 border-0 bg-info bg-opacity-10">
             {/* <StaticImage src="../../../images/placeholder.jpg" alt="A dinosaur" className="card-img-top"  /> */}
-            <GatsbyImage src={getImage(image.src)} className="card-img-top" />
+            <GatsbyImage image={getImage(image.src)} className="card-img-top" />
             <div className="card-body">
               <h3 className="card-title">{title}</h3>
               <p className="card-text">{body}</p>
