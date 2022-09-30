@@ -1,17 +1,39 @@
 const path = require("path")
 
-exports.createPages = async ({ actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const indexTemplate = path.resolve(`./src/templates/index.jsx`)
-  const indexContentFilePath = path.resolve(`./src/content/index.mdx`)
+  const result = await graphql(`
+    query {
+      allMdx {
+        nodes {
+          id
+          frontmatter {
+            slug
+            template
+          }
+          internal {
+            contentFilePath
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild('Error loading MDX result', result.errors)
+  }
 
   // ---------------
-  // Create home page
+  // Create pages
   //
-  createPage({
-    path: "/",
-    component: `${indexTemplate}?__contentFilePath=${indexContentFilePath}`,
+
+  result.data.allMdx.nodes.forEach(node => {
+    let template = path.resolve(`./src/templates/${node.frontmatter.template}`);
+    createPage({
+      path: node.frontmatter.slug,
+      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
+    })
   })
-  
+
 }
