@@ -166,7 +166,7 @@ Statistic.Gradient = ({stats}) => {
                 let icon = stat.field_font_awesome_icon;
 
                 return <Statistic.SolidCard 
-                      key={`gradient-stat-${stat.index}`} 
+                      key={`gradient-stat-${index}`} 
                       background={gradientColourOptions[index%gradientColourOptions.length].background} 
                       colour={gradientColourOptions[index%gradientColourOptions.length].colour} 
                       className="p-5 col">

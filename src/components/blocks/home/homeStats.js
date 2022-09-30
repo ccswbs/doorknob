@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Statistic from "components/shared/statistic"
+import Statistic from "../../../components/shared/statistic"
 
 const render = ({ stats }) => {
   return <Statistic.Gradient stats={stats} />

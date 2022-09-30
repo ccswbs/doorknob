@@ -15,12 +15,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `University of Guelph`,
@@ -32,7 +26,12 @@ module.exports = {
         icon: `static/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-root-import`,
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     extensions: [`.mdx`, `.md`],
+    //   },
+    // },
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
@@ -46,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
+        path: `${__dirname}/src/data/`,
       },
     },
     {

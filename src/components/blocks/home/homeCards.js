@@ -1,16 +1,19 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const render = ({ cards }) => {
   return (
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-      {cards.map(({title, body}, index) => {
-        return <div class="col">
-          <div class="card h-100">
-            {/* <img src="..." class="card-img-top" alt="..."> */}
-            <div class="card-body">
-              <h3 class="card-title">{title}</h3>
-              <p class="card-text">{body}</p>
+    <div className="row row-cols-1 row-cols-md-4 g-4">
+      {cards.map(({title, body, image}, index) => {
+        console.log(getImage(image.src))
+        return <div className="col" key={index}>
+          <div className="card h-100 border-0 bg-info bg-opacity-10">
+            {/* <StaticImage src="../../../images/placeholder.jpg" alt="A dinosaur" className="card-img-top"  /> */}
+            <GatsbyImage src={getImage(image.src)} className="card-img-top" />
+            <div className="card-body">
+              <h3 className="card-title">{title}</h3>
+              <p className="card-text">{body}</p>
             </div>
           </div>
         </div>
@@ -22,12 +25,21 @@ const render = ({ cards }) => {
 const query = graphql`
   query {
     blockYaml(yamlId: {eq: "home_cards"}) {
-        id
+      id
+      cards {
         title
-        cards {
-          title
-          body
+        body
+        image {
+          src {
+            childImageSharp {
+              gatsbyImageData (
+                width: 400
+              )
+            }
+          }
+          alt
         }
+      }
     }
   }
 `

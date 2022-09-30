@@ -7,9 +7,9 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import Footer from "src/components/footer"
-import Header from "src/components/header"
-import 'src/styles/ug.scss'
+import Footer from "../components/footer"
+import Header from "../components/header"
+import '../styles/ug.scss'
 
 const Layout = ({ children }) => {
   return (
