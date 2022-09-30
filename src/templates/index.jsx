@@ -1,8 +1,8 @@
 import React from "react"
-// import { graphql } from "gatsby"
-// import { MDXProvider } from "@mdx-js/react"
-// import { Link } from "gatsby"
-// import Seo from '../components/seo'
+import { graphql } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import { Link } from "gatsby"
+import Seo from '../components/seo'
 import PageContainer from '../components/shared/pageContainer'
 import HomeCards from "../components/blocks/home/homeCards"
 // import HomeHero from "../components/blocks/home/homeHero"
@@ -10,26 +10,24 @@ import HomeCards from "../components/blocks/home/homeCards"
 import HomeStats from "../components/blocks/home/homeStats"
 // import HomeStory from "../components/blocks/home/homeStory"
 
-// const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link } // Provide common components here
 
-// export default function IndexTemplate ({ data, children }) {
-  export default function IndexTemplate () {
+export default function IndexTemplate ({ data, children }) {
   return (
     <>
-        {/* <Seo title={data.mdx.frontmatter.title} /> */}
+        <Seo title={data.mdx.frontmatter.title} />
         {/* <HomeHero /> */}
         <div id="main-column">
           <PageContainer.SiteContent>
             <PageContainer.ContentArea>      
-              {/* <MDXProvider components={shortcodes}>
+              <MDXProvider components={shortcodes}>
                 {children}
-              </MDXProvider> */}
+              </MDXProvider>
 
               <HomeCards />
               
             </PageContainer.ContentArea>
           </PageContainer.SiteContent>
-
           <HomeStats />
           {/* <HomeStory /> */}
           {/* <HomeNews /> */}
@@ -40,12 +38,12 @@ import HomeStats from "../components/blocks/home/homeStats"
   )
 }
 
-// export const query = graphql`
-//   query {
-//     mdx (frontmatter: {slug: {eq: "/"}}) {
-//       frontmatter {
-//         title
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    mdx (frontmatter: {slug: {eq: "/"}}) {
+      frontmatter {
+        title
+      }
+    }
+  }
+`
