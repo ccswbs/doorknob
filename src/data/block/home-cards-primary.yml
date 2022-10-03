@@ -1,4 +1,4 @@
-id: home_cards
+id: home_cards_primary
 cards:
   - title: Future Students
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
@@ -6,7 +6,7 @@ cards:
       src: ../../images/placeholder.jpg
       alt: Placeholder image
   - title: Current Students
-    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam. A consectetur adipiscing elit. Donec lobortis iaculis diam.
     image:
       src: ../../images/placeholder.jpg
       alt: Placeholder image

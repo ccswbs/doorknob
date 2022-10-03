@@ -6,14 +6,6 @@ const PageContainer = ({ children, className}) => (
   </div>
 )
 
-PageContainer.SiteContent = ({ children, className}) => (
-  <PageContainer>
-    <div className={`row site-content ${className ?? '' }`}>
-      {children}
-    </div>
-  </PageContainer>
-)
-
 PageContainer.ContentArea = ({ children, className}) => (
   <div className={`content-area ${className ?? '' }`}>
     {children}
@@ -24,6 +16,22 @@ PageContainer.FullWidth = ({ children, className}) => (
   <div className={`full-width-container ${className ?? '' }`}>
     {children}
   </div>
+)
+
+PageContainer.Margins = ({ children, className}) => (
+  <PageContainer.SiteContent>
+    <PageContainer.ContentArea>
+      {children}
+    </PageContainer.ContentArea>
+  </PageContainer.SiteContent>
+)
+
+PageContainer.SiteContent = ({ children, className}) => (
+  <PageContainer>
+    <div className={`row site-content ${className ?? '' }`}>
+      {children}
+    </div>
+  </PageContainer>
 )
 
 export default PageContainer

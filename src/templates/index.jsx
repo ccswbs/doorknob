@@ -4,32 +4,24 @@ import { MDXProvider } from "@mdx-js/react"
 import { Link } from "gatsby"
 import Seo from '../components/seo'
 import PageContainer from '../components/shared/pageContainer'
-import HomeCards from "../components/blocks/home/homeCards"
+import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
+import HomeCardsSecondary from "../components/blocks/home/homeCardsSecondary"
 // import HomeHero from "../components/blocks/home/homeHero"
 // import HomeLinks from "../components/blocks/home/homeLinks"
 import HomeStats from "../components/blocks/home/homeStats"
-// import HomeStory from "../components/blocks/home/homeStory"
+import HomeStory from "../components/blocks/home/homeStory"
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link, HomeCardsPrimary, HomeCardsSecondary, HomeStats, HomeStory, PageContainer } // Provide common components here
 
 export default function IndexTemplate ({ data, children }) {
   return (
     <>
         <Seo title={data.mdx.frontmatter.title} />
         {/* <HomeHero /> */}
-        <div id="main-column">
-          <PageContainer.SiteContent>
-            <PageContainer.ContentArea>      
-              <MDXProvider components={shortcodes}>
-                {children}
-              </MDXProvider>
-
-              <HomeCards />
-              
-            </PageContainer.ContentArea>
-          </PageContainer.SiteContent>
-          <HomeStats />
-          {/* <HomeStory /> */}
+        <div id="main-column">   
+          <MDXProvider components={shortcodes}>
+            {children}
+          </MDXProvider>
           {/* <HomeNews /> */}
           {/* <HomeEvents /> */}
           {/* <HomeLinks /> */}

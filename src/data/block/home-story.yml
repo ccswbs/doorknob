@@ -1,1 +1,19 @@
 id: home_story
+
+content:
+  blockquote: Change happens at the community level. Small people put in small efforts and those efforts add up to something big.
+  foreground:
+    src: ../../images/home/meal-care-students.png
+    alt: Kiana Gibson and David Sahai, co-founders of MealCare Guelph
+  cta: Find out how Kiana...
+  video:
+    id: "522360252"
+    type: vimeo
+    title: MealCare
+    url: https://player.vimeo.com/video/522360252?api=1
+    transcript: /transcripts/mealcare-transcript.txt
+    captions: /captions/mealcare-captions.srt
+
+background:
+  src: ../../images/home/meal-care-bg.jpg
+  alt: Student volunteers
