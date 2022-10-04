@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import PageContainer from "./pageContainer";
+import { Container } from "react-bootstrap"
 
 const Gradient = styled.div`
   background: ${props => (props.gradientStyle ?? "none")};
@@ -156,10 +156,10 @@ Statistic.Gradient = ({stats}) => {
   }
 
   return (
-    <Gradient className="d-flex flex-column mb-4" 
+    <Gradient className="row d-flex flex-column mb-4" 
               gradientStyle={gradientStyle} 
               stackedGradientStyle={stackedGradientStyle} >
-      <PageContainer className="p-0">
+      <Container className="p-0">
           <Statistic className={`row g-0 row-cols-1 ${rowClasses} justify-content-center mb-0`}>
               {stats.map((stat, index) => {
                 let type = stat.field_statistic_represents;
@@ -178,7 +178,7 @@ Statistic.Gradient = ({stats}) => {
                 }
               )}
           </Statistic>
-      </PageContainer>
+      </Container>
     </Gradient>
 )}
 

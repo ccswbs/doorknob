@@ -1,12 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Card, Col } from "react-bootstrap"
-import PageContainer from "../../shared/pageContainer"
+import { Card, Col, Container } from "react-bootstrap"
 
 const render = ({ cards }) => {
   return (
-    <PageContainer.SiteContent>
+    <Container>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         {cards.map(({title, body, image}, index) => {
           return (
@@ -21,7 +20,7 @@ const render = ({ cards }) => {
             </Col>
         )})}
       </div>
-    </PageContainer.SiteContent>
+    </Container>
   )
 }
 
