@@ -1,14 +1,29 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-const render = ({ id }) => {
-  return <></>
+const render = ({ image }) => {
+  return (
+    <div id="rotator">
+      <GatsbyImage image={getImage(image.src)} alt={image.alt} />
+    </div>
+  )
 }
 
 const query = graphql`
   query {
     blockYaml(yamlId: {eq: "home_hero"}) {
         id
+        image {
+          src {
+            childImageSharp {
+              gatsbyImageData (
+                width: 1920
+              )
+            }
+          }
+          alt
+        }
     }
   }
 `

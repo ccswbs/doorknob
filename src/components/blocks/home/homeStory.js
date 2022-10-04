@@ -42,7 +42,7 @@ const render = ({ content, background }) => {
         </PageContainer>
       </Overlay.GatsbyImage>
       <PageContainer>
-        <Col lg={12} className="d-flex text-white fs-3 justify-content-center">
+        <Col lg={12} className="d-flex text-white fs-4 justify-content-center">
           <p>{content.cta}</p>
         </Col>
       </PageContainer>

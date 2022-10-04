@@ -1,1 +1,4 @@
 id: home_hero
+image:
+  src: ../../images/home/banner.jpg
+  alt: Johnston Hall
