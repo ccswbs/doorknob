@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Card, Col, Container } from "react-bootstrap"
+import { Card, Col, Container, Row } from "react-bootstrap"
 import styled from "styled-components"
 
 const borderColourOptions = [
@@ -16,7 +16,7 @@ const BorderCard = styled(Card.Body)`
 const render = ({ cards }) => {
   return (
     <Container>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <Row className="row-cols-1 row-cols-md-3 g-4">
         {cards.map(({title, body}, index) => {
           return (
             <Col key={index}>
@@ -28,7 +28,7 @@ const render = ({ cards }) => {
               </Card>
             </Col>
         )})}
-      </div>
+      </Row>
     </Container>
   )
 }

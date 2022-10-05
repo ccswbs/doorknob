@@ -94,11 +94,17 @@ module.exports = {
           Menu: {exclude: true},
           MenuItem: {exclude: true},
           Taxonomy: {exclude: true},
-          Category: {exclude: true},
           UserRole: {exclude: true},
           PostFormat: {exclude: true},
           Page: {exclude: true},
-          Post: {exclude: true},
+          Post:  {
+            limit:
+              process.env.NODE_ENV === `development`
+                ? // Lets just pull 25 posts in development to make it easy on ourselves (aka. faster).
+                  25
+                : // and we don't actually need more than 50 in production for this particular site
+                  50,
+          },
           Tag: {exclude: true},
           User: {exclude: true},
         },

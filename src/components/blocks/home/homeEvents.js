@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { Container } from "react-bootstrap"
+import { Card, Container } from "react-bootstrap"
 import moment from 'moment';
 
-const generateEvents = (data) => {
+const render = ( data ) => {
   let shownEvents = data.allWpEvent.edges;
   let colClasses;
   
@@ -22,14 +22,13 @@ const generateEvents = (data) => {
       break;
   }
   
-  
   return (
     <Container>
       <h2 className="mb-5">Events</h2>
       {shownEvents ? 
       <div className="gy-0">
         <ul className="event-list row gx-3 gy-5 mb-5">
-        {shownEvents.slice(0,4).map(wpEvent => {
+        {shownEvents.map(wpEvent => {
             let eventMonth = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("MMM");
             let eventDay = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("D");
             let eventStartTime = moment(wpEvent.node.startDate,"YYYY-MM-DD HH:mm").format("h:mm A");
@@ -41,57 +40,49 @@ const generateEvents = (data) => {
             let srDayNumber = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("Do");
             
             return (
-              <li key={wpEvent.node.id} className={"card border-0 flex-row" + colClasses}>
+              <Card as="li" key={wpEvent.node.id} className={"border-0 flex-row" + colClasses}>
                   <div className="event-day col-3 col-md-4 col-xl-4 border border-5 d-flex me-3 p-2" aria-hidden="true">
                       <p className="align-self-center mb-0 mx-auto text-center w-50">
                           <span className="fs-2 text-nowrap text-uppercase">{eventMonth}</span> <span className="display-4 fw-bold text-nowrap">{eventDay}</span>
                       </p>
                   </div>
-                  <div className="card-body col d-flex flex-column pt-0 pb-0 ps-0">
+                  <Card.Body className="col d-flex flex-column pt-0 pb-0 ps-0">
                       <a className="event-title border-0 fs-4 fw-bold lh-base stretched-link text-decoration-none" href={eventLink}>{wpEvent.node.title}</a>
                       <p className="fs-4 mt-auto mb-0"><span className="visually-hidden">Happening on {srDayName} {srMonth} {srDayNumber} from </span><time dateTime={wpEvent.node.startDate}>{eventStartTime}</time> to <time dateTime={wpEvent.node.endDate}>{eventEndTime}</time></p>
-                  </div>
-              </li>
+                  </Card.Body>
+              </Card>
             )
         })}
         </ul>
       </div>
   
       : <p>No events at this time.</p>}
-  </Container>
+    </Container>
   )
 }
 
-const Events = () => (
-  <StaticQuery
-    query={
-      graphql`
-        query EventsQuery {
-          allWpEvent(
-            filter: {isPast: {eq: false}}
-            sort: {fields: startDate, order: ASC}
-          ) {
-            edges {
-              node {
-                id
-                title
-                startDate
-                endDate
-                uri
-                url
-                eventsCategories {
-                  nodes {
-                    name
-                  }
-                }
-              }
+const query = graphql`
+  query {
+    allWpEvent (filter: {isPast: {eq: false}}, sort: {fields: startDate, order: ASC}, limit: 3) {
+      edges {
+        node {
+          id
+          title
+          startDate
+          endDate
+          uri
+          url
+          eventsCategories {
+            nodes {
+              name
             }
           }
         }
-        `
       }
-    render={data => generateEvents(data)}
-  />
-)
+    }
+  }
+`
 
-export default Events
+export default function Events () {
+  return <StaticQuery query={query} render={allWpEvent => render (allWpEvent)} />
+}

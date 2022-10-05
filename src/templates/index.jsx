@@ -9,6 +9,7 @@ import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
 import HomeCardsSecondary from "../components/blocks/home/homeCardsSecondary"
 import HomeEvents from "../components/blocks/home/homeEvents"
 import HomeHero from "../components/blocks/home/homeHero"
+import HomeNews from "../components/blocks/home/homeNews"
 import HomeOverlay from "../components/blocks/home/homeOverlay"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
@@ -20,6 +21,7 @@ const shortcodes = {
   HomeCardsPrimary, 
   HomeCardsSecondary, 
   HomeEvents, 
+  HomeNews,
   HomeOverlay,
   HomeStats, 
   HomeStory,
@@ -34,7 +36,6 @@ export default function IndexTemplate ({ data, children }) {
         <MDXProvider components={shortcodes}>
           {children}
         </MDXProvider>
-        {/* <HomeNews /> */}
       </Container>
     </>
   )
