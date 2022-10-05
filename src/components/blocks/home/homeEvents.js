@@ -25,6 +25,7 @@ const render = ( data ) => {
   return (
     <Container>
       <h2 className="mb-5">Events</h2>
+      <a href="https://news.uoguelph.ca/events/">All Events</a>
       {shownEvents ? 
       <div className="gy-0">
         <ul className="event-list row gx-3 gy-5 mb-5">
@@ -61,9 +62,14 @@ const render = ( data ) => {
   )
 }
 
+// taxonomy term ID 21 = Homepage
 const query = graphql`
   query {
-    allWpEvent (filter: {isPast: {eq: false}}, sort: {fields: startDate, order: ASC}, limit: 3) {
+    allWpEvent (
+      filter: {terms: {nodes: {elemMatch: {termTaxonomyId: {eq: 21}}}}, isPast: {eq: false}}
+      sort: {fields: startDate, order: ASC}
+      limit: 3
+    ) {
       edges {
         node {
           id
