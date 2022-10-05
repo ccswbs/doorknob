@@ -62,7 +62,7 @@ const render = ( data ) => {
   )
 }
 
-// taxonomy term ID 21 = Homepage
+// termTaxonomyId 21 = Homepage
 const query = graphql`
   query {
     allWpEvent (
