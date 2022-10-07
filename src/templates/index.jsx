@@ -37,6 +37,21 @@ export default function IndexTemplate ({ data, children }) {
           {children}
         </MDXProvider>
       </Container>
+      <HomeCardsPrimary />
+      <HomeOverlay />
+      <HomeStats />
+      <HomeCardsSecondary />
+      <HomeStory />
+      <HomeNews />
+      <HomeEvents />
+
+      <Container>
+        <Button href="#" variant="outline-info">Diversity and Human Rights</Button>
+        <Button href="#" variant="outline-info">Economic Impact Report</Button>
+        <Button href="#" variant="outline-info">President's Message</Button>
+        <Button href="#" variant="outline-info">COVID-19 Updates</Button>
+        <Button href="#" variant="outline-info">Other Links</Button>
+      </Container>
     </>
   )
 }
