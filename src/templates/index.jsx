@@ -9,23 +9,14 @@ import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
 import HomeCardsSecondary from "../components/blocks/home/homeCardsSecondary"
 import HomeEvents from "../components/blocks/home/homeEvents"
 import HomeHero from "../components/blocks/home/homeHero"
+import HomeLinks from "../components/blocks/home/homeLinks"
 import HomeNews from "../components/blocks/home/homeNews"
 import HomeOverlay from "../components/blocks/home/homeOverlay"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
 
 // Provide common components here
-const shortcodes = { 
-  Button, 
-  Container, 
-  HomeCardsPrimary, 
-  HomeCardsSecondary, 
-  HomeEvents, 
-  HomeNews,
-  HomeOverlay,
-  HomeStats, 
-  HomeStory,
-  Link }
+const shortcodes = { Button, Container, Link }
 
 export default function IndexTemplate ({ data, children }) {
   return (
@@ -44,14 +35,7 @@ export default function IndexTemplate ({ data, children }) {
       <HomeStory />
       <HomeNews />
       <HomeEvents />
-
-      <Container>
-        <Button href="#" variant="outline-info">Diversity and Human Rights</Button>
-        <Button href="#" variant="outline-info">Economic Impact Report</Button>
-        <Button href="#" variant="outline-info">President's Message</Button>
-        <Button href="#" variant="outline-info">COVID-19 Updates</Button>
-        <Button href="#" variant="outline-info">Other Links</Button>
-      </Container>
+      <HomeLinks />
     </>
   )
 }
