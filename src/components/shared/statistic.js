@@ -56,7 +56,7 @@ const StatSolidCard = styled(StatCard)`
 `;
 const StatValue = styled.dt`
   color: #000;
-  font-size: ${props => (props.fontsize ?? "4.25rem")};
+  font-size: ${props => (props.fontsize ?? "3.25rem")};
   line-height: 1.2;
   margin-bottom: 1.2rem;
 `
@@ -156,7 +156,7 @@ Statistic.Gradient = ({stats}) => {
   }
 
   return (
-    <Gradient className="row d-flex flex-column mb-4" 
+    <Gradient className="row d-flex flex-column content-block" 
               gradientStyle={gradientStyle} 
               stackedGradientStyle={stackedGradientStyle} >
       <Container className="p-0">
