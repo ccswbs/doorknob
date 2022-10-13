@@ -11,7 +11,7 @@ const QuoteMark = styled.i`
 
 const render = ({ content, background }) => {
   return (
-    <Row className="bg-black">
+    <Row className="bg-black content-block">
       <Overlay.GatsbyImage 
           gatsbyImageData={getImage(background.src)} 
           alt={background.alt} 
@@ -19,10 +19,10 @@ const render = ({ content, background }) => {
         <Container>
           <Row className="bg-transparent h-100 text-white pb-0">
             <Col lg={6} className="mb-4 d-flex flex-column justify-content-center">
-              <blockquote className="display-3 text-white">
-                <QuoteMark className="fad fa-quote-left pe-2" aria-hidden="true" /> 
+              <blockquote className="display-3 text-white text-center">
+                <QuoteMark className="fa-solid fa-quote-left pe-2" aria-hidden="true" /> 
                   <em>{content.blockquote}</em>
-                <QuoteMark className="fad fa-quote-right ps-2" aria-hidden="true" />
+                <QuoteMark className="fa-solid fa-quote-right ps-2" aria-hidden="true" />
               </blockquote>
             </Col>
 
@@ -33,8 +33,9 @@ const render = ({ content, background }) => {
         </Container>
       </Overlay.GatsbyImage>
 
-      <Col lg={12} className="d-flex text-white fs-4 justify-content-center">
-        <p>{content.cta}</p>
+      <Col lg={12} className="align-items-center d-flex fs-4 justify-content-center p-3 text-white">
+        <p className="mb-0">{content.cta}</p>
+        <button type="button" className="btn btn-primary ms-4 my-4"><i className="fa-solid fa-play me-2" /> Watch Video</button>
       </Col>
     </Row>
   )
