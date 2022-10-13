@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { Link } from "gatsby"
-import { Button, Container } from "react-bootstrap"
+import { Button, Col, Container, Row } from "react-bootstrap"
 
 import Seo from '../components/seo'
 import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
@@ -22,20 +22,30 @@ export default function IndexTemplate ({ data, children }) {
   return (
     <>
       <Seo title={data.mdx.frontmatter.title} />
-      <Container fluid>
-        <HomeHero />
-        <MDXProvider components={shortcodes}>
-          {children}
-        </MDXProvider>
+      <HomeHero />
+
+      <Container fluid>  
+
+        <Container className="content-block mb-4">
+          <Row>
+            <Col>
+              <MDXProvider components={shortcodes}>
+                {children}
+              </MDXProvider>
+            </Col>
+          </Row>
+        </Container>
+
+        <HomeCardsPrimary />
+        <HomeOverlay />
+        <HomeStats />
+        <HomeCardsSecondary />
+        <HomeStory />
+        <HomeNews />
+        <HomeEvents />
+        <HomeLinks />
+
       </Container>
-      <HomeCardsPrimary />
-      <HomeOverlay />
-      <HomeStats />
-      <HomeCardsSecondary />
-      <HomeStory />
-      <HomeNews />
-      <HomeEvents />
-      <HomeLinks />
     </>
   )
 }
