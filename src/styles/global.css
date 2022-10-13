@@ -1,0 +1,11 @@
+#rotator {
+  margin-top: calc(var(--uofg-header-height) * -0.2);
+}
+
+.content-block {
+  margin-bottom: 5rem;
+}
+
+h1 {
+  color: var(--bs-primary);
+}

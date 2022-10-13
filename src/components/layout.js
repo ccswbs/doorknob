@@ -10,6 +10,12 @@ import PropTypes from "prop-types"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import '../styles/ug.scss'
+import '../styles/global.css';
+import "@fontsource/roboto"
+import "@fontsource/roboto/700.css"
+import "@fontsource/roboto/300.css"
+import "@fontsource/roboto/100-italic.css"
+import "@fontsource/roboto/400-italic.css"
 
 const Layout = ({ children }) => {
   return (
