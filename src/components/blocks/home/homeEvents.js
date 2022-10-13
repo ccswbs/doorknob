@@ -2,6 +2,13 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Card, Container } from "react-bootstrap"
 import moment from 'moment';
+import styled from 'styled-components';
+
+const EventLink = styled.a`
+  color: #000000;
+  text-decoration-color: #8ed1ff;
+  text-underline-offset: 4px;
+`
 
 const render = ( data ) => {
   let shownEvents = data.allWpEvent.edges;
@@ -9,56 +16,60 @@ const render = ( data ) => {
   
   switch(shownEvents.length) {
       case 1:
-          colClasses = " col";
+          colClasses = "col";
       break;
-      case 2:
-          colClasses = " col-md-6";
-      break;
+      // three columns
       case 3:
-          colClasses = " col-xl-4";
+          colClasses = "col-xl-4";
       break;
       default:
-          colClasses = " col-xl-3 col-md-6";
+          colClasses = "col-md-6";
       break;
   }
   
   return (
-    <Container>
-      <h2 className="mb-5">Events</h2>
-      <a href="https://news.uoguelph.ca/events/">All Events</a>
-      {shownEvents ? 
-      <div className="gy-0">
-        <ul className="event-list row gx-3 gy-5 mb-5">
-        {shownEvents.map(wpEvent => {
-            let eventMonth = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("MMM");
-            let eventDay = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("D");
-            let eventStartTime = moment(wpEvent.node.startDate,"YYYY-MM-DD HH:mm").format("h:mm A");
-            let eventEndTime = moment(wpEvent.node.endDate,"YYYY-MM-DD HH:mm").format("h:mm A");
-            let eventLink = wpEvent.node.url ? wpEvent.node.url : "https://news.uoguelph.ca" + wpEvent.node.uri;
-            
-            let srMonth = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("MMMM");
-            let srDayName = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("dddd");
-            let srDayNumber = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("Do");
-            
-            return (
-              <Card as="li" key={wpEvent.node.id} className={"border-0 flex-row" + colClasses}>
-                  <div className="event-day col-3 col-md-4 col-xl-4 border border-5 d-flex me-3 p-2" aria-hidden="true">
+    <div className="bg-info bg-opacity-10 content-block row">
+      <div className="p-5">
+        <Container>
+          <div className="align-items-center d-flex justify-content-between mb-3">
+            <h2 className="text-primary">Events</h2>
+            <a className="btn-info btn btn-sm px-3" href="https://news.uoguelph.ca/events/">All Events <i className="fa-solid fa-chevron-right" aria-hidden="true" /></a>
+          </div>
+          {shownEvents ? 
+          <div className="gy-0">
+            <ul className="g-5 row row-cols-md-3 px-0 ">
+            {shownEvents.map(wpEvent => {
+                let eventMonth = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("MMM");
+                let eventDay = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("D");
+                let eventStartTime = moment(wpEvent.node.startDate,"YYYY-MM-DD HH:mm").format("h:mm A");
+                let eventEndTime = moment(wpEvent.node.endDate,"YYYY-MM-DD HH:mm").format("h:mm A");
+                let eventLink = wpEvent.node.url ? wpEvent.node.url : "https://news.uoguelph.ca" + wpEvent.node.uri;
+                
+                let srMonth = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("MMMM");
+                let srDayName = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("dddd");
+                let srDayNumber = moment(wpEvent.node.startDate,"YYYY-MM-DD").format("Do");
+                
+                return (
+                  <Card as="li" key={wpEvent.node.id} className={"border-0 bg-transparent flex-row " + colClasses}>
+                    <div className="align-self-start bg-warning border-0 col-3 col-md-4 col-xl-3 d-flex justify-self-start me-4 p-2" aria-hidden="true">
                       <p className="align-self-center mb-0 mx-auto text-center w-50">
-                          <span className="fs-2 text-nowrap text-uppercase">{eventMonth}</span> <span className="display-4 fw-bold text-nowrap">{eventDay}</span>
+                        <span className="fs-5 fw-bold text-nowrap text-uppercase">{eventMonth}</span> <span className="display-5 fw-bold text-nowrap">{eventDay}</span>
                       </p>
-                  </div>
-                  <Card.Body className="col d-flex flex-column pt-0 pb-0 ps-0">
-                      <a className="event-title border-0 fs-4 fw-bold lh-base stretched-link text-decoration-none" href={eventLink}>{wpEvent.node.title}</a>
-                      <p className="fs-4 mt-auto mb-0"><span className="visually-hidden">Happening on {srDayName} {srMonth} {srDayNumber} from </span><time dateTime={wpEvent.node.startDate}>{eventStartTime}</time> to <time dateTime={wpEvent.node.endDate}>{eventEndTime}</time></p>
-                  </Card.Body>
-              </Card>
-            )
-        })}
-        </ul>
+                    </div>
+                    <Card.Body className="col d-flex flex-column pb-0 ps-0 pt-0">
+                      <EventLink className="border-0 fs-5 lh-base mb-2 stretched-link" href={eventLink}>{wpEvent.node.title}</EventLink>
+                      <p className="fs-6 mb-0 text-black-50"><span className="visually-hidden">Happening on {srDayName} {srMonth} {srDayNumber} from </span><time dateTime={wpEvent.node.startDate}>{eventStartTime}</time> to <time dateTime={wpEvent.node.endDate}>{eventEndTime}</time></p>
+                    </Card.Body>
+                  </Card>
+                )
+            })}
+            </ul>
+          </div>
+      
+          : <p>No events at this time.</p>}
+        </Container>
       </div>
-  
-      : <p>No events at this time.</p>}
-    </Container>
+    </div>
   )
 }
 
