@@ -12,18 +12,24 @@ const borderColourOptions = [
 const BorderCard = styled(Card.Body)`
   border-left: 1rem solid ${props => (props.border ?? "#000000")};
 `;
+const Body = styled.div`
+  a {
+    text-decoration-color: #8ed1ff;
+    text-underline-offset: 4px;
+  }
+`
 
 const render = ({ cards }) => {
   return (
-    <Container>
+    <Container className="content-block">
       <Row className="row-cols-1 row-cols-md-3 g-4">
-        {cards.map(({title, body}, index) => {
+        {cards.map(({title, body_html}, index) => {
           return (
             <Col key={index}>
               <Card className="h-100 border-0 bg-info bg-opacity-10">
                 <BorderCard border={borderColourOptions[index%borderColourOptions.length]} >
-                  <Card.Title as="h3">{title}</Card.Title>
-                  <Card.Text>{body}</Card.Text>
+                  <Card.Title as="h2" className="h3">{title}</Card.Title>
+                  <Card.Text><Body dangerouslySetInnerHTML={{__html: body_html}}></Body></Card.Text>
                 </BorderCard>
               </Card>
             </Col>
@@ -39,7 +45,7 @@ const query = graphql`
       id
       cards {
         title
-        body
+        body_html
       }
     }
   }

@@ -5,15 +5,15 @@ import { Card, Col, Container } from "react-bootstrap"
 
 const render = ({ cards }) => {
   return (
-    <Container>
+    <Container className="content-block">
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         {cards.map(({title, body, image}, index) => {
           return (
             <Col key={index}>
               <Card className="h-100 border-0 bg-info bg-opacity-10">
                 <GatsbyImage image={getImage(image.src)} alt={image.alt} className="card-img-top" />
-                <Card.Body>
-                  <Card.Title as="h3">{title}</Card.Title>
+                <Card.Body className="p-5">
+                  <Card.Title as="h2" className="mb-4">{title}</Card.Title>
                   <Card.Text>{body}</Card.Text>
                 </Card.Body>
               </Card>

@@ -1,8 +1,11 @@
 id: home_cards_secondary
 cards:
   - title: International Students
-    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
+    body_html: |
+      <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.'</a>
   - title: Explore Programs
-    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.
+    body_html: |
+      <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.'</a>
   - title: Admissions
-    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam. A consectetur adipiscing elit. Donec lobortis iaculis diam.
+    body_html: |
+      <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis iaculis diam.'</a>
