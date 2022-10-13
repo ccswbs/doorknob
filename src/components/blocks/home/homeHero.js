@@ -1,13 +1,12 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Row } from "react-bootstrap"
 
 const render = ({ image }) => {
   return (
-    <Row id="rotator">
-      <GatsbyImage image={getImage(image.src)} alt={image.alt} />
-    </Row>
+    <div id="rotator" className="mb-5">
+        <GatsbyImage image={getImage(image.src)} alt={image.alt} />
+    </div>
   )
 }
 

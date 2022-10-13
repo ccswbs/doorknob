@@ -6,7 +6,7 @@ import { getImage } from "gatsby-plugin-image"
 import { Row, Col, Container } from "react-bootstrap"
 
 const Shadow = styled.p`
-  text-shadow: 0px 0px 4px #ffffff;
+  text-shadow: 1px 0 4px #ffffff;
   &:hover, &:focus {
     text-shadow: none;
   }
@@ -14,16 +14,16 @@ const Shadow = styled.p`
 
 const render = ({ title, link, background }) => {
   return (
-      <Row>
-        <Overlay.GatsbyImage gatsbyImageData={getImage(background.src)} alt={background.alt}>
-            <Container className="d-flex h-100 w-100 p-5 justify-content-center align-items-center">
-              <Col className="text-center"> 
-                <h2 className="display-2 text-dark">{title}</h2>
-                <Shadow><a href={link.url}>{link.title}</a></Shadow>
-              </Col>
-            </Container>
-        </Overlay.GatsbyImage>
-      </Row>
+    <Row>
+      <Overlay.GatsbyImage gatsbyImageData={getImage(background.src)} alt={background.alt}>
+          <Container className="d-flex h-100 w-100 p-5 justify-content-center align-items-center">
+            <Col className="text-center"> 
+              <h2 className="display-2 text-dark">{title}</h2>
+              <Shadow><a href={link.url}>{link.title}</a></Shadow>
+            </Col>
+          </Container>
+      </Overlay.GatsbyImage>
+    </Row>
   )
 }
 
@@ -40,6 +40,7 @@ const query = graphql`
           src {
             childImageSharp {
               gatsbyImageData (
+                height: 300,
                 width: 1920
               )
             }

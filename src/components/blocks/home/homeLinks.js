@@ -1,13 +1,15 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Button, Container } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 
 const render = ({ links }) => {
   return (
-    <Container>
-      { links.map((link, index) => {
-        return <Button href={link.url} variant="outline-info">{link.title}</Button>
-      })}
+    <Container className="content-block">
+      <div className="d-grid d-md-block gap-2">
+        { links.map((link, index) => {
+          return <a href={link.url} key={`homelinks-${index}`} className="btn btn-lg btn-outline-info mb-md-3 me-md-3 p-4 text-start">{link.title}</a>
+        })}
+      </div>
     </Container>
   )
 }
