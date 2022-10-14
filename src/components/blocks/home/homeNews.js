@@ -13,8 +13,6 @@ const NewsLink = styled.a`
 const render = ( data ) => {
   let shownNews = data.allWpPost.edges;
 
-console.log(shownNews)
-
   return (
     <Container className="content-block">
       <div className="align-items-center d-flex justify-content-between mb-3">

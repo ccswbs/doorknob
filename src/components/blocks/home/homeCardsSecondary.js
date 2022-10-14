@@ -12,7 +12,7 @@ const borderColourOptions = [
 const BorderCard = styled(Card.Body)`
   border-left: 1rem solid ${props => (props.border ?? "#000000")};
 `;
-const Body = styled.div`
+const Body = styled.span`
   a {
     text-decoration-color: #8ed1ff;
     text-underline-offset: 4px;

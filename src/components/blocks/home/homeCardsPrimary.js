@@ -12,8 +12,8 @@ const render = ({ cards }) => {
             <Col key={index}>
               <Card className="h-100 border-0 bg-info bg-opacity-10">
                 <GatsbyImage image={getImage(image.src)} alt={image.alt} className="card-img-top" />
-                <Card.Body className="p-5">
-                  <Card.Title as="h2" className="mb-4">{title}</Card.Title>
+                <Card.Body className="p-4">
+                  <Card.Title as="h2" className="mb-4 h3">{title}</Card.Title>
                   <Card.Text>{body}</Card.Text>
                 </Card.Body>
               </Card>
