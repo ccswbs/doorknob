@@ -159,7 +159,8 @@ Statistic.Gradient = ({stats}) => {
     <Gradient className="row d-flex flex-column content-block" 
               gradientStyle={gradientStyle} 
               stackedGradientStyle={stackedGradientStyle} >
-      <Container className="p-0">
+      <div className="p-0">
+        <Container>
           <Statistic className={`row g-0 row-cols-1 ${rowClasses} justify-content-center mb-0`}>
               {stats.map((stat, index) => {
                 let type = stat.field_statistic_represents;
@@ -178,7 +179,8 @@ Statistic.Gradient = ({stats}) => {
                 }
               )}
           </Statistic>
-      </Container>
+        </Container>
+      </div>                
     </Gradient>
 )}
 
