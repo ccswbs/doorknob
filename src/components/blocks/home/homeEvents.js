@@ -51,14 +51,14 @@ const render = ( data ) => {
                 
                 return (
                   <Card as="li" key={wpEvent.node.id} className={"border-0 bg-transparent flex-row " + colClasses}>
-                    <div className="align-self-start bg-warning border-0 col-3 col-md-4 col-xl-3 d-flex justify-self-start me-4 p-2" aria-hidden="true">
-                      <p className="align-self-center mb-0 mx-auto text-center w-50">
+                    <div className="align-self-start bg-warning border-0 col-2 col-md-4 col-xl-2 d-flex justify-self-start me-4 p-2" aria-hidden="true">
+                      <p className="align-self-center mb-0 mx-auto text-center w-75">
                         <span className="fs-5 fw-bold text-nowrap text-uppercase">{eventMonth}</span> <span className="display-5 fw-bold text-nowrap">{eventDay}</span>
                       </p>
                     </div>
                     <Card.Body className="col d-flex flex-column pb-0 ps-0 pt-0">
                       <EventLink className="border-0 fs-5 lh-base mb-2 stretched-link" href={eventLink}>{wpEvent.node.title}</EventLink>
-                      <p className="fs-6 mb-0 text-black-50"><span className="visually-hidden">Happening on {srDayName} {srMonth} {srDayNumber} from </span><time dateTime={wpEvent.node.startDate}>{eventStartTime}</time> to <time dateTime={wpEvent.node.endDate}>{eventEndTime}</time></p>
+                      <p className="fs-6 mb-0 text-black-75"><span className="visually-hidden">Happening on {srDayName} {srMonth} {srDayNumber} from </span><time dateTime={wpEvent.node.startDate}>{eventStartTime}</time> to <time dateTime={wpEvent.node.endDate}>{eventEndTime}</time></p>
                     </Card.Body>
                   </Card>
                 )
