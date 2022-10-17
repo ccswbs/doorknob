@@ -4,6 +4,9 @@
   "description": "U of G homepage",
   "version": "0.1.0",
   "author": "University of Guelph",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
     "@mdx-js/react": "^2.1.3",
