@@ -4,7 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 const render = ({ image }) => {
   return (
-    <div id="rotator" className="mb-5">
+    <div id="rotator" className="d-flex justify-content-center mb-5">
         <GatsbyImage image={getImage(image.src)} alt={image.alt} />
     </div>
   )
