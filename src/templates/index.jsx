@@ -22,10 +22,10 @@ export default function IndexTemplate ({ data, children }) {
   return (
     <>
       <Seo title={data.mdx.frontmatter.title} />
-      <HomeHero />
 
-      <Container fluid>  
-
+      <Container fluid>
+        
+        <HomeHero />
         <Container className="content-block mb-4">
           <Row>
             <Col>

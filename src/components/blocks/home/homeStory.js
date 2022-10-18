@@ -10,7 +10,7 @@ const QuoteMark = styled.i`
     color: var(--bs-yellow);
 `
 
-const Image = styled(GatsbyImage)`
+const ForegroundImage = styled(GatsbyImage)`
   @media (min-width: 1200px) {
     margin-top: -5rem;
   }
@@ -35,8 +35,7 @@ const render = ({ content, background }) => {
             </Col>
 
             <Col xl={6} className="d-flex justify-content-center">
-            {/* <Col xl={6} className="d-flex justify-content-center mt-xl-n5"> */}
-              <Image image={getImage(content.foreground.src)} alt={content.foreground.alt} className="align-self-end img-fluid" />
+              <ForegroundImage image={getImage(content.foreground.src)} alt={content.foreground.alt} className="align-self-end img-fluid" />
             </Col>
           </Row>
         </Container>

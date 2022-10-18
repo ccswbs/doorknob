@@ -1,12 +1,13 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { Row } from "react-bootstrap"
 
 const render = ({ image }) => {
   return (
-    <div id="rotator" className="d-flex justify-content-center mb-5">
-        <GatsbyImage image={getImage(image.src)} alt={image.alt} />
-    </div>
+    <Row id="rotator" className="content-block">
+        <GatsbyImage style={{ gridArea: "1/1" }} image={getImage(image.src)} alt={image.alt} />
+    </Row>
   )
 }
 
