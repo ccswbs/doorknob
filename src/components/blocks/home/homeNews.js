@@ -30,7 +30,7 @@ const render = ( data ) => {
                 <GatsbyImage image={getImage(wpPost.node.featuredImage.node.localFile)} alt={wpPost.node.featuredImage.node.altText} />
                 <Card.Body className="px-0">
                   <Card.Title as="p">
-                    <NewsLink className="fs-5" href={newsLink}>{wpPost.node.title}</NewsLink>
+                    <NewsLink href={newsLink}>{wpPost.node.title}</NewsLink>
                   </Card.Title>
                 </Card.Body>
               </Card>
