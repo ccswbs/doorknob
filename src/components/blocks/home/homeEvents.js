@@ -74,31 +74,29 @@ const render = ( data ) => {
 }
 
 // termTaxonomyId 21 = Homepage
-const query = graphql`
-  query {
-    allWpEvent (
-      filter: {terms: {nodes: {elemMatch: {termTaxonomyId: {eq: 21}}}}, isPast: {eq: false}}
-      sort: {fields: startDate, order: ASC}
-      limit: 3
-    ) {
-      edges {
-        node {
-          id
-          title
-          startDate
-          endDate
-          uri
-          url
-          eventsCategories {
-            nodes {
-              name
-            }
+const query = graphql`{
+  allWpEvent(
+    filter: {terms: {nodes: {elemMatch: {termTaxonomyId: {eq: 21}}}}, isPast: {eq: false}}
+    sort: {startDate: ASC}
+    limit: 3
+  ) {
+    edges {
+      node {
+        id
+        title
+        startDate
+        endDate
+        uri
+        url
+        eventsCategories {
+          nodes {
+            name
           }
         }
       }
     }
   }
-`
+}`
 
 export default function Events () {
   return <StaticQuery query={query} render={allWpEvent => render (allWpEvent)} />
