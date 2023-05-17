@@ -6,7 +6,7 @@ import { Card, Col, Container } from "react-bootstrap"
 const render = ({ cards }) => {
   return (
     <Container className="content-block">
-      <h2 className="mb-4">Spotlight</h2>
+      <h2 className="mb-4 mt-4">Spotlight</h2>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {cards.map(({title, url, image}, index) => {
             
