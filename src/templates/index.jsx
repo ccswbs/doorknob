@@ -7,6 +7,7 @@ import { Button, Col, Container, Row } from "react-bootstrap"
 import Seo from '../components/seo'
 import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
 import HomeCardsSecondary from "../components/blocks/home/homeCardsSecondary"
+import HomeCardsSpotlight from "../components/blocks/home/homeCardsSpotlight"
 import HomeEvents from "../components/blocks/home/homeEvents"
 import HomeHero from "../components/blocks/home/homeHero"
 import HomeLinks from "../components/blocks/home/homeLinks"
@@ -24,9 +25,10 @@ export default function IndexTemplate ({ data, children }) {
       <Seo title={data.mdx.frontmatter.title} />
 
       <Container fluid>
-        
+        <h1 className="visually-hidden">University of Guelph homepage</h1>
         <HomeHero />
-        <Container className="content-block mb-4">
+        <HomeCardsSpotlight />
+        <Container className="content-block mb-4 mt-4">
           <Row>
             <Col>
               <MDXProvider components={shortcodes}>
