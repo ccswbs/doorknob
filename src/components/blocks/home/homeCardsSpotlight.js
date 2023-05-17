@@ -8,13 +8,18 @@ const render = ({ cards }) => {
     <Container className="content-block">
       <h2 className="mb-4">Spotlight</h2>
       <div className="row row-cols-1 row-cols-md-3 g-4">
-        {cards.map(({title, image}, index) => {
+        {cards.map(({title, url, image}, index) => {
+            
+          if (index === 0) {
+            return null; // Skip the first result
+          }
+            
           return (
             <Col key={index}>
               <Card className="h-100 border-0 bg-info bg-opacity-10">
                 <GatsbyImage image={getImage(image.src)} alt={image.alt} className="card-img-top" />
                 <Card.Body className="p-4">
-                  <Card.Title as="h3" className="mb-4 h3"><a href="#" className="stretched-link">{title}</a></Card.Title>
+                  <Card.Title as="h3" className="mb-4 h5"><a href={url} className="stretched-link">{title}</a></Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -30,6 +35,7 @@ const query = graphql`
       id
       cards {
         title
+        url
         image {
           src {
             childImageSharp {
