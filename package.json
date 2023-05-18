@@ -13,6 +13,7 @@
     "@uoguelph/snowdrop": "github:ccswbs/snowdrop#main",
     "babel-plugin-styled-components": "^2.1.1",
     "bootstrap": "^5.2.3",
+    "classnames": "^2.3.2",
     "gatsby": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
