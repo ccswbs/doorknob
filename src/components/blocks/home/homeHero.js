@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import classNames from "classnames"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row } from "react-bootstrap"
@@ -29,11 +30,16 @@ export default function HomeHero () {
       }
     `)
     
-    let image = data.blockYaml.cards[0].image;
-    let title = data.blockYaml.cards[0].title;
-    let url = data.blockYaml.cards[0].url;
+    const image = data.blockYaml.cards[0].image;
+    const title = data.blockYaml.cards[0].title;
+    const url = data.blockYaml.cards[0].url;
+    const defaultClasses = classNames("d-flex","p-0","h-100");
+    const desktopClasses = classNames("position-absolute", "top-50", "start-50", "translate-middle");
     
     const [isMobile, setIsMobile] = useState(false);
+    
+    let captionClasses = classNames(defaultClasses, {[desktopClasses]: !isMobile});
+    
 
     useEffect(() => {
         const handleResize = () => {
@@ -55,9 +61,9 @@ export default function HomeHero () {
     return (
     <Row id="rotator" className="mb-md-5 position-relative">
         <GatsbyImage image={getImage(image.src)} alt={image.alt} />
-        <div className={`d-flex p-0 h-100 ${isMobile ? null : 'position-absolute top-50 start-50 translate-middle'}`} style={{ maxWidth:"1320px" }}>
+        <div className={captionClasses} style={{ maxWidth:"1320px" }}>
             <div className="align-self-center bg-dark bg-opacity-75 w-100 p-4 p-lg-5 mb-lg-5 mt-auto text-center text-white">            
-                <h2 className="h3"><a href={url} className="text-white">{title}</a></h2>
+                <h2 className="h3"><a href={url} className="text-decoration-none text-white">{title}</a></h2>
             </div>
         </div>
     </Row>
