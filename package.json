@@ -25,6 +25,7 @@
     "gatsby-source-wordpress": "^7.5.0",
     "gatsby-transformer-sharp": "^5.5.0",
     "gatsby-transformer-yaml": "^5.5.0",
+    "postcss": "^8.4.24",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
@@ -34,7 +35,12 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "prettier": "^2.8.3"
+    "@rollup/plugin-terser": "^0.4.3",
+    "html-minifier": "^4.0.0",
+    "prettier": "^2.8.3",
+    "pug": "^3.0.2",
+    "rollup": "^3.23.0",
+    "rollup-plugin-postcss": "^4.0.2"
   },
   "license": "0BSD",
   "scripts": {
@@ -44,7 +50,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "build-webcomponents": "rollup --config ./web-components/rollup.config.js --bundleConfigAsCjs",
+    "watch-webcomponents": "rollup --watch --config ./web-components/rollup.config.js --bundleConfigAsCjs"
   },
   "repository": {
     "type": "git",
