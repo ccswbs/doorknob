@@ -20,7 +20,7 @@ class UgHeader extends HTMLElement {
     super();
     this.shadow = this.attachShadow({mode: 'open'});
     this.link('//www.uoguelph.ca/css/UofG-styles-dist.css');
-    this.import("//www.uoguelph.ca/web-components/UofGWebComponents-dist.js");
+    this.import('/UofGWebComponents-dist-v2-demo.js');
     this.header = document.createElement('uofg-header');
     this.shadow.appendChild(this.header);
     const observer = new MutationObserver(this.onChildAdded.bind(this));
