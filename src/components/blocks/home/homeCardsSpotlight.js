@@ -5,8 +5,8 @@ import { Card, Col, Container } from "react-bootstrap"
 
 const render = ({ cards }) => {
   return (
-    <Container className="content-block">
-      <h2 className="mb-4 mt-4">Spotlight</h2>
+    <Container>
+      <h2 className="mt-5 mb-5">Spotlight</h2>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {cards.map(({title, url, image}, index) => {
             
@@ -15,7 +15,7 @@ const render = ({ cards }) => {
           }
             
           return (
-            <Col key={index}>
+            <Col key={index} className="mt-4 mb-4">
               <Card className="h-100 border-0 bg-info bg-opacity-10">
                 <GatsbyImage image={getImage(image.src)} alt={image.alt} className="card-img-top" />
                 <Card.Body className="p-4">
