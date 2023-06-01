@@ -43,7 +43,7 @@ export default function HomeCardsSpotlight () {
                     <GatsbyImage image={getImage(image.src)} alt={image.alt} className="card-img-top" />
                     <Card.Body className="p-4">
                       <Card.Title as="h3" className="mb-4 h5">
-                        <a href={url} className="link-dark stretched-link text-decoration-none">{title}</a>
+                        <a href={url} className="spotlight link-dark stretched-link text-decoration-none">{title}</a>
                       </Card.Title>
                     </Card.Body>
                   </Card>

@@ -38,12 +38,11 @@ export default function HomeHero () {
     
     const [isMobile, setIsMobile] = useState(false);
     
-    let captionClasses = classNames(defaultClasses, {[desktopClasses]: !isMobile});
-    
+    let captionClasses = classNames(defaultClasses, {[desktopClasses]: !isMobile});    
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as per your needs
+            setIsMobile(window.innerWidth <= 912); // Adjust the breakpoint as per your needs
         };
 
         // Add event listener to handle window resize
@@ -63,7 +62,7 @@ export default function HomeHero () {
         <GatsbyImage image={getImage(image.src)} alt={image.alt} />
         <div className={captionClasses} style={{ maxWidth:"1320px" }}>
             <div className="align-self-center bg-dark bg-opacity-75 w-100 p-4 p-lg-5 mb-lg-5 mt-auto text-center text-white">            
-                <h2 className="h3"><a href={url} className="text-decoration-none text-white">{title}</a></h2>
+                <h2 className="h3 long-title m-auto"><a href={url} className="spotlight text-decoration-none text-white">{title}</a></h2>
             </div>
         </div>
     </Row>

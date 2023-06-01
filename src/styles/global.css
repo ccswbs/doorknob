@@ -4,27 +4,8 @@
 #rotator img {
   aspect-ratio: 5/3;
 }
-.hero-text-container {
-	max-width: 1320px;
-}
-.hero-text {
-	background: var(--bs-light);
-}
-.hero-text h1 {
-	color: black !important;
-}
+
 @media (min-width: 768px) {
-	.hero-text-container {
-		position: absolute;
-	}
-	.hero-text {
-		background: rgba(0,0,0,0.75);
-		color: white;
-		position: absolute;
-	}
-	.hero-text h1 {
-		color: white !important;
-	}
 	#rotator img {
 		aspect-ratio: 21 / 9;
 	}
@@ -41,4 +22,13 @@
 
 h1 {
   color: var(--bs-primary);
+}
+
+.long-title {
+	max-width: 55ch;
+}
+
+a.spotlight:hover,
+a.spotlight:focus {
+	border-bottom: 1px solid;
 }
