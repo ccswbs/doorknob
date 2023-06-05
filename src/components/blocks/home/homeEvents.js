@@ -2,13 +2,6 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Card, Container } from "react-bootstrap"
 import moment from 'moment';
-import styled from 'styled-components';
-
-const EventLink = styled.a`
-  color: #000000;
-  text-decoration-color: #8ed1ff;
-  text-underline-offset: 4px;
-`
 
 const render = ( data ) => {
   let shownEvents = data.allWpEvent.edges;
@@ -57,7 +50,7 @@ const render = ( data ) => {
                       </p>
                     </div>
                     <Card.Body className="col d-flex flex-column pb-0 ps-0 pt-0">
-                      <EventLink className="border-0 lh-base mb-2 stretched-link" href={eventLink}>{wpEvent.node.title}</EventLink>
+                      <a className="border-0 lh-base mb-2 stretched-link" href={eventLink}>{wpEvent.node.title}</a>
                       <p className="fs-6 mb-0 text-black-75"><span className="visually-hidden">Happening on {srDayName} {srMonth} {srDayNumber} from </span><time dateTime={wpEvent.node.startDate}>{eventStartTime}</time> to <time dateTime={wpEvent.node.endDate}>{eventEndTime}</time></p>
                     </Card.Body>
                   </Card>
