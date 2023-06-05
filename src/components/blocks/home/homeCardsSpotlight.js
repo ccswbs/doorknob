@@ -10,6 +10,7 @@ export default function HomeCardsSpotlight () {
       query {
         blockYaml(yamlId: {eq: "home_cards_spotlight"}) {
           id
+          heading
           cards {
             title
             url
@@ -32,7 +33,7 @@ export default function HomeCardsSpotlight () {
     
     return (spotlightCards > 2 &&
         <Container>
-          <h2 className="mt-5 mb-5">Spotlight</h2>
+          <h2 className="mt-5 mb-5">{data.blockYaml.heading}</h2>
           <div className={rowClasses}>
             {data.blockYaml.cards.map(({title, url, image}, index) => {
                 
