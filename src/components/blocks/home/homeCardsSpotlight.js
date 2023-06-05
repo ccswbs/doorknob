@@ -1,4 +1,5 @@
 import React from "react"
+import classNames from "classnames"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Col, Container } from "react-bootstrap"
@@ -26,11 +27,13 @@ export default function HomeCardsSpotlight () {
         }
       }
     `)
+    const spotlightCards = data.blockYaml.cards.length;
+    const rowClasses = classNames("row","row-cols-1","g-4",{"row-cols-md-2": spotlightCards === 3, "row-cols-md-3": spotlightCards > 3});
     
-    return (
+    return (spotlightCards > 2 &&
         <Container>
           <h2 className="mt-5 mb-5">Spotlight</h2>
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+          <div className={rowClasses}>
             {data.blockYaml.cards.map(({title, url, image}, index) => {
                 
               if (index === 0) {
