@@ -2,13 +2,6 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Card, Container, Row } from "react-bootstrap"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import styled from 'styled-components';
-
-const NewsLink = styled.a`
-  color: #000000;
-  text-decoration-color: #8ed1ff;
-  text-underline-offset: 4px;
-`
 
 const render = ( data ) => {
   let shownNews = data.allWpPost.edges;
@@ -30,7 +23,7 @@ const render = ( data ) => {
                 <GatsbyImage image={getImage(wpPost.node.featuredImage.node.localFile)} alt={wpPost.node.featuredImage.node.altText} />
                 <Card.Body className="px-0">
                   <Card.Title as="p">
-                    <NewsLink href={newsLink}>{wpPost.node.title}</NewsLink>
+                    <a href={newsLink}>{wpPost.node.title}</a>
                   </Card.Title>
                 </Card.Body>
               </Card>

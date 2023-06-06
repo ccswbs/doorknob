@@ -1,6 +1,20 @@
 #rotator {
   margin-top: calc(var(--uofg-header-height) * -0.2);
 }
+#rotator img {
+  aspect-ratio: 5/3;
+}
+
+@media (min-width: 768px) {
+	#rotator img {
+		aspect-ratio: 21 / 9;
+	}
+}
+@media (min-width: 992px) { 
+	#rotator img {
+		aspect-ratio: auto;
+	}
+}
 
 .content-block {
   margin-bottom: 5rem;
@@ -8,4 +22,13 @@
 
 h1 {
   color: var(--bs-primary);
+}
+
+.long-title {
+	max-width: 55ch;
+}
+
+a.spotlight:hover,
+a.spotlight:focus {
+	border-bottom: 1px solid;
 }
