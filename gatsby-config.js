@@ -36,6 +36,19 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-source-drupal`,
+        options: {
+        baseUrl: process.env.DRUPAL_BASEURL,
+        apiBase: process.env.DRUPAL_APIBASE,
+        basicAuth: {
+          username: process.env.BASIC_AUTH_USERNAME,
+          password: process.env.BASIC_AUTH_PASSWORD,
+        },
+        fastBuilds: true,
+        //skipFileDownloads: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
