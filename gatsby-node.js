@@ -7,6 +7,17 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   const typeDefs = [
     `
+      type node__spotlight implements Node {
+        drupal_id: String
+        field_hero_image: node__spotlightField_hero_image
+        field_spotlight_rank: Int
+        field_spotlight_url: node__spotlightField_spotlight_url
+      }
+      type node__spotlightField_spotlight_url implements Node {
+        uri: String
+        url: String
+        title: String
+      }
       type WpEventToEventsCategoryConnection implements Node {
         nodes: [WpEventsCategory]
       }
