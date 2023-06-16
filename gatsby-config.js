@@ -58,7 +58,6 @@ module.exports = {
             `feeds_feed--testimonial_import`,
             `media--audio`,
             `media--file`,
-            `media--image`,
             `media--remote_video`,
             `media--video`,
             `menu--menu`,
@@ -128,11 +127,6 @@ module.exports = {
             `taxonomy_term--units`,
             `taxonomy_vocabulary--taxonomy_vocabulary`,
         ],
-        filters: {
-          // Use includes so only the things we need are fetched.
-          "node--spotlight": "include=field_hero_image",
-          "media--image": "include=field_media_image",
-        },
         skipFileDownloads: true,
         requestTimeoutMS: 300000,
       },
