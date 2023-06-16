@@ -7,11 +7,27 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   const typeDefs = [
     `
+      type media__image implements Node {
+        drupal_id: String
+        name: String
+        field_media_image: media__imageField_media_image
+        relationships: media__imageRelationships
+      }
+      type media__imageField_media_image implements Node {
+        alt: String
+      }
+      type media__imageRelationships implements Node {
+        field_media_image: file__file @link(from: "field_media_image___NODE")
+        node__spotlight: [node__spotlight] @link(from: "node__spotlight___NODE")
+      }
       type node__spotlight implements Node {
         drupal_id: String
-        field_hero_image: node__spotlightField_hero_image
         field_spotlight_rank: Int
         field_spotlight_url: node__spotlightField_spotlight_url
+        relationships: node__spotlightRelationships
+      }
+      type node__spotlightRelationships implements Node {
+        field_hero_image: media__image @link(from: "field_hero_image___NODE")
       }
       type node__spotlightField_spotlight_url implements Node {
         uri: String
