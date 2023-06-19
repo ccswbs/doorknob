@@ -23,7 +23,7 @@ export default function HomeHero () {
                     }
                     relationships {
                       field_media_image {
-                        gatsbyImage(width: 400)
+                        gatsbyImage(width: 1920)
                       }
                     }
                   }
