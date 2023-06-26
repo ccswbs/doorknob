@@ -1,6 +1,19 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
+const render = ({ pageSpecific }) => (
+  <>
+    <div id="header-breakpoint"></div>
+    <uofg-header>
+      {pageSpecific?.map((item, i) => (
+        <a key={item.path} href={item.path}>
+          {item.title}
+        </a>
+      ))}
+    </uofg-header>
+  </>
+)
+
 const query = graphql`
   query {
     site {
@@ -12,21 +25,13 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 export default function Header() {
   return (
     <StaticQuery
       query={query}
-      render={({ site }) => (
-        <uofg-header>
-          {site.siteMetadata.map((item, i) => (
-            <a key={item.path} href={item.path}>
-              {item.title}
-            </a>
-          ))}
-        </uofg-header>
-      )}
+      render={({ site }) => render(site.siteMetadata)}
     />
   )
 }
