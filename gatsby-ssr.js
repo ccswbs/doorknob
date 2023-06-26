@@ -11,7 +11,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       rel="preconnect"
       href="https://fonts.gstatic.com"
       key="https://fonts.gstatic.com"
-      crossOrigin={true}
+      crossOrigin="anonymous"
     />,
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
