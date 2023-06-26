@@ -2,16 +2,13 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 const render = ({ pageSpecific }) => (
-  <>
-    <div id="header-breakpoint"></div>
-    <uofg-header>
-      {pageSpecific?.map((item, i) => (
-        <a key={item.path} href={item.path}>
-          {item.title}
-        </a>
-      ))}
-    </uofg-header>
-  </>
+  <uofg-header>
+    {pageSpecific?.map((item, i) => (
+      <a key={item.path} href={item.path}>
+        {item.title}
+      </a>
+    ))}
+  </uofg-header>
 )
 
 const query = graphql`
