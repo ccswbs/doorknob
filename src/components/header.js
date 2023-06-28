@@ -1,34 +1,27 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-
-const render = ({ pageSpecific }) => (
-  <uofg-header>
-    {pageSpecific?.map((item, i) => (
-      <a key={item.path} href={item.path}>
-        {item.title}
-      </a>
-    ))}
-  </uofg-header>
-)
-
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        menu {
-          title
-          path
-        }
-      }
-    }
-  }
-`
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function Header() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          menu {
+            title
+            path
+          }
+        }
+      }
+    }`
+  )
+
   return (
-    <StaticQuery
-      query={query}
-      render={({ site }) => render(site.siteMetadata)}
-    />
+    <uofg-header>
+      {data.site.siteMetadata.menu?.map((item, i) => (
+        <a key={item.path} href={item.path}>
+          {item.title}
+        </a>
+      ))}
+    </uofg-header>
   )
 }
