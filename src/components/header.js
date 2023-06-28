@@ -17,11 +17,13 @@ export default function Header() {
 
   return (
     <uofg-header>
-      {data.site.siteMetadata.menu?.map((item, i) => (
-        <a key={item.path} href={item.path}>
-          {item.title}
-        </a>
-      ))}
+      <template>
+        {data.site.siteMetadata.menu?.map((item, i) => (
+          <a key={item.path} href={item.path}>
+            {item.title}
+          </a>
+        ))}
+      </template>
     </uofg-header>
   )
 }
