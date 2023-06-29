@@ -4,7 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { Link } from "gatsby"
 import { Button, Col, Container, Row } from "react-bootstrap"
 
-import Seo from '../components/seo'
+import Seo from "../components/seo"
 import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
 import HomeCardsSecondary from "../components/blocks/home/homeCardsSecondary"
 import HomeCardsSpotlight from "../components/blocks/home/homeCardsSpotlight"
@@ -19,7 +19,7 @@ import HomeStory from "../components/blocks/home/homeStory"
 // Provide common components here
 const shortcodes = { Button, Container, Link }
 
-export default function IndexTemplate ({ data, children }) {
+export default function IndexTemplate({ data, children }) {
   return (
     <>
       <Seo title={data.mdx.frontmatter.title} />
@@ -31,9 +31,7 @@ export default function IndexTemplate ({ data, children }) {
         <Container className="content-block mb-4 mt-4">
           <Row>
             <Col>
-              <MDXProvider components={shortcodes}>
-                {children}
-              </MDXProvider>
+              <MDXProvider components={shortcodes}>{children}</MDXProvider>
             </Col>
           </Row>
         </Container>
@@ -42,11 +40,21 @@ export default function IndexTemplate ({ data, children }) {
         <HomeOverlay />
         <HomeStats />
         <HomeCardsSecondary />
-        <HomeStory />
-        <HomeNews />
-        <HomeEvents />
-        <HomeLinks />
 
+        <Container className="content-block">
+          <Row>
+            <Col>
+              <HomeNews />
+            </Col>
+            <Col>
+              <HomeEvents />
+            </Col>
+          </Row>
+        </Container>
+
+        <HomeStory />
+
+        <HomeLinks />
       </Container>
     </>
   )
@@ -54,7 +62,7 @@ export default function IndexTemplate ({ data, children }) {
 
 export const query = graphql`
   query ($slug: String) {
-    mdx (frontmatter: {slug: {eq: $slug}}) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
       }

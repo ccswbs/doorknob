@@ -1,38 +1,32 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import { Card, Container, Row } from "react-bootstrap"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const render = ( data ) => {
-  let shownNews = data.allWpPost.edges;
+const render = data => {
+  let shownNews = data.allWpPost.edges
 
   return (
-    <Container className="content-block">
+    <Container>
       <div className="align-items-center d-flex justify-content-between mb-3">
         <h2 className="text-primary">News</h2>
-        <a className="btn-info btn btn-sm px-3" href="https://news.uoguelph.ca/category/feature/">All News <i className="fa-solid fa-chevron-right" aria-hidden="true" /></a>
       </div>
 
-      {shownNews ? 
-      <div className="gy-0">
-        <Row as="ul" className="row-cols-1 row-cols-md-3 g-5 p-0">
-          {shownNews.map ( wpPost => {
-            let newsLink = "https://news.uoguelph.ca" + wpPost.node.uri;
-            return (
-              <Card as="li" key={wpPost.node.id} className="border-0">
-                <GatsbyImage image={getImage(wpPost.node.featuredImage.node.localFile)} alt={wpPost.node.featuredImage.node.altText} />
-                <Card.Body className="px-0">
-                  <Card.Title as="p">
-                    <a href={newsLink}>{wpPost.node.title}</a>
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            )
-          })}
-        </Row>
-      </div>
-  
-      : <p>No news at this time.</p>}
+      {shownNews ? (
+        <ul className="d-flex flex-column list-unstyled">
+          {shownNews.map(wpPost => (
+            <li className="py-3">
+              <a href={"https://news.uoguelph.ca" + wpPost.node.uri}>
+                {wpPost.node.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No news at this time.</p>
+      )}
+
+      <a className="py-3" href="#">Latest News</a>
     </Container>
   )
 }
@@ -40,7 +34,13 @@ const render = ( data ) => {
 // termTaxonomyId 5 = Top Stories
 const query = graphql`
   query {
-    allWpPost(filter: {terms: {nodes: {elemMatch: {termTaxonomyId: {eq: 5}}}}, status: {eq: "publish"}}, limit: 3) {
+    allWpPost(
+      filter: {
+        terms: { nodes: { elemMatch: { termTaxonomyId: { eq: 5 } } } }
+        status: { eq: "publish" }
+      }
+      limit: 3
+    ) {
       edges {
         node {
           id
@@ -63,6 +63,6 @@ const query = graphql`
   }
 `
 
-export default function News () {
-  return <StaticQuery query={query} render={allWpPost => render (allWpPost)} />
+export default function News() {
+  return <StaticQuery query={query} render={allWpPost => render(allWpPost)} />
 }

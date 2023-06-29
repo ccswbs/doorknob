@@ -21,7 +21,7 @@ const render = ( data ) => {
   }
   
   return (
-    <div className="bg-info bg-opacity-10 content-block row">
+    <div className="bg-info bg-opacity-10 row">
       <div className="p-5">
         <Container>
           <div className="align-items-center d-flex justify-content-between mb-3">
