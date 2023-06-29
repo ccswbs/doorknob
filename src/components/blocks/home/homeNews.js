@@ -28,10 +28,10 @@ export default function News() {
       <h2 className="text-primary">News</h2>
 
       {news ? (
-        <ul className="d-flex flex-column flex-grow-1 justify-content-around list-unstyled">
+        <ul className="d-flex flex-column flex-grow-1 list-unstyled">
           {news.map(article => (
-            <li key={article.node.id} className="py-3">
-              <a className="text-decoration-none link-dark" href={"https://news.uoguelph.ca" + article.node.uri}>
+            <li key={article.node.id} className="py-3 flex-grow-1">
+              <a className="text-decoration-none link-dark h-100 d-block" href={"https://news.uoguelph.ca" + article.node.uri}>
                 {article.node.title}
               </a>
             </li>

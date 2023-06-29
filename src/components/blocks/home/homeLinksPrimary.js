@@ -28,7 +28,7 @@ export default function HomeLinksPrimary() {
               key={link.url}
               className="btn btn-dark w-100 d-flex align-items-center justify-content-center"
               href={link.url}
-              style={{ height: "8rem" }}
+              style={{ height: "6rem" }}
             >
               <h3 className="fs-5 fw-normal">{link.title}</h3>
             </a>

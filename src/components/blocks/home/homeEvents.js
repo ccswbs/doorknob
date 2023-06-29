@@ -32,9 +32,9 @@ export default function Events() {
       <h2 className="text-primary">Events</h2>
 
       {events ? (
-        <ul className="d-flex flex-column flex-grow-1 justify-content-between list-unstyled">
+        <ul className="d-flex flex-column flex-grow-1 list-unstyled">
           {events.map(event => (
-            <li key={event.node.id} className="py-3 d-flex">
+            <li key={event.node.id} className="py-3 d-flex flex-grow-1">
               <div
                 className="align-items-center bg-warning d-flex flex-column justify-content-center flex-shrink-0"
                 style={{ width: "5rem", height: "5rem" }}
@@ -46,7 +46,7 @@ export default function Events() {
                 <span className="fw-bold text-nowrap">{moment(event.node.startDate, "YYYY-MM-DD").format("D")}</span>
               </div>
               <a
-                className="text-decoration-none link-dark flex-fill px-3"
+                className="text-decoration-none link-dark px-3 h-100 d-block"
                 href={event.node.url ? event.node.url : "https://news.uoguelph.ca" + event.node.uri}
               >
                 {event.node.title}
