@@ -39,22 +39,15 @@ export default function IndexTemplate({ data, children }) {
         <HomeCardsPrimary />
         <HomeOverlay />
         <HomeStats />
-        <HomeCardsSecondary />
 
         <Container className="content-block">
           <Row>
-            <Col>
-              <HomeNews />
-            </Col>
-            <Col>
-              <HomeEvents />
-            </Col>
+            <HomeNews />
+            <HomeEvents />
           </Row>
         </Container>
 
         <HomeStory />
-
-        <HomeLinks />
       </Container>
     </>
   )

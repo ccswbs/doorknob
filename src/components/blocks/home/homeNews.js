@@ -1,15 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Container } from "react-bootstrap"
 
 // termTaxonomyId 5 = Top Stories
 const query = graphql`
   query {
     allWpPost(
-      filter: {
-        terms: { nodes: { elemMatch: { termTaxonomyId: { eq: 5 } } } }
-        status: { eq: "publish" }
-      }
+      filter: { terms: { nodes: { elemMatch: { termTaxonomyId: { eq: 5 } } } }, status: { eq: "publish" } }
       limit: 3
     ) {
       edges {
@@ -25,21 +21,19 @@ const query = graphql`
 `
 
 export default function News() {
-  const data = useStaticQuery(query);
-  const shownNews = data.allWpPost.edges;
+  const data = useStaticQuery(query)
+  const news = data.allWpPost.edges
 
   return (
-    <Container>
-      <div className="align-items-center d-flex justify-content-between mb-3">
-        <h2 className="text-primary">News</h2>
-      </div>
+    <div className="d-flex flex-column col-sm mb-4 mb-md-0">
+      <h2 className="text-primary">News</h2>
 
-      {shownNews ? (
-        <ul className="d-flex flex-column list-unstyled">
-          {shownNews.map(wpPost => (
-            <li className="py-2">
-              <a className="text-decoration-none link-dark" href={"https://news.uoguelph.ca" + wpPost.node.uri}>
-                {wpPost.node.title}
+      {news ? (
+        <ul className="d-flex flex-column flex-grow-1 justify-content-around list-unstyled">
+          {news.map(article => (
+            <li className="py-3">
+              <a className="text-decoration-none link-dark" href={"https://news.uoguelph.ca" + article.node.uri}>
+                {article.node.title}
               </a>
             </li>
           ))}
@@ -48,9 +42,9 @@ export default function News() {
         <p>No news at this time.</p>
       )}
 
-      <a className="py-2" href="https://news.uoguelph.ca/">
+      <a className="py-2 mt-auto" href="https://news.uoguelph.ca/">
         Latest News
       </a>
-    </Container>
+    </div>
   )
 }
