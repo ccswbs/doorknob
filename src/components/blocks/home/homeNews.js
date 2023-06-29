@@ -1,35 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import { Card, Container, Row } from "react-bootstrap"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-const render = data => {
-  let shownNews = data.allWpPost.edges
-
-  return (
-    <Container>
-      <div className="align-items-center d-flex justify-content-between mb-3">
-        <h2 className="text-primary">News</h2>
-      </div>
-
-      {shownNews ? (
-        <ul className="d-flex flex-column list-unstyled">
-          {shownNews.map(wpPost => (
-            <li className="py-3">
-              <a href={"https://news.uoguelph.ca" + wpPost.node.uri}>
-                {wpPost.node.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No news at this time.</p>
-      )}
-
-      <a className="py-3" href="#">Latest News</a>
-    </Container>
-  )
-}
+import { useStaticQuery, graphql } from "gatsby"
+import { Container } from "react-bootstrap"
 
 // termTaxonomyId 5 = Top Stories
 const query = graphql`
@@ -47,16 +18,6 @@ const query = graphql`
           title
           date
           uri
-          featuredImage {
-            node {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-              altText
-            }
-          }
         }
       }
     }
@@ -64,5 +25,32 @@ const query = graphql`
 `
 
 export default function News() {
-  return <StaticQuery query={query} render={allWpPost => render(allWpPost)} />
+  const data = useStaticQuery(query);
+  const shownNews = data.allWpPost.edges;
+
+  return (
+    <Container>
+      <div className="align-items-center d-flex justify-content-between mb-3">
+        <h2 className="text-primary">News</h2>
+      </div>
+
+      {shownNews ? (
+        <ul className="d-flex flex-column list-unstyled">
+          {shownNews.map(wpPost => (
+            <li className="py-2">
+              <a className="text-decoration-none link-dark" href={"https://news.uoguelph.ca" + wpPost.node.uri}>
+                {wpPost.node.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No news at this time.</p>
+      )}
+
+      <a className="py-2" href="https://news.uoguelph.ca/">
+        Latest News
+      </a>
+    </Container>
+  )
 }
