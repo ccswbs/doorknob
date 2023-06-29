@@ -12,7 +12,6 @@ const query = graphql`
         node {
           id
           title
-          date
           uri
         }
       }
@@ -31,7 +30,7 @@ export default function News() {
       {news ? (
         <ul className="d-flex flex-column flex-grow-1 justify-content-around list-unstyled">
           {news.map(article => (
-            <li className="py-3">
+            <li key={article.node.id} className="py-3">
               <a className="text-decoration-none link-dark" href={"https://news.uoguelph.ca" + article.node.uri}>
                 {article.node.title}
               </a>

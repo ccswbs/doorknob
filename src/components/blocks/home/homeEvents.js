@@ -15,14 +15,8 @@ const query = graphql`
           id
           title
           startDate
-          endDate
           uri
           url
-          eventsCategories {
-            nodes {
-              name
-            }
-          }
         }
       }
     }
@@ -40,7 +34,7 @@ export default function Events() {
       {events ? (
         <ul className="d-flex flex-column flex-grow-1 justify-content-between list-unstyled">
           {events.map(event => (
-            <li className="py-3 d-flex">
+            <li key={event.node.id} className="py-3 d-flex">
               <div
                 className="align-items-center bg-warning d-flex flex-column justify-content-center flex-shrink-0"
                 style={{ width: "5rem", height: "5rem" }}
