@@ -5,12 +5,10 @@ import { Link } from "gatsby"
 import { Button, Col, Container, Row } from "react-bootstrap"
 
 import Seo from "../components/seo"
-import HomeCardsPrimary from "../components/blocks/home/homeCardsPrimary"
-import HomeCardsSecondary from "../components/blocks/home/homeCardsSecondary"
 import HomeCardsSpotlight from "../components/blocks/home/homeCardsSpotlight"
 import HomeEvents from "../components/blocks/home/homeEvents"
 import HomeHero from "../components/blocks/home/homeHero"
-import HomeLinks from "../components/blocks/home/homeLinks"
+import HomeLinksPrimary from "../components/blocks/home/homeLinksPrimary"
 import HomeNews from "../components/blocks/home/homeNews"
 import HomeOverlay from "../components/blocks/home/homeOverlay"
 import HomeStats from "../components/blocks/home/homeStats"
@@ -28,15 +26,8 @@ export default function IndexTemplate({ data, children }) {
         <h1 className="visually-hidden">University of Guelph homepage</h1>
         <HomeHero />
         <HomeCardsSpotlight />
-        <Container className="content-block mb-4 mt-4">
-          <Row>
-            <Col>
-              <MDXProvider components={shortcodes}>{children}</MDXProvider>
-            </Col>
-          </Row>
-        </Container>
-
-        <HomeCardsPrimary />
+       
+        <HomeLinksPrimary />
         <HomeOverlay />
         <HomeStats />
 

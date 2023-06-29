@@ -1,0 +1,14 @@
+id: home_links_primary
+links:
+  - title: Future Students
+    url: https://uoguelph.ca/future-students
+  - title: Current Students
+    url: https://uoguelph.ca/current-students
+  - title: International Students
+    url: https://uoguelph.ca/international-students
+  - title: Alumni & Donors
+    url: https://uoguelph.ca/alumni-friends
+  - title: Faculty & Staff
+    url: https://uoguelph.ca/faculty-staff
+  - title: Employers
+    url: https://uoguelph.ca/emplyers
