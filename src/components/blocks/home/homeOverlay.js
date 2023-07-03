@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Overlay from "../../shared/overlay"
 import { getImage } from "gatsby-plugin-image"
@@ -11,21 +11,6 @@ const Shadow = styled.p`
     text-shadow: none;
   }
 `
-
-const render = ({ title, link, background }) => {
-  return (
-    <Row>
-      <Overlay.GatsbyImage gatsbyImageData={getImage(background.src)} alt={background.alt}>
-          <Container className="d-flex h-100 w-100 p-5 justify-content-center align-items-center">
-            <Col className="text-center"> 
-              <h2 className="display-2 text-dark">{title}</h2>
-              <Shadow><a href={link.url}>{link.title}</a></Shadow>
-            </Col>
-          </Container>
-      </Overlay.GatsbyImage>
-    </Row>
-  )
-}
 
 const query = graphql`
   query {
@@ -52,5 +37,23 @@ const query = graphql`
 `
 
 export default function HomeStats () {
-  return <StaticQuery query={query} render={({blockYaml}) => render(blockYaml )} />
+  const data = useStaticQuery(query);
+  const title = data.blockYaml.title;
+  const link = data.blockYaml.link;
+  const background = data.blockYaml.background;
+
+  return (
+    <Row>
+      <Overlay.GatsbyImage gatsbyImageData={getImage(background.src)} alt={background.alt}>
+        <Container className="d-flex h-100 w-100 p-5 justify-content-center align-items-center">
+          <Col className="text-center">
+            <h2 className="display-2 text-dark">{title}</h2>
+            <Shadow>
+              <a href={link.url}>{link.title}</a>
+            </Shadow>
+          </Col>
+        </Container>
+      </Overlay.GatsbyImage>
+    </Row>
+  )
 }
