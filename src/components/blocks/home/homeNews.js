@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 // termTaxonomyId 5 = Top Stories
 const query = graphql`
@@ -19,22 +20,26 @@ const query = graphql`
   }
 `
 
+const NewsItem = styled.li`
+  min-height: 7rem;
+`;
+
 export default function News() {
   const data = useStaticQuery(query)
   const news = data.allWpPost.edges
 
   return (
-    <div className="d-flex flex-column col-sm mb-4 mb-md-0">
+    <div className="d-flex flex-column col-md mb-4 mb-md-0">
       <h2 className="text-primary">News</h2>
 
       {news ? (
         <ul className="d-flex flex-column flex-grow-1 list-unstyled">
           {news.map(article => (
-            <li key={article.node.id} className="py-3 flex-grow-1">
+            <NewsItem key={article.node.id} className="py-3">
               <a className="text-decoration-none link-dark h-100 d-block" href={"https://news.uoguelph.ca" + article.node.uri}>
                 {article.node.title}
               </a>
-            </li>
+            </NewsItem>
           ))}
         </ul>
       ) : (
