@@ -26,6 +26,8 @@ const NewsItem = styled.li`
 
 const Link = styled.a`
   text-decoration: none;
+  font-size: 2rem;
+
   :hover {
     text-decoration: underline;
   }
@@ -53,9 +55,9 @@ export default function News() {
         <p>No news at this time.</p>
       )}
 
-      <a className="py-2 mt-auto" href="https://news.uoguelph.ca/">
+      <Link className="py-2 mt-auto link-info text-decoration-underline" href="https://news.uoguelph.ca/">
         Latest News
-      </a>
+      </Link>
     </div>
   )
 }

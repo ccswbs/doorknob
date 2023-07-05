@@ -17,6 +17,7 @@ const query = graphql`
 
 const Link = styled.a`
   height: 6rem;
+  font-size: 2rem;
 
   @media screen and (min-width: 768px) {
     height: 8rem;

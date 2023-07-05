@@ -35,6 +35,8 @@ const CalendarIcon = styled.div`
 
 const Link = styled.a`
   text-decoration: none;
+  font-size: 2rem;
+
   :hover {
     text-decoration: underline;
   }
@@ -76,9 +78,9 @@ export default function Events() {
         <p>No events at this time.</p>
       )}
 
-      <a className="py-2 mt-auto" href="https://news.uoguelph.ca/events/">
+      <Link className="py-2 mt-auto link-info text-decoration-underline" href="https://news.uoguelph.ca/events/">
         Events Calendar
-      </a>
+      </Link>
     </div>
   )
 }
