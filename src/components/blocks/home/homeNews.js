@@ -24,6 +24,13 @@ const NewsItem = styled.li`
   min-height: 7rem;
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
+`
+
 export default function News() {
   const data = useStaticQuery(query)
   const news = data.allWpPost.edges
@@ -36,9 +43,9 @@ export default function News() {
         <ul className="d-flex flex-column flex-grow-1 list-unstyled">
           {news.map(article => (
             <NewsItem key={article.node.id} className="py-3">
-              <a className="text-decoration-none link-dark h-100 d-block" href={"https://news.uoguelph.ca" + article.node.uri}>
+              <Link className="link-dark h-100 d-block" href={"https://news.uoguelph.ca" + article.node.uri}>
                 {article.node.title}
-              </a>
+              </Link>
             </NewsItem>
           ))}
         </ul>

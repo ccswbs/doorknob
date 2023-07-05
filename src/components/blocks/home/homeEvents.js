@@ -33,6 +33,13 @@ const CalendarIcon = styled.div`
   }
 `
 
+const Link = styled.a`
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
+`
+
 export default function Events() {
   const data = useStaticQuery(query)
   const events = data.allWpEvent.edges
@@ -52,16 +59,16 @@ export default function Events() {
                 <span className="fw-bold text-nowrap text-uppercase">
                   {moment(event.node.startDate, "YYYY-MM-DD").format("MMM")}
                 </span>
-                <span className="fw-bold text-nowrap text-uppercase">
+                <span className="fw-bold text-nowrap text-uppercase fs-6">
                   {moment(event.node.startDate, "YYYY-MM-DD").format("D")}
                 </span>
               </CalendarIcon>
-              <a
-                className="text-decoration-none link-dark px-3 h-100 d-block"
+              <Link
+                className="link-dark px-3 h-100 d-block link-dark"
                 href={event.node.url ? event.node.url : "https://news.uoguelph.ca" + event.node.uri}
               >
                 {event.node.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

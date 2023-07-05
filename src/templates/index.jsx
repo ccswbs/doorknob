@@ -22,7 +22,7 @@ export default function IndexTemplate({ data, children }) {
     <>
       <Seo title={data.mdx.frontmatter.title} />
 
-      <Container fluid>
+      <Container fluid className="fs-5">
         <h1 className="visually-hidden">University of Guelph homepage</h1>
         <HomeHero />
         <HomeCardsSpotlight />
