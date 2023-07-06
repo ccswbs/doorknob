@@ -6,14 +6,14 @@
 }
 
 @media (min-width: 768px) {
-	#rotator img {
-		aspect-ratio: 21 / 9;
-	}
+  #rotator img {
+    aspect-ratio: 21 / 9;
+  }
 }
-@media (min-width: 992px) { 
-	#rotator img {
-		aspect-ratio: auto;
-	}
+@media (min-width: 992px) {
+  #rotator img {
+    aspect-ratio: auto;
+  }
 }
 
 .content-block {
@@ -25,10 +25,50 @@ h1 {
 }
 
 .long-title {
-	max-width: 55ch;
+  max-width: 55ch;
 }
 
 a.spotlight:hover,
 a.spotlight:focus {
-	border-bottom: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.homepage-primary-links a {
+  height: 6rem;
+  font-size: 2rem;
+}
+
+.homepage-news > ul > li,
+.homepage-events > ul > li {
+  min-height: 7rem;
+}
+
+.homepage-news a,
+.homepage-events a {
+  font-size: 2rem;
+}
+
+.homepage-news > ul > li > a,
+.homepage-events > ul > li > a {
+  text-decoration: none;
+}
+
+.homepage-news > ul > li > a:hover,
+.homepage-events > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.homepage-events .calendar-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.homepage-events .calendar-icon > :first-child {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage-primary-links a {
+    height: 8rem;
+  }
 }
