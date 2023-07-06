@@ -33,7 +33,7 @@ export default function HomeCardsSpotlight () {
     
     return (spotlightCards > 2 &&
         <Container>
-          <h2 className="mt-5 mb-5">{data.blockYaml.heading}</h2>
+          <h2 className="text-primary mt-5 mb-5">{data.blockYaml.heading}</h2>
           <div className={rowClasses}>
             {data.blockYaml.cards.map(({title, url, image}, index) => {
                 
