@@ -6,7 +6,11 @@ import moment from "moment"
 const query = graphql`
   {
     allWpEvent(
-      filter: { terms: { nodes: { elemMatch: { termTaxonomyId: { eq: 21 } } } }, isPast: { eq: false } }
+      filter: {
+        terms: { nodes: { elemMatch: { termTaxonomyId: { eq: 21 } } } }
+        status: { eq: "publish" }
+        isPast: { eq: false }
+      }
       sort: { startDate: ASC }
       limit: 3
     ) {
@@ -48,7 +52,7 @@ export default function Events() {
               </div>
               <a
                 className="link-dark px-3 h-100 d-block link-dark"
-                href={event.node.url ? event.node.url : "https://news.uoguelph.ca" + event.node.uri}
+                href={event.node.uri ? "https://news.uoguelph.ca" + event.node.uri : event.node.url}
               >
                 {event.node.title}
               </a>
