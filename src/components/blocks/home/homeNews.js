@@ -24,7 +24,7 @@ export default function News() {
   const news = data.allWpPost.edges
 
   return (
-    <div className="d-flex flex-column col-md mb-4 mb-md-0 homepage-news">
+    <div className="d-flex flex-column col-md mb-md-0 homepage-news">
       <h2 className="text-primary">News</h2>
 
       {news ? (

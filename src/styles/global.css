@@ -38,6 +38,10 @@ a.spotlight:focus {
   font-size: 2rem;
 }
 
+.homepage-news {
+  margin-bottom: 5rem;
+}
+
 .homepage-news > ul > li,
 .homepage-events > ul > li {
   min-height: 7rem;
@@ -68,6 +72,10 @@ a.spotlight:focus {
 }
 
 @media screen and (min-width: 768px) {
+  .homepage-news {
+    margin-bottom: 0;
+  }
+
   .homepage-primary-links a {
     height: 8rem;
   }
