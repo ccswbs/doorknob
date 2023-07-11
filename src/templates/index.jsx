@@ -21,7 +21,7 @@ const shortcodes = { Button, Container, Link }
 export default function IndexTemplate({ data, children }) {
   return (
     <>
-      <AppArmorAlert id="162" />
+      <AppArmorAlert />
       <Seo title={data.mdx.frontmatter.title} />
 
       <Container fluid>

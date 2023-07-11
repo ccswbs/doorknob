@@ -1,3 +1,6 @@
+// App Armor ID: 162 (dev) 163 (prod), typically we shouldn't expose env variables like this, but since this is not a secret, it's fine.
+process.env["GATSBY_APP_ARMOR_ALERT_ID"] = process.env.NODE_ENV === `development` ? `162` : `163`
+
 module.exports = {
   siteMetadata: {
     title: `University of Guelph`,
@@ -7,7 +10,7 @@ module.exports = {
     ogImageAlt: ``,
     menu: [
       { title: "Choose U of G", path: "https://www.uoguelph.ca/choose-u-of-g" },
-      { title: "Improve Life",path: "https://www.uoguelph.ca/improve-life/" },
+      { title: "Improve Life", path: "https://www.uoguelph.ca/improve-life/" },
       { title: "News", path: "https://news.uoguelph.ca" },
     ],
   },
@@ -67,9 +70,8 @@ module.exports = {
       options: {
         catchLinks: false,
         url:
-        // allows a fallback url if WPGRAPHQL_URL is not set in the env, this may be a local or remote WP instance.
-          process.env.WPGRAPHQL_URL ||
-          `https://live-ug-news.pantheonsite.io/graphql`,
+          // allows a fallback url if WPGRAPHQL_URL is not set in the env, this may be a local or remote WP instance.
+          process.env.WPGRAPHQL_URL || `https://live-ug-news.pantheonsite.io/graphql`,
         schema: {
           //Prefixes all WP Types with "Wp" so "Post and allPost" become "WpPost and allWpPost".
           typePrefix: `Wp`,
@@ -90,14 +92,14 @@ module.exports = {
                 : // and we don't actually need more than 50 in production for this particular site
                   50,
           },
-          Comment: {exclude: true},
-          Menu: {exclude: true},
-          MenuItem: {exclude: true},
-          Taxonomy: {exclude: true},
-          UserRole: {exclude: true},
-          PostFormat: {exclude: true},
-          Page: {exclude: true},
-          Post:  {
+          Comment: { exclude: true },
+          Menu: { exclude: true },
+          MenuItem: { exclude: true },
+          Taxonomy: { exclude: true },
+          UserRole: { exclude: true },
+          PostFormat: { exclude: true },
+          Page: { exclude: true },
+          Post: {
             limit:
               process.env.NODE_ENV === `development`
                 ? // Lets just pull 25 posts in development to make it easy on ourselves (aka. faster).
@@ -105,8 +107,8 @@ module.exports = {
                 : // and we don't actually need more than 50 in production for this particular site
                   50,
           },
-          Tag: {exclude: true},
-          User: {exclude: true},
+          Tag: { exclude: true },
+          User: { exclude: true },
         },
       },
     },
