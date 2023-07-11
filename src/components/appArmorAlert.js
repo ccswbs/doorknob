@@ -9,12 +9,13 @@ const AppArmorAlert = ({ id }) => {
 
     const container = document.createElement("div")
     container.id = appArmorID
-    document.body.prepend(container)
 
-    // Need to load the script after the container is added to the DOM, otherwise the app armor script will not find the container
+    // Need to load the script with the container, otherwise the app armor script will not find the container
     const script = document.createElement("script")
     script.src = "https://uoguelph.apparmor.com/Notifications/Feeds/Javascript/?AlertID=" + id
     container.appendChild(script)
+
+    document.body.prepend(container)
   }, [id])
 
   return <></>
