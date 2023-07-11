@@ -160,7 +160,7 @@ Statistic.Gradient = ({stats}) => {
               gradientStyle={gradientStyle} 
               stackedGradientStyle={stackedGradientStyle} >
       <div className="p-0">
-        <Container>
+        <Container className="px-0"> 
           <Statistic className={`row g-0 row-cols-1 ${rowClasses} justify-content-center mb-0`}>
               {stats.map((stat, index) => {
                 let type = stat.field_statistic_represents;

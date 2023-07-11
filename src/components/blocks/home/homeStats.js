@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, useStaticQuery, graphql } from "gatsby"
 import Statistic from "../../../components/shared/statistic"
 
 const render = ({ stats }) => {
@@ -20,5 +20,7 @@ const query = graphql`
 `
 
 export default function HomeStats () {
-  return <StaticQuery query={query} render={({blockYaml}) => render(blockYaml )} />
+  const stats = useStaticQuery(query).blockYaml.stats;
+  
+  return <Statistic.Gradient stats={stats} />;
 }
