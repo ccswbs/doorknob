@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { Link } from "gatsby"
 import { Button, Col, Container, Row } from "react-bootstrap"
 
+import AppArmorAlert from "../components/appArmorAlert"
 import Seo from "../components/seo"
 import HomeCardsSpotlight from "../components/blocks/home/homeCardsSpotlight"
 import HomeEvents from "../components/blocks/home/homeEvents"
@@ -20,13 +21,14 @@ const shortcodes = { Button, Container, Link }
 export default function IndexTemplate({ data, children }) {
   return (
     <>
+      <AppArmorAlert id="162" />
       <Seo title={data.mdx.frontmatter.title} />
 
       <Container fluid>
         <h1 className="visually-hidden">University of Guelph homepage</h1>
         <HomeHero />
         <HomeCardsSpotlight />
-       
+
         <HomeLinksPrimary />
         <HomeOverlay />
         <HomeStats />
