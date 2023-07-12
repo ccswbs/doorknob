@@ -13,6 +13,7 @@ export default function HomeHero () {
               node {
                 field_spotlight_rank
                 field_spotlight_url {
+                  uri
                   url
                   title
                 }
@@ -38,13 +39,17 @@ export default function HomeHero () {
     const imageSrc = data.allNodeSpotlight.edges[0]?.node.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage;
     const imageAlt = data.allNodeSpotlight.edges[0]?.node.relationships.field_hero_image?.field_media_image.alt;
     const title = data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.title;
-    const url = data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.url;
     const defaultClasses = classNames("d-flex","p-0","h-100");
     const desktopClasses = classNames("position-absolute", "top-50", "start-50", "translate-middle");
-    
     const [isMobile, setIsMobile] = useState(false);
     
-    let captionClasses = classNames(defaultClasses, {[desktopClasses]: !isMobile});    
+    let url = data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.url;
+    let captionClasses = classNames(defaultClasses, {[desktopClasses]: !isMobile});
+    
+    // Check if Spotlight URL is external or internal
+    if (url !== data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.uri) {
+        url = "https://www.uoguelph.ca" + url;
+    }
 
     useEffect(() => {
         const handleResize = () => {
