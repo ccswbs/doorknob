@@ -3,11 +3,11 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
-variables:
-  _prefix_paths: '$(PrefixPaths)'
-
 trigger:
 - prefixCondition
+
+variables:
+  _prefix_paths: '$(PrefixPaths)'
 
 pool:
   vmImage: ubuntu-latest
@@ -19,12 +19,13 @@ steps:
   displayName: 'Install Node.js'
 
 - script: npm install
+  displayName: 'npm install'
 
-- ${{ if eq(variables._prefix_paths, 'true') }}:
-  - script: npm run build-prefix
+- ${{ if eq($(_prefix_paths), 'true') }}:
+  - script: npm run build
     displayName: 'Build gatsby in sub-directory'
 - ${{ else }}:
-  - script: npm run build
+  - script: npm run build-prefix
     displayName: 'Build gatsby'
 
 - task: ArchiveFiles@2
