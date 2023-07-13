@@ -18,7 +18,7 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
-- ${{ if eq(variables['_prefix_paths'], 'true') }}:
+- ${{ if eq('$(_prefix_paths)', 'true') }}:
   - script: |
       echo 'it catches the true'
 - ${{ else }}:
