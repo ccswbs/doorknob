@@ -17,7 +17,7 @@ steps:
 
 - script: npm install
 
-- ${{ if eq(variables.PrefixPaths, 'true') }}:
+- ${{ if eq( $(PrefixPaths), 'true') }}:
   - script: npm run build-prefix
     displayName: 'Build gatsby in sub-directory'
 - ${{ else }}:
