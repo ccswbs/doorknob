@@ -6,6 +6,20 @@
 trigger:
 - main
 
+schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight EST build
+  branches:
+    include:
+    - main
+  always: true
+- cron: "0 6,12 * * *"
+  displayName: Twice a day build (6am and 12pm EST)
+  branches:
+    include:
+    - main
+  always: true
+
 variables:
   _path_prefix: '$(PathPrefix)'
 
