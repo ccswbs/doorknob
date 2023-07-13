@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+- prefixCondition
 
 pool:
   vmImage: ubuntu-latest
@@ -17,7 +17,7 @@ steps:
 
 - script: npm install
 
--  ${{ if eq(variables.PREFIXPATHS, 'true') }}:
+-  ${{ if eq(variables.PrefixPaths, 'true') }}:
   - script: npm run build-prefix
     displayName: 'Build gatsby in sub-directory'
 -  ${{ else }}:
