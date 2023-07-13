@@ -17,10 +17,10 @@ steps:
 
 - script: npm install
 
--  ${{ if eq(variables.PrefixPaths, 'true') }}:
+- ${{ if eq(variables.PrefixPaths, 'true') }}:
   - script: npm run build-prefix
     displayName: 'Build gatsby in sub-directory'
--  ${{ else }}:
+- ${{ else }}:
   - script: npm run build
     displayName: 'Build gatsby'
 
