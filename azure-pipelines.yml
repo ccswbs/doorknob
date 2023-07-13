@@ -18,8 +18,12 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
-- script: |
-    echo $(_prefix_paths)
+- ${{ if eq(variables['_prefix_paths'], 'true') }}:
+  - script: |
+      echo 'it catches the true'
+- ${{ else }}:
+  - script: echo 'not working yet'
+
 
 - script: npm install
   displayName: 'npm install'
