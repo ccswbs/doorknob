@@ -6,6 +6,9 @@
 trigger:
 - main
 
+variables:
+  _prefix_paths: '$(PrefixPaths)'
+
 pool:
   vmImage: ubuntu-latest
 
@@ -15,10 +18,16 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- script: npm install
+  displayName: 'npm install'
+
+- script: npm run build-prefix
+  displayName: 'Build gatsby in sub-directory'
+  condition: eq(variables._prefix_paths, 'true')
+
+- script: npm run build
+  displayName: 'Build gatsby'
+  condition: ne(variables._prefix_paths, 'true')
 
 - task: ArchiveFiles@2
   inputs:
@@ -27,6 +36,7 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
