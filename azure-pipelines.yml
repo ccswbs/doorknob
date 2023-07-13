@@ -7,7 +7,7 @@ trigger:
 - main
 
 variables:
-  _prefix_paths: '$(PrefixPaths)'
+  _path_prefix: '$(PathPrefix)'
 
 pool:
   vmImage: ubuntu-latest
@@ -23,11 +23,11 @@ steps:
 
 - script: npm run build-prefix
   displayName: 'Build gatsby in sub-directory'
-  condition: eq(variables._prefix_paths, 'true')
+  condition: eq(variables._path_prefix, 'true')
 
 - script: npm run build
   displayName: 'Build gatsby'
-  condition: ne(variables._prefix_paths, 'true')
+  condition: ne(variables._path_prefix, 'true')
 
 - task: ArchiveFiles@2
   inputs:
