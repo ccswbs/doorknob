@@ -18,14 +18,17 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
+- script: |
+    echo $(_prefix_paths)
+
 - script: npm install
   displayName: 'npm install'
 
-- ${{ if eq($(_prefix_paths), 'true') }}:
-  - script: npm run build
+- ${{ if eq(variables._prefix_paths, 'true') }}:
+  - script: npm run build-prefix
     displayName: 'Build gatsby in sub-directory'
 - ${{ else }}:
-  - script: npm run build-prefix
+  - script: npm run build
     displayName: 'Build gatsby'
 
 - task: ArchiveFiles@2
