@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { Link } from "gatsby"
-import { Button, Col, Container, Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 import AppArmorAlert from "../components/appArmorAlert"
 import Seo from "../components/seo"
@@ -14,9 +12,6 @@ import HomeNews from "../components/blocks/home/homeNews"
 import HomeOverlay from "../components/blocks/home/homeOverlay"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
-
-// Provide common components here
-const shortcodes = { Button, Container, Link }
 
 export default function IndexTemplate({ data, children }) {
   return (
