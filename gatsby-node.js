@@ -21,10 +21,12 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         node__spotlight: [node__spotlight] @link(from: "node__spotlight___NODE")
       }
       type node__spotlight implements Node {
+        changed: Date
         drupal_id: String
         field_spotlight_rank: Int
         field_spotlight_url: node__spotlightField_spotlight_url
         relationships: node__spotlightRelationships
+        status: Boolean
       }
       type node__spotlightRelationships implements Node {
         field_hero_image: media__image @link(from: "field_hero_image___NODE")

@@ -6,9 +6,16 @@ import { Card, Col, Container } from "react-bootstrap"
 
 export default function HomeCardsSpotlight () {
     
+    // Query will sort first by rank, then by recently changed. 
+    // Rank 1 will be skipped since it's for the Hero image
+    // Only a maxiumum of 5 published nodes will be returned
     const data = useStaticQuery(graphql`
       query {
-        allNodeSpotlight(sort: {field_spotlight_rank: ASC}) {
+        allNodeSpotlight(
+          sort: [{field_spotlight_rank: ASC}, {changed: DESC}]
+          filter: {status: {eq: true}, field_spotlight_rank: {ne: 1}}
+          limit: 5
+        ) {
           edges {
             node {
               drupal_id
@@ -40,19 +47,15 @@ export default function HomeCardsSpotlight () {
       }
     `)
     const spotlightCards = data.allNodeSpotlight.edges.length;
-    const rowClasses = classNames("row","row-cols-1","g-4",{"row-cols-md-2": spotlightCards === 3, "row-cols-md-3": spotlightCards === 4, "row-cols-md-4": spotlightCards > 4});
+    const rowClasses = classNames("row","row-cols-1","g-4",{"row-cols-md-2": spotlightCards === 2, "row-cols-md-3": spotlightCards === 3, "row-cols-md-2 row-cols-xl-4": spotlightCards === 4});
     let spotlightLink;
     
-    return (spotlightCards > 2 &&
+    return (spotlightCards > 1 &&
         <Container>
           <h2 className="mt-5 mb-5">Spotlight</h2>
           <div className={rowClasses}>
-            {data.allNodeSpotlight.edges.map(item => {
-                
-              if (item.node.field_spotlight_rank === 1) {
-                return null; // Skip the top result
-              }
-              
+            {data.allNodeSpotlight.edges.map(item => {                
+            
               // Check if Spotlight URL is external or internal
               if (item.node.field_spotlight_url?.url === item.node.field_spotlight_url?.uri) {
                 spotlightLink = item.node.field_spotlight_url.url;
