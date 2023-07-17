@@ -23,12 +23,8 @@ export default function HomeLinksPrimary() {
 
       <ul className="list-unstyled row g-md-5 g-3">
         {links.map(link => (
-          <li className="col-md-4">
-            <a
-              key={link.url}
-              className="btn btn-dark w-100 d-flex align-items-center justify-content-center"
-              href={link.url}
-            >
+          <li key={link.url} className="col-md-4">
+            <a className="btn btn-dark w-100 d-flex align-items-center justify-content-center" href={link.url}>
               <h3 className="fs-5 fw-normal">{link.title}</h3>
             </a>
           </li>
