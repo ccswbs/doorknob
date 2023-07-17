@@ -28,9 +28,27 @@ h1 {
   max-width: 55ch;
 }
 
+.spotlight-card img {
+  transition: transform 0.2s ease-in-out, opacity .25s linear !important;
+}
+
+.spotlight-card:hover img, 
+.spotlight-card:focus img {
+  transform: scale(1.1);
+}
+
+.spotlight-card .card-body {
+  padding: 2rem;
+}
+
+a.spotlight {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
+
 a.spotlight:hover,
 a.spotlight:focus {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
 }
 
 .homepage-primary-links a {

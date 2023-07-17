@@ -52,7 +52,7 @@ export default function HomeCardsSpotlight () {
     
     return (spotlightCards > 1 &&
         <Container>
-          <h2 className="mt-5 mb-5">Spotlight</h2>
+          <h2 className="mt-5 mb-5 text-primary">Spotlight</h2>
           <div className={rowClasses}>
             {data.allNodeSpotlight.edges.map(item => {                
             
@@ -65,11 +65,11 @@ export default function HomeCardsSpotlight () {
                 
               return (
                 <Col key={item.node.drupal_id} className="mt-4 mb-4">
-                  <Card className="h-100 border-0 bg-info bg-opacity-10">
+                  <Card className="h-100 border-0 bg-info bg-opacity-10 spotlight-card">
                     <GatsbyImage image={getImage(item.node.relationships?.field_hero_image?.relationships?.field_media_image.gatsbyImage)} alt={item.node.relationships?.field_hero_image?.field_media_image.alt} className="card-img-top" />
-                    <Card.Body className="p-4">
+                    <Card.Body>
                       <Card.Title as="h3" className="mb-4 h5">
-                        <a href={spotlightLink} className="spotlight link-dark stretched-link text-decoration-none">{item.node.field_spotlight_url?.title}</a>
+                        <a href={spotlightLink} className="spotlight link-dark stretched-link text-decoration-none fw-normal">{item.node.field_spotlight_url?.title}</a>
                       </Card.Title>
                     </Card.Body>
                   </Card>
