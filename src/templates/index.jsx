@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { Button, Col, Container, Row } from "react-bootstrap"
 
 import AppArmorAlert from "../components/appArmorAlert"
+import BECookieBar from "../components/beCookieBar"
 import Seo from "../components/seo"
 import HomeCardsSpotlight from "../components/blocks/home/homeCardsSpotlight"
 import HomeEvents from "../components/blocks/home/homeEvents"
@@ -21,6 +22,7 @@ const shortcodes = { Button, Container, Link }
 export default function IndexTemplate({ data, children }) {
   return (
     <>
+      <BECookieBar />
       <AppArmorAlert />
       <Seo title={data.mdx.frontmatter.title} />
 
