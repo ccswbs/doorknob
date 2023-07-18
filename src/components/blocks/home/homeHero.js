@@ -86,7 +86,7 @@ export default function HomeHero() {
       <div className={captionClasses} style={{ maxWidth: "1320px" }}>
         <div className={linkContainerClasses}>
           <h2 className="h3 long-title m-auto">
-            <a href={url} className="spotlight text-decoration-none text-white stretched-link">
+            <a href={url} className="spotlight text-decoration-none text-white stretched-link fw-normal">
               {title}
             </a>
           </h2>
