@@ -65,7 +65,7 @@ export default function HomeHero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 912) // Adjust the breakpoint as per your needs
+      setIsMobile(window.innerWidth <= 1024) // Adjust the breakpoint as per your needs
     }
 
     // Add event listener to handle window resize
