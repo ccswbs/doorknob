@@ -30,6 +30,12 @@ h1 {
 
 .spotlight-hero > div {
   background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.spotlight-hero:hover > div,
+.spotlight-hero:focus-within > div {
+  background-color: rgba(0, 0, 0, 1) !important;
 }
 
 #rotator img,
