@@ -28,12 +28,21 @@ h1 {
   max-width: 55ch;
 }
 
-.spotlight-card img {
-  transition: transform 0.2s ease-in-out, opacity .25s linear !important;
+.spotlight-hero > div {
+  background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
 }
 
-.spotlight-card:hover img, 
-.spotlight-card:focus img {
+#rotator img,
+.spotlight-card img {
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.25s linear !important;
+}
+
+.spotlight-card:hover img,
+.spotlight-card:focus img,
+#rotator:hover img,
+#rotator:focus-within img {
   transform: scale(1.1);
 }
 
