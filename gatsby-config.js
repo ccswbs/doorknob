@@ -43,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
         options: {
-        baseUrl: "https://spotlight-chug.pantheonsite.io/",
+        baseUrl: process.env.DRUPAL_BASEURL,
         apiBase: process.env.DRUPAL_APIBASE,
         basicAuth: {
           username: process.env.BASIC_AUTH_USERNAME,
