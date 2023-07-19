@@ -22,9 +22,9 @@ export default function IndexTemplate({ data, children }) {
       <Container fluid>
         <h1 className="visually-hidden">University of Guelph homepage</h1>
         {data.allNodeSpotlight?.edges?.length > 0 && <HomeHero heroData={data.allNodeSpotlight.edges[0]} />}
-        <HomeCardsSpotlight />
 
         <HomeLinksPrimary />
+        <HomeCardsSpotlight />
         <HomeOverlay />
         <HomeStats />
 
