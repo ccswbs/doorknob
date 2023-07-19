@@ -8,13 +8,13 @@ export default function HomeCardsSpotlight () {
     
     // Query will sort first by rank, then by recently changed. 
     // Rank 1 will be skipped since it's for the Hero image
-    // Only a maxiumum of 5 published nodes will be returned
+    // Only a maxiumum of 4 published nodes will be returned
     const data = useStaticQuery(graphql`
       query {
         allNodeSpotlight(
           sort: [{field_spotlight_rank: ASC}, {changed: DESC}]
           filter: {status: {eq: true}, field_spotlight_rank: {ne: 1}}
-          limit: 5
+          limit: 4
         ) {
           edges {
             node {
