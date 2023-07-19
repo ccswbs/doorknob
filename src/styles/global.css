@@ -17,7 +17,7 @@
 }
 
 .content-block {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 h1 {
@@ -56,19 +56,16 @@ h1 {
   padding: 2rem;
 }
 
-a.spotlight {
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease-in-out;
-}
-
-a.spotlight:hover,
-a.spotlight:focus {
-  border-bottom: 1px solid currentColor;
-}
-
 .homepage-primary-links a {
   height: 6rem;
   font-size: 2rem;
+}
+
+.homepage-primary-links a:hover,
+.homepage-primary-links a:focus {
+  background-color: #ffc72b;
+  color: black;
+  border-color: #ffc72b;
 }
 
 .homepage-news {

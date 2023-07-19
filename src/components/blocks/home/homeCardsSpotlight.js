@@ -51,7 +51,7 @@ export default function HomeCardsSpotlight () {
     let spotlightLink;
     
     return (spotlightCards > 1 &&
-        <Container>
+        <Container className="content-block">
           <h2 className="mt-5 mb-5 text-primary">Spotlight</h2>
           <div className={rowClasses}>
             {data.allNodeSpotlight.edges.map(item => {                
