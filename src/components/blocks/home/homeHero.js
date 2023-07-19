@@ -1,49 +1,19 @@
 import React, { useState, useEffect } from "react"
 import classNames from "classnames"
-import { useStaticQuery, graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row } from "react-bootstrap"
 
-export default function HomeHero() {
-  const data = useStaticQuery(graphql`
-    query {
-      allNodeSpotlight(filter: { field_spotlight_rank: { eq: 1 } }) {
-        edges {
-          node {
-            field_spotlight_rank
-            field_spotlight_url {
-              uri
-              url
-              title
-            }
-            relationships {
-              field_hero_image {
-                field_media_image {
-                  alt
-                }
-                relationships {
-                  field_media_image {
-                    gatsbyImage(width: 1920)
-                  }
-                }
-              }
-            }
-            drupal_id
-          }
-        }
-      }
-    }
-  `)
-
-  const imageSrc =
-    data.allNodeSpotlight.edges[0]?.node.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage
-  const imageAlt = data.allNodeSpotlight.edges[0]?.node.relationships.field_hero_image?.field_media_image.alt
-  const title = data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.title
+export default function HomeHero(props) {
+    
+  const { heroData } = props // Extract the heroData from props
+  const imageSrc = heroData?.node?.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage
+  const imageAlt = heroData?.node?.relationships.field_hero_image?.field_media_image.alt
+  const title = heroData?.node?.field_spotlight_url.title
   const defaultClasses = classNames("d-flex", "p-0", "h-100")
   const desktopClasses = classNames("position-absolute", "top-50", "start-50", "translate-middle")
   const [isMobile, setIsMobile] = useState(false)
 
-  let url = data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.url
+  let url = heroData?.node?.field_spotlight_url.url
   let captionClasses = classNames(defaultClasses, { [desktopClasses]: !isMobile }, "spotlight-hero")
   let linkContainerClasses = classNames(
     "align-self-center",
@@ -56,10 +26,9 @@ export default function HomeHero() {
     "text-white",
     { "bg-opacity-75": !isMobile, "bg-opacity-100": isMobile },
   )
-  let linkClasses = classNames("spotlight", "text-decoration-none", "text-white", { "stretched-link": !isMobile })
 
   // Check if Spotlight URL is external or internal
-  if (url !== data.allNodeSpotlight.edges[0]?.node.field_spotlight_url.uri) {
+  if (url !== heroData?.node?.field_spotlight_url.uri) {
     url = "https://www.uoguelph.ca" + url
   }
 

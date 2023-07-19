@@ -21,7 +21,7 @@ export default function IndexTemplate({ data, children }) {
 
       <Container fluid>
         <h1 className="visually-hidden">University of Guelph homepage</h1>
-        <HomeHero />
+        {data.allNodeSpotlight?.edges?.length > 0 && <HomeHero heroData={data.allNodeSpotlight.edges[0]} />}
         <HomeCardsSpotlight />
 
         <HomeLinksPrimary />
@@ -46,6 +46,31 @@ export const query = graphql`
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
+      }
+    }
+    allNodeSpotlight(filter: { field_spotlight_rank: { eq: 1 } }) {
+      edges {
+        node {
+          field_spotlight_rank
+          field_spotlight_url {
+            uri
+            url
+            title
+          }
+          relationships {
+            field_hero_image {
+              field_media_image {
+                alt
+              }
+              relationships {
+                field_media_image {
+                  gatsbyImage(width: 1920)
+                }
+              }
+            }
+          }
+          drupal_id
+        }
       }
     }
   }
