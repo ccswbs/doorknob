@@ -113,3 +113,10 @@ a.spotlight:focus {
     height: 8rem;
   }
 }
+
+@media screen and (min-width: 1320px) {
+  .spotlight-hero .spotlight::after {
+    width: 100vw;
+    left: calc(calc(100vw - 1320px) / -2);
+  }
+}
