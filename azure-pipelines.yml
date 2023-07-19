@@ -7,14 +7,14 @@ trigger:
 - main
 
 schedules:
-- cron: "0 0 * * *"
-  displayName: Daily midnight EST build
+- cron: "0 4 * * *"
+  displayName: Daily midnight EST build (4am UTC)
   branches:
     include:
     - main
   always: true
-- cron: "0 6,12 * * *"
-  displayName: Twice a day build (6am and 12pm EST)
+- cron: "0 10,16 * * *"
+  displayName: Twice a day build (6am and 12pm EST / 10am and 4pm UTC )
   branches:
     include:
     - main
