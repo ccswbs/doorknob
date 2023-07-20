@@ -21,8 +21,9 @@ schedules:
   always: true
 
 variables:
-  _path_prefix: '$(PathPrefix)'
-  - group: ug-doorknob
+- group: ug-doorknob
+- name: _path_prefix
+  value: '$(PathPrefix)'
 
 pool:
   vmImage: ubuntu-latest
