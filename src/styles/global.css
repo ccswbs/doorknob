@@ -38,7 +38,6 @@ h1 {
   background-color: rgba(0, 0, 0, 1) !important;
 }
 
-//TODO: think about something else to replace the zoom effect on hover for the hero image
 /*
 #rotator img {
   transition: transform 0.2s ease-in-out, opacity 0.25s linear !important;
