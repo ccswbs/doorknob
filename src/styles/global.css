@@ -38,16 +38,22 @@ h1 {
   background-color: rgba(0, 0, 0, 1) !important;
 }
 
-#rotator img,
-.spotlight-card img {
-  transition:
-    transform 0.2s ease-in-out,
-    opacity 0.25s linear !important;
+//TODO: think about something else to replace the zoom effect on hover for the hero image
+/*
+#rotator img {
+  transition: transform 0.2s ease-in-out, opacity 0.25s linear !important;
 }
 
 #rotator:hover img,
 #rotator:focus-within img {
-  transform: scale(1.03);
+  transform: scale(1.03); 
+}
+*/
+
+.spotlight-card img {
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.25s linear !important;
 }
 
 .spotlight-card:hover img,
