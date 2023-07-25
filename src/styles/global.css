@@ -6,6 +6,15 @@
   aspect-ratio: 5/3;
 }
 
+#rotator img {
+  transition: transform 0.2s ease-in-out, opacity 0.25s linear !important;
+}
+
+#rotator:hover img,
+#rotator:focus-within img {
+  transform: scale(1.03); 
+}
+
 @media (min-width: 768px) {
   #rotator img {
     aspect-ratio: 21 / 9;
