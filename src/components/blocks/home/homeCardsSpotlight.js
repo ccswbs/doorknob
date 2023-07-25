@@ -2,7 +2,7 @@ import React from "react"
 import classNames from "classnames"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Col, Container } from "react-bootstrap"
-import { useSpotlightData } from "../../../hooks/d9/use-spotlight-data"
+import { useSpotlightData } from "../../../hooks/drupal/use-spotlight-data"
 
 export default function HomeCardsSpotlight() {
   const spotlightData = useSpotlightData()

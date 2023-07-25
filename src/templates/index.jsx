@@ -12,7 +12,7 @@ import HomeNews from "../components/blocks/home/homeNews"
 import HomeOverlay from "../components/blocks/home/homeOverlay"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
-import { useSpotlightData } from "../hooks/d9/use-spotlight-data"
+import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
 
 export default function IndexTemplate({ data, children }) {
   const spotlightData = useSpotlightData();

@@ -12,7 +12,7 @@ function getLink(url) {
 }
 
 export const useSpotlightData = () => {
-  let data = {};
+  let spotlightData = {};
 
   /* -------
   // hero
@@ -23,7 +23,7 @@ export const useSpotlightData = () => {
     // Rank 1 will be skipped since it's for the Hero image
     // Only a maxiumum of 4 published nodes will be returned
   --------- */
-  const d9Data = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
       query {
         hero: allNodeSpotlight(filter: { field_spotlight_rank: { eq: 1 } }) {
@@ -87,7 +87,7 @@ export const useSpotlightData = () => {
       }
   `)
 
-  const cards = d9Data.cards;
+  const cards = data.cards;
   let cardsData = [];
 
   cards.edges.forEach((item) => {
@@ -100,7 +100,7 @@ export const useSpotlightData = () => {
     })
   });
 
-  const hero = d9Data.hero;
+  const hero = data.hero;
   let heroData = [];
 
   hero.edges.forEach((item) => {
@@ -112,10 +112,10 @@ export const useSpotlightData = () => {
     })
   });
 
-  data = {
+  spotlightData = {
     hero: heroData,
     cards: cardsData
   }
 
-  return data;
+  return spotlightData;
 } 
