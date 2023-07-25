@@ -45,10 +45,13 @@ h1 {
     opacity 0.25s linear !important;
 }
 
-.spotlight-card:hover img,
-.spotlight-card:focus img,
 #rotator:hover img,
 #rotator:focus-within img {
+  transform: scale(1.03);
+}
+
+.spotlight-card:hover img,
+.spotlight-card:focus img {
   transform: scale(1.1);
 }
 
