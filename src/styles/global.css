@@ -38,7 +38,17 @@ h1 {
   background-color: rgba(0, 0, 0, 1) !important;
 }
 
-#rotator img,
+/*
+#rotator img {
+  transition: transform 0.2s ease-in-out, opacity 0.25s linear !important;
+}
+
+#rotator:hover img,
+#rotator:focus-within img {
+  transform: scale(1.03); 
+}
+*/
+
 .spotlight-card img {
   transition:
     transform 0.2s ease-in-out,
@@ -46,9 +56,7 @@ h1 {
 }
 
 .spotlight-card:hover img,
-.spotlight-card:focus img,
-#rotator:hover img,
-#rotator:focus-within img {
+.spotlight-card:focus img {
   transform: scale(1.1);
 }
 
