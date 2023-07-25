@@ -6,15 +6,6 @@
   aspect-ratio: 5/3;
 }
 
-#rotator img {
-  transition: transform 0.2s ease-in-out, opacity 0.25s linear !important;
-}
-
-#rotator:hover img,
-#rotator:focus-within img {
-  transform: scale(1.03); 
-}
-
 @media (min-width: 768px) {
   #rotator img {
     aspect-ratio: 21 / 9;
@@ -45,7 +36,16 @@ h1 {
 
 .spotlight-hero:hover > div,
 .spotlight-hero:focus-within > div {
-  background-color: rgba(0, 0, 0, 1) !important;
+  background-color: #ffc72b !important;
+}
+
+.spotlight-hero .spotlight {
+  transition: color 0.2s ease-in-out;
+}
+
+.spotlight-hero:hover .spotlight,
+.spotlight-hero:focus-within .spotlight {
+  color: black !important;
 }
 
 .spotlight-card img {
