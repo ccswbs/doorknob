@@ -4,17 +4,17 @@
 
 #rotator img {
   aspect-ratio: 5/3;
-  transition: filter 0.2s ease-in-out, opacity 0.25s linear !important;
+  transition: transform 0.25s ease-in-out, opacity 0.25s linear !important;
 }
 
 #rotator:hover img,
 #rotator:focus-within img {
-  filter: brightness(1.2);
+  transform: scale(1.01);
 }
 
 .spotlight-hero > div {
   background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .spotlight-hero:hover > div,
@@ -23,7 +23,7 @@
 }
 
 .spotlight-hero .spotlight {
-  transition: color 0.2s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 
 .spotlight-hero:hover .spotlight,
