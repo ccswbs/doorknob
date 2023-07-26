@@ -19,7 +19,7 @@ export default function HomeLinksPrimary() {
   const links = data.blockYaml.links
   return (
     <Container className="content-block homepage-primary-links">
-      <h2 className="text-primary mt-5 mb-5">Welcome to the University of Guelph</h2>
+      <h2 className="text-primary mt-5 mb-5">Welcome</h2>
 
       <ul className="list-unstyled row g-md-5 g-3">
         {links.map(link => (
