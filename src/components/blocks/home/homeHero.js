@@ -45,7 +45,7 @@ export default function HomeHero( props ) {
       <GatsbyImage image={getImage(heroData.imageSrc)} alt={heroData.imageAlt} />
       <div className={captionClasses} style={{ maxWidth: "1320px" }}>
         <div className={linkContainerClasses}>
-          <h2 className="h3 long-title m-auto">
+          <h2 className="h3 m-auto container">
             <a href={heroData.url} className="spotlight text-decoration-none text-white stretched-link fw-normal">
               {heroData.title}
             </a>
