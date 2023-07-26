@@ -26,7 +26,11 @@ export const useSpotlightData = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        hero: allNodeSpotlight(filter: { field_spotlight_rank: { eq: 1 } }) {
+        hero: allNodeSpotlight(
+          sort: {changed: DESC}
+          filter: {field_spotlight_rank: {eq: 1}}
+          limit: 1
+          ) {
           edges {
             node {
               field_spotlight_rank
@@ -53,8 +57,8 @@ export const useSpotlightData = () => {
         }
         cards: allNodeSpotlight(
           sort: [{field_spotlight_rank: ASC}, {changed: DESC}]
-          filter: {status: {eq: true}, field_spotlight_rank: {ne: 1}}
-          limit: 4
+          filter: {status: {eq: true}}
+          limit: 5
         ) {
           edges {
             node {
@@ -87,6 +91,18 @@ export const useSpotlightData = () => {
       }
   `)
 
+  const hero = data.hero;
+  let heroData = [];
+
+  hero.edges.forEach((item) => {
+    heroData.push({
+      imageSrc: item?.node?.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage,
+      imageAlt: item?.node?.relationships.field_hero_image?.field_media_image.alt,
+      title: item?.node?.field_spotlight_url.title,
+      url: getLink(item?.node?.field_spotlight_url)
+    })
+  });
+
   const cards = data.cards;
   let cardsData = [];
 
@@ -100,17 +116,8 @@ export const useSpotlightData = () => {
     })
   });
 
-  const hero = data.hero;
-  let heroData = [];
-
-  hero.edges.forEach((item) => {
-    heroData.push({
-      imageSrc: item?.node?.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage,
-      imageAlt: item?.node?.relationships.field_hero_image?.field_media_image.alt,
-      title: item?.node?.field_spotlight_url.title,
-      url: getLink(item?.node?.field_spotlight_url)
-    })
-  });
+  // Remove first item of array (a.k.a. the hero)
+  cardsData.shift();
 
   spotlightData = {
     hero: heroData,
