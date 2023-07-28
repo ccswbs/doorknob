@@ -66,6 +66,7 @@ steps:
 
 - script: |
     echo $(variables._path_prefix_url)
+    echo $(PATH_PREFIX_URL)
     cd $(Build.SourcesDirectory)/public/$(variables._path_prefix_url)/_gatsby/
     mv image $(Build.SourcesDirectory)/public/_gatsby/
   displayName: 'Fix images in extra sub-directory'
