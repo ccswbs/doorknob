@@ -24,8 +24,10 @@ variables:
 - group: ug-doorknob
 - name: _path_prefix
   value: '$(PathPrefix)'
-- name: _path_prefix_url
-  value: '$(PATH_PREFIX_URL)'
+- name: _gatsby_cache_folder
+  value: '.cache'
+- name: _gatsby_public_folder
+  value: 'public'
 
 pool:
   vmImage: ubuntu-latest
@@ -39,6 +41,18 @@ steps:
 - script: npm install
   displayName: 'npm install'
 
+- task: Cache@2
+  inputs:
+    key: 'gatsby_cache | "$(Agent.OS)" | "$(Build.SourceBranch)" | "$(_path_prefix)"'
+    path: $(_gatsby_cache_folder)
+  displayName: 'Retrieve cached Gatsby .cache folder'
+
+- task: Cache@2
+  inputs:
+    key: 'gatsby_public | "$(Agent.OS)" | "$(Build.SourceBranch)" | "$(_path_prefix)"'
+    path: $(_gatsby_public_folder)
+  displayName: 'Retrieve cached Gatsby public folder'
+
 - script: npm run build-prefix
   displayName: 'Build gatsby in sub-directory'
   condition: eq(variables._path_prefix, 'true')
@@ -48,8 +62,9 @@ steps:
   condition: ne(variables._path_prefix, 'true')
 
 - script: |
-    cd /$(_path_prefix_url)/_gatsby/
-    mv image /../../_gatsby/
+    echo $(variables.PATH_PREFIX_URL)
+    cd $(Build.SourcesDirectory)/public/$(variables.PATH_PREFIX_URL)/_gatsby/
+    mv image $(Build.SourcesDirectory)/public/_gatsby/
   displayName: 'Fix images in extra sub-directory'
   condition: eq(variables._path_prefix, 'true')
 
