@@ -30,6 +30,8 @@ variables:
   value: '.cache'
 - name: _gatsby_public_folder
   value: 'public'
+- name: _npm_node_modules
+  value: 'node_modules'
 
 pool:
   vmImage: ubuntu-latest
@@ -40,19 +42,25 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
+- task: Cache@2
+  inputs:
+    key: '_npm_node_modules | "$(Agent.OS)" | "$(Build.SourceBranch)"'
+    path: $(_npm_node_modules)
+  displayName: 'Retrieve cached NPM folder'
+
 - task: Npm@1
   inputs:
     command: 'install'
 
 - task: Cache@2
   inputs:
-    key: 'gatsby_cache | "$(Agent.OS)" | "$(Build.SourceBranch)" | "$(_path_prefix)"'
+    key: 'gatsby_cache | "$(Agent.OS)" | "$(Build.SourceBranch)"'
     path: $(_gatsby_cache_folder)
   displayName: 'Retrieve cached Gatsby .cache folder'
 
 - task: Cache@2
   inputs:
-    key: 'gatsby_public | "$(Agent.OS)" | "$(Build.SourceBranch)" | "$(_path_prefix)"'
+    key: 'gatsby_public | "$(Agent.OS)" | "$(Build.SourceBranch)"'
     path: $(_gatsby_public_folder)
   displayName: 'Retrieve cached Gatsby public folder'
 
@@ -65,9 +73,7 @@ steps:
   condition: ne(variables._path_prefix, 'true')
 
 - script: |
-    echo $(variables._path_prefix_url)
-    echo $(PATH_PREFIX_URL)
-    cd $(Build.SourcesDirectory)/public/$(variables._path_prefix_url)/_gatsby/
+    cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/
     mv image $(Build.SourcesDirectory)/public/_gatsby/
   displayName: 'Fix images in extra sub-directory'
   condition: eq(variables._path_prefix, 'true')
