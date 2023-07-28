@@ -1,8 +1,34 @@
 #rotator {
   margin-top: calc(var(--uofg-header-height) * -0.2);
 }
+
 #rotator img {
   aspect-ratio: 5/3;
+  transition: filter 0.2s ease-in-out, opacity 0.25s linear !important;
+}
+
+#rotator:hover img,
+#rotator:focus-within img {
+  filter: brightness(1.2);
+}
+
+.spotlight-hero > div {
+  background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.spotlight-hero:hover > div,
+.spotlight-hero:focus-within > div {
+  background-color: #ffc72b !important;
+}
+
+.spotlight-hero .spotlight {
+  transition: color 0.2s ease-in-out;
+}
+
+.spotlight-hero:hover .spotlight,
+.spotlight-hero:focus-within .spotlight {
+  color: black !important;
 }
 
 @media (min-width: 768px) {
@@ -17,7 +43,7 @@
 }
 
 .content-block {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 h1 {
@@ -28,14 +54,31 @@ h1 {
   max-width: 55ch;
 }
 
-a.spotlight:hover,
-a.spotlight:focus {
-  border-bottom: 1px solid;
+.spotlight-card img {
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.25s linear !important;
+}
+
+.spotlight-card:hover img,
+.spotlight-card:focus img {
+  transform: scale(1.1);
+}
+
+.spotlight-card .card-body {
+  padding: 2rem;
 }
 
 .homepage-primary-links a {
   height: 6rem;
   font-size: 2rem;
+}
+
+.homepage-primary-links a:hover,
+.homepage-primary-links a:focus {
+  background-color: #ffc72b;
+  color: black;
+  border-color: #ffc72b;
 }
 
 .homepage-news {
@@ -78,5 +121,12 @@ a.spotlight:focus {
 
   .homepage-primary-links a {
     height: 8rem;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .spotlight-hero .spotlight::after {
+    width: 100vw;
+    left: calc(calc(100vw - 1320px) / -2);
   }
 }

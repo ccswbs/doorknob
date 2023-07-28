@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { Link } from "gatsby"
-import { Button, Col, Container, Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 import AppArmorAlert from "../components/appArmorAlert"
 import BECookieBar from "../components/beCookieBar"
@@ -15,11 +13,11 @@ import HomeNews from "../components/blocks/home/homeNews"
 import HomeOverlay from "../components/blocks/home/homeOverlay"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
-
-// Provide common components here
-const shortcodes = { Button, Container, Link }
+import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
 
 export default function IndexTemplate({ data, children }) {
+  const spotlightData = useSpotlightData();
+  
   return (
     <>
       <BECookieBar />
@@ -28,10 +26,10 @@ export default function IndexTemplate({ data, children }) {
 
       <Container fluid>
         <h1 className="visually-hidden">University of Guelph homepage</h1>
-        <HomeHero />
-        <HomeCardsSpotlight />
+        {spotlightData.hero?.length > 0 && <HomeHero heroData={spotlightData.hero[0]} />}
 
         <HomeLinksPrimary />
+        <HomeCardsSpotlight />
         <HomeOverlay />
         <HomeStats />
 
