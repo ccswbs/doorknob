@@ -24,6 +24,8 @@ variables:
 - group: ug-doorknob
 - name: _path_prefix
   value: '$(PathPrefix)'
+- name: _path_prefix_url
+  value: '$(PATH_PREFIX_URL)'
 - name: _gatsby_cache_folder
   value: '.cache'
 - name: _gatsby_public_folder
@@ -63,8 +65,8 @@ steps:
   condition: ne(variables._path_prefix, 'true')
 
 - script: |
-    echo $(variables.PATH_PREFIX_URL)
-    cd $(Build.SourcesDirectory)/public/$(variables.PATH_PREFIX_URL)/_gatsby/
+    echo $(variables._path_prefix_url)
+    cd $(Build.SourcesDirectory)/public/$(variables._path_prefix_url)/_gatsby/
     mv image $(Build.SourcesDirectory)/public/_gatsby/
   displayName: 'Fix images in extra sub-directory'
   condition: eq(variables._path_prefix, 'true')
