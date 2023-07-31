@@ -8,10 +8,10 @@ const NotFoundPage = () => (
     <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
     <p>We think you will find one of the following links useful:</p>
     <p>
-      <a href="/">University of Guelph Home Page</a>
+      <a href="https://www.uoguelph.ca/">University of Guelph Home Page</a>
     </p>
     <p>
-      <a href="/sitemap">University of Guelph Site Map</a>
+      <a href="https://www.uoguelph.ca/sitemap">University of Guelph Site Map</a>
     </p>
     <p>
       <strong>You may not be able to find this page because of:</strong>
