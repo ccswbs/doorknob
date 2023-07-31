@@ -38,7 +38,7 @@ export default function Events() {
       {events ? (
         <ul className="d-flex flex-column flex-grow-1 list-unstyled homepage-events">
           {events.map(event => (
-            <li key={event.node.id} className="py-3 d-flex flex-grow-1">
+            <li key={event.node.id} className="py-3 d-flex">
               <div
                 className="align-items-center bg-warning d-flex flex-column justify-content-center flex-shrink-0 py-2 calendar-icon me-3"
                 aria-hidden="true"

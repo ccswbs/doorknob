@@ -25,13 +25,13 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
     />,
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@uoguelph/web-components/dist/uofg-web-components/uofg-web-components.css"
-      key="https://unpkg.com/@uoguelph/web-components/dist/uofg-web-components/uofg-web-components.css"
+      href="https://unpkg.com/@uoguelph/web-components@1.x.x/dist/uofg-web-components/uofg-web-components.css"
+      key="https://unpkg.com/@uoguelph/web-components@1.x.x/dist/uofg-web-components/uofg-web-components.css"
     />,
     <script
       type="module"
-      src="https://unpkg.com/@uoguelph/web-components/dist/uofg-web-components/uofg-web-components.esm.js"
-      key="https://unpkg.com/@uoguelph/web-components/dist/uofg-web-components/uofg-web-components.esm.js"
+      src="https://unpkg.com/@uoguelph/web-components@1.x.x/dist/uofg-web-components/uofg-web-components.esm.js"
+      key="https://unpkg.com/@uoguelph/web-components@1.x.x/dist/uofg-web-components/uofg-web-components.esm.js"
     ></script>,
   ])
   setPostBodyComponents([
