@@ -23,7 +23,7 @@ schedules:
 variables:
 - group: ug-doorknob
 - name: _path_prefix
-  value: '$(PathPrefix)'
+  value: '$(PATH_PREFIX)'
 - name: _path_prefix_url
   value: '$(PATH_PREFIX_URL)'
 - name: _gatsby_cache_folder
