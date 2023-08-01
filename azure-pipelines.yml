@@ -73,17 +73,9 @@ steps:
   condition: ne(variables._path_prefix, 'true')
 
 - bash: |
-
-    cd $(Build.SourcesDirectory)/public
-    ls
-    cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)
-    ls
-
     if [ -d "$(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image" ]; then
-      echo $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image
       cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/
-      pwd
-      mv image/* $(Build.SourcesDirectory)/public/_gatsby/image/
+      rsync -a image/ $(Build.SourcesDirectory)/public/_gatsby/image/
     fi
   displayName: 'Fix images in extra sub-directory'
   condition: eq(variables._path_prefix, 'true')
