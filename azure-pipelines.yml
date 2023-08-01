@@ -24,6 +24,14 @@ variables:
 - group: ug-doorknob
 - name: _path_prefix
   value: '$(PathPrefix)'
+- name: _path_prefix_url
+  value: '$(PATH_PREFIX_URL)'
+- name: _gatsby_cache_folder
+  value: '.cache'
+- name: _gatsby_public_folder
+  value: 'public'
+- name: _npm_node_modules
+  value: 'node_modules'
 
 pool:
   vmImage: ubuntu-latest
@@ -34,8 +42,27 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
-- script: npm install
-  displayName: 'npm install'
+- task: Cache@2
+  inputs:
+    key: '_npm_node_modules | "$(Agent.OS)" | "$(Build.SourceBranch)"'
+    path: $(_npm_node_modules)
+  displayName: 'Retrieve cached NPM folder'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+
+- task: Cache@2
+  inputs:
+    key: 'gatsby_cache | "$(Agent.OS)" | "$(Build.SourceBranch)"'
+    path: $(_gatsby_cache_folder)
+  displayName: 'Retrieve cached Gatsby .cache folder'
+
+- task: Cache@2
+  inputs:
+    key: 'gatsby_public | "$(Agent.OS)" | "$(Build.SourceBranch)"'
+    path: $(_gatsby_public_folder)
+  displayName: 'Retrieve cached Gatsby public folder'
 
 - script: npm run build-prefix
   displayName: 'Build gatsby in sub-directory'
@@ -44,6 +71,15 @@ steps:
 - script: npm run build
   displayName: 'Build gatsby'
   condition: ne(variables._path_prefix, 'true')
+
+- bash: |
+    echo $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image
+    if [ -d "$(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image" ]; then
+      cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/
+      mv image/* $(Build.SourcesDirectory)/public/_gatsby/image/
+    fi
+  displayName: 'Fix images in extra sub-directory'
+  condition: eq(variables._path_prefix, 'true')
 
 - task: ArchiveFiles@2
   inputs:
