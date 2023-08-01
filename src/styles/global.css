@@ -12,13 +12,13 @@
   filter: brightness(1.2);
 }
 
-.spotlight-hero > div {
+.spotlight-hero h2 {
   background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
   transition: background-color 0.2s ease-in-out;
 }
 
-.spotlight-hero:hover > div,
-.spotlight-hero:focus-within > div {
+.spotlight-hero:hover h2,
+.spotlight-hero:focus-within h2 {
   background-color: #ffc72b !important;
 }
 
