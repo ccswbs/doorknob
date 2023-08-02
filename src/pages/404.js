@@ -28,15 +28,14 @@ const NotFoundPage = () => (
       </li>
       <li>
         If you are <strong>looking for an out-of-date page</strong> that might have been removed from this site, you can
-        search for <a href="http://web.archive.org/web/*/https://www.uoguelph.ca/232">an archival copy</a> at the{" "}
+        search for <a href="http://web.archive.org/web/*/https://www.uoguelph.ca/232">an archival copy</a> at the
         <a href="http://www.archive.org">Internet Archive</a>. The University of Guelph is not responsible for the
         contents of the Internet Archive.
       </li>
     </ol>
     <p>
       Please visit the University of Guelph homepage at <a href="http://www.uoguelph.ca/">www.uoguelph.ca</a> or contact
-      the website manager at <a href="mailto:webmaster@uoguelph.ca">webmaster@uoguelph.ca</a>
-      <span class="emailp">&nbsp;</span>.
+      the website manager at <a href="mailto:webmaster@uoguelph.ca">webmaster@uoguelph.ca</a>.
     </p>
   </div>
 )
