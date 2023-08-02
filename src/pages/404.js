@@ -28,7 +28,7 @@ const NotFoundPage = () => (
       </li>
       <li>
         If you are <strong>looking for an out-of-date page</strong> that might have been removed from this site, you can
-        search for <a href="http://web.archive.org/web/*/https://www.uoguelph.ca/232">an archival copy</a> at the
+        search for <a href="http://web.archive.org/web/*/https://www.uoguelph.ca/232">an archival copy</a> at the&nbsp;
         <a href="http://www.archive.org">Internet Archive</a>. The University of Guelph is not responsible for the
         contents of the Internet Archive.
       </li>
