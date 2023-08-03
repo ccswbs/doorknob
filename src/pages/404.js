@@ -1,9 +1,16 @@
-import * as React from "react"
+import React from "react"
+import { useState, useEffect } from "react"
 import Seo from "../components/seo"
 import { useLocation } from "@reach/router"
 
 const NotFoundPage = () => {
-  const location = useLocation();
+  const location = useLocation()
+
+  const [archiveLink, setArchiveLink] = useState("https://web.archive.org/web/*/https://www.uoguelph.ca")
+
+  useEffect(() => {
+    setArchiveLink("https://web.archive.org/web/*/https://www.uoguelph.ca" + location.pathname)
+  }, [])
 
   return (
     <div className="container page-container">
@@ -34,7 +41,7 @@ const NotFoundPage = () => {
               A <strong>mis-typed address</strong>
             </li>
             <li>
-              If you are <strong>looking for an out-of-date page</strong> that might have been removed from this site, you can search for <a href={"https://web.archive.org/web/*/https://www.uoguelph.ca" + location.pathname}>an archival copy</a> at the <a href="https://www.archive.org">Internet Archive</a>. The University of Guelph is not responsible for the contents of the Internet Archive.
+              If you are <strong>looking for an out-of-date page</strong> that might have been removed from this site, you can search for <a href={archiveLink}>an archival copy</a> at the <a href="https://www.archive.org">Internet Archive</a>. The University of Guelph is not responsible for the contents of the Internet Archive.
             </li>
           </ol>
           <p>
