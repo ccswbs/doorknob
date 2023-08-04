@@ -1,4 +1,7 @@
-html, body, #___gatsby, #gatsby-focus-wrapper {
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
   min-height: 100vh;
 }
 
@@ -17,7 +20,9 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 
 #rotator img {
   aspect-ratio: 5/3;
-  transition: filter 0.2s ease-in-out, opacity 0.25s linear !important;
+  transition:
+    filter 0.2s ease-in-out,
+    opacity 0.25s linear !important;
 }
 
 #rotator:hover img,
