@@ -28,18 +28,9 @@ export default function IndexTemplate({ data, children }) {
         <h1 className="visually-hidden">University of Guelph homepage</h1>
         {spotlightData.hero?.length > 0 && <HomeHero heroData={spotlightData.hero[0]} />}
 
-        <HomeLinksPrimary />
         <HomeCardsSpotlight />
         <HomeOverlay />
         <HomeStats />
-
-        <Container className="content-block">
-          <Row>
-            <HomeNews />
-            <HomeEvents />
-          </Row>
-        </Container>
-
         <HomeStory />
       </Container>
     </>
