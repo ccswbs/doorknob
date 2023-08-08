@@ -27,17 +27,8 @@ export default function IndexTemplate({ data, children }) {
       <h1 className="visually-hidden">University of Guelph homepage</h1>
       <HomeHero />
 
-      <HomeLinksPrimary />
       <HomeCardsSpotlight />
-      <HomeOverlay />
       <HomeStats />
-
-      <Container className="content-block">
-        <Row>
-          <HomeNews />
-          <HomeEvents />
-        </Row>
-      </Container>
 
       <HomeStory />
     </>
