@@ -42,7 +42,7 @@ export default function HomeHero() {
   )
 
   let captionContainerClasses = classNames(
-    { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-4")]: !isMobile },
+    { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-5")]: !isMobile },
     { [classNames("w-100", "bg-opacity-100")]: isMobile },
     { [classNames("top-50", "start-0", "translate-middle-y")]: alignment === "west" && !isMobile },
     { [classNames("top-50", "end-0", "translate-middle-y")]: alignment === "east" && !isMobile },
