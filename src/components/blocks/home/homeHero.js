@@ -30,6 +30,7 @@ const query = graphql`
 export default function HomeHero() {
   const data = useStaticQuery(query).blockYaml
   const isMobile = useMediaQuery("(max-width: 992px)")
+  const alignment = data.alignment;
 
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
@@ -43,15 +44,15 @@ export default function HomeHero() {
   let captionContainerClasses = classNames(
     { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-4")]: !isMobile },
     { [classNames("w-100", "bg-opacity-100")]: isMobile },
-    { [classNames("top-50", "start-0", "translate-middle-y")]: data.alignment === "west" && !isMobile },
-    { [classNames("top-50", "end-0", "translate-middle-y")]: data.alignment === "east" && !isMobile },
-    { [classNames("bottom-0", "start-50", "translate-middle-x", "w-100")]: data.alignment === "south" && !isMobile },
-    { [classNames("top-0", "start-50", "translate-middle-x", "w-100")]: data.alignment === "north" && !isMobile },
-    { [classNames("top-0", "start-0")]: data.alignment === "north-west" && !isMobile },
-    { [classNames("top-0", "end-0")]: data.alignment === "north-east" && !isMobile },
-    { [classNames("bottom-0", "start-0")]: data.alignment === "south-west" && !isMobile },
-    { [classNames("bottom-0", "end-0")]: data.alignment === "south-east" && !isMobile },
-    { [classNames("top-50", "start-50", "translate-middle", "w-100")]: data.alignment === "center" && !isMobile },
+    { [classNames("top-50", "start-0", "translate-middle-y")]: alignment === "west" && !isMobile },
+    { [classNames("top-50", "end-0", "translate-middle-y")]: alignment === "east" && !isMobile },
+    { [classNames("bottom-0", "start-50", "translate-middle-x", "w-100")]: alignment === "south" && !isMobile },
+    { [classNames("top-0", "start-50", "translate-middle-x", "w-100")]: alignment === "north" && !isMobile },
+    { [classNames("top-0", "start-0")]: alignment === "north-west" && !isMobile },
+    { [classNames("top-0", "end-0")]: alignment === "north-east" && !isMobile },
+    { [classNames("bottom-0", "start-0")]: alignment === "south-west" && !isMobile },
+    { [classNames("bottom-0", "end-0")]: alignment === "south-east" && !isMobile },
+    { [classNames("top-50", "start-50", "translate-middle", "w-100")]: alignment === "center" && !isMobile },
     "bg-black",
     "text-white",
     "p-md-5",
@@ -59,7 +60,6 @@ export default function HomeHero() {
   )
 
   let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0")
-
   let headingClasses = classNames("h4")
   let bodyClasses = classNames("fs-6")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
