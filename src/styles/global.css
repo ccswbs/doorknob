@@ -39,6 +39,25 @@ body,
   }
 }
 
+hr {
+  border: 0;
+  height: 3px;
+  margin: 3rem 0;
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(194, 4, 48, 1) 20%,
+    rgba(194, 4, 48, 1) 40%,
+    rgba(255, 199, 43, 1) 40%,
+    rgba(255, 199, 43, 1) 60%,
+    rgba(105, 163, 185, 1) 60%,
+    rgba(105, 163, 185, 1) 80%,
+    rgba(0, 0, 0, 1) 80%
+  );
+}
+
 .content-block {
   margin-bottom: 6rem;
 }
