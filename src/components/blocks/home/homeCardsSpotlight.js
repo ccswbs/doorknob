@@ -22,7 +22,7 @@ export default function HomeCardsSpotlight() {
   return (
     quantity > 1 && (
       <Container className="content-block">
-        <h2 className="mt-5 mb-5 text-primary">Spotlight</h2>
+        <h2 className="mt-5 mb-5">Our Latest News and Events</h2>
         <div className={rowClasses}>
           {cardData.map(item => {
             return (
