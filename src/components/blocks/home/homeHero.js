@@ -57,9 +57,10 @@ export default function HomeHero() {
     "text-white",
     "p-md-5",
     "p-4",
+    "spotlight-hero-caption-container"
   )
 
-  let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0")
+  let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0", "spotlight-hero-caption")
   let headingClasses = classNames("h4")
   let bodyClasses = classNames("fs-6")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")

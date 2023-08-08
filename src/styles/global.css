@@ -22,6 +22,11 @@ body,
   aspect-ratio: 5/3;
 }
 
+.spotlight-hero-caption-container {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 @media (min-width: 768px) {
   #rotator img {
     aspect-ratio: 21 / 9;
