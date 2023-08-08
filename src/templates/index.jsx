@@ -16,32 +16,30 @@ import HomeStory from "../components/blocks/home/homeStory"
 import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
 
 export default function IndexTemplate({ data, children }) {
-  const spotlightData = useSpotlightData();
-  
+  const spotlightData = useSpotlightData()
+
   return (
     <>
       <BECookieBar />
       <AppArmorAlert />
       <Seo title={data.mdx.frontmatter.title} />
 
-      <Container fluid>
-        <h1 className="visually-hidden">University of Guelph homepage</h1>
-        {spotlightData.hero?.length > 0 && <HomeHero heroData={spotlightData.hero[0]} />}
+      <h1 className="visually-hidden">University of Guelph homepage</h1>
+      <HomeHero />
 
-        <HomeLinksPrimary />
-        <HomeCardsSpotlight />
-        <HomeOverlay />
-        <HomeStats />
+      <HomeLinksPrimary />
+      <HomeCardsSpotlight />
+      <HomeOverlay />
+      <HomeStats />
 
-        <Container className="content-block">
-          <Row>
-            <HomeNews />
-            <HomeEvents />
-          </Row>
-        </Container>
-
-        <HomeStory />
+      <Container className="content-block">
+        <Row>
+          <HomeNews />
+          <HomeEvents />
+        </Row>
       </Container>
+
+      <HomeStory />
     </>
   )
 }

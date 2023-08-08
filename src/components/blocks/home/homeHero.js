@@ -1,53 +1,83 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import classNames from "classnames"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
+import { graphql, useStaticQuery } from "gatsby"
+import { useMediaQuery } from "../../../hooks/use-media-query"
 
-export default function HomeHero(props) {
-  const { heroData } = props // Extract the heroData from props
+const query = graphql`
+  query {
+    blockYaml(yamlId: { eq: "home_hero" }) {
+      title
+      body
+      alignment
+      link {
+        url
+        text
+      }
+      image {
+        src {
+          childImageSharp {
+            gatsbyImageData(width: 1680, height: 640)
+          }
+        }
+        alt
+      }
+    }
+  }
+`
 
-  const defaultClasses = classNames("d-flex", "p-0", "h-100")
-  const desktopClasses = classNames("position-absolute", "top-50", "start-50", "translate-middle")
-  const [isMobile, setIsMobile] = useState(false)
+export default function HomeHero() {
+  const data = useStaticQuery(query).blockYaml
+  const isMobile = useMediaQuery("(max-width: 992px)")
 
-  let captionClasses = classNames(defaultClasses, { [desktopClasses]: !isMobile }, "spotlight-hero")
-  let linkContainerClasses = classNames("align-self-center", "w-100", {"p-4": !isMobile}, "text-center", "text-white")
-
-  let headingClasses = classNames(
-    { [classNames("w-50", "bg-opacity-75")]: !isMobile, [classNames("w-100", "bg-opacity-100")]: isMobile },
-    "p-5",
-    "h3",
+  let containerClasses = classNames(
+    { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
+    "mb-md-5",
+    "top-0",
+    "h-100",
+    "w-100",
+    "p-0",
   )
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024) // Adjust the breakpoint as per your needs
-    }
+  let captionContainerClasses = classNames(
+    { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-4")]: !isMobile },
+    { [classNames("w-100", "bg-opacity-100")]: isMobile },
+    { [classNames("top-50", "start-0", "translate-middle-y")]: data.alignment === "west" && !isMobile },
+    { [classNames("top-50", "end-0", "translate-middle-y")]: data.alignment === "east" && !isMobile },
+    { [classNames("bottom-0", "start-50", "translate-middle-x")]: data.alignment === "south" && !isMobile },
+    { [classNames("top-0", "start-50", "translate-middle-x")]: data.alignment === "north" && !isMobile },
+    { [classNames("top-0", "start-0")]: data.alignment === "north-west" && !isMobile },
+    { [classNames("top-0", "end-0")]: data.alignment === "north-east" && !isMobile },
+    { [classNames("bottom-0", "start-0")]: data.alignment === "south-west" && !isMobile },
+    { [classNames("bottom-0", "end-0")]: data.alignment === "south-east" && !isMobile },
+    { [classNames("top-50", "start-50", "translate-middle")]: data.alignment === "center" && !isMobile },
+    "bg-black",
+    "text-white",
+    "p-md-5",
+    "p-4",
+  )
 
-    // Add event listener to handle window resize
-    window.addEventListener("resize", handleResize)
+  let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0")
 
-    // Call handleResize initially
-    handleResize()
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+  let headingClasses = classNames("h4")
+  let bodyClasses = classNames("fs-6")
+  let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
 
   return (
-    <Row id="rotator" className="mb-md-5 position-relative">
-      <GatsbyImage image={getImage(heroData.imageSrc)} alt={heroData.imageAlt} />
-      <div className={captionClasses} style={{ maxWidth: "1320px" }}>
-        <div className={linkContainerClasses}>
-          <h2 className={headingClasses}>
-            <a href={heroData.url} className="spotlight text-decoration-none text-white stretched-link fw-normal">
-              {heroData.title}
+    <div id="rotator" className="mb-md-5 position-relative spotlight-hero">
+      <GatsbyImage image={getImage(data.image.src)} alt={data.image.alt} className="w-100" />
+      <div className={containerClasses}>
+        <div className={captionContainerClasses}>
+          <Container className={captionClasses}>
+            <h2 className={headingClasses}>{data.title}</h2>
+            <span className={bodyClasses}>{data.body}</span>
+            <a href={data.link.url} className={linkClasses}>
+              {data.link.text}
             </a>
-          </h2>
+          </Container>
         </div>
       </div>
-    </Row>
+    </div>
   )
 }

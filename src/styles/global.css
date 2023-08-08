@@ -20,33 +20,6 @@ body,
 
 #rotator img {
   aspect-ratio: 5/3;
-  transition:
-    filter 0.2s ease-in-out,
-    opacity 0.25s linear !important;
-}
-
-#rotator:hover img,
-#rotator:focus-within img {
-  filter: brightness(1.2);
-}
-
-.spotlight-hero h2 {
-  background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.spotlight-hero:hover h2,
-.spotlight-hero:focus-within h2 {
-  background-color: #ffc72b !important;
-}
-
-.spotlight-hero .spotlight {
-  transition: color 0.2s ease-in-out;
-}
-
-.spotlight-hero:hover .spotlight,
-.spotlight-hero:focus-within .spotlight {
-  color: black !important;
 }
 
 @media (min-width: 768px) {
@@ -54,6 +27,7 @@ body,
     aspect-ratio: 21 / 9;
   }
 }
+
 @media (min-width: 992px) {
   #rotator img {
     aspect-ratio: auto;
@@ -143,7 +117,7 @@ h1 {
 }
 
 @media screen and (min-width: 1320px) {
-  .spotlight-hero .spotlight::after {
+  .spotlight::after {
     width: 100vw;
     left: calc(calc(100vw - 1320px) / -2);
   }
