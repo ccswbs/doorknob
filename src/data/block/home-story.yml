@@ -1,5 +1,4 @@
 id: home_story
-
 content:
   blockquote: Change happens at the community level. Small people put in small efforts and those efforts add up to something big.
   foreground:
@@ -9,14 +8,6 @@ content:
     body: Learn more about how the University of Guelph is working to
     button: Improve Life
     url: https://www.uoguelph.ca/improve-life/
-  video:
-    id: "xOL5GVOMfCw"
-    type: youtube
-    title: MealCare
-    url: https://www.youtube.com/watch?v=xOL5GVOMfCw
-    transcript: /transcripts/mealcare-transcript.txt
-    captions: /captions/mealcare-captions.srt
-
 background:
   src: ../../images/home/meal-care-bg.jpg
   alt: Student volunteers
