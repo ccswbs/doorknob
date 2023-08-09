@@ -52,7 +52,7 @@ export default function HomeHero( props ) {
             <h2 className={headingClasses}>{heroData.title}</h2>
             <span className={bodyClasses}>{heroData.captionText}</span>
             <a href={heroData.url} className={linkClasses}>
-              {heroData.buttonText}
+              {heroData.buttonText ? heroData.buttonText : "Learn More"}
             </a>
           </Container>
         </div>
