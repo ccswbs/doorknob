@@ -8,15 +8,17 @@ import HomeHero from "../components/blocks/home/homeHero"
 import HomeTagline from "../components/blocks/home/homeTagline"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
+import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
 
 export default function IndexTemplate({ data, children }) {
+  const spotlightData = useSpotlightData();
   return (
     <>
       <BECookieBar />
       <AppArmorAlert />
       <Seo title={data.mdx.frontmatter.title} />
       <h1 className="visually-hidden">University of Guelph homepage</h1>
-      <HomeHero />
+      {spotlightData.hero?.length > 0 && <HomeHero heroData={spotlightData.hero[0]} />}
       <HomeTagline />
       <HomeCardsSpotlight />
       <HomeStats />
