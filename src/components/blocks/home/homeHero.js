@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import classNames from "classnames"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Row } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { useMediaQuery } from "../../../hooks/use-media-query"
 
 export default function HomeHero( props ) {
     
   const { heroData } = props // Extract the heroData from props  
   const isMobile = useMediaQuery("(max-width: 992px)")
-  const alignment = data.alignment;
+  const alignment = heroData.captionAlign;
   
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },

@@ -58,7 +58,7 @@ export default function HomeStory() {
   const background = data.blockYaml.background
 
   return (
-    <Row className="bg-black content-block">
+    <div className="bg-black content-block">
       <Overlay.GatsbyImage gatsbyImageData={getImage(background.src)} alt={background.alt} className="opacity-75 h-100">
         <Container>
           <Row className="bg-transparent h-100 text-white pb-0 px-5 pt-5">
@@ -101,6 +101,6 @@ export default function HomeStory() {
           </Row>
         </Container>
       </div>
-    </Row>
+    </div>
   )
 }
