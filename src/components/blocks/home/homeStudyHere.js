@@ -30,8 +30,15 @@ export default function HomeStudyHere() {
   const [activeLink, setActiveLink] = useState(links[0])
   const isMobile = useMediaQuery("(max-width: 992px)")
 
-  const imageClasses = classNames("position-absolute", "w-100", "mh-100", "z-n1")
-  const captionClasses = classNames("position-absolute", "bottom-0", "start-0", "text-white", "p-4", "study-here-caption fs-6")
+  const imageClasses = classNames("position-absolute", "w-100", "mh-100", "z-n1", "study-here-image")
+  const captionClasses = classNames(
+    "position-absolute",
+    "bottom-0",
+    "start-0",
+    "text-white",
+    "p-4",
+    "study-here-caption fs-6",
+  )
 
   const linkContainerClasses = classNames(
     { [classNames("ms-auto", "w-33")]: !isMobile },
@@ -62,7 +69,15 @@ export default function HomeStudyHere() {
       <div className="position-relative study-here-container">
         {!isMobile && (
           <>
-            <GatsbyImage image={getImage(activeLink.image.src)} alt={activeLink.image.alt} className={imageClasses} />
+            {links.map(link => {
+              return (
+                <GatsbyImage
+                  image={getImage(link.image.src)}
+                  alt={link.image.alt}
+                  className={classNames(imageClasses, { [classNames("hidden")]: link !== activeLink })}
+                />
+              )
+            })}
             <span className={captionClasses}>{activeLink.image.caption}</span>
           </>
         )}

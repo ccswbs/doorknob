@@ -118,6 +118,17 @@ h1 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
 }
 
+.study-here-container .study-here-image {
+  transition-property: opacity, visibility !important;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.study-here-container .study-here-image.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .study-here-link {
   transition-property: background-color, color;
   transition-duration: 0.2s;
