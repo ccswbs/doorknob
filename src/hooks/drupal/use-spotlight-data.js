@@ -130,6 +130,6 @@ export const useSpotlightData = () => {
     hero: heroData,
     cards: cardsData
   }
-  console.log(heroData);
+
   return spotlightData;
 } 

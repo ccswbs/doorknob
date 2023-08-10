@@ -21,7 +21,7 @@ export default function IndexTemplate({ data, children }) {
       <Seo title={data.mdx.frontmatter.title} />
       <h1 className="visually-hidden">University of Guelph homepage</h1>
       {/* spotlightData.hero?.length > 0 && <HomeHero heroData={spotlightData.hero[0]} /> */}
-      {heroData.length > 0 && <HomeHero heroData={heroData} />}
+      {heroData.length > 0 && <HomeHero heroData={heroData[0]} />}
       <HomeTagline />
       <HomeCardsSpotlight />
       <HomeStats />

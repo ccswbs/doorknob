@@ -27,7 +27,7 @@ export const useHeroData = () => {
 	`
   )
   heroData.push({
-    imageSrc: data.blockYaml.image.src,
+    imageSrc: data.blockYaml.image.src.childImageSharp.gatsbyImageData,
     imageAlt: data.blockYaml.image.alt,
     buttonText: data.blockYaml.link.text,
     captionAlign: data.blockYaml.captionAlignment,

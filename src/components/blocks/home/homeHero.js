@@ -37,7 +37,7 @@ export default function HomeHero( props ) {
   let headingClasses = classNames("h4")
   let bodyClasses = classNames("fs-6")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
-
+  console.log(heroData);
   return (
     <div id="rotator" className="mb-md-5 position-relative spotlight-hero">
       <GatsbyImage image={getImage(heroData.imageSrc)} alt={heroData.imageAlt} className="w-100" />
