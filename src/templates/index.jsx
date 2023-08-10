@@ -28,7 +28,7 @@ export default function IndexTemplate({ data, children }) {
       <AppArmorAlert />
       <Seo title={data.mdx.frontmatter.title} />
       <h1 className="visually-hidden">University of Guelph homepage</h1>
-      {renderHero}
+      <HomeHero heroData={heroData[0]} />
       <HomeTagline />
       <HomeCardsSpotlight />
       <HomeStudyHere />

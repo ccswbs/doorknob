@@ -5,11 +5,10 @@ import { Container } from "react-bootstrap"
 import { useMediaQuery } from "../../../hooks/use-media-query"
 
 export default function HomeHero( props ) {
-    
   const { heroData } = props // Extract the heroData from props  
   const isMobile = useMediaQuery("(max-width: 992px)")
   const alignment = heroData.captionAlign;
-  
+
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
     "mb-md-5",
@@ -37,7 +36,7 @@ export default function HomeHero( props ) {
   let headingClasses = classNames("h4")
   let bodyClasses = classNames("fs-6")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
-  console.log(heroData);
+
   return (
     <div id="rotator" className="mb-md-5 position-relative spotlight-hero">
       <GatsbyImage image={getImage(heroData.imageSrc)} alt={heroData.imageAlt} className="w-100" />
