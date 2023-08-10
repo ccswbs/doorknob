@@ -9,7 +9,7 @@ export const useHeroData = () => {
 		blockYaml(yamlId: { eq: "home_hero" }) {
 		  title
 		  body
-		  alignment
+		  captionAlignment
 		  link {
 			url
 			text
@@ -30,7 +30,7 @@ export const useHeroData = () => {
     imageSrc: data.blockYaml.image.src,
     imageAlt: data.blockYaml.image.alt,
     buttonText: data.blockYaml.link.text,
-    captionAlign: data.blockYaml.alignment,
+    captionAlign: data.blockYaml.captionAlignment,
     captionText: data.blockYaml.body,
     title: data.blockYaml.title,
     url: data.blockYaml.link.url
