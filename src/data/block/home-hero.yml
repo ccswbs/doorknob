@@ -1,4 +1,10 @@
 id: home_hero
+title: "Equity, Diversity, and Inclusion"
+body: "All voices are needed when we pursue diverse ideas, knowledge and perspectives that allow us to lead with purpose"
+alignment: left
+link:
+  url: https://www.uoguelph.ca/president/edi/
+  text: Learn More
 image:
-  src: ../../images/home/banner.jpg
-  alt: Johnston Hall
+  src: ../../images/home/banner.png
+  alt: A group of people sitting on a bench with laptops and tablets.
