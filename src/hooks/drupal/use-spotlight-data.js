@@ -81,9 +81,7 @@ export const useSpotlightData = () => {
                   relationships {
                     field_media_image {
                       gatsbyImage(
-                        width: 400,
-                        aspectRatio: 1.5,
-                        cropFocus: ENTROPY
+                        width: 640
                       )
                     }
                   }
