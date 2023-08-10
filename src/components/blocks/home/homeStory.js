@@ -30,14 +30,10 @@ const query = graphql`
           }
           alt
         }
-        cta
-        video {
-          id
-          type
-          title
+        cta {
+          body
+          button
           url
-          transcript
-          captions
         }
       }
       background {
@@ -84,19 +80,8 @@ export default function HomeStory() {
         <Container>
           <Row>
             <Col lg={12} className="align-items-center d-flex fs-4 justify-content-center p-3 text-white">
-              <p className="mb-0">{content.cta}</p>
-              <ModalVideo
-                id={content.video.id}
-                src={content.video.url}
-                title={content.video.title}
-                transcript={content.video.transcript}
-                modalButton={
-                  <button type="button" className="btn btn-primary ms-4 my-4">
-                    <i className="fa-solid fa-play me-2" /> Watch Video
-                    <span className="visually-hidden">: {content.video.title}</span>
-                  </button>
-                }
-              />
+              <p className="mb-0">{content.cta.body}</p>
+              <a className="btn btn-primary ms-4 my-4 fs-5">{content.cta.button}</a>
             </Col>
           </Row>
         </Container>

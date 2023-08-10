@@ -14,6 +14,21 @@ body,
   flex: 1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Roboto Condensed", "Roboto", Arial, sans-serif;
+}
+
 #rotator {
   margin-top: calc(var(--uofg-header-height) * -0.2);
 }
@@ -46,15 +61,19 @@ hr {
   opacity: 1;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(194, 4, 48, 1) 20%,
-    rgba(194, 4, 48, 1) 40%,
-    rgba(255, 199, 43, 1) 40%,
-    rgba(255, 199, 43, 1) 60%,
-    rgba(105, 163, 185, 1) 60%,
-    rgba(105, 163, 185, 1) 80%,
-    rgba(0, 0, 0, 1) 80%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 14%,
+    rgba(0, 0, 0, 1) 14%,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(194, 4, 48, 1) 28%,
+    rgba(194, 4, 48, 1) 42%,
+    rgba(255, 199, 43, 1) 42%,
+    rgba(255, 199, 43, 1) 56%,
+    rgba(105, 163, 185, 1) 56%,
+    rgba(105, 163, 185, 1) 70%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 1) 84%,
+    rgba(0, 0, 0, 0) 84%
   );
 }
 
@@ -71,6 +90,8 @@ h1 {
 }
 
 .spotlight-card img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   transition:
     transform 0.2s ease-in-out,
     opacity 0.25s linear !important;
@@ -81,8 +102,20 @@ h1 {
   transform: scale(1.1);
 }
 
+.spotlight-card.left-align-image img {
+  object-position: left;
+}
+
+.spotlight-card.right-align-image img {
+  object-position: right;
+}
+
 .spotlight-card .card-body {
   padding: 2rem;
+}
+
+.spotlight-card .spotlight {
+  font-family: inherit;
 }
 
 .homepage-primary-links a {
@@ -137,12 +170,5 @@ h1 {
 
   .homepage-primary-links a {
     height: 8rem;
-  }
-}
-
-@media screen and (min-width: 1320px) {
-  .spotlight::after {
-    width: 100vw;
-    left: calc(calc(100vw - 1320px) / -2);
   }
 }
