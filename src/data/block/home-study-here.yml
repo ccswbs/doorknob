@@ -3,25 +3,25 @@ links:
   - title: Undergraduate Programs
     url: https://admission.uoguelph.ca/programs
     image:
-      src: ../../images/placeholder.jpg
+      src: ../../images/home/undergraduate.png
       alt: Placeholder image
       caption: "Monica Gomez, Food Science PhD '22"
   - title: Graduate Programs
     url: https://graduatestudies.uoguelph.ca
     image:
-      src: ../../images/home/banner.jpg
+      src: ../../images/home/graduate.png
       alt: Placeholder image
       caption: "John Doe, Psychology PhD '23"
   - title: International
     url: https://uoguelph.ca/international-students
     image:
-      src: ../../images/home/banner.png
+      src: ../../images/home/international.png
       alt: Placeholder image,
       caption: "Jane Doe, Computer Science '21"
   - title: Open Education
     url: https://opened.uoguelph.ca
     image:
-      src: ../../images/placeholder.jpg
+      src: ../../images/home/open-education.png
       alt: Placeholder image
-      caption: "Monica Gomez, Food Science PhD '22"
+      caption: "Richard Doe, Chemical Engineering '20"
 
