@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Overlay from "../../shared/overlay"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Col, Container, Row } from "react-bootstrap"
-import ModalVideo from "../../shared/modalVideo"
 
 const QuoteMark = styled.i`
   color: var(--bs-yellow);
@@ -81,7 +80,7 @@ export default function HomeStory() {
           <Row>
             <Col lg={12} className="align-items-center d-flex fs-4 justify-content-center p-3 text-white">
               <p className="mb-0">{content.cta.body}</p>
-              <a className="btn btn-primary ms-4 my-4 fs-5">{content.cta.button}</a>
+              <a className="btn btn-primary ms-4 my-4 fs-5" href={content.cta.url}>{content.cta.button}</a>
             </Col>
           </Row>
         </Container>
