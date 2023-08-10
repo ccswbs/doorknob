@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
@@ -27,7 +27,10 @@ const query = graphql`
 
 export default function HomeStudyHere() {
   const links = useStaticQuery(query).blockYaml.links
+  const [activeLink, setActiveLink] = useState(links[0]);
   const isMobile = useMediaQuery("(max-width: 992px)")
+
+  const imageClasses = classNames("position-absolute", "w-100", "mh-100", "z-n1");
 
   const linkContainerClasses = classNames(
     { [classNames("ms-auto", "w-33")]: !isMobile },
@@ -57,13 +60,13 @@ export default function HomeStudyHere() {
 
       <div className="position-relative">
         {!isMobile && (
-          <img src="https://placehold.co/600x400/png" className="position-absolute w-100 mh-100 z-n1" />
+          <GatsbyImage image={getImage(activeLink.image.src)} alt={activeLink.image.alt} className={imageClasses} />
         )}
 
         <div className={linkContainerClasses}>
           {links.map(link => {
             return (
-              <a href={link.url} className={linkClasses} key={link.url}>
+              <a href={link.url} className={linkClasses} key={link.url} onMouseEnter={() => setActiveLink(link)}>
                 <h3 className="mb-0 h5">{link.title}</h3>
                 <i className="fa-solid fa-chevron-right"></i>
               </a>
