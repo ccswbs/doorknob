@@ -27,10 +27,11 @@ const query = graphql`
 
 export default function HomeStudyHere() {
   const links = useStaticQuery(query).blockYaml.links
-  const [activeLink, setActiveLink] = useState(links[0]);
+  const [activeLink, setActiveLink] = useState(links[0])
   const isMobile = useMediaQuery("(max-width: 992px)")
 
-  const imageClasses = classNames("position-absolute", "w-100", "mh-100", "z-n1");
+  const imageClasses = classNames("position-absolute", "w-100", "mh-100", "z-n1")
+  const captionClasses = classNames("position-absolute", "bottom-0", "start-0", "text-white", "p-4", "study-here-caption fs-6")
 
   const linkContainerClasses = classNames(
     { [classNames("ms-auto", "w-33")]: !isMobile },
@@ -58,9 +59,12 @@ export default function HomeStudyHere() {
     <Container className="content-block position-relative">
       <h2 className="mt-5 mb-5">Study Here</h2>
 
-      <div className="position-relative">
+      <div className="position-relative study-here-container">
         {!isMobile && (
-          <GatsbyImage image={getImage(activeLink.image.src)} alt={activeLink.image.alt} className={imageClasses} />
+          <>
+            <GatsbyImage image={getImage(activeLink.image.src)} alt={activeLink.image.alt} className={imageClasses} />
+            <span className={captionClasses}>{activeLink.image.caption}</span>
+          </>
         )}
 
         <div className={linkContainerClasses}>
