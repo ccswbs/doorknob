@@ -11,17 +11,17 @@ links:
     image:
       src: ../../images/home/banner.jpg
       alt: Placeholder image
-      caption: "John Doe, Psychology PhD '22"
+      caption: "John Doe, Psychology PhD '23"
   - title: International
     url: https://uoguelph.ca/international-students
     image:
       src: ../../images/home/banner.png
       alt: Placeholder image,
-      caption: "Jane Doe, Computer Science '22"
+      caption: "Jane Doe, Computer Science '21"
   - title: Open Education
     url: https://opened.uoguelph.ca
     image:
       src: ../../images/placeholder.jpg
       alt: Placeholder image
-      caption: "test caption"
+      caption: "Monica Gomez, Food Science PhD '22"
 
