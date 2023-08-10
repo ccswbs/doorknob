@@ -8,6 +8,7 @@ export default function HomeCardsSpotlight() {
   const spotlightData = useSpotlightData()
   const cardData = spotlightData.cards
   const quantity = cardData.length
+  const imageAlignment = spotlightData?.imageAlignment ?? "center" // 3 options: left, center, right
   const rowClasses = classNames(
     "row",
     "row-cols-1",
@@ -18,6 +19,15 @@ export default function HomeCardsSpotlight() {
       "row-cols-md-2 row-cols-xl-4": quantity === 4,
     }, // xl: allow 4 on a single row
   )
+  const cardClasses = classNames(
+    "h-100",
+    "border-0",
+    "bg-info",
+    "bg-opacity-10",
+    "spotlight-card",
+    { "left-align-image": imageAlignment === "left" },
+    { "right-align-image": imageAlignment === "right" },
+  )
 
   return (
     quantity > 1 && (
@@ -27,7 +37,7 @@ export default function HomeCardsSpotlight() {
           {cardData.map(item => {
             return (
               <Col key={item.key} className="mt-4 mb-4">
-                <Card className="h-100 border-0 bg-info bg-opacity-10 spotlight-card">
+                <Card className={cardClasses}>
                   <GatsbyImage image={getImage(item.imageSrc)} alt={item.imageAlt} className="card-img-top" />
                   <Card.Body>
                     <Card.Title
