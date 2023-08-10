@@ -19,6 +19,15 @@ export default function HomeCardsSpotlight() {
       "row-cols-md-2 row-cols-xl-4": quantity === 4,
     }, // xl: allow 4 on a single row
   )
+  const cardClasses = classNames(
+    "h-100",
+    "border-0",
+    "bg-info",
+    "bg-opacity-10",
+    "spotlight-card",
+    { "left-align-image": imageAlignment === "left" },
+    { "right-align-image": imageAlignment === "right" },
+  )
 
   const cardClasses = classNames(
     "h-100",
