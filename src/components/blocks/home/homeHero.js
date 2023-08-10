@@ -7,7 +7,7 @@ import { useMediaQuery } from "../../../hooks/use-media-query"
 export default function HomeHero( props ) {
   const { heroData } = props // Extract the heroData from props  
   const isMobile = useMediaQuery("(max-width: 992px)")
-  const alignment = heroData.captionAlign;
+  const alignment = heroData.captionAlign ?? "left";
 
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
