@@ -90,6 +90,8 @@ h1 {
 }
 
 .spotlight-card img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   transition:
     transform 0.2s ease-in-out,
     opacity 0.25s linear !important;
@@ -98,6 +100,14 @@ h1 {
 .spotlight-card:hover img,
 .spotlight-card:focus img {
   transform: scale(1.1);
+}
+
+.spotlight-card.left-align-image img {
+  object-position: left;
+}
+
+.spotlight-card.right-align-image img {
+  object-position: right;
 }
 
 .spotlight-card .card-body {

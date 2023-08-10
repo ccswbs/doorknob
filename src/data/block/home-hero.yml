@@ -1,7 +1,7 @@
 id: home_hero
 title: "Equity, Diversity, and Inclusion"
 body: "All voices are needed when we pursue diverse ideas, knowledge and perspectives that allow us to lead with purpose"
-alignment: left
+captionAlignment: left
 link:
   url: https://www.uoguelph.ca/president/edi/
   text: Learn More

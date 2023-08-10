@@ -10,7 +10,7 @@ const query = graphql`
     blockYaml(yamlId: { eq: "home_hero" }) {
       title
       body
-      alignment
+      captionAlignment
       link {
         url
         text
@@ -30,7 +30,7 @@ const query = graphql`
 export default function HomeHero() {
   const data = useStaticQuery(query).blockYaml
   const isMobile = useMediaQuery("(max-width: 992px)")
-  const alignment = data.alignment;
+  const alignment = data.captionAlignment;
 
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
