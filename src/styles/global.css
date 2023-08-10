@@ -29,8 +29,8 @@ h6,
   font-family: "Roboto Condensed", "Roboto", Arial, sans-serif;
 }
 
-#rotator {
-  margin-top: calc(var(--uofg-header-height) * -0.2);
+.w-33 {
+  width: 33.333% !important;
 }
 
 #rotator img {

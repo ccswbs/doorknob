@@ -8,6 +8,7 @@ import HomeHero from "../components/blocks/home/homeHero"
 import HomeTagline from "../components/blocks/home/homeTagline"
 import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
+import HomeStudyHere from "../components/blocks/home/homeStudyHere"
 
 export default function IndexTemplate({ data, children }) {
   return (
@@ -19,6 +20,7 @@ export default function IndexTemplate({ data, children }) {
       <HomeHero />
       <HomeTagline />
       <HomeCardsSpotlight />
+      <HomeStudyHere />
       <HomeStats />
       <HomeStory />
     </>
