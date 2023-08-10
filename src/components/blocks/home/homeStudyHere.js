@@ -31,9 +31,11 @@ export default function HomeStudyHere() {
 
   const linkContainerClasses = classNames(
     { [classNames("ms-auto", "w-33")]: !isMobile },
+    { [classNames("w-100")]: isMobile },
     "d-flex",
     "flex-column",
     "gap-2",
+    "z-10",
   )
 
   const linkClasses = classNames(
@@ -46,21 +48,28 @@ export default function HomeStudyHere() {
     "text-decoration-none",
     "text-white",
     "gap-3",
+    "study-here-link",
   )
 
   return (
     <Container className="content-block position-relative">
       <h2 className="mt-5 mb-5">Study Here</h2>
 
-      <div className={linkContainerClasses}>
-        {links.map(link => {
-          return (
-            <a href={link.url} className={linkClasses} key={link.url}>
-              <h3 className="mb-0 h5">{link.title}</h3>
-              <i className="fa-solid fa-chevron-right"></i>
-            </a>
-          )
-        })}
+      <div className="position-relative">
+        {!isMobile && (
+          <img src="https://placehold.co/600x400/png" className="position-absolute w-100 mh-100 z-n1" />
+        )}
+
+        <div className={linkContainerClasses}>
+          {links.map(link => {
+            return (
+              <a href={link.url} className={linkClasses} key={link.url}>
+                <h3 className="mb-0 h5">{link.title}</h3>
+                <i className="fa-solid fa-chevron-right"></i>
+              </a>
+            )
+          })}
+        </div>
       </div>
     </Container>
   )
