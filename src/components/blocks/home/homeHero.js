@@ -1,37 +1,15 @@
 import React from "react"
 import classNames from "classnames"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row } from "react-bootstrap"
-import { graphql, useStaticQuery } from "gatsby"
+import { Container } from "react-bootstrap"
 import { useMediaQuery } from "../../../hooks/use-media-query"
 
-const query = graphql`
-  query {
-    blockYaml(yamlId: { eq: "home_hero" }) {
-      title
-      body
-      captionAlignment
-      link {
-        url
-        text
-      }
-      image {
-        src {
-          childImageSharp {
-            gatsbyImageData(width: 1680, height: 640)
-          }
-        }
-        alt
-      }
-    }
-  }
-`
-
-export default function HomeHero() {
-  const data = useStaticQuery(query).blockYaml
+export default function HomeHero( props ) {
+    
+  const { heroData } = props // Extract the heroData from props  
   const isMobile = useMediaQuery("(max-width: 992px)")
-  const alignment = data.captionAlignment;
-
+  const alignment = heroData.captionAlign;
+  
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
     "mb-md-5",
@@ -59,17 +37,17 @@ export default function HomeHero() {
   let headingClasses = classNames("h4")
   let bodyClasses = classNames("fs-6")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
-
+  console.log(heroData);
   return (
     <div id="rotator" className="mb-md-5 position-relative spotlight-hero">
-      <GatsbyImage image={getImage(data.image.src)} alt={data.image.alt} className="w-100" />
+      <GatsbyImage image={getImage(heroData.imageSrc)} alt={heroData.imageAlt} className="w-100" />
       <div className={containerClasses}>
         <div className={captionContainerClasses}>
           <Container className={captionClasses}>
-            <h2 className={headingClasses}>{data.title}</h2>
-            <span className={bodyClasses}>{data.body}</span>
-            <a href={data.link.url} className={linkClasses}>
-              {data.link.text}
+            <h2 className={headingClasses}>{heroData.title}</h2>
+            <span className={bodyClasses}>{heroData.captionText}</span>
+            <a href={heroData.url} className={linkClasses}>
+              {heroData.buttonText ? heroData.buttonText : "Learn More"}
             </a>
           </Container>
         </div>

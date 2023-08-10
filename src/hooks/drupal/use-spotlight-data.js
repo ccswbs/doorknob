@@ -33,6 +33,9 @@ export const useSpotlightData = () => {
           ) {
           edges {
             node {
+              field_spotlight_alignment
+              field_spotlight_button
+              field_spotlight_caption
               field_spotlight_rank
               field_spotlight_url {
                 uri
@@ -46,12 +49,13 @@ export const useSpotlightData = () => {
                   }
                   relationships {
                     field_media_image {
-                      gatsbyImage(width: 1920)
+                      gatsbyImage(width: 1680, height: 640)
                     }
                   }
                 }
               }
               drupal_id
+              title
             }
           }
         }
@@ -96,7 +100,10 @@ export const useSpotlightData = () => {
     heroData.push({
       imageSrc: item?.node?.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage,
       imageAlt: item?.node?.relationships.field_hero_image?.field_media_image.alt,
-      title: item?.node?.field_spotlight_url.title,
+      buttonText: item?.node?.field_spotlight_button,
+      captionAlign: item?.node?.field_spotlight_alignment,
+      captionText: item?.node?.field_spotlight_caption,
+      title: item?.node?.title,
       url: getLink(item?.node?.field_spotlight_url)
     })
   });
