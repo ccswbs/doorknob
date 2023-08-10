@@ -13,14 +13,8 @@ import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
 import { useHeroData } from "../hooks/yaml/use-hero-data"
 
 export default function IndexTemplate({ data, children }) {
-  const spotlightData = useSpotlightData();
-  const heroData = useHeroData();
-
-  const renderHero = spotlightData && spotlightData.hero?.length > 0 ? (
-    <HomeHero heroData={spotlightData.hero[0]} />
-  ) : (
-    <HomeHero heroData={heroData[0]} />
-  );
+  const spotlightData = useSpotlightData() // use this for drupal data
+  //const heroData = useHeroData() use this for yaml data
 
   return (
     <>
@@ -28,7 +22,7 @@ export default function IndexTemplate({ data, children }) {
       <AppArmorAlert />
       <Seo title={data.mdx.frontmatter.title} />
       <h1 className="visually-hidden">University of Guelph homepage</h1>
-      <HomeHero heroData={heroData[0]} />
+      <HomeHero heroData={spotlightData.hero[0]} />
       <HomeTagline />
       <HomeCardsSpotlight />
       <HomeStudyHere />
