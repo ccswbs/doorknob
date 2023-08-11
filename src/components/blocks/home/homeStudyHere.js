@@ -30,7 +30,7 @@ export default function HomeStudyHere() {
   const [activeLink, setActiveLink] = useState(links[0])
   const isMobile = useMediaQuery("(max-width: 992px)")
 
-  const imageClasses = classNames("position-absolute", "w-100", "mh-100", "z-n1", "study-here-image")
+  const imageClasses = classNames("position-absolute", "w-100", "h-100", "mh-100", "z-n1", "study-here-image")
   const captionClasses = classNames(
     "position-absolute",
     "bottom-0",
