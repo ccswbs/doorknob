@@ -8,7 +8,7 @@ const Gradient = styled.div`
   @media (min-width: 576px) and (max-width: 992px) {
     background: ${props => (props.stackedGradientStyle ?? "none")};
     && dl > div {
-      background: none;
+      
     }
     
   }
@@ -156,7 +156,7 @@ Statistic.Gradient = ({stats}) => {
   }
 
   return (
-    <Gradient className="row d-flex flex-column" 
+    <Gradient className="row d-flex flex-column w-100 mx-auto" 
               gradientStyle={gradientStyle} 
               stackedGradientStyle={stackedGradientStyle} >
       <div className="p-0">
