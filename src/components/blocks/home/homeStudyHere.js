@@ -73,6 +73,7 @@ export default function HomeStudyHere() {
             {links.map(link => {
               return (
                 <GatsbyImage
+                  key={link.url}
                   image={getImage(link.image.src)}
                   alt={link.image.alt}
                   className={classNames(imageClasses, { [classNames("hidden")]: link !== activeLink })}
