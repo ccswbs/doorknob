@@ -4,13 +4,13 @@ import { Container } from "react-bootstrap"
 
 const Gradient = styled.div`
   background: ${props => (props.gradientStyle ?? "none")};
-  
+
   @media (min-width: 576px) and (max-width: 992px) {
     background: ${props => (props.stackedGradientStyle ?? "none")};
     && dl > div {
-      
+      background: none;
     }
-    
+
   }
 `
 const gradientColourOptions = [
@@ -156,21 +156,21 @@ Statistic.Gradient = ({stats}) => {
   }
 
   return (
-    <Gradient className="row d-flex flex-column w-100 mx-auto" 
-              gradientStyle={gradientStyle} 
+    <Gradient className="row d-flex flex-column w-100 mx-auto"
+              gradientStyle={gradientStyle}
               stackedGradientStyle={stackedGradientStyle} >
       <div className="p-0">
-        <Container className="px-0"> 
+        <Container className="px-0">
           <Statistic className={`row g-0 row-cols-1 ${rowClasses} justify-content-center mb-0`}>
               {stats.map((stat, index) => {
                 let type = stat.field_statistic_represents;
                 let value = stat.field_statistic_value;
                 let icon = stat.field_font_awesome_icon;
 
-                return <Statistic.SolidCard 
-                      key={`gradient-stat-${index}`} 
-                      background={gradientColourOptions[index%gradientColourOptions.length].background} 
-                      colour={gradientColourOptions[index%gradientColourOptions.length].colour} 
+                return <Statistic.SolidCard
+                      key={`gradient-stat-${index}`}
+                      background={gradientColourOptions[index%gradientColourOptions.length].background}
+                      colour={gradientColourOptions[index%gradientColourOptions.length].colour}
                       className="p-5 col">
                         {icon && <Statistic.Icon icon={icon} colour={gradientColourOptions[index%gradientColourOptions.length].colour} />}
                         <Statistic.Value><strong>{value}</strong></Statistic.Value>
@@ -180,7 +180,7 @@ Statistic.Gradient = ({stats}) => {
               )}
           </Statistic>
         </Container>
-      </div>                
+      </div>
     </Gradient>
 )}
 
