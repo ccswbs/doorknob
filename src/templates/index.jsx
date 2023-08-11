@@ -10,6 +10,7 @@ import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
 import HomeStudyHere from "../components/blocks/home/homeStudyHere"
 import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
+import BERelatedLinks from "../components/beRelatedLinks"
 //import { useHeroData } from "../hooks/yaml/use-hero-data"
 
 export default function IndexTemplate({ data, children }) {
@@ -28,6 +29,7 @@ export default function IndexTemplate({ data, children }) {
       <HomeStudyHere />
       <HomeStats />
       <HomeStory />
+      <BERelatedLinks />
     </>
   )
 }
