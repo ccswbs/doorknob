@@ -10,7 +10,7 @@ import HomeStats from "../components/blocks/home/homeStats"
 import HomeStory from "../components/blocks/home/homeStory"
 import HomeStudyHere from "../components/blocks/home/homeStudyHere"
 import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
-import { useHeroData } from "../hooks/yaml/use-hero-data"
+//import { useHeroData } from "../hooks/yaml/use-hero-data"
 
 export default function IndexTemplate({ data, children }) {
   const spotlightData = useSpotlightData() // use this for drupal data
@@ -20,8 +20,8 @@ export default function IndexTemplate({ data, children }) {
     <>
       <BECookieBar />
       <AppArmorAlert />
-      <Seo title={data.mdx.frontmatter.title} />
-      <h1 className="visually-hidden">University of Guelph homepage</h1>
+      <Seo title="University of Guelph - Improve Life" description="Discover excellence at the University of Guelph - a leading institution fostering innovation, world-class research, and personalized learning. Explore our diverse academic programs, cutting-edge facilities, and vibrant campus life. Join a community dedicated to shaping the future." />
+      <h1 className="visually-hidden">University of Guelph, Ontario, Canada</h1>
       <HomeHero heroData={spotlightData.hero[0]} />
       <HomeTagline />
       <HomeCardsSpotlight />
