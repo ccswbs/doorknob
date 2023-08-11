@@ -16,7 +16,7 @@ const query = graphql`
           caption
           src {
             childImageSharp {
-              gatsbyImageData(width: 1320, aspectRatio: 2.333)
+              gatsbyImageData(width: 1320)
             }
           }
         }
@@ -38,6 +38,7 @@ export default function HomeStudyHere() {
     "text-white",
     "p-4",
     "study-here-caption fs-6",
+    "w-66"
   )
 
   const linkContainerClasses = classNames(

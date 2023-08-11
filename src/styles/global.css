@@ -33,6 +33,10 @@ h6,
   width: 33.333% !important;
 }
 
+.w-66 {
+  width: 66.666% !important;
+}
+
 #rotator img {
   aspect-ratio: 5/3;
 }
