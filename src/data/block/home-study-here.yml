@@ -3,25 +3,25 @@ links:
   - title: Undergraduate Programs
     url: https://admission.uoguelph.ca/programs
     image:
-      src: ../../images/home/undergraduate.png
+      src: ../../images/home/leah-weller-environmental-engineering-u-of-g.jpg
       alt: Placeholder image
-      caption: "Monica Gomez, Food Science PhD '22"
+      caption: "Leah Weller - Environmental Engineering"
   - title: Graduate Programs
     url: https://graduatestudies.uoguelph.ca
     image:
-      src: ../../images/home/graduate.png
+      src: ../../images/home/caroline-pottruff-landscape-architecture-u-of-g.jpg
       alt: Placeholder image
-      caption: "John Doe, Psychology PhD '23"
+      caption: "Caroline Pottruff - Landscape Architecture "
   - title: International
     url: https://uoguelph.ca/international-students
     image:
-      src: ../../images/home/international.png
+      src: ../../images/home/ryan-ahlers-theatre-studies-u-of-g.jpg
       alt: Placeholder image,
-      caption: "Jane Doe, Computer Science '21"
+      caption: "Ryan Ahlers - Theatre Studies"
   - title: Open Education
     url: https://opened.uoguelph.ca
     image:
-      src: ../../images/home/open-education.png
+      src: ../../images/home/kathryn-knowles-jenna-schamowski-environmental-sciences-u-of-g.jpg
       alt: Placeholder image
-      caption: "Richard Doe, Chemical Engineering '20"
+      caption: "Kathryn Knowles & Jenna Schamowski - Environmental Sciences"
 
