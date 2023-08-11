@@ -78,7 +78,7 @@ export default function HomeStory() {
       <div className="bg-black">
         <Container>
           <Row>
-            <Col lg={12} className="align-items-center d-flex fs-4 justify-content-center p-3 text-white">
+            <Col lg={12} className="align-items-center d-flex fs-5 justify-content-center p-3 text-white">
               <p className="mb-0">{content.cta.body}</p>
               <a className="btn btn-primary ms-4 my-4 fs-5" href={content.cta.url}>{content.cta.button}</a>
             </Col>

@@ -46,6 +46,17 @@ h6,
   backdrop-filter: blur(10px);
 }
 
+.spotlight-hero-caption {
+  font-size: 2rem;
+}
+
+.spotlight-hero-caption a:hover,
+.spotlight-hero-caption a:focus {
+  color: white !important;
+  background-color: #c20430;
+  border-color: #c20430;
+}
+
 hr {
   border: 0;
   height: 3px;
@@ -87,6 +98,16 @@ h1 {
   transition:
     transform 0.2s ease-in-out,
     opacity 0.25s linear !important;
+}
+
+.spotlight-card .card-body,
+.spotlight-card .card-body {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.spotlight-card:hover .card-body,
+.spotlight-card:focus .card-body {
+  background-color: #FFC72A !important;
 }
 
 .spotlight-card:hover img,
@@ -139,6 +160,11 @@ h1 {
   transition-timing-function: ease-in-out;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+.study-here-link h3 {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 400;
 }
 
 .study-here-link:hover,

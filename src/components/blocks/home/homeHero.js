@@ -34,7 +34,6 @@ export default function HomeHero( props ) {
 
   let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0", "spotlight-hero-caption")
   let headingClasses = classNames("h4")
-  let bodyClasses = classNames("fs-6")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
 
   return (
@@ -44,7 +43,7 @@ export default function HomeHero( props ) {
         <div className={captionContainerClasses}>
           <Container className={captionClasses}>
             <h2 className={headingClasses}>{heroData.title}</h2>
-            <span className={bodyClasses}>{heroData.captionText}</span>
+            <span>{heroData.captionText}</span>
             <a href={heroData.url} className={linkClasses}>
               {heroData.buttonText ? heroData.buttonText : "Learn More"}
             </a>
