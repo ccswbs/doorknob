@@ -7,11 +7,11 @@ link:
   title: "Learn More: Read the Full Article!"
   url: https://news.uoguelph.ca/2022/04/u-of-g-places-16th-in-global-impact-in-international-ranking/
 stats:
-  - field_statistic_represents: Macleans, 2022
-    field_statistic_value: A Top Comprehensive University in Canada
-  - field_statistic_represents: Times Higher Education, 2022
-    field_statistic_value: One of the World's Top 600 universities
   - field_statistic_represents: IMPACT Rankings, 2021
-    field_statistic_value: One of the World's Most Sustainable Universities
+    field_statistic_value: "One of the World's Most <strong>Sustainable</strong> Universities"
+  - field_statistic_represents: Macleans, 2022
+    field_statistic_value: A <strong>Top Comprehensive University</strong> in Canada
+  - field_statistic_represents: Times Higher Education, 2022
+    field_statistic_value: One of the World's <strong>Top</strong> universities
   - field_statistic_represents: Infosource 2022
-    field_statistic_value: Top five in Research among CAD comprehensive Universities
+    field_statistic_value: <strong>Top five in Research</strong> among CAD comprehensive Universities

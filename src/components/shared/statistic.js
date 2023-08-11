@@ -171,9 +171,9 @@ Statistic.Gradient = ({stats}) => {
                       key={`gradient-stat-${index}`}
                       background={gradientColourOptions[index%gradientColourOptions.length].background}
                       colour={gradientColourOptions[index%gradientColourOptions.length].colour}
-                      className="p-5 col">
+                      className="p-5 col d-flex flex-column justify-content-around">
                         {icon && <Statistic.Icon icon={icon} colour={gradientColourOptions[index%gradientColourOptions.length].colour} />}
-                        <Statistic.Value><strong>{value}</strong></Statistic.Value>
+                        <Statistic.Value><span className="fw-normal" dangerouslySetInnerHTML={{__html: value}}></span></Statistic.Value>
                         <Statistic.Type><span dangerouslySetInnerHTML={{__html: type}} /></Statistic.Type>
                     </Statistic.SolidCard>
                 }
