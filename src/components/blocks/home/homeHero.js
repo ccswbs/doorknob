@@ -33,7 +33,7 @@ export default function HomeHero( props ) {
   )
 
   let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0", "spotlight-hero-caption")
-  let headingClasses = classNames("h4")
+  let headingClasses = classNames("h3")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
 
   return (
