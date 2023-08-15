@@ -89,7 +89,7 @@ export default function HomeStudyHere() {
             return (
               <a href={link.url} className={linkClasses} key={link.url} onMouseEnter={() => setActiveLink(link)}>
                 <h3 className="mb-0 h5">{link.title}</h3>
-                <i className="fa-solid fa-chevron-right"></i>
+                <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
               </a>
             )
           })}
