@@ -40,11 +40,11 @@ export default function HomeCardsSpotlight() {
               <Col key={item.key} className="mt-4 mb-4">
                 <Card className={cardClasses}>
                   <GatsbyImage image={getImage(item.imageSrc)} alt={item.imageAlt} className="card-img-top" />
-                  <Card.Body>
+                  <Card.Body className="d-flex justify-content-center align-items-center">
                     <Card.Title
                       as="a"
                       href={item.url}
-                      className="mb-4 h5 spotlight link-dark stretched-link text-decoration-none fw-normal"
+                      className="h5 spotlight link-dark stretched-link text-decoration-none fw-normal text-center"
                     >
                       {item.title}
                     </Card.Title>
