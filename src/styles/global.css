@@ -75,6 +75,10 @@ hr {
   );
 }
 
+.home-tagline h2 {
+  font-size: 4rem;
+}
+
 .content-block {
   margin-bottom: 6rem;
 }
