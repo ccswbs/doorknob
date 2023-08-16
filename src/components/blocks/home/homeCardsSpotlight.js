@@ -22,18 +22,29 @@ export default function HomeCardsSpotlight() {
   return (
     quantity > 1 && (
       <Container className="content-block">
-        <h2 className="mt-5 mb-5 text-primary">Spotlight</h2>
+        <h2 className="mt-5 mb-5">Our Latest News and Events</h2>
         <div className={rowClasses}>
           {cardData.map(item => {
+            const imageAlignment = item?.imageAlignment ?? "center" // 3 options: left, center, right
+            const cardClasses = classNames(
+              "h-100",
+              "border-0",
+              "bg-info",
+              "bg-opacity-10",
+              "spotlight-card",
+              { "left-align-image": imageAlignment === "left" },
+              { "right-align-image": imageAlignment === "right" },
+            )
+
             return (
               <Col key={item.key} className="mt-4 mb-4">
-                <Card className="h-100 border-0 bg-info bg-opacity-10 spotlight-card">
+                <Card className={cardClasses}>
                   <GatsbyImage image={getImage(item.imageSrc)} alt={item.imageAlt} className="card-img-top" />
-                  <Card.Body>
+                  <Card.Body className="d-flex justify-content-center align-items-center">
                     <Card.Title
                       as="a"
                       href={item.url}
-                      className="mb-4 h5 spotlight link-dark stretched-link text-decoration-none fw-normal"
+                      className="h5 spotlight link-dark stretched-link text-decoration-none fw-normal text-center"
                     >
                       {item.title}
                     </Card.Title>

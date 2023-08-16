@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Overlay from "../../shared/overlay"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Col, Container, Row } from "react-bootstrap"
-import ModalVideo from "../../shared/modalVideo"
 
 const QuoteMark = styled.i`
   color: var(--bs-yellow);
@@ -30,14 +29,10 @@ const query = graphql`
           }
           alt
         }
-        cta
-        video {
-          id
-          type
-          title
+        cta {
+          body
+          button
           url
-          transcript
-          captions
         }
       }
       background {
@@ -58,7 +53,7 @@ export default function HomeStory() {
   const background = data.blockYaml.background
 
   return (
-    <Row className="bg-black content-block">
+    <div className="bg-black content-block">
       <Overlay.GatsbyImage gatsbyImageData={getImage(background.src)} alt={background.alt} className="opacity-75 h-100">
         <Container>
           <Row className="bg-transparent h-100 text-white pb-0 px-5 pt-5">
@@ -83,24 +78,13 @@ export default function HomeStory() {
       <div className="bg-black">
         <Container>
           <Row>
-            <Col lg={12} className="align-items-center d-flex fs-4 justify-content-center p-3 text-white">
-              <p className="mb-0">{content.cta}</p>
-              <ModalVideo
-                id={content.video.id}
-                src={content.video.url}
-                title={content.video.title}
-                transcript={content.video.transcript}
-                modalButton={
-                  <button type="button" className="btn btn-primary ms-4 my-4">
-                    <i className="fa-solid fa-play me-2" /> Watch Video
-                    <span className="visually-hidden">: {content.video.title}</span>
-                  </button>
-                }
-              />
+            <Col lg={12} className="align-items-center d-flex fs-5 justify-content-center p-3 text-white">
+              <p className="mb-0">{content.cta.body}</p>
+              <a className="btn btn-primary ms-4 my-4 fs-5" href={content.cta.url}>{content.cta.button}</a>
             </Col>
           </Row>
         </Container>
       </div>
-    </Row>
+    </div>
   )
 }
