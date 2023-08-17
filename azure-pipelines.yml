@@ -22,16 +22,16 @@ schedules:
 
 variables:
 - group: ug-doorknob
-- name: _path_prefix
-  value: '$(PATH_PREFIX)'
-- name: _path_prefix_url
-  value: '$(PATH_PREFIX_URL)'
 - name: _gatsby_cache_folder
   value: '.cache'
 - name: _gatsby_public_folder
   value: 'public'
 - name: _npm_node_modules
   value: 'node_modules'
+- name: _asset_prefix
+  value: '$(ASSET_PREFIX)'
+- name: _prefix_paths
+  value: '$(PREFIX_PATHS)'
 
 pool:
   vmImage: ubuntu-latest
@@ -66,20 +66,11 @@ steps:
 
 - script: npm run build-prefix
   displayName: 'Build gatsby in sub-directory'
-  condition: eq(variables._path_prefix, 'true')
+  condition: eq(variables._prefix_paths, 'true')
 
 - script: npm run build
   displayName: 'Build gatsby'
-  condition: ne(variables._path_prefix, 'true')
-
-- bash: |
-    if [ -d "$(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image" ]; then
-      cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/
-      rsync -a image/ $(Build.SourcesDirectory)/public/_gatsby/image/
-      rm -rf $(Build.SourcesDirectory)/public/$(_path_prefix_url)/
-    fi
-  displayName: 'Fix images in extra sub-directory'
-  condition: eq(variables._path_prefix, 'true')
+  condition: ne(variables._prefix_paths, 'true')
 
 - task: ArchiveFiles@2
   inputs:
