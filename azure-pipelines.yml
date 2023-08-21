@@ -28,10 +28,6 @@ variables:
   value: 'public'
 - name: _npm_node_modules
   value: 'node_modules'
-- name: _asset_prefix
-  value: '$(ASSET_PREFIX)'
-- name: _prefix_paths
-  value: '$(PREFIX_PATHS)'
 
 pool:
   vmImage: ubuntu-latest
