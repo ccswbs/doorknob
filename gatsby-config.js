@@ -4,7 +4,6 @@ process.env["GATSBY_APP_ARMOR_ALERT_ID"] = process.env.NODE_ENV === `development
 module.exports = {
     
   assetPrefix: `/sitefiles`,
-  prefixPaths: `true`,
 
   siteMetadata: {
     title: `University of Guelph`,
