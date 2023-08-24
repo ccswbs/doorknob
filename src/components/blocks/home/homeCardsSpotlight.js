@@ -44,7 +44,7 @@ export default function HomeCardsSpotlight() {
                     <Card.Title
                       as="a"
                       href={item.url}
-                      className="h5 spotlight link-dark stretched-link text-decoration-none fw-normal text-center"
+                      className="h5 spotlight link-dark stretched-link text-decoration-none fw-bold text-center"
                     >
                       {item.title}
                     </Card.Title>
