@@ -1,0 +1,17 @@
+id: home_our_campuses
+links:
+  - title: Guelph Campus
+    url: #
+    image:
+      src: ../../images/placeholder.jpg
+      alt: Placeholder image
+  - title: Ridgetown Campus
+    url: https://www.ridgetownc.com/
+    image:
+      src: ../../images/placeholder.jpg
+      alt: Placeholder image
+  - title: Guelph-Humber Campus
+    url: https://www.guelphhumber.ca/
+    image:
+      src: ../../images/placeholder.jpg
+      alt: Placeholder image
