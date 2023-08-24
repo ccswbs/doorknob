@@ -1,7 +1,7 @@
 id: home_our_campuses
 links:
   - title: Guelph Campus
-    url: #
+    url: "#"
     image:
       src: ../../images/placeholder.jpg
       alt: Placeholder image
