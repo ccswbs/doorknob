@@ -39,8 +39,8 @@ export const HomeOurCampuses = () => {
               <Card.Body className="d-flex justify-content-center align-items-center">
                 <Card.Title
                   as="a"
-                  href="#"
-                  className="h5 link-dark stretched-link text-decoration-none fw-normal text-center"
+                  href={link.url}
+                  className="h5 link-dark stretched-link text-decoration-none fw-bold text-center"
                 >
                   {link.title}
                 </Card.Title>

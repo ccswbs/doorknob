@@ -91,7 +91,7 @@ h1 {
   max-width: 55ch;
 }
 
-.spotlight-card img {
+.card img {
   aspect-ratio: 3 / 2;
   object-fit: cover;
   transition:
@@ -99,34 +99,34 @@ h1 {
     opacity 0.25s linear !important;
 }
 
-.spotlight-card .card-body,
-.spotlight-card .card-body {
+.card .card-body,
+.card .card-body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.spotlight-card:hover .card-body,
-.spotlight-card:focus .card-body {
+.card:hover .card-body,
+.card:focus .card-body {
   background-color: #ffc72a !important;
 }
 
-.spotlight-card:hover img,
-.spotlight-card:focus img {
+.card:hover img,
+.card:focus img {
   transform: scale(1.1);
 }
 
-.spotlight-card.left-align-image img {
+.card.left-align-image img {
   object-position: left;
 }
 
-.spotlight-card.right-align-image img {
+.card.right-align-image img {
   object-position: right;
 }
 
-.spotlight-card .card-body {
+.card .card-body {
   padding: 2rem;
 }
 
-.spotlight-card .spotlight {
+.card .card-title {
   font-family: inherit;
 }
 
