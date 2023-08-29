@@ -2,7 +2,7 @@
 process.env["GATSBY_APP_ARMOR_ALERT_ID"] = process.env.NODE_ENV === `development` ? `162` : `163`
 
 module.exports = {
-  pathPrefix: `/gryphon-doorknob`,
+  // pathPrefix: `/gryphon-doorknob`,
 
   siteMetadata: {
     title: `University of Guelph`,
