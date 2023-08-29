@@ -64,16 +64,16 @@ steps:
     path: $(_gatsby_public_folder)
   displayName: 'Retrieve cached Gatsby public folder'
 
-# - script: npm run build-prefix
-#   displayName: 'Build gatsby in sub-directory'
-#   condition: eq(variables._path_prefix, 'true')
-
-# - script: npm run build
-#   displayName: 'Build gatsby'
-#   condition: ne(variables._path_prefix, 'true')
+- script: npm run build-prefix
+  displayName: 'Build gatsby in sub-directory'
+  condition: eq(variables._path_prefix, 'true')
 
 - script: npm run build
   displayName: 'Build gatsby'
+  condition: ne(variables._path_prefix, 'true')
+
+# - script: npm run build
+#   displayName: 'Build gatsby'
 
 # - bash: |
 #     if [ -d "$(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image" ]; then
