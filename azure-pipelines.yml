@@ -73,13 +73,20 @@ steps:
   condition: ne(variables._path_prefix, 'true')
 
 - bash: |
-    if [ -d "$(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image" ]; then
-      cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/
-      rsync -a image/ $(Build.SourcesDirectory)/public/_gatsby/image/
-      rm -rf $(Build.SourcesDirectory)/public/$(_path_prefix_url)/
+    # Define absolute paths
+    source_dir="$(Build.SourcesDirectory)/public/_gatsby"
+    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+    index_file="$(Build.SourcesDirectory)/public/index.html"
+
+    if [ -d "$source_dir" ]; then
+      # Move _gatsby to assets/_gatsby      
+      mv "$source_dir" "$target_dir"
+
+      # Update links in index.html
+      sed -i 's|/_gatsby|/assets/_gatsby|g' "$index_file"
     fi
-  displayName: 'Fix images in extra sub-directory'
-  condition: eq(variables._path_prefix, 'true')
+
+  displayName: 'Move _gatsby to assets/_gatsby'
 
 - task: ArchiveFiles@2
   inputs:
