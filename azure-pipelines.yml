@@ -99,7 +99,7 @@ steps:
     fi
 
   displayName: '(Path Prefix) Move _gatsby to /$(_path_prefix_url)/assets/_gatsby'
-  condition: eg(variables._path_prefix, 'true')
+  condition: eq(variables._path_prefix, 'true')
 
 
 - bash: |
