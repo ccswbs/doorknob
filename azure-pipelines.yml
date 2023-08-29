@@ -91,12 +91,14 @@ steps:
     index_file="$(Build.SourcesDirectory)/public/index.html"
     subdirectory="${$(_path_prefix_url)/\//}"
 
+    echo "$subdirectory"
+
     if [ -d "$source_dir" ]; then
       # Move _gatsby to assets/_gatsby
       mv "$source_dir" "$target_dir"
 
       # Update links in index.html
-      sed -i 's|/_gatsby|/'"$subdirectory"'/assets/_gatsby|g' "$index_file"
+      sed -i "s|/_gatsby|/$subdirectory/assets/_gatsby|g" "$index_file"
     fi
 
   displayName: '(Path Prefix) Move _gatsby to /$subdirectory/assets/_gatsby'
