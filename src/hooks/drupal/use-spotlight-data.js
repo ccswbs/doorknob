@@ -34,6 +34,7 @@ export const useSpotlightData = () => {
           edges {
             node {
               field_spotlight_alignment
+              field_spotlight_image_alignment
               field_spotlight_button
               field_spotlight_caption
               field_spotlight_rank
@@ -101,6 +102,7 @@ export const useSpotlightData = () => {
     heroData.push({
       imageSrc: item?.node?.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage,
       imageAlt: item?.node?.relationships.field_hero_image?.field_media_image.alt,
+      imageAlignment: item?.node?.field_spotlight_image_alignment,
       buttonText: item?.node?.field_spotlight_button,
       captionAlign: item?.node?.field_spotlight_alignment,
       captionText: item?.node?.field_spotlight_caption,

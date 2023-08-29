@@ -64,14 +64,15 @@ hr {
   opacity: 1;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 45%,
-    rgba(255, 255, 255, 0) 45%,
-    rgba(255, 255, 255, 0) 46%,
-    rgba(194, 4, 48, 1) 46%,
-    rgba(194, 4, 48, 1) 75%,
-    rgba(255, 255, 255, 0) 75%,
-    rgba(255, 255, 255, 0) 76%,
-    rgba(255, 199, 43, 1) 76%
+    #000 0%,
+    #000 56%,
+    rgba(255, 255, 255, 0) 56%,
+    rgba(255, 255, 255, 0) 57%,
+    #c20430 57%,
+    #c20430 85%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 0) 86%,
+    #ffc72b 86%
   );
 }
 
@@ -91,7 +92,7 @@ h1 {
   max-width: 55ch;
 }
 
-.spotlight-card img {
+.card img {
   aspect-ratio: 3 / 2;
   object-fit: cover;
   transition:
@@ -99,35 +100,43 @@ h1 {
     opacity 0.25s linear !important;
 }
 
-.spotlight-card .card-body,
-.spotlight-card .card-body {
+.card .card-body,
+.card .card-body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.spotlight-card:hover .card-body,
-.spotlight-card:focus .card-body {
+.card:hover .card-body,
+.card:focus .card-body {
   background-color: #ffc72a !important;
 }
 
-.spotlight-card:hover img,
-.spotlight-card:focus img {
+.card:hover img,
+.card:focus img {
   transform: scale(1.1);
 }
 
-.spotlight-card.left-align-image img {
+.card.left-align-image img {
   object-position: left;
 }
 
-.spotlight-card.right-align-image img {
+.card.right-align-image img {
   object-position: right;
 }
 
-.spotlight-card .card-body {
+.card .card-body {
   padding: 2rem;
 }
 
-.spotlight-card .spotlight {
+.card .card-title {
   font-family: inherit;
+}
+
+.spotlight-hero.left-align-image img {
+  object-position: left;
+}
+
+.spotlight-hero.right-align-image img {
+  object-position: right;
 }
 
 .study-here-container::after {
