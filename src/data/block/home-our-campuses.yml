@@ -3,7 +3,7 @@ links:
   - title: Guelph Campus
     url: "#"
     image:
-      src: ../../images/guelph.png
+      src: ../../images/home/guelph.png
       alt: An aerial view of Johnston Hall and the University of Guelph campus
   - title: Ridgetown Campus
     url: https://www.ridgetownc.com/
