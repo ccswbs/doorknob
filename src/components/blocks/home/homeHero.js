@@ -4,10 +4,11 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Container } from "react-bootstrap"
 import { useMediaQuery } from "../../../hooks/use-media-query"
 
-export default function HomeHero( props ) {
-  const { heroData } = props // Extract the heroData from props  
+export default function HomeHero(props) {
+  const { heroData } = props // Extract the heroData from props
   const isMobile = useMediaQuery("(max-width: 992px)")
   const alignment = heroData.captionAlign ?? "left";
+  const imageAlignment = heroData.imageAlignment ?? "center";
 
   let containerClasses = classNames(
     { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
@@ -29,15 +30,22 @@ export default function HomeHero( props ) {
     "text-white",
     "p-md-5",
     "p-4",
-    "spotlight-hero-caption-container"
+    "spotlight-hero-caption-container",
   )
 
+  let mainContainerClasses = classNames(
+    "position-relative",
+    "mb-md-5",
+    "spotlight-hero",
+    { "left-align-image": imageAlignment === "left" },
+    { "right-align-image": imageAlignment === "right" },
+  )
   let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0", "spotlight-hero-caption")
   let headingClasses = classNames("h3")
   let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
 
   return (
-    <div id="rotator" className="mb-md-5 position-relative spotlight-hero">
+    <div id="rotator" className={mainContainerClasses}>
       <GatsbyImage image={getImage(heroData.imageSrc)} alt={heroData.imageAlt} className="w-100" />
       <div className={containerClasses}>
         <div className={captionContainerClasses}>

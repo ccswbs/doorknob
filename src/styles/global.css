@@ -131,6 +131,14 @@ h1 {
   font-family: inherit;
 }
 
+.spotlight-hero.left-align-image img {
+  object-position: left;
+}
+
+.spotlight-hero.right-align-image img {
+  object-position: right;
+}
+
 .study-here-container::after {
   content: none;
   display: block;
