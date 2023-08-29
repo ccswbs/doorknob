@@ -89,9 +89,9 @@ steps:
     source_dir="$(Build.SourcesDirectory)/public/_gatsby"
     target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
     index_file="$(Build.SourcesDirectory)/public/index.html"
-    subdirectory="${$(_path_prefix_url)/\//}"
 
-    echo "$subdirectory"
+    url="$(_path_prefix_url)"
+    subdirectory="${url/\//}"
 
     if [ -d "$source_dir" ]; then
       # Move _gatsby to assets/_gatsby
