@@ -84,26 +84,26 @@ steps:
 #   displayName: 'Fix images in extra sub-directory'
 #   condition: eq(variables._path_prefix, 'true')
 
-- bash: |
-    # Define absolute paths
-    source_dir="$(Build.SourcesDirectory)/public/_gatsby"
-    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
-    index_file="$(Build.SourcesDirectory)/public/index.html"
+# - bash: |
+#     # Define absolute paths
+#     source_dir="$(Build.SourcesDirectory)/public/_gatsby"
+#     target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+#     index_file="$(Build.SourcesDirectory)/public/index.html"
 
-    url="$(_path_prefix_url)"
-    subdirectory="${url/\//}"
+#     url="$(_path_prefix_url)"
+#     subdirectory="${url/\//}"
 
-    if [ -d "$source_dir" ]; then
-      # Move _gatsby to assets/_gatsby
-      mv "$source_dir" "$target_dir"
+#     if [ -d "$source_dir" ]; then
+#       # Move _gatsby to assets/_gatsby
+#       mv "$source_dir" "$target_dir"
 
-      # Update links in index.html
-      sed -i "s|/_gatsby|/$subdirectory/assets/_gatsby|g" "$index_file"
-      sed -i "s|/static/|/$subdirectory/static/|g" "$index_file"
-    fi
+#       # Update links in index.html
+#       sed -i "s|/_gatsby|/$subdirectory/assets/_gatsby|g" "$index_file"
+#       sed -i "s|/static/|/$subdirectory/static/|g" "$index_file"
+#     fi
 
-  displayName: '(Path Prefix) Move _gatsby to /$subdirectory/assets/_gatsby'
-  condition: eq(variables._path_prefix, 'true')
+#   displayName: '(Path Prefix) Move _gatsby to /$subdirectory/assets/_gatsby'
+#   condition: eq(variables._path_prefix, 'true')
 
 
 - bash: |
@@ -121,7 +121,6 @@ steps:
     fi
 
   displayName: 'Move _gatsby to assets/_gatsby'
-  condition: ne(variables._path_prefix, 'true')
 
 - task: ArchiveFiles@2
   inputs:
