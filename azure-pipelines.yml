@@ -81,6 +81,23 @@ steps:
   displayName: 'Fix images in extra sub-directory'
   condition: eq(variables._path_prefix, 'true')
 
+- bash: |
+    # Define absolute paths
+    source_dir="$(Build.SourcesDirectory)/public/_gatsby"
+    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+    index_file="$(Build.SourcesDirectory)/index.html"
+
+    if [ -d "$source_dir" ]; then
+      # Move _gatsby to assets/_gatsby      
+      mv "$source_dir" "$target_dir"
+
+      # Update links in index.html
+      sed -i 's|/_gatsby|/assets/_gatsby|g' "$index_file"
+    fi
+
+  displayName: 'Move _gatsby to assets/_gatsby'
+  condition: ne(variables._path_prefix, 'true')
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/public'
