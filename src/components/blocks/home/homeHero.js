@@ -6,12 +6,12 @@ import { useMediaQuery } from "../../../hooks/use-media-query"
 
 export default function HomeHero(props) {
   const { heroData } = props // Extract the heroData from props
-  const isMobile = useMediaQuery("(max-width: 992px)")
+  const isDesktop = useMediaQuery("(min-width: 992px)")
   const alignment = heroData.captionAlign ?? "left";
   const imageAlignment = heroData.imageAlignment ?? "center";
 
   let containerClasses = classNames(
-    { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: !isMobile },
+    { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: isDesktop },
     "mb-md-5",
     "top-0",
     "h-100",
@@ -20,12 +20,12 @@ export default function HomeHero(props) {
   )
 
   let captionContainerClasses = classNames(
-    { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-5")]: !isMobile },
-    { [classNames("w-100", "bg-opacity-100")]: isMobile },
-    { [classNames("bottom-0", "start-0")]: alignment === "left" && !isMobile },
-    { [classNames("bottom-0", "end-0")]: alignment === "right" && !isMobile },
-    { [classNames("bottom-0", "start-50", "translate-middle-x")]: alignment === "center" && !isMobile },
-    { [classNames("bottom-0", "start-50", "translate-middle-x", "w-100")]: alignment === "full" && !isMobile },
+    { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-5")]: isDesktop },
+    { [classNames("w-100", "bg-opacity-100")]: !isDesktop },
+    { [classNames("bottom-0", "start-0")]: alignment === "left" && isDesktop },
+    { [classNames("bottom-0", "end-0")]: alignment === "right" && isDesktop },
+    { [classNames("bottom-0", "start-50", "translate-middle-x")]: alignment === "center" && isDesktop },
+    { [classNames("bottom-0", "start-50", "translate-middle-x", "w-100")]: alignment === "full" && isDesktop },
     "bg-black",
     "text-white",
     "p-md-5",
