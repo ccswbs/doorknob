@@ -84,6 +84,7 @@ export const useSpotlightData = () => {
                     field_media_image {
                       gatsbyImage(
                         width: 640
+                        formats: [AUTO, WEBP]
                       )
                     }
                   }
