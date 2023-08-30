@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { useMediaQuery } from "../../../hooks/use-media-query"
+import { useWindowSize } from "../../../hooks/use-window-size"
 import classNames from "classnames"
 
 const query = graphql`
@@ -28,7 +28,8 @@ const query = graphql`
 export default function HomeStudyHere() {
   const links = useStaticQuery(query).blockYaml.links
   const [activeLink, setActiveLink] = useState(links[0])
-  const isDesktop = useMediaQuery("(min-width: 992px)")
+  const windowSize = useWindowSize();
+  const isDesktop = windowSize.width >= 992;
 
   const imageClasses = classNames("position-absolute", "w-100", "h-100", "mh-100", "z-n1", "study-here-image")
   const captionClasses = classNames(

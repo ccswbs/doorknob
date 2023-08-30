@@ -2,11 +2,12 @@ import React from "react"
 import classNames from "classnames"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Container } from "react-bootstrap"
-import { useMediaQuery } from "../../../hooks/use-media-query"
+import { useWindowSize }  from "../../../hooks/use-window-size"
 
 export default function HomeHero(props) {
   const { heroData } = props // Extract the heroData from props
-  const isDesktop = useMediaQuery("(min-width: 992px)")
+  const windowSize = useWindowSize();
+  const isDesktop = windowSize.width >= 992;
   const alignment = heroData.captionAlign ?? "left";
   const imageAlignment = heroData.imageAlignment ?? "center";
 
