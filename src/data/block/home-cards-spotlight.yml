@@ -1,23 +1,27 @@
 id: home_cards_spotlight
-heading: Spotlight
+heading: Our Latest News and Events
 cards:
-  - title: "Answering the Call: A Look at U of G, Lakehead’s Historic Veterinary Medical Training Expansion"
-    url: https://news.uoguelph.ca/2023/04/answering-the-call-a-look-at-u-of-g-lakeheads-historic-veterinary-medical-training-expansion/
+  - title: "News"
+    url: https://news.uoguelph.ca/
     image:
-      src: ../../images/placeholder.jpg
-      alt: Placeholder image
-  - title: "Light Signals From Neighbouring Weeds Alter Crop Growth, Yield: U of G Research"
-    url: https://news.uoguelph.ca/2023/03/light-signals-from-neighbouring-weeds-alter-crop-plant-growth-yield-u-of-g-research/
+      src: ../../images/home/portico-u-of-g.jpg
+      alt: The Portico in front of several trees
+      alignment: center
+  - title: "President's Welcome"
+    url: https://www.uoguelph.ca/president
     image:
-      src: ../../images/placeholder.jpg
-      alt: Placeholder image
-  - title: Snail Compounds Can Disarm Deadly Fungal Pathogen,  U of G Researchers Discover
-    url: https://news.uoguelph.ca/2023/04/snail-compounds-can-disarm-deadly-fungal-pathogen-u-of-g-researchers-discover/
+      src: ../../images/home/charlotte-yates.jpg
+      alt: Charlotte Yates smiling in front of a tree
+      alignment: center
+  - title: Campus Safety
+    url: https://cso.uoguelph.ca/
     image:
-      src: ../../images/placeholder.jpg
-      alt: Placeholder image
-  - title: Strenuous Exercise May Not Lead to Cardiac Fatigue, U of G Research Suggests
-    url: https://news.uoguelph.ca/2023/04/strenuous-exercise-may-not-lead-to-cardiac-fatigue-u-of-g-research-suggests/
+      src: ../../images/home/johnston-hall-u-of-g.jpg
+      alt: A wide shot of Johnston Green with Johnston Hall in the back
+      alignment: center
+  - title: Clubs and Events
+    url: https://www.uoguelph.ca/studentexperience/get-involved
     image:
-      src: ../../images/placeholder.jpg
-      alt: Placeholder image
+      src: ../../images/home/clubs-events.jpg
+      alt: A group of students posing for a photo in front of the Gryphon statue
+      alignment: center
