@@ -44,6 +44,8 @@ h6,
 .spotlight-hero-caption-container {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  width: 100%;
+  background-color: rgb(0, 0, 0);
 }
 
 .spotlight-hero-caption {
@@ -194,5 +196,34 @@ h1 {
 
   .study-here-container::after {
     content: "";
+  }
+
+  .spotlight-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 960px;
+  }
+
+  .spotlight-hero-caption-container {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    margin: 3rem 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .spotlight-hero-content {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .spotlight-hero-content {
+    max-width: 1320px;
   }
 }
