@@ -12,22 +12,19 @@ export default function HomeHero(props) {
   const imageAlignment = heroData.imageAlignment ?? "center";
 
   let containerClasses = classNames(
-    { [classNames("position-absolute", "top-50", "start-50", "translate-middle", "container")]: isDesktop },
+    { [classNames("container")]: isDesktop },
     "mb-md-5",
-    "top-0",
     "h-100",
     "w-100",
     "p-0",
+    "spotlight-hero-content",
   )
 
   let captionContainerClasses = classNames(
-    { [classNames("w-50", "bg-opacity-75", "position-absolute", "my-5")]: isDesktop },
-    { [classNames("w-100", "bg-opacity-100")]: !isDesktop },
     { [classNames("bottom-0", "start-0")]: alignment === "left" && isDesktop },
     { [classNames("bottom-0", "end-0")]: alignment === "right" && isDesktop },
     { [classNames("bottom-0", "start-50", "translate-middle-x")]: alignment === "center" && isDesktop },
     { [classNames("bottom-0", "start-50", "translate-middle-x", "w-100")]: alignment === "full" && isDesktop },
-    "bg-black",
     "text-white",
     "p-md-5",
     "p-4",
