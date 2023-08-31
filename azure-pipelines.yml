@@ -83,7 +83,7 @@ steps:
       mv -v "$source_dir" "$target_dir"
 
       # Update links in index.html
-      sed -i 's|/_gatsby|/assets/_gatsby|g' "$index_file"
+      sed --debug -i 's|/_gatsby|/assets/_gatsby|g' "$index_file"
     fi
 
   displayName: 'Move _gatsby to assets/_gatsby'
