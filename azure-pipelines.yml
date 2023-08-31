@@ -82,8 +82,8 @@ steps:
       # Move _gatsby to assets/_gatsby      
       mv -v "$source_dir" "$target_dir"
 
-      # Update links in index.html
-      sed --debug -i 's|/_gatsby|/assets/_gatsby|g' "$index_file"
+      # Update links in all .html and .json files under public directory
+      find "$(Build.SourcesDirectory)/public" -type f \( -name "*.html" -o -name "*.json" \) -exec sed -i 's|/_gatsby|/assets/_gatsby|g' {} +
     fi
 
   displayName: 'Move _gatsby to assets/_gatsby'
