@@ -66,7 +66,19 @@ steps:
 
 - script: npm run build
   displayName: 'Build gatsby'
-  condition: ne(variables._prefix_paths, 'true')
+  condition: ne(variables._path_prefix, 'true')
+
+- bash: |
+    # Define absolute paths
+    source_dir="$(Build.SourcesDirectory)/public/_gatsby"
+    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+
+    if [ -d "$source_dir" ]; then
+      # Move _gatsby to assets/_gatsby      
+      mv -v "$source_dir" "$target_dir"
+    fi
+
+  displayName: 'Move _gatsby to assets/_gatsby'
 
 - task: ArchiveFiles@2
   inputs:
