@@ -88,6 +88,18 @@ steps:
 
   displayName: 'Move _gatsby to assets/_gatsby'
 
+- bash: |
+    url="$(_path_prefix_url)"
+    subdirectory="${url/\//}"
+
+    if [ -d "$source_dir" ]; then
+      # Update links in all .html and .json files under public directory
+      find "$(Build.SourcesDirectory)/public" -type f \( -name "*.html" -o -name "*.json" \) -exec sed -i 's|/assets/_gatsby|/$subdirectory/assets/_gatsby|g' {} +
+    fi
+
+  displayName: 'Update links for _gatsby to /subdirectory/assets/_gatsby'
+  condition: eq(variables._path_prefix, 'true')
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/public'
