@@ -95,7 +95,7 @@ steps:
 
     # Define absolute paths
     source_dir="$(Build.SourcesDirectory)/public/$subdirectory/_gatsby"
-    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+    target_dir="$(Build.SourcesDirectory)/public/assets/"
     index_file="$(Build.SourcesDirectory)/public/index.html"
 
     if [ -d "$source_dir" ]; then
