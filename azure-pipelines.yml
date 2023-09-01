@@ -87,14 +87,23 @@ steps:
     fi
 
   displayName: 'Move _gatsby to assets/_gatsby'
+  condition: ne(variables._path_prefix, 'true')
 
 - bash: |
     url="$(_path_prefix_url)"
     subdirectory="${url/\//}"
 
+    # Define absolute paths
+    source_dir="$(Build.SourcesDirectory)/public/$subdirectory/_gatsby"
+    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+    index_file="$(Build.SourcesDirectory)/public/index.html"
+
     if [ -d "$source_dir" ]; then
+      # Move _gatsby to assets/_gatsby      
+      mv -v "$source_dir" "$target_dir"
+      
       # Update links in all .html and .json files under public directory
-      find "$(Build.SourcesDirectory)/public" -type f \( -name "*.html" -o -name "*.json" \) -exec sed -i 's|/assets/_gatsby|/$subdirectory/assets/_gatsby|g' {} +
+      find "$(Build.SourcesDirectory)/public" -type f \( -name "*.html" -o -name "*.json" \) -exec sed -i 's|/_gatsby|/assets/_gatsby|g' {} +
     fi
 
   displayName: 'Update links for _gatsby to /subdirectory/assets/_gatsby'
