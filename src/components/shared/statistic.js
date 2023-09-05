@@ -9,6 +9,7 @@ const Gradient = styled.div`
     background: ${props => props.stackedGradientStyle ?? "none"};
     && dl > div {
       background: none;
+      min-height: 300px;
     }
   }
 `
