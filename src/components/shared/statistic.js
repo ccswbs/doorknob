@@ -35,10 +35,14 @@ const StatisticGrid = styled.dl`
 `
 const StatCard = styled.div`
   background: #f5f7fa;
-  padding: 1.25rem;
+  padding: 3rem;
   min-width: 25%;
   word-wrap: break-word;
   text-align: center;
+
+  @media (min-width: 992px) and (max-width: 1200px), (min-width: 578px) and (max-width: 768px) {
+    padding: 2rem;
+  }
 `
 const StatBorderCard = styled(StatCard)`
   border-left: 1rem solid ${props => props.border ?? "#000000"};
@@ -59,6 +63,10 @@ const StatValue = styled.dt`
   font-size: ${props => props.fontsize ?? "3rem"};
   line-height: 1.2;
   margin-bottom: 1.2rem;
+
+  @media (min-width: 992px) and (max-width: 1200px), (min-width: 578px) and (max-width: 768px) {
+    font-size: 2.75rem;
+  }
 `
 const StatType = styled.dd`
   font-size: 1.8rem;
@@ -164,7 +172,7 @@ Statistic.Gradient = ({ stats }) => {
                   key={`gradient-stat-${index}`}
                   background={gradientColourOptions[index % gradientColourOptions.length].background}
                   colour={gradientColourOptions[index % gradientColourOptions.length].colour}
-                  className="p-5 col d-flex flex-column justify-content-around"
+                  className="col d-flex flex-column justify-content-around"
                 >
                   {icon && (
                     <Statistic.Icon
