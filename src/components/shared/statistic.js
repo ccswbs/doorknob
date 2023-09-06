@@ -40,7 +40,7 @@ const StatCard = styled.div`
   word-wrap: break-word;
   text-align: center;
 
-  @media (min-width: 992px) and (max-width: 1200px), (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: 992px) and (max-width: 1415px), (min-width: 576px) and (max-width: 768px) {
     padding: 2rem;
   }
 `
@@ -64,7 +64,7 @@ const StatValue = styled.dt`
   line-height: 1.2;
   margin-bottom: 1.2rem;
 
-  @media (min-width: 992px) and (max-width: 1200px), (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: 992px) and (max-width: 1415px), (min-width: 576px) and (max-width: 768px) {
     font-size: 2.6rem;
   }
 `
