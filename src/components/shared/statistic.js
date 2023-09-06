@@ -65,7 +65,7 @@ const StatValue = styled.dt`
   margin-bottom: 1.2rem;
 
   @media (min-width: 992px) and (max-width: 1200px), (min-width: 576px) and (max-width: 768px) {
-    font-size: 2.75rem;
+    font-size: 2.6rem;
   }
 `
 const StatType = styled.dd`
