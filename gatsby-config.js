@@ -1,6 +1,3 @@
-// App Armor ID: 162 (dev) 163 (prod), typically we shouldn't expose env variables like this, but since this is not a secret, it's fine.
-process.env["GATSBY_APP_ARMOR_ALERT_ID"] = process.env.NODE_ENV === `development` ? `162` : `163`
-
 module.exports = {
   siteMetadata: {
     title: `University of Guelph`,
