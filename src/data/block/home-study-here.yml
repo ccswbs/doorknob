@@ -4,24 +4,24 @@ links:
     url: https://admission.uoguelph.ca/programs
     image:
       src: ../../images/home/leah-weller-environmental-engineering-u-of-g.jpg
-      alt: Placeholder image
+      alt: Leah Weller and another student in lab coats looking at a computer screen.
       caption: "Leah Weller - Environmental Engineering"
   - title: Graduate Programs
     url: https://graduatestudies.uoguelph.ca
     image:
       src: ../../images/home/caroline-pottruff-landscape-architecture-u-of-g.jpg
-      alt: Placeholder image
+      alt: Caroline Pottruff working in a forest with a hard hat on
       caption: "Caroline Pottruff - Landscape Architecture "
   - title: International
     url: https://www.uoguelph.ca/study-in-canada/
     image:
       src: ../../images/home/ryan-ahlers-theatre-studies-u-of-g.jpg
-      alt: Placeholder image,
+      alt: Ryan Ahlers adjusting a spotlight in a theatre
       caption: "Ryan Ahlers - Theatre Studies"
   - title: Open Education
     url: https://opened.uoguelph.ca
     image:
       src: ../../images/home/kathryn-knowles-jenna-schamowski-environmental-sciences-u-of-g.jpg
-      alt: Placeholder image
+      alt: Kathryn Knowles & Jenna Schamowski working with bee hives
       caption: "Kathryn Knowles & Jenna Schamowski - Environmental Sciences"
 

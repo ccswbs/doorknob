@@ -22,10 +22,6 @@ schedules:
 
 variables:
 - group: ug-doorknob
-- name: _path_prefix
-  value: '$(PATH_PREFIX)'
-- name: _path_prefix_url
-  value: '$(PATH_PREFIX_URL)'
 - name: _gatsby_cache_folder
   value: '.cache'
 - name: _gatsby_public_folder
@@ -64,22 +60,32 @@ steps:
     path: $(_gatsby_public_folder)
   displayName: 'Retrieve cached Gatsby public folder'
 
-- script: npm run build-prefix
-  displayName: 'Build gatsby in sub-directory'
-  condition: eq(variables._path_prefix, 'true')
-
 - script: npm run build
   displayName: 'Build gatsby'
-  condition: ne(variables._path_prefix, 'true')
 
 - bash: |
-    if [ -d "$(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/image" ]; then
-      cd $(Build.SourcesDirectory)/public/$(_path_prefix_url)/_gatsby/
-      rsync -a image/ $(Build.SourcesDirectory)/public/_gatsby/image/
-      rm -rf $(Build.SourcesDirectory)/public/$(_path_prefix_url)/
+    # Define absolute paths
+    source_dir="$(Build.SourcesDirectory)/public/_gatsby"
+    target_dir="$(Build.SourcesDirectory)/public/assets/_gatsby"
+
+    if [ -d "$source_dir" ]; then
+      # Move _gatsby to assets/_gatsby      
+      mv -v "$source_dir" "$target_dir"
+
+      # Update links in all .html and .json files under public directory
+      find "$(Build.SourcesDirectory)/public" -type f \( -name "*.html" -o -name "*.json" \) -exec sed -i 's|/_gatsby|/assets/_gatsby|g' {} +
     fi
-  displayName: 'Fix images in extra sub-directory'
-  condition: eq(variables._path_prefix, 'true')
+
+  displayName: 'Move _gatsby to assets/_gatsby'
+
+- bash: |
+    # Define absolute paths
+    index_file="$(Build.SourcesDirectory)/public/index.html"
+    gindex_file="$(Build.SourcesDirectory)/public/gindex.html"
+
+    mv "$index_file" "$gindex_file"
+
+  displayName: 'Rename index.html to gindex.html'
 
 - task: ArchiveFiles@2
   inputs:
