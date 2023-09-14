@@ -108,12 +108,12 @@ h1 {
 }
 
 .card:hover .card-body,
-.card:focus .card-body {
+.card:focus-within .card-body {
   background-color: #ffc72a !important;
 }
 
 .card:hover img,
-.card:focus img {
+.card:focus-within img {
   transform: scale(1.1);
 }
 
