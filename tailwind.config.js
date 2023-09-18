@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/pages/**/*.{js,jsx,ts,tsx}", "./src/components/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        uofgred: {
+          50: "#fff0f1",
+          100: "#ffe2e4",
+          200: "#ffc9cf",
+          300: "#ff9da9",
+          400: "#ff667b",
+          500: "#ff3051",
+          600: "#f10d3c",
+          700: "#c20430",
+          800: "#aa0732",
+          900: "#910a31",
+          950: "#520016",
+          DEFAULT: "#c20430",
+        },
+        uofgyellow: {
+          50: "#fffbeb",
+          100: "#fff5c6",
+          200: "#ffe988",
+          300: "#ffd84a",
+          400: "#ffc72a",
+          500: "#f9a307",
+          600: "#dd7b02",
+          700: "#b75606",
+          800: "#94410c",
+          900: "#7a360d",
+          950: "#461b02",
+          DEFAULT: "#ffc72a",
+        },
+        uofgblue: {
+          50: "#f1f8fa",
+          100: "#ddecf0",
+          200: "#bedae3",
+          300: "#91bfcf",
+          400: "#69a3b9",
+          500: "#417f99",
+          600: "#396981",
+          700: "#33576b",
+          800: "#314a59",
+          900: "#2c3f4d",
+          950: "#192833",
+          DEFAULT: "#69a3b9",
+        },
+      },
+    },
+  },
+  prefix: "tw-",
+  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
+}
