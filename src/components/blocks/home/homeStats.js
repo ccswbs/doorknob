@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Statistic from "../../../components/shared/statistic"
+import Statistic from "../../shared/tw-statistic"
 import { Container } from "react-bootstrap"
 
 const query = graphql`

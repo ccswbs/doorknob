@@ -3,8 +3,15 @@ module.exports = {
   content: ["./src/pages/**/*.{js,jsx,ts,tsx}", "./src/components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "576px",
+        md: "768px",
+        lg: "992px",
+        xl: "1200px",
+        "xxl": "1400px",
+      },
       colors: {
-        uofgred: {
+        "uofg-red": {
           50: "#fff0f1",
           100: "#ffe2e4",
           200: "#ffc9cf",
@@ -18,7 +25,7 @@ module.exports = {
           950: "#520016",
           DEFAULT: "#c20430",
         },
-        uofgyellow: {
+        "uofg-yellow": {
           50: "#fffbeb",
           100: "#fff5c6",
           200: "#ffe988",
@@ -32,7 +39,7 @@ module.exports = {
           950: "#461b02",
           DEFAULT: "#ffc72a",
         },
-        uofgblue: {
+        "uofg-blue": {
           50: "#f1f8fa",
           100: "#ddecf0",
           200: "#bedae3",
@@ -46,6 +53,22 @@ module.exports = {
           950: "#192833",
           DEFAULT: "#69a3b9",
         },
+        white: "#ffffff",
+        black: "#000000",
+      },
+      width: {
+        "sm-container": "540px",
+        "md-container": "720px",
+        "lg-container": "960px",
+        "xl-container": "1140px",
+        "xxl-container": "1320px",
+      },
+      maxWidth: {
+        "sm-container": "540px",
+        "md-container": "720px",
+        "lg-container": "960px",
+        "xl-container": "1140px",
+        "xxl-container": "1320px",
       },
     },
   },
