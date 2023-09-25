@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    --tw-scrollbar-width: 0px;
+  }
+
+  .tw-container .tw-container {
+    @apply tw-px-0;
+  }
+}
+
+@layer components {
+  .tw-container {
+    @apply tw-w-full tw-mx-auto tw-px-3 sm:tw-px-0 sm:tw-max-w-sm-container md:tw-max-w-md-container lg:tw-max-w-lg-container xl:tw-max-w-xl-container xxl:tw-max-w-xxl-container;
+  }
+
+  .tw-content-block {
+    @apply tw-mb-24;
+  }
+}
