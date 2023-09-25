@@ -1,28 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Container } from "react-bootstrap"
-
-const Gradient = styled.div`
-  background: ${props => props.gradientStyle ?? "none"};
-
-  @media (min-width: 576px) and (max-width: 992px) {
-    background: ${props => props.stackedGradientStyle ?? "none"};
-    && dl > div {
-      background: none;
-      min-height: 300px;
-    }
-  }
-`
-const gradientColourOptions = [
-  { background: "var(--bs-black)", colour: "#FFFFFF" },
-  { background: "var(--bs-red)", colour: "#FFFFFF" },
-  { background: "var(--bs-yellow)", colour: "#000000" },
-  { background: "var(--bs-blue)", colour: "#000000" },
-  { background: "var(--bs-yellow)", colour: "#000000" },
-  { background: "var(--bs-black)", colour: "#FFFFFF" },
-  { background: "var(--bs-blue)", colour: "#000000" },
-  { background: "var(--bs-red)", colour: "#FFFFFF" },
-]
+import classNames from "classnames"
 
 /* Accessible definition lists can only have one nested div.
 In order to achieve gap between bordered stats, use grid instead of row-cols-* */
@@ -130,69 +108,111 @@ Statistic.Type = ({ children, className = "" }) => <StatType className={classNam
  *      field_font_awesome_icon (String)
  *    }
  */
-Statistic.Gradient = ({ stats }) => {
-  let numStats = stats.length
+Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
+  const divisbleByTwo = stats.length % 2 === 0
+  const divisbleByThree = stats.length % 3 === 0
+  const divisbleByFour = stats.length % 4 === 0
 
-  // default is displaying 3 colours in a row
-  let rowClasses = "row-cols-md-3"
-  let gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#ffc72a 60%,#ffc72a 100%)"
-  let stackedGradientStyle =
-    "repeating-conic-gradient(var(--bs-red) 0% 25%, var(--bs-blue) 0% 50%, var(--bs-yellow) 50% 75%, var(--bs-black) 75% 100%)"
+  const colorClasses = [
+    {
+      bg: "tw-bg-black",
+      text: "tw-text-white",
+    },
+    {
+      bg: "tw-bg-uofg-red",
+      text: "tw-text-white",
+    },
+    {
+      bg: "tw-bg-uofg-yellow",
+      text: "tw-text-black",
+    },
+    {
+      bg: "tw-bg-uofg-blue",
+      text: "tw-text-black",
+    },
+  ]
 
-  if (numStats === 1) {
-    // one colour
-    rowClasses = "row-cols-sm-1"
-    gradientStyle = "#000000"
-  } else if (numStats === 2) {
-    // two colours
-    rowClasses = "row-cols-sm-2"
-    gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#c20430 60%,#c20430 100%)"
-  } else if (numStats % 4 === 0) {
-    // four colour
-    rowClasses = "row-cols-sm-2 row-cols-lg-4"
-    gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#69A3B9 60%,#69A3B9 100%)"
-  }
+  const dlClasses = classNames(
+    "tw-flex",
+    "tw-flex-wrap",
+    "tw-flex-col",
+    "sm:tw-flex-row",
+    "tw-container",
+    {
+      "tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-4": divisbleByFour,
+    },
+    {
+      "tw-grid tw-grid-cols-1 lg:tw-grid-cols-3": divisbleByThree && !divisbleByFour,
+    },
+    {
+      "tw-grid tw-grid-cols-1 sm:tw-grid-cols-2": divisbleByTwo && !divisbleByFour,
+    },
+  )
+
+  const statClasses = classNames(
+    "tw-flex-1",
+    "tw-flex",
+    "tw-flex-col",
+    "tw-justify-around",
+    "tw-gap-5",
+    "tw-p-12",
+    "tw-relative",
+    fullWidthBG
+      ? classNames(
+          'sm:before:tw-content-[""]',
+          "before:tw-absolute",
+          "before:tw-top-0",
+          "before:tw-right-full",
+          "before:tw-w-[calc(((100vw_-_theme(width.sm-container))_/_2))]",
+          "md:before:tw-w-[calc(((100vw_-_theme(width.md-container))_/_2))]",
+          "lg:before:tw-w-[calc(((100vw_-_theme(width.lg-container))_/_2))]",
+          "xl:before:tw-w-[calc(((100vw_-_theme(width.xl-container))_/_2))]",
+          "xxl:before:tw-w-[calc(((100vw_-_theme(width.xxl-container))_/_2))]",
+          "before:tw-h-full",
+          "before:tw-bg-inherit",
+          "before:tw-z-[-1]",
+          "first:before:tw-z-0",
+          'sm:after:tw-content-[""]',
+          "after:tw-absolute",
+          "after:tw-top-0",
+          "after:tw-left-full",
+          "after:tw-w-[calc(((100vw_-_theme(width.sm-container)_-_var(--tw-scrollbar-width))_/_2))]",
+          "md:after:tw-w-[calc(((100vw_-_theme(width.md-container)_-_var(--tw-scrollbar-width))_/_2))]",
+          "lg:after:tw-w-[calc(((100vw_-_theme(width.lg-container)_-_var(--tw-scrollbar-width))_/_2))]",
+          "xl:after:tw-w-[calc(((100vw_-_theme(width.xl-container)_-_var(--tw-scrollbar-width))_/_2))]",
+          "xxl:after:tw-w-[calc(((100vw_-_theme(width.xxl-container)_-_var(--tw-scrollbar-width))_/_2))]",
+          "after:tw-h-full",
+          "after:tw-bg-inherit",
+          "after:tw-z-[-1]",
+          "last:after:tw-z-0",
+        )
+      : "",
+  )
+
+  const dtClasses = classNames("tw-text-center", "tw-font-normal", "tw-text-4xl", "tw-leading-tight")
+
+  const ddClasses = classNames("tw-text-center", "tw-font-normal", "tw-text-3xl")
 
   return (
-    <Gradient
-      className="row d-flex flex-column w-100 mx-auto"
-      gradientStyle={gradientStyle}
-      stackedGradientStyle={stackedGradientStyle}
-    >
-      <div className="p-0">
-        <Container className="px-0">
-          <Statistic className={`row g-0 row-cols-1 ${rowClasses} justify-content-center mb-0`}>
-            {stats.map((stat, index) => {
-              let type = stat.field_statistic_represents
-              let value = stat.field_statistic_value
-              let icon = stat.field_font_awesome_icon
+    <dl className={dlClasses}>
+      {stats.map((stat, index) => {
+        const color = colorClasses[index % colorClasses.length]
+        const type = stat.field_statistic_represents
+        const value = stat.field_statistic_value
+        const icon = stat.field_font_awesome_icon
 
-              return (
-                <Statistic.SolidCard
-                  key={`gradient-stat-${index}`}
-                  background={gradientColourOptions[index % gradientColourOptions.length].background}
-                  colour={gradientColourOptions[index % gradientColourOptions.length].colour}
-                  className="col d-flex flex-column justify-content-around"
-                >
-                  {icon && (
-                    <Statistic.Icon
-                      icon={icon}
-                      colour={gradientColourOptions[index % gradientColourOptions.length].colour}
-                    />
-                  )}
-                  <Statistic.Value>
-                    <span className="fw-normal" dangerouslySetInnerHTML={{ __html: value }}></span>
-                  </Statistic.Value>
-                  <Statistic.Type>
-                    <span dangerouslySetInnerHTML={{ __html: type }} />
-                  </Statistic.Type>
-                </Statistic.SolidCard>
-              )
-            })}
-          </Statistic>
-        </Container>
-      </div>
-    </Gradient>
+        return (
+          <div key={value + type} className={classNames(statClasses, color.bg, color.text)}>
+            <dt className={dtClasses}>
+              <span dangerouslySetInnerHTML={{ __html: value }}></span>
+            </dt>
+            <dd className={ddClasses}>
+              <span dangerouslySetInnerHTML={{ __html: type }}></span>
+            </dd>
+          </div>
+        )
+      })}
+    </dl>
   )
 }
 
