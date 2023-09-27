@@ -1,0 +1,44 @@
+id: programs
+programs:
+  - title: "Computer Science"
+    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10cis.shtml
+    degree:
+      - title: "Bachelor of Computing"
+        type: ["Major", "Co-op"]
+    tags:
+      - "Information Technology"
+      - "Computer Programming"
+      - "Programming"
+  - title: "Software Engineering"
+    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10seng.shtml
+    degree:
+      - title: "Bachelor of Computing"
+        type: ["Major", "Co-op"]
+    tags:
+      - "Software Engineering"
+      - "Software Design"
+      - "Information Technology"
+      - "Computer Programming"
+      - "Programming"
+  - title: "Computer Engineering"
+    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10ceng.shtml
+    degree:
+      - title: "Bachelor of Computing"
+        type: ["Major", "Co-op"]
+    tags:
+      - "Engineering"
+      - "Computer Hardware"
+      - "Electronics"
+      - "Programming"
+  - title: "Mathematical Science"
+    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10msc.shtml
+    degree:
+      - title: "Bachelor of Science"
+        type: ["Major", "Minor"]
+      - title: "Bachelor of Arts"
+        type: ["Major", "Minor"]
+    tags:
+      - "Mathematical Science"
+      - "Mathematics"
+      - "Math"
+      - "Statistics"
