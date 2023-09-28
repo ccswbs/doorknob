@@ -5,17 +5,17 @@ export const useProgramData = () => {
     query {
       blockYaml(yamlId: { eq: "programs" }) {
         programs {
+          id
           title
+          acronym
           url
-          degree {
-            title
-            type
-          }
+          degrees
+          types
           tags
         }
       }
     }
   `)
 
-  return data.blockYaml.programs
+  return data.blockYaml.programs.sort((a, b) => a.title.localeCompare(b.title))
 }

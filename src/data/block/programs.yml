@@ -1,44 +1,173 @@
 id: programs
 programs:
-  - title: "Computer Science"
-    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10cis.shtml
-    degree:
-      - title: "Bachelor of Computing"
-        type: ["Major", "Co-op"]
+  - id: "0"
+    title: "Accounting"
+    acronym: "ACCT"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/accounting-acct/
+    degrees:
+      - "Bachelor of Commerce"
+    types:
+      - "Major"
+      - "Co-op"
+      - "Minor"
+      - "Certificate"
     tags:
-      - "Information Technology"
-      - "Computer Programming"
-      - "Programming"
-  - title: "Software Engineering"
-    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10seng.shtml
-    degree:
-      - title: "Bachelor of Computing"
-        type: ["Major", "Co-op"]
+      - "Business"
+      - "Commerce"
+      - "Finance"
+
+  - id: "1"
+    title: "Agriculture"
+    acronym: "AGRS"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/agriculture-agr/
+    degrees:
+      - "Bachelor of Science in Agriculture"
+    types:
+      - "Major"
+      - "Co-op"
+      - "Minor"
     tags:
-      - "Software Engineering"
-      - "Software Design"
-      - "Information Technology"
-      - "Computer Programming"
-      - "Programming"
-  - title: "Computer Engineering"
-    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10ceng.shtml
-    degree:
-      - title: "Bachelor of Computing"
-        type: ["Major", "Co-op"]
+      - "Business"
+      - "Commerce"
+      - "Finance"
+
+  - id: "2"
+    title: "Animal Biology"
+    acronym: "ABIO"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/animal-biology-abio/
+    degrees:
+      - "Bachelor of Science"
+    types:
+      - "Major"
     tags:
-      - "Engineering"
-      - "Computer Hardware"
-      - "Electronics"
-      - "Programming"
-  - title: "Mathematical Science"
-    url: https://www.uoguelph.ca/registrar/calendars/undergraduate/current/c10/c10msc.shtml
-    degree:
-      - title: "Bachelor of Science"
-        type: ["Major", "Minor"]
-      - title: "Bachelor of Arts"
-        type: ["Major", "Minor"]
+      - "Biology"
+      - "Science"
+      - "Animals"
+
+  - id: "3"
+    title: "Animal Science"
+    acronym: "ANSC"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/animal-science-ansc/
+    degrees:
+      - "Bachelor of Science in Agriculture"
+    types:
+      - "Major"
+      - "Co-op"
     tags:
-      - "Mathematical Science"
-      - "Mathematics"
-      - "Math"
-      - "Statistics"
+      - "Biology"
+      - "Science"
+      - "Animals"
+
+  - id: "4"
+    title: "Anthropology"
+    acronym: "ANTH"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/anthropology-anth/
+    degrees:
+      - "Bachelor of Arts"
+      - "Bachelor of Arts and Sciences"
+    types:
+      - "Major"
+      - "Co-op"
+      - "Minor"
+      - "Area of Concentration"
+    tags:
+      - "Social Science"
+      - "Humanities"
+      - "History"
+
+  - id: "5"
+    title: "Applied Geomatics"
+    acronym: "AG"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/applied-geomatics-ag/
+    degrees:
+      - ""
+    types:
+      - "Minor"
+    tags:
+      - "Geography"
+      - "GIS"
+      - "STEM"
+
+  - id: "6"
+    title: "Applied Human Nutrition"
+    acronym: "AHN"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/applied-human-nutrition-ahn/
+    degrees:
+      - "Bachelor of Applied Science"
+    types:
+      - "Major"
+    tags:
+      - "Health"
+      - "Food"
+      - "Biology"
+      - "Science"
+      - "STEM"
+
+  - id: "7"
+    title: "Art History"
+    acronym: "ARTH"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/art-history-arth/
+    degrees:
+      - "Bachelor of Arts"
+    types:
+      - "Major"
+      - "Minor"
+    tags:
+      - "Fine Arts"
+      - "Humanities"
+      - "History"
+
+  - id: "8"
+    title: "Arts and Sciences"
+    acronym: "AS"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/arts-sciences-as/
+    degrees:
+      - "Bachelor of Arts and Sciences"
+    types:
+      - "Major"
+    tags:
+      - "Social Science"
+      - "Humanities"
+      - "History"
+      - "Fine Arts"
+
+  - id: "9"
+    title: "Arts Management"
+    acronym: "AM"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/arts-management-am/
+    degrees:
+      - ""
+    types:
+      - "Minor"
+    tags:
+      - "Business"
+      - "Fine Arts"
+
+  - id: "10"
+    title: "Bio-Medical Science"
+    acronym: "BIOM"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/bio-medical-science-biom/
+    degrees:
+      - "Bachelor of Science"
+    types:
+      - "Major"
+      - "Co-op"
+    tags:
+      - "Biology"
+      - "Science"
+      - "STEM"
+
+  - id: "11"
+    title: "Biochemistry"
+    acronym: "BIOC"
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biochemistry-bioc/
+    degrees:
+      - "Bachelor of Science"
+    types:
+      - "Major"
+      - "Co-op"
+      - "Minor"
+    tags:
+      - "Biology"
+      - "Science"
+      - "STEM"
