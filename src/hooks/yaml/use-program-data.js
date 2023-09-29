@@ -9,8 +9,8 @@ export const useProgramData = () => {
           title
           acronym
           url
-          degrees
           types
+          degrees
           tags
         }
       }
