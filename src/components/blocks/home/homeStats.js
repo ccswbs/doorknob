@@ -19,11 +19,11 @@ export default function HomeStats() {
   const stats = useStaticQuery(query).blockYaml.stats
   return (
     <>
-    <div className="tw-container tw-content-block">
-      <h2 className="tw-my-12">How We Rank Among the World</h2>
+      <div className="tw-container tw-content-block">
+        <h2 className="tw-my-12">How We Rank Among the World</h2>
 
-      <Statistic.Gradient stats={stats} fullWidthBG={true} />
-    </div>
+        <Statistic.Gradient stats={stats} fullWidthBG={false} />
+      </div>
     </>
   )
 }
