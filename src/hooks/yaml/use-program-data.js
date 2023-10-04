@@ -17,5 +17,5 @@ export const useProgramData = () => {
     }
   `)
 
-  return data.blockYaml.programs.sort((a, b) => a.title.localeCompare(b.title))
+  return data.blockYaml.programs
 }
