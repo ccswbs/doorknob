@@ -3,9 +3,32 @@ import { useProgramData } from "../hooks/yaml/use-program-data"
 import { Card, Container } from "react-bootstrap"
 import { editDistance } from "../utils/editDistance"
 
+const pattern = /\s+|and/g
+
 // Returns a positive integer representing how well the program matches the input string (lower is better) or -1 if it doesn't match
-const getProgramRank = (program, input) => {
-  return program.title.toLowerCase().includes(input.toLowerCase()) ? 0 : -1
+const getProgramRank = (program, searchTerms) => {
+  for (const term of searchTerms) {
+    if (program.title.toLowerCase().includes(term)) {
+      return 0
+    }
+  }
+
+  return -1
+}
+
+const parseUserInput = input => {
+  return (
+    input
+      .toLowerCase()
+      // Remove leading and trailing whitespace
+      .trim()
+      // Remove all non-alphabetic and non-whitespace characters
+      .replace(/[^a-zA-Z\s]/g, "")
+      // Split on whitespace and "and"
+      .split(pattern)
+      // Remove empty strings
+      .filter(word => word.length > 0)
+  )
 }
 
 const ProgramCard = ({ title = "", url = "", degrees = [], types = [] }) => (
@@ -23,13 +46,18 @@ const ProgramCard = ({ title = "", url = "", degrees = [], types = [] }) => (
 const ProgramSearch = () => {
   const data = useProgramData()
   const [programs, setPrograms] = useState(data)
-  const [input, setInput] = useState("")
+  const [searchTerms, setSearchTerms] = useState([])
 
   useEffect(() => {
+    if (searchTerms.length === 0) {
+      setPrograms(data)
+      return
+    }
+
     const filteredPrograms = data
       // Add a rank to each program based on how well it matches the user's input
-      .map(program => ({ ...program, rank: getProgramRank(program, input) }))
-      // Filter out programs that don't match the input
+      .map(program => ({ ...program, rank: getProgramRank(program, searchTerms) }))
+      // Filter out programs that don't match the input at all
       .filter(program => program.rank >= 0)
       // Sort by rank and title
       .sort((a, b) => {
@@ -43,17 +71,18 @@ const ProgramSearch = () => {
 
     // Update the programs state
     setPrograms(filteredPrograms)
-  }, [input])
+  }, [searchTerms])
 
   return (
     <Container>
       <h1>Program Search</h1>
-      <input type="text" onChange={e => setInput(e.target.value)} />
+      <input type="text" onChange={e => setSearchTerms(parseUserInput(e.target.value))} />
       <div className="my-5">
         {programs.map(program => (
           <ProgramCard key={program.id} {...program} />
         ))}
       </div>
+      {JSON.stringify(searchTerms)}
     </Container>
   )
 }
