@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useProgramData } from "../hooks/yaml/use-program-data"
-import { Card, Container } from "react-bootstrap"
-import { editDistance } from "../utils/editDistance"
+import { Container } from "react-bootstrap"
 
 const pattern = /\s+|and/g
 
@@ -16,6 +15,7 @@ const getProgramRank = (program, searchTerms) => {
   return -1
 }
 
+// Split the user's input into an array of search terms
 const parseUserInput = input => {
   return (
     input
@@ -28,6 +28,28 @@ const parseUserInput = input => {
       .split(pattern)
       // Remove empty strings
       .filter(word => word.length > 0)
+  )
+}
+
+// Filter the list of programs based on the search terms
+const filterPrograms = (programs, searchTerms) => {
+  if (searchTerms.length === 0) return programs
+
+  return (
+    programs
+      // Add a rank to each program based on how well it matches the user's input
+      .map(program => ({ ...program, rank: getProgramRank(program, searchTerms) }))
+      // Filter out programs that don't match the input at all
+      .filter(program => program.rank >= 0)
+      // Sort by rank and title
+      .sort((a, b) => {
+        // Sort by rank
+        if (a.rank < b.rank) return -1
+        if (a.rank > b.rank) return 1
+
+        // If rank is the same, sort alphabetically by title
+        return a.title.localeCompare(b.title)
+      })
   )
 }
 
@@ -49,29 +71,9 @@ const ProgramSearch = () => {
   const [searchTerms, setSearchTerms] = useState([])
 
   useEffect(() => {
-    if (searchTerms.length === 0) {
-      setPrograms(data)
-      return
-    }
-
-    const filteredPrograms = data
-      // Add a rank to each program based on how well it matches the user's input
-      .map(program => ({ ...program, rank: getProgramRank(program, searchTerms) }))
-      // Filter out programs that don't match the input at all
-      .filter(program => program.rank >= 0)
-      // Sort by rank and title
-      .sort((a, b) => {
-        // Sort by rank
-        if (a.rank < b.rank) return -1
-        if (a.rank > b.rank) return 1
-
-        // If rank is the same, sort alphabetically by title
-        return a.title.localeCompare(b.title)
-      })
-
-    // Update the programs state
+    const filteredPrograms = filterPrograms(data, searchTerms)
     setPrograms(filteredPrograms)
-  }, [searchTerms])
+  }, [data, searchTerms])
 
   return (
     <Container>
