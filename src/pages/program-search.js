@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useProgramData } from "../hooks/yaml/use-program-data"
 import { Container } from "react-bootstrap"
+import { toTitleCase } from "../utils/toTitleCase"
 
 const pattern = /\s+|and/g
 
@@ -54,14 +55,17 @@ const filterPrograms = (programs, searchTerms) => {
 }
 
 const ProgramCard = ({ title = "", url = "", degrees = [], types = [] }) => (
-  <div className="mb-5">
-    <div className="h5">{title}</div>
-
-    {degrees.map(degree => (
-      <div key={degree}>{degree}</div>
-    ))}
-
-    <div>{types.join(", ")}</div>
+  <div className="card my-5">
+    <div className="card-body">
+      <h5 className="card-title">{title}</h5>
+      <p className="card-text">
+        {degrees.map(degree => (
+          <span key={degree}>{degree}</span>
+        ))}
+      </p>
+      <a href={url} className="stretched-link"></a>
+    </div>
+    <div className="card-footer text-muted">{toTitleCase(types.join(", "))}</div>
   </div>
 )
 
