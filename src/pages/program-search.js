@@ -8,16 +8,24 @@ const pattern = /\s+|and/g
 
 // Returns a positive integer representing how well the program matches the keywords (lower is better) or -1 if it doesn't match
 const getProgramRank = (program, keywords) => {
-  // TODO: Improve this algorithm, taking into account program tags and degrees as well as title.
-  // TODO: consider using levenshtein distance for fuzzy matching program titles.
+  // Split the program title into an array of words just like the keywords.
+  const title = program.title.toLowerCase().split(pattern)
 
-  for (const term of keywords) {
-    if (program.title.toLowerCase().includes(term)) {
-      return 0
-    }
-  }
+  // We rank each keyword individually, then take the highest rank as the program's rank overall.
+  // If any single keyword doesn't match (i.e. rank = -1), then the program as a whole doesn't match.
+  return keywords.reduce((rank, keyword) => {
+    // The previous keyword didn't match, so this keyword can't match either, so we don't need to get its rank.
+    if (rank === -1) return -1
 
-  return -1
+    // If any word in the title starts with or is equal to the keyword, return the maximum of the previous keyword rank and 0.
+    if (title.some(word => word.startsWith(keyword))) return Math.max(rank, 0)
+
+    // TODO: consider using levenshtein distance for fuzzy matching title words against keyword.
+
+    // TODO: add extra logic here to match based on program tags and degrees as well as title.
+
+    return -1
+  }, 0)
 }
 
 // Split the user's input into an array of keywords
@@ -119,13 +127,11 @@ const ProgramSearch = () => {
         </div>
 
         <div className="col-lg-3">
-          <label htmlFor="program-type-select" className="form-label">
+          <label htmlFor="program-type-select" className="form-label" defaultValue="">
             Filter by degree type
           </label>
           <select id="program-type-select" className="form-select" onChange={e => setSelectedType(e.target.value)}>
-            <option value="" selected>
-              Any
-            </option>
+            <option value="">Any</option>
             {types.map(type => (
               <option key={type} value={type}>
                 {toTitleCase(type)}
