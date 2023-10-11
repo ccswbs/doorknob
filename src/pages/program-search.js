@@ -95,7 +95,6 @@ const ProgramSearch = () => {
           <ProgramCard key={program.id} {...program} />
         ))}
       </div>
-      {JSON.stringify(searchTerms)}
     </Container>
   )
 }
