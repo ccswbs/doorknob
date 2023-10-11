@@ -8,6 +8,9 @@ const pattern = /\s+|and/g
 
 // Returns a positive integer representing how well the program matches the keywords (lower is better) or -1 if it doesn't match
 const getProgramRank = (program, keywords) => {
+  // TODO: Improve this algorithm, taking into account program tags and degrees as well as title.
+  // TODO: consider using levenshtein distance for fuzzy matching program titles.
+
   for (const term of keywords) {
     if (program.title.toLowerCase().includes(term)) {
       return 0
