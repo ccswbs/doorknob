@@ -55,10 +55,10 @@ const filterPrograms = (programs, searchTerms) => {
   )
 }
 
-const ProgramCard = ({ title = "", url = "", degrees = [], types = [] }) => (
+const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) => (
   <div className="card my-5">
     <div className="card-body">
-      <h5 className="card-title">{title}</h5>
+      <h5 className="card-title">{acronym ? `${title} (${acronym})` : title}</h5>
       <p className="card-text">
         {degrees.map(degree => (
           <span key={degree}>{degree}</span>
@@ -84,12 +84,27 @@ const ProgramSearch = () => {
   return (
     <Container>
       <h1 className="my-5">Program Search</h1>
-      <input
-        className="form-control form-control-md"
-        type="text"
-        placeholder="Search for a program"
-        onChange={e => setSearchTerms(parseUserInput(e.target.value))}
-      />
+      <div className="row gap-5 gap-lg-0">
+        <div className="col-lg-9">
+          <label htmlFor="program-search-input" className="form-label">Search for a Program</label>
+          <input
+            id="program-search-input"
+            className="form-control form-control-md"
+            type="text"
+            onChange={e => setSearchTerms(parseUserInput(e.target.value))}
+          />
+        </div>
+        <div className="col-lg-3">
+          <label htmlFor="degree-type-select" className="form-label">Filter by Degree Type</label>
+          <select id="degree-type-select" className="form-select" aria-label="multiple select example">
+            <option selected>Any</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+
       <div id="program-search-grid" className="my-5">
         {programs.map(program => (
           <ProgramCard key={program.id} {...program} />
