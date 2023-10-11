@@ -6,9 +6,9 @@ import "../styles/program-search.scss"
 
 const pattern = /\s+|and/g
 
-// Returns a positive integer representing how well the program matches the input string (lower is better) or -1 if it doesn't match
-const getProgramRank = (program, searchTerms) => {
-  for (const term of searchTerms) {
+// Returns a positive integer representing how well the program matches the keywords (lower is better) or -1 if it doesn't match
+const getProgramRank = (program, keywords) => {
+  for (const term of keywords) {
     if (program.title.toLowerCase().includes(term)) {
       return 0
     }
@@ -17,7 +17,7 @@ const getProgramRank = (program, searchTerms) => {
   return -1
 }
 
-// Split the user's input into an array of search terms
+// Split the user's input into an array of keywords
 const parseUserInput = input => {
   return (
     input
@@ -33,14 +33,14 @@ const parseUserInput = input => {
   )
 }
 
-// Filter the list of programs based on the search terms
-const filterProgramsBySearchInput = (programs, searchTerms) => {
-  if (searchTerms.length === 0) return programs
+// Filter the list of programs based on keywords
+const filterProgramsByKeywords = (programs, keywords) => {
+  if (keywords.length === 0) return programs
 
   return (
     programs
       // Add a rank to each program based on how well it matches the user's input
-      .map(program => ({ ...program, rank: getProgramRank(program, searchTerms) }))
+      .map(program => ({ ...program, rank: getProgramRank(program, keywords) }))
       // Filter out programs that don't match the input at all
       .filter(program => program.rank >= 0)
       // Sort by rank and title
@@ -55,7 +55,7 @@ const filterProgramsBySearchInput = (programs, searchTerms) => {
   )
 }
 
-const getDegreeTypes = programs => {
+const getTypes = programs => {
   const types = new Set()
 
   for (const program of programs) {
@@ -85,19 +85,19 @@ const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) =>
 
 const ProgramSearch = () => {
   const data = useProgramData()
-  const degreeTypes = getDegreeTypes(data)
+  const types = getTypes(data)
   const [programs, setPrograms] = useState(data)
-  const [searchTerms, setSearchTerms] = useState([])
-  const [selectedDegreeType, setSelectedDegreeType] = useState("")
+  const [keywords, setKeywords] = useState([])
+  const [selectedType, setSelectedType] = useState("")
 
   useEffect(() => {
-    const filteredPrograms = filterProgramsBySearchInput(data, searchTerms).filter(program => {
-      if (selectedDegreeType === "") return true
-      return program.types.includes(selectedDegreeType)
+    const filteredPrograms = filterProgramsByKeywords(data, keywords).filter(program => {
+      if (selectedType === "") return true
+      return program.types.includes(selectedType)
     })
 
     setPrograms(filteredPrograms)
-  }, [data, searchTerms, selectedDegreeType])
+  }, [data, keywords, selectedType])
 
   return (
     <Container>
@@ -105,25 +105,25 @@ const ProgramSearch = () => {
       <div className="row gap-5 gap-lg-0">
         <div className="col-lg-9">
           <label htmlFor="program-search-input" className="form-label">
-            Search for a Program
+            Search by keywords
           </label>
           <input
             id="program-search-input"
             className="form-control form-control-md"
             type="text"
-            onChange={e => setSearchTerms(parseUserInput(e.target.value))}
+            onChange={e => setKeywords(parseUserInput(e.target.value))}
           />
         </div>
 
         <div className="col-lg-3">
-          <label htmlFor="degree-type-select" className="form-label">
-            Filter by Degree Type
+          <label htmlFor="program-type-select" className="form-label">
+            Filter by degree type
           </label>
-          <select id="degree-type-select" className="form-select" onChange={e => setSelectedDegreeType(e.target.value)}>
+          <select id="program-type-select" className="form-select" onChange={e => setSelectedType(e.target.value)}>
             <option value="" selected>
               Any
             </option>
-            {degreeTypes.map(type => (
+            {types.map(type => (
               <option key={type} value={type}>
                 {toTitleCase(type)}
               </option>
