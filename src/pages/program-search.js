@@ -83,9 +83,9 @@ const ProgramSearch = () => {
 
   return (
     <Container>
-      <h1>Program Search</h1>
+      <h1 className="my-5">Program Search</h1>
       <input
-        className="form-control form-control-lg mt-5"
+        className="form-control form-control-md"
         type="text"
         placeholder="Search for a program"
         onChange={e => setSearchTerms(parseUserInput(e.target.value))}
