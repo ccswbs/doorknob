@@ -34,7 +34,7 @@ const parseUserInput = input => {
 }
 
 // Filter the list of programs based on the search terms
-const filterPrograms = (programs, searchTerms) => {
+const filterProgramsBySearchInput = (programs, searchTerms) => {
   if (searchTerms.length === 0) return programs
 
   return (
@@ -55,6 +55,18 @@ const filterPrograms = (programs, searchTerms) => {
   )
 }
 
+const getDegreeTypes = programs => {
+  const types = new Set()
+
+  for (const program of programs) {
+    for (const type of program.types) {
+      types.add(type)
+    }
+  }
+
+  return Array.from(types)
+}
+
 const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) => (
   <div className="card my-5">
     <div className="card-body">
@@ -73,20 +85,28 @@ const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) =>
 
 const ProgramSearch = () => {
   const data = useProgramData()
+  const degreeTypes = getDegreeTypes(data)
   const [programs, setPrograms] = useState(data)
   const [searchTerms, setSearchTerms] = useState([])
+  const [selectedDegreeType, setSelectedDegreeType] = useState("")
 
   useEffect(() => {
-    const filteredPrograms = filterPrograms(data, searchTerms)
+    const filteredPrograms = filterProgramsBySearchInput(data, searchTerms).filter(program => {
+      if (selectedDegreeType === "") return true
+      return program.types.includes(selectedDegreeType)
+    })
+
     setPrograms(filteredPrograms)
-  }, [data, searchTerms])
+  }, [data, searchTerms, selectedDegreeType])
 
   return (
     <Container>
       <h1 className="my-5">Program Search</h1>
       <div className="row gap-5 gap-lg-0">
         <div className="col-lg-9">
-          <label htmlFor="program-search-input" className="form-label">Search for a Program</label>
+          <label htmlFor="program-search-input" className="form-label">
+            Search for a Program
+          </label>
           <input
             id="program-search-input"
             className="form-control form-control-md"
@@ -94,13 +114,20 @@ const ProgramSearch = () => {
             onChange={e => setSearchTerms(parseUserInput(e.target.value))}
           />
         </div>
+
         <div className="col-lg-3">
-          <label htmlFor="degree-type-select" className="form-label">Filter by Degree Type</label>
-          <select id="degree-type-select" className="form-select" aria-label="multiple select example">
-            <option selected>Any</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <label htmlFor="degree-type-select" className="form-label">
+            Filter by Degree Type
+          </label>
+          <select id="degree-type-select" className="form-select" onChange={e => setSelectedDegreeType(e.target.value)}>
+            <option value="" selected>
+              Any
+            </option>
+            {degreeTypes.map(type => (
+              <option key={type} value={type}>
+                {toTitleCase(type)}
+              </option>
+            ))}
           </select>
         </div>
       </div>
