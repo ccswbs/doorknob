@@ -1,0 +1,19 @@
+#program-search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 3rem;
+
+  .card:hover .card-body,
+  .card:focus .card-body {
+    //background-color: #bdb !important;
+  }
+
+  .card {
+    .card-footer {
+      &::after {
+        content: "\200B";
+        visibility: hidden;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useProgramData } from "../hooks/yaml/use-program-data"
 import { Container } from "react-bootstrap"
 import { toTitleCase } from "../utils/toTitleCase"
+import "../styles/program-search.scss"
 
 const pattern = /\s+|and/g
 
@@ -65,7 +66,8 @@ const ProgramCard = ({ title = "", url = "", degrees = [], types = [] }) => (
       </p>
       <a href={url} className="stretched-link"></a>
     </div>
-    <div className="card-footer text-muted">{toTitleCase(types.join(", "))}</div>
+
+    <div className="card-footer text-muted bg-info bg-opacity-10">{toTitleCase(types.join(", "))}</div>
   </div>
 )
 
@@ -82,8 +84,13 @@ const ProgramSearch = () => {
   return (
     <Container>
       <h1>Program Search</h1>
-      <input type="text" onChange={e => setSearchTerms(parseUserInput(e.target.value))} />
-      <div className="my-5">
+      <input
+        className="form-control form-control-lg mt-5"
+        type="text"
+        placeholder="Search for a program"
+        onChange={e => setSearchTerms(parseUserInput(e.target.value))}
+      />
+      <div id="program-search-grid" className="my-5">
         {programs.map(program => (
           <ProgramCard key={program.id} {...program} />
         ))}

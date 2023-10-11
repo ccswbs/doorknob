@@ -95,7 +95,8 @@ programs:
     title: Arts and Sciences
     acronym: AS
     url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/arts-sciences-as/
-    degrees: []
+    degrees:
+      - Bachelor of Arts and Sciences
     types: []
     tags: []
   - id: 8v0uXcx6vbAsoOowhH6yZ
