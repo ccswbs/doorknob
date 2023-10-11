@@ -15,22 +15,15 @@ programs:
       - business
       - commerce
       - finance
-  - id: VnltLn0Q5kT6aW9FqSf2F
-    title: Agriculture
-    acronym: AGR
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/agriculture-agr/
-    degrees: []
-    types:
-      - minor
-    tags: []
   - id: X0AKHgQMhcfycMjrtvzuT
-    title: Agriculture, Honours
+    title: Agriculture
     acronym: AGRS
     url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/honours-agriculture-agrs/
     degrees:
       - Bachelor of Science in Agriculture
     types:
       - major
+      - minor
       - co-op
     tags: []
   - id: e1R0ZPaBsyvMefTekAEN5
