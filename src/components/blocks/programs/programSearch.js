@@ -1,8 +1,6 @@
+import { ProgramCard } from "./programCard"
 import React, { useEffect, useState } from "react"
-import { useProgramData } from "../hooks/yaml/use-program-data"
 import { Container } from "react-bootstrap"
-import { toTitleCase } from "../utils/toTitleCase"
-import "../styles/program-search.scss"
 
 const pattern = /\s+|\band\b|\bof\b|\bin\b/g
 
@@ -89,26 +87,7 @@ const getTypes = programs => {
   return Array.from(types)
 }
 
-const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) => (
-  <div className="card">
-    <div className="card-body">
-      <h5 className="card-title">{acronym ? `${title} (${acronym})` : title}</h5>
-      <p className="card-text">
-        {degrees.map(degree => (
-          <span className="d-block" key={degree}>
-            {degree}
-          </span>
-        ))}
-      </p>
-      <a href={url} className="stretched-link"></a>
-    </div>
-
-    <div className="card-footer text-muted bg-info bg-opacity-10">{toTitleCase(types.join(", "))}</div>
-  </div>
-)
-
-const ProgramSearch = () => {
-  const data = useProgramData()
+export const ProgramSearch = ({ data }) => {
   const types = getTypes(data)
   const [programs, setPrograms] = useState(data)
   const [keywords, setKeywords] = useState([])
@@ -125,11 +104,10 @@ const ProgramSearch = () => {
 
   return (
     <Container>
-      <h1 className="my-5">Program Search</h1>
       <div className="row gap-5 gap-lg-0">
         <div className="col-lg-9">
           <label htmlFor="program-search-input" className="form-label">
-            Search by keywords
+            Search by title, degree, or theme
           </label>
           <input
             id="program-search-input"
@@ -147,7 +125,7 @@ const ProgramSearch = () => {
             <option value="">Any</option>
             {types.map(type => (
               <option key={type} value={type}>
-                {toTitleCase(type)}
+                {type}
               </option>
             ))}
           </select>
@@ -162,5 +140,3 @@ const ProgramSearch = () => {
     </Container>
   )
 }
-
-export default ProgramSearch
