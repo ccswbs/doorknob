@@ -4,28 +4,39 @@ import { Container } from "react-bootstrap"
 import { toTitleCase } from "../utils/toTitleCase"
 import "../styles/program-search.scss"
 
-const pattern = /\s+|and/g
+const pattern = /\s+|\band\b|\bof\b|\bin\b/g
 
 // Returns a positive integer representing how well the program matches the keywords (lower is better) or -1 if it doesn't match
 const getProgramRank = (program, keywords) => {
-  // Split the program title into an array of words just like the keywords.
+  // Split some of the program props into an array of words just like the keywords.
+  // TODO: consider doing this once when the data is loaded instead of every time the user searches.
   const title = program.title.toLowerCase().split(pattern)
+  const degrees = program.degrees
+    .map(degree => degree.toLowerCase())
+    .join(" ")
+    .split(pattern)
+    .filter(word => word.length > 0)
+  const tags = program.tags.map(tag => tag.toLowerCase())
 
-  // We rank each keyword individually, then take the highest rank as the program's rank overall.
+  // We rank each keyword individually, then take the highest (lowest number) rank as the program's rank overall.
   // If any single keyword doesn't match (i.e. rank = -1), then the program as a whole doesn't match.
   return keywords.reduce((rank, keyword) => {
     // The previous keyword didn't match, so this keyword can't match either, so we don't need to get its rank.
     if (rank === -1) return -1
 
-    // If any word in the title starts with or is equal to the keyword, return the maximum of the previous keyword rank and 0.
-    if (title.some(word => word.startsWith(keyword))) return Math.max(rank, 0)
+    // If any word in the title starts with or is equal to the keyword return 0 (highest rank).
+    if (title.some(word => word.startsWith(keyword))) return 0
 
     // TODO: consider using levenshtein distance for fuzzy matching title words against keyword.
 
-    // TODO: add extra logic here to match based on program tags and degrees as well as title.
+    // if the keyword is in the program's degrees, return 1 if the none of the previous keywords had a higher rank.
+    if (degrees.some(word => word.startsWith(keyword))) return isNaN(rank) ? 1 : Math.min(rank, 1)
+
+    // If the keyword is in the program's tags, return 2 if the none of the previous keywords had a higher rank.
+    if (tags.some(tag => tag.startsWith(keyword))) return isNaN(rank) ? 2 : Math.min(rank, 2)
 
     return -1
-  }, 0)
+  }, NaN)
 }
 
 // Split the user's input into an array of keywords
@@ -79,12 +90,14 @@ const getTypes = programs => {
 }
 
 const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) => (
-  <div className="card my-5">
+  <div className="card">
     <div className="card-body">
       <h5 className="card-title">{acronym ? `${title} (${acronym})` : title}</h5>
       <p className="card-text">
         {degrees.map(degree => (
-          <span key={degree}>{degree}</span>
+          <span className="d-block" key={degree}>
+            {degree}
+          </span>
         ))}
       </p>
       <a href={url} className="stretched-link"></a>

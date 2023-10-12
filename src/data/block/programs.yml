@@ -294,7 +294,9 @@ programs:
     types:
       - major
       - co-op
-    tags: []
+    tags:
+      - programming
+      - stem
   - id: M20Vp3poNNEEjW_Mp0SYu
     title: Computer Science
     acronym: CS
@@ -304,7 +306,11 @@ programs:
     types:
       - major
       - co-op
-    tags: []
+    tags:
+      - programming
+      - stem
+      - coding
+      - engineering
   - id: EA2IZ_wOh29AjpRzKgi4H
     title: Computing and Information Science
     acronym: CIS
@@ -1043,7 +1049,12 @@ programs:
     types:
       - major
       - co-op
-    tags: []
+    tags:
+      - marketing
+      - business
+      - finance
+      - economics
+      - commerce
   - id: 6iQQM8ZmNY-n0j08hma1V
     title: Sexualities, Genders and Social Change
     acronym: SXGN
@@ -1074,7 +1085,10 @@ programs:
     types:
       - major
       - co-op
-    tags: []
+    tags:
+      - programming
+      - stem
+      - coding
   - id: 3SbuRM0yGJiUkg0AU7D3b
     title: Spanish and Hispanic Studies
     acronym: SPAH
@@ -1108,7 +1122,11 @@ programs:
       - minor
       - area of concentration
       - diploma
-    tags: []
+    tags:
+      - stem
+      - math
+      - data
+      - mathematics
   - id: u19ONAHbQbaWnqJgM9Cxm
     title: Studio Art
     acronym: SART
