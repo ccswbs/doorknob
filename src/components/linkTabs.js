@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 
 const LinkTab = ({ href, active, children }) => (
-  <li className="nav-item">
+  <li className="nav-item nav-fill">
     <Link className={classNames("nav-link", { active: active })} to={href}>
       {children}
     </Link>
