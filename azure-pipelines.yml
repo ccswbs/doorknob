@@ -78,15 +78,6 @@ steps:
 
   displayName: 'Move _gatsby to assets/_gatsby'
 
-- bash: |
-    # Define absolute paths
-    index_file="$(Build.SourcesDirectory)/public/index.html"
-    gindex_file="$(Build.SourcesDirectory)/public/gindex.html"
-
-    mv "$index_file" "$gindex_file"
-
-  displayName: 'Rename index.html to gindex.html'
-
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)/public'
