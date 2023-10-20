@@ -3,7 +3,7 @@ programs:
   - id: CayU8RbEa8E3C-6Uz3kZc
     title: Accounting
     acronym: ACCT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/accounting-acct/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/accounting-acct/
     degrees:
       - Bachelor of Commerce
     types:
@@ -17,7 +17,7 @@ programs:
   - id: X0AKHgQMhcfycMjrtvzuT
     title: Agriculture
     acronym: AGRS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/honours-agriculture-agrs/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/honours-agriculture-agrs/
     degrees:
       - Bachelor of Science in Agriculture
     types:
@@ -29,7 +29,7 @@ programs:
   - id: e1R0ZPaBsyvMefTekAEN5
     title: Animal Biology
     acronym: ABIO
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/animal-biology-abio/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/animal-biology-abio/
     degrees:
       - Bachelor of Science
     types:
@@ -38,7 +38,7 @@ programs:
   - id: 9cn85BWiuvlJhn0SKEH6a
     title: Animal Science
     acronym: ANSC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/animal-science-ansc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/animal-science-ansc/
     degrees:
       - Bachelor of Science in Agriculture
     types:
@@ -49,7 +49,7 @@ programs:
   - id: scALh9Udk2L2z3n31PISz
     title: Anthropology
     acronym: ANTH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/anthropology-anth/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/anthropology-anth/
     degrees:
       - Bachelor of Arts
     types:
@@ -62,7 +62,7 @@ programs:
   - id: 45VaX60nCuwRkCiiSzTwJ
     title: Applied Geomatics
     acronym: AG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/applied-geomatics-ag/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/applied-geomatics-ag/
     degrees: []
     types:
       - Minor
@@ -70,7 +70,7 @@ programs:
   - id: CEy0N1dThIYdK_K_feZ8O
     title: Applied Human Nutrition
     acronym: AHN
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/applied-human-nutrition-ahn/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/applied-human-nutrition-ahn/
     degrees:
       - Bachelor of Applied Science
     types:
@@ -81,7 +81,7 @@ programs:
   - id: TaAKlyqKPgnrerBYhRZZd
     title: Art History
     acronym: ARTH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/art-history-arth/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/art-history-arth/
     degrees:
       - Bachelor of Arts
     types:
@@ -92,7 +92,7 @@ programs:
   - id: N3cAAFyTSg-saeVyovL4m
     title: Arts and Sciences
     acronym: AS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/arts-sciences-as/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/arts-sciences-as/
     degrees:
       - Bachelor of Arts and Sciences
     types: []
@@ -100,7 +100,7 @@ programs:
   - id: 8v0uXcx6vbAsoOowhH6yZ
     title: Arts Management
     acronym: AM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/arts-management-am/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/arts-management-am/
     degrees: []
     types:
       - Minor
@@ -109,7 +109,7 @@ programs:
   - id: 7Q8btIe02YSlmne9UefCF
     title: Bio-Medical Science
     acronym: BIOM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/bio-medical-science-biom/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/bio-medical-science-biom/
     degrees:
       - Bachelor of Science
     types:
@@ -120,7 +120,7 @@ programs:
   - id: vikVVXZWPJo7RkgHYd_-R
     title: Biochemistry
     acronym: BIOC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biochemistry-bioc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biochemistry-bioc/
     degrees:
       - Bachelor of Science
     types:
@@ -133,7 +133,7 @@ programs:
   - id: bJtrun4JW74_14MGFP50h
     title: Biodiversity
     acronym: BIOD
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biodiversity-biod/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biodiversity-biod/
     degrees:
       - Bachelor of Science
     types:
@@ -143,7 +143,7 @@ programs:
   - id: BJw2paGY9kgV94LZm-tLN
     title: Biological and Medical Physics
     acronym: BMPH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biological-medical-physics-bmph/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biological-medical-physics-bmph/
     degrees:
       - Bachelor of Science
     types:
@@ -154,7 +154,7 @@ programs:
   - id: hvWpInt9NF9SOtbhm44Lv
     title: Biological and Pharmaceutical Chemistry
     acronym: BPCH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biological-pharmaceutical-chemistry-bpch/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biological-pharmaceutical-chemistry-bpch/
     degrees:
       - Bachelor of Science
     types:
@@ -167,7 +167,7 @@ programs:
   - id: vqRsWo9ByhpxhuKh2R9wM
     title: Biological Engineering
     acronym: BIOE
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biological-engineering-program-bioe/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biological-engineering-program-bioe/
     degrees:
       - Bachelor of Engineering
     types:
@@ -178,7 +178,7 @@ programs:
   - id: sLkTBljGIya8FeWmhBWlY
     title: Biological Science
     acronym: BIOS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biological-science-bios/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biological-science-bios/
     degrees:
       - Bachelor of Science
     types:
@@ -188,7 +188,7 @@ programs:
   - id: TN6o7nu8IMTJncDTLFyxS
     title: Biology
     acronym: BIOL
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biology-biol/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biology-biol/
     degrees: []
     types:
       - Minor
@@ -197,7 +197,7 @@ programs:
   - id: nf6jZj1kpARMQ94kWsYnj
     title: Biomedical Engineering
     acronym: BME
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biomedical-engineering-program-bme/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biomedical-engineering-program-bme/
     degrees:
       - Bachelor of Engineering
     types:
@@ -207,7 +207,7 @@ programs:
   - id: U2choqf0TyEHD-fqNYLS4
     title: Biomedical Toxicology
     acronym: BTOX
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biomedical-toxicology-btox/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biomedical-toxicology-btox/
     degrees:
       - Bachelor of Science
     types:
@@ -217,7 +217,7 @@ programs:
   - id: vYMgooCgJ89w88pK0oJAB
     title: Biotechnology
     acronym: BIOT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/biotechnology-biot/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biotechnology-biot/
     degrees: []
     types:
       - Minor
@@ -225,7 +225,7 @@ programs:
   - id: 1o3c-PxAZ44k2mFgBVZWL
     title: Black Canadian Studies
     acronym: BLCK
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/black-canadian-studies-blck/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/black-canadian-studies-blck/
     degrees: []
     types:
       - Minor
@@ -233,7 +233,7 @@ programs:
   - id: 096_UduP7ZB06HVqP1u35
     title: Business
     acronym: BUS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/business-bus/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/business-bus/
     degrees: []
     types:
       - Minor
@@ -242,7 +242,7 @@ programs:
   - id: nDn8xB3YTw3NZE9v3e_oL
     title: Business Data Analytics
     acronym: BDA
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/business-data-analytics-bda/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/business-data-analytics-bda/
     degrees: []
     types:
       - Minor
@@ -250,7 +250,7 @@ programs:
   - id: x_qCyysh6cdyfDpD8cH3_
     title: Business Economics
     acronym: BECN
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/business-economics-becn/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/business-economics-becn/
     degrees: []
     types:
       - Minor
@@ -258,7 +258,7 @@ programs:
   - id: Z1gpRWQlpK76lzwdmZ1Zt
     title: Chemical Physics
     acronym: CHPY
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/chemical-physics-chpy/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/chemical-physics-chpy/
     degrees:
       - Bachelor of Science
     types:
@@ -268,7 +268,7 @@ programs:
   - id: aeOxqMyrdXi-DSZUJlGGf
     title: Chemistry
     acronym: CHEM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/chemistry-chem/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/chemistry-chem/
     degrees:
       - Bachelor of Science
     types:
@@ -279,7 +279,7 @@ programs:
   - id: v-uj12QY7Zwp3H0VSSK3O
     title: Child Studies
     acronym: CSTU
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/child-studies-cstu/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/child-studies-cstu/
     degrees:
       - Bachelor of Applied Science
     types:
@@ -288,7 +288,7 @@ programs:
   - id: o3x6wk8Lbrljjb_CR2ric
     title: Classical Studies
     acronym: CLAS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/classical-studies-clas/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/classical-studies-clas/
     degrees:
       - Bachelor of Arts
     types:
@@ -298,7 +298,7 @@ programs:
   - id: i5HUzkTY6_B8Fcw-K6P71
     title: Communication Process
     acronym: CPTP
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/communication-process-cptp/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/communication-process-cptp/
     degrees: []
     types:
       - Certificate
@@ -306,7 +306,7 @@ programs:
   - id: ioh3XxhX32y5t9izFEwJQ
     title: Computer Engineering
     acronym: CENG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/computer-engineering-program-ceng/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/computer-engineering-program-ceng/
     degrees:
       - Bachelor of Engineering
     types:
@@ -318,7 +318,7 @@ programs:
   - id: M20Vp3poNNEEjW_Mp0SYu
     title: Computer Science
     acronym: CS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/computer-science-cs/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/computer-science-cs/
     degrees:
       - Bachelor of Computing
     types:
@@ -332,7 +332,7 @@ programs:
   - id: EA2IZ_wOh29AjpRzKgi4H
     title: Computing and Information Science
     acronym: CIS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/computing-information-science-cis/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/computing-information-science-cis/
     degrees: []
     types:
       - Minor
@@ -340,7 +340,7 @@ programs:
   - id: BcWq6BOQsNBW0qdb5_CnO
     title: Creative Writing
     acronym: CW
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/creative-writing-cw/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/creative-writing-cw/
     degrees:
       - Bachelor of Arts
     types:
@@ -350,7 +350,7 @@ programs:
   - id: 2CWGU68s4hfq51DlgTHsx
     title: Criminal Justice and Public Policy
     acronym: CJPP
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/criminal-justice-public-policy-cjpp/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/criminal-justice-public-policy-cjpp/
     degrees:
       - Bachelor of Arts
     types:
@@ -361,7 +361,7 @@ programs:
   - id: BUfbZf3Bv8xrIzGSnfqBG
     title: Crop Science
     acronym: CRSC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/crop-science-crsc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/crop-science-crsc/
     degrees:
       - Bachelor of Science in Agriculture
     types:
@@ -371,7 +371,7 @@ programs:
   - id: uJqjHXv1qEAul79ra0RWA
     title: Culture and Technology Studies
     acronym: CTS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/culture-and-technology-studies-cts/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/culture-and-technology-studies-cts/
     degrees:
       - Bachelor of Arts
     types:
@@ -382,7 +382,7 @@ programs:
   - id: sJIcuBVAP0vBRlBE6eSTL
     title: Ecology
     acronym: ECOL
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/ecology-ecol/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/ecology-ecol/
     degrees:
       - Bachelor of Science in Environmental Sciences
     types:
@@ -393,7 +393,7 @@ programs:
   - id: zPpUhnpB-ecIUOomWRHoB
     title: Economics
     acronym: ECON
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/economics-econ/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/economics-econ/
     degrees:
       - Bachelor of Arts
     types:
@@ -404,7 +404,7 @@ programs:
   - id: nsFIJU9DoLFI3fjaicBpL
     title: Engineering Systems and Computing
     acronym: ESC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/engineering-systems-computing-program-esc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/engineering-systems-computing-program-esc/
     degrees:
       - Bachelor of Engineering
     types:
@@ -414,7 +414,7 @@ programs:
   - id: QzCEuV9liJXenC0wMzPl-
     title: English
     acronym: ENGL
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/english-engl/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/english-engl/
     degrees:
       - Bachelor of Arts
     types:
@@ -425,7 +425,7 @@ programs:
   - id: vkGGkGsT__d4HQ_mU5xKQ
     title: Entrepreneurship
     acronym: ENT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/entrepreneurship-ent/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/entrepreneurship-ent/
     degrees: []
     types:
       - Minor
@@ -433,7 +433,7 @@ programs:
   - id: oNguNI4SypfMVng0wFgut
     title: Environment and Resource Management
     acronym: ERM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environment-resource-management-erm/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environment-resource-management-erm/
     degrees:
       - Bachelor of Science in Environmental Sciences
     types:
@@ -443,7 +443,7 @@ programs:
   - id: uJkrVMeT3BrpCeuGLjdhq
     title: Environmental Biology
     acronym: ENVB
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-biology-envb/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-biology-envb/
     degrees:
       - Bachelor of Science
     types:
@@ -452,7 +452,7 @@ programs:
   - id: E3Hd5H6q-CKjXchlyEeT5
     title: Environmental Citizenship
     acronym: ECT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-citizenship-ect/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-citizenship-ect/
     degrees: []
     types:
       - Certificate
@@ -460,7 +460,7 @@ programs:
   - id: 6JJWP-TzeK8heaoyMSnxy
     title: Environmental Conservation
     acronym: ECV
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-conservation-ecv/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-conservation-ecv/
     degrees: []
     types:
       - Certificate
@@ -468,7 +468,7 @@ programs:
   - id: lBHT5nLFJotTRYDvUD0Ob
     title: Environmental Economics and Policy
     acronym: EEP
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-economics-policy-eep/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-economics-policy-eep/
     degrees:
       - Bachelor of Science in Environmental Sciences
     types:
@@ -478,7 +478,7 @@ programs:
   - id: 0W0GXC0_hv8VozuUteO0o
     title: Environmental Engineering
     acronym: ENVE
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-engineering-program-enve/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-engineering-program-enve/
     degrees:
       - Bachelor of Engineering
     types:
@@ -489,7 +489,7 @@ programs:
   - id: OgW3Fck4OcJ4MhGEj8V3u
     title: Environmental Geomatics
     acronym: EG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-geomatics-eg/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-geomatics-eg/
     degrees:
       - Bachelor of Science
     types:
@@ -499,7 +499,7 @@ programs:
   - id: 5U5hokLQ6Zahf2hH25S69
     title: Environmental Governance
     acronym: EGOV
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-governance-egov/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-governance-egov/
     degrees:
       - Bachelor of Arts
     types:
@@ -509,7 +509,7 @@ programs:
   - id: -UNOpsxNXBE1W4yPJjzvM
     title: Environmental Management
     acronym: EM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-management-Major-em/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-management-Major-em/
     degrees:
       - Bachelor of Bio-Resource Management
     types:
@@ -519,7 +519,7 @@ programs:
   - id: q4lrQO4fol8ZePXE1aLdd
     title: Environmental Sciences
     acronym: ENVS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/environmental-sciences-envs/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-sciences-envs/
     degrees:
       - Bachelor of Science in Environmental Sciences
     types:
@@ -529,7 +529,7 @@ programs:
   - id: e3WqYKjewfKwxGW4Kjqd5
     title: Equine Management
     acronym: EQM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/equine-management-Major-eqm/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/equine-management-Major-eqm/
     degrees:
       - Bachelor of Bio-Resource Management
     types:
@@ -539,7 +539,7 @@ programs:
   - id: FfJ2IWXDxt0xfBqmgZifx
     title: European Culture and Civilization
     acronym: ECC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/european-culture-civilization-ecc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/european-culture-civilization-ecc/
     degrees: []
     types:
       - Minor
@@ -547,7 +547,7 @@ programs:
   - id: 2xG73enkM5zUUXuaWI30a
     title: European Studies
     acronym: EURS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/european-studies-eurs/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/european-studies-eurs/
     degrees:
       - Bachelor of Arts
     types:
@@ -556,7 +556,7 @@ programs:
   - id: kRrwq7G-7yjihrQxC79n5
     title: Family and Child Studies
     acronym: FCS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/family-child-studies-fcs/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/family-child-studies-fcs/
     degrees: []
     types:
       - Minor
@@ -564,7 +564,7 @@ programs:
   - id: aovnlFeeEsz4JcfDaTjuy
     title: Family Studies and Human Development
     acronym: FSHD
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/family-studies-human-development-fshd/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/family-studies-human-development-fshd/
     degrees:
       - Bachelor of Applied Science
     types:
@@ -573,7 +573,7 @@ programs:
   - id: HxGceo1xBVeT8_XwXw4d4
     title: Food and Agricultural Business
     acronym: FAB
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/food-agricultural-business-fab/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/food-agricultural-business-fab/
     degrees:
       - Bachelor of Commerce
     types:
@@ -583,7 +583,7 @@ programs:
   - id: XxOqQ3mMnCVH_rl-NDUp9
     title: Food Engineering
     acronym: FENG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/food-engineering-feng/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/food-engineering-feng/
     degrees: []
     types:
       - Minor
@@ -591,7 +591,7 @@ programs:
   - id: -d1Y3c4nUYaD6aoIyquoh
     title: Food Industry Management
     acronym: FIM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/food-industry-management-fim/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/food-industry-management-fim/
     degrees:
       - Bachelor of Bio-Resource Management
     types:
@@ -601,7 +601,7 @@ programs:
   - id: OlpFF7a6uFQYzZwdO9Gny
     title: Food Science
     acronym: FOOD
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/food-science-food/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/food-science-food/
     degrees:
       - Bachelor of Science
     types:
@@ -612,7 +612,7 @@ programs:
   - id: AO8oKioBHXN93XZ4b78RI
     title: Food, Agricultural and Resource Economics
     acronym: FARE
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/food-agricultural-resource-economics-fare/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/food-agricultural-resource-economics-fare/
     degrees:
       - Bachelor of Arts
     types:
@@ -622,7 +622,7 @@ programs:
   - id: ZsNZNWVDf2GzqbbhBH9aY
     title: French Studies
     acronym: FREN
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/french-studies-fren/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/french-studies-fren/
     degrees:
       - Bachelor of Arts
     types:
@@ -633,7 +633,7 @@ programs:
   - id: kFChqjpvce_-yDT7QpQOo
     title: Geography
     acronym: GEOG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/geography-geog/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/geography-geog/
     degrees:
       - Bachelor of Arts
     types:
@@ -645,7 +645,7 @@ programs:
   - id: cAtCR3OF_mgagyzGLij69
     title: German
     acronym: GERM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/german-germ/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/german-germ/
     degrees: []
     types:
       - Minor
@@ -654,7 +654,7 @@ programs:
   - id: fYGSKc5nHyEFfvMXlecjF
     title: Government, Economics and Management
     acronym: GEM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/government-economics-and-management-gem/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/government-economics-and-management-gem/
     degrees:
       - Bachelor of Commerce
     types:
@@ -664,7 +664,7 @@ programs:
   - id: LJYouP7uBwJruBk5Ep2hW
     title: History
     acronym: HIST
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/history-hist/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/history-hist/
     degrees:
       - Bachelor of Arts
     types:
@@ -676,7 +676,7 @@ programs:
   - id: 6EfwFEmBbKL5hDfWaQWsL
     title: Horticulture
     acronym: HRT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/horticulture-hort/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/horticulture-hort/
     degrees:
       - Bachelor of Science in Agriculture
     types:
@@ -686,7 +686,7 @@ programs:
   - id: hgsQls9LKhXUMGYgP3wa1
     title: Hospitality and Tourism Management
     acronym: HTM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/hospitality-tourism-management-htm/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/hospitality-tourism-management-htm/
     degrees:
       - Bachelor of Commerce
     types:
@@ -697,7 +697,7 @@ programs:
   - id: g9t8TrAFiJWpzCwTfXtIH
     title: Human Kinetics
     acronym: HK
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/human-kinetics-hk/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/human-kinetics-hk/
     degrees:
       - Bachelor of Science
     types:
@@ -706,7 +706,7 @@ programs:
   - id: gVS_dbPTdW-iwrT3tEkpP
     title: Human Resources
     acronym: HR
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/human-resources-hr/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/human-resources-hr/
     degrees: []
     types:
       - Minor
@@ -714,7 +714,7 @@ programs:
   - id: QNrmOJKJjEQv4LCipkNAA
     title: Indigenous Environmental Governance
     acronym: IEG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/indigenous-environmental-governance-ieg/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/indigenous-environmental-governance-ieg/
     degrees: []
     types:
       - Certificate
@@ -722,14 +722,14 @@ programs:
   - id: GamvxtGE3EpjpNc4q4AF9
     title: Indigenous Environmental Science and Practice
     acronym: IESP
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/indigenous-environmental-sscience-practice-iesp/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/indigenous-environmental-sscience-practice-iesp/
     degrees: []
     types: []
     tags: []
   - id: 6nKYoJnl2Px50ZORrvtvY
     title: International Business
     acronym: IB
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/international-business-ib/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/international-business-ib/
     degrees: []
     types:
       - Minor
@@ -737,7 +737,7 @@ programs:
   - id: Cw6JnoZNKGrpgP3rbQTmE
     title: International Development Studies
     acronym: IDS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/international-development-studies-ids/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/international-development-studies-ids/
     degrees:
       - Bachelor of Arts
     types:
@@ -749,7 +749,7 @@ programs:
   - id: NYYBKdQL2FA_AefHVxOuy
     title: Italian
     acronym: ITAL
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/italian-ital/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/italian-ital/
     degrees: []
     types:
       - Minor
@@ -757,7 +757,7 @@ programs:
   - id: UGj5la8l0mI1uzhX2AAvJ
     title: Justice and Legal Studies
     acronym: JLS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/justice-and-legal-studies-jls/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/justice-and-legal-studies-jls/
     degrees:
       - Bachelor of Arts
     types:
@@ -767,7 +767,7 @@ programs:
   - id: 7sVuzdZFwyG-rITHhfTfA
     title: Landscape Architecture
     acronym: LA
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/landscape-architecture-la/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/landscape-architecture-la/
     degrees:
       - Bachelor of Landscape Architecture
     types: []
@@ -775,7 +775,7 @@ programs:
   - id: 0RThCPYWRntnJvoshwLCD
     title: Leadership
     acronym: LEAD
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/leadership-lead/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/leadership-lead/
     degrees: []
     types:
       - Certificate
@@ -783,7 +783,7 @@ programs:
   - id: 8pZNElylpWLGGSfTZOK2D
     title: Linguistics
     acronym: LING
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/linguistics-ling/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/linguistics-ling/
     degrees: []
     types:
       - Minor
@@ -791,7 +791,7 @@ programs:
   - id: SgSsEFX_ojV-nsViPKjwX
     title: Management
     acronym: MGMT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/management-mgmt/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/management-mgmt/
     degrees:
       - Bachelor of Commerce
     types:
@@ -801,7 +801,7 @@ programs:
   - id: 9TdUQ1tWlyOfHm4jClybN
     title: Management Economics and Finance
     acronym: MEF
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/management-economics-finance-mef/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/management-economics-finance-mef/
     degrees:
       - Bachelor of Commerce
     types:
@@ -811,7 +811,7 @@ programs:
   - id: FyR1Auq-7F-ekkY53hxf5
     title: Marine and Freshwater Biology
     acronym: MFB
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/marine-freshwater-biology-mfb/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/marine-freshwater-biology-mfb/
     degrees:
       - Bachelor of Science
     types:
@@ -821,7 +821,7 @@ programs:
   - id: ECfkX3ZumSuw_KJgNIpof
     title: Marketing
     acronym: MKTG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/marketing-mktg/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/marketing-mktg/
     degrees: []
     types:
       - Minor
@@ -829,7 +829,7 @@ programs:
   - id: N54Vplr9fmR_HUd2raon6
     title: Marketing Management
     acronym: MKMN
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/marketing-management-mkmn/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/marketing-management-mkmn/
     degrees:
       - Bachelor of Commerce
     types:
@@ -839,7 +839,7 @@ programs:
   - id: Wa8228duuJi45e4Ryn11o
     title: Mathematical Economics
     acronym: MAEC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/mathematical-economics-maec/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/mathematical-economics-maec/
     degrees:
       - Bachelor of Arts
     types:
@@ -849,7 +849,7 @@ programs:
   - id: V3fAkHFL6Tsh_qM9m1ZJp
     title: Mathematical Science
     acronym: MSCI
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/mathematical-science-msci/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/mathematical-science-msci/
     degrees:
       - Bachelor of Arts
       - Bachelor of Science
@@ -860,7 +860,7 @@ programs:
   - id: sb2hTGj5XlX9NpG1JvcOl
     title: Mathematics
     acronym: MATH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/mathematics-math/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/mathematics-math/
     degrees:
       - Bachelor of Arts
     types:
@@ -870,7 +870,7 @@ programs:
   - id: Q8N-JwPwLFetmfKTL7A6L
     title: Mechanical Engineering
     acronym: MECH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/mechanical-engineering-program-mech/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/mechanical-engineering-program-mech/
     degrees:
       - Bachelor of Engineering
     types:
@@ -880,7 +880,7 @@ programs:
   - id: 0__UOv8M5yfEBp3A1gqII
     title: Media and Cinema Studies
     acronym: MCST
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/media-cinema-studies-mcst/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/media-cinema-studies-mcst/
     degrees: []
     types:
       - Minor
@@ -888,7 +888,7 @@ programs:
   - id: rE5eDl3PkU9JweFUtEmYm
     title: Microbiology
     acronym: MICR
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/microbiology-micr/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/microbiology-micr/
     degrees:
       - Bachelor of Science
     types:
@@ -899,7 +899,7 @@ programs:
   - id: iYiE0yp9n7jOZzuKc8Wgc
     title: Molecular Biology and Genetics
     acronym: MBG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/molecular-biology-genetics-mbg/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/molecular-biology-genetics-mbg/
     degrees:
       - Bachelor of Science
     types:
@@ -910,7 +910,7 @@ programs:
   - id: jUMopOwDUDvhWOMkJYX0o
     title: Museum Studies
     acronym: MS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/museum-studies-ms/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/museum-studies-ms/
     degrees: []
     types:
       - Minor
@@ -918,7 +918,7 @@ programs:
   - id: FRKCe0DPQKZ2Tslp_UKh8
     title: Music
     acronym: MUSC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/music-musc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/music-musc/
     degrees:
       - Bachelor of Arts
     types:
@@ -929,7 +929,7 @@ programs:
   - id: wx0VQTC9BrHwf-J3AsRhp
     title: Nanoscience
     acronym: NANO
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/nanoscience-nano/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/nanoscience-nano/
     degrees:
       - Bachelor of Science
     types:
@@ -939,7 +939,7 @@ programs:
   - id: mPQguN-fJKgSCzRyyPUzk
     title: Neuroscience
     acronym: NEUR
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/neuroscience-neur/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/neuroscience-neur/
     degrees:
       - Bachelor of Science
     types:
@@ -950,7 +950,7 @@ programs:
   - id: btRAtLhH_6HB8BY5RUsaf
     title: Nutritional and Nutraceutical Sciences
     acronym: NANS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/nutritional-nutraceutical-sciences-nans/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/nutritional-nutraceutical-sciences-nans/
     degrees:
       - Bachelor of Science
     types:
@@ -961,7 +961,7 @@ programs:
   - id: bHuo7zbDS7NMhKtfHU1Vf
     title: One Health
     acronym: ONEH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/one-health-oneh/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/one-health-oneh/
     degrees:
       - Bachelor of One Health
     types:
@@ -971,7 +971,7 @@ programs:
   - id: -wucmntuCbUsSNW244Us-
     title: Organic Agriculture
     acronym: OAGR
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/organic-agriculture-oagr/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/organic-agriculture-oagr/
     degrees: []
     types:
       - Certificate
@@ -979,7 +979,7 @@ programs:
   - id: TOrH7TYLBfnoOVq2RjiGS
     title: Philosophy
     acronym: PHIL
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/philosophy-phil/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/philosophy-phil/
     degrees:
       - Bachelor of Arts
     types:
@@ -990,7 +990,7 @@ programs:
   - id: 1eZyT88dvfSuWYYdKSQMm
     title: Physical Science
     acronym: PSCI
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/physical-science-psci/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/physical-science-psci/
     degrees:
       - Bachelor of Science
     types:
@@ -999,7 +999,7 @@ programs:
   - id: da_TbgIIwEd4azYbK_A0X
     title: Physics
     acronym: PHYS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/physics-phys/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/physics-phys/
     degrees:
       - Bachelor of Science
     types:
@@ -1010,7 +1010,7 @@ programs:
   - id: bK8Gbhf4P0sYXcAr72v48
     title: Plant Science
     acronym: PLSC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/plant-science-plsc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/plant-science-plsc/
     degrees:
       - Bachelor of Science
     types:
@@ -1021,7 +1021,7 @@ programs:
   - id: Xn2MIMAtBe9wGCFFsHlvU
     title: Political Science
     acronym: POLS
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/political-science-pols/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/political-science-pols/
     degrees:
       - Bachelor of Arts
     types:
@@ -1033,7 +1033,7 @@ programs:
   - id: ktmVrwPSBLIGAqz9qDZ5J
     title: Project Management
     acronym: PM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/project-management-pm/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/project-management-pm/
     degrees: []
     types:
       - Minor
@@ -1041,7 +1041,7 @@ programs:
   - id: AeVrwg28oFmD6e651V6yo
     title: Psychology
     acronym: PSYC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/psychology-psyc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/psychology-psyc/
     degrees:
       - Bachelor of Arts
     types:
@@ -1053,7 +1053,7 @@ programs:
   - id: zZWuDsGCkGsNORUpJiDOq
     title: Public Policy and Administration
     acronym: PPA
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/public-policy-administration-ppa/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/public-policy-administration-ppa/
     degrees: []
     types:
       - Certificate
@@ -1061,7 +1061,7 @@ programs:
   - id: ZkRxcdc0-WaLuUI5FNdMD
     title: Real Estate
     acronym: RE
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/real-estate-re/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/real-estate-re/
     degrees:
       - Bachelor of Commerce
     types:
@@ -1076,7 +1076,7 @@ programs:
   - id: 6iQQM8ZmNY-n0j08hma1V
     title: Sexualities, Genders and Social Change
     acronym: SXGN
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/sexualities-genders-and-social-change-sxgn/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/sexualities-genders-and-social-change-sxgn/
     degrees:
       - Bachelor of Arts
     types:
@@ -1086,7 +1086,7 @@ programs:
   - id: VsmBaSjtPNRyEXT9QX24s
     title: Sociology
     acronym: SOC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/sociology-soc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/sociology-soc/
     degrees:
       - Bachelor of Arts
     types:
@@ -1097,7 +1097,7 @@ programs:
   - id: ZRdu4JoJrKJxRhm40ohzv
     title: Software Engineering
     acronym: SENG
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/software-engineering-seng/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/software-engineering-seng/
     degrees:
       - Bachelor of Computing
     types:
@@ -1110,7 +1110,7 @@ programs:
   - id: 3SbuRM0yGJiUkg0AU7D3b
     title: Spanish and Hispanic Studies
     acronym: SPAH
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/spanish-hispanic-studies-spah/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/spanish-hispanic-studies-spah/
     degrees:
       - Bachelor of Arts
     types:
@@ -1122,7 +1122,7 @@ programs:
   - id: JQFaHTyhLnEdLJbimZHss
     title: Sport and Event Management
     acronym: SPMT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/sport-event-management-spmt/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/sport-event-management-spmt/
     degrees:
       - Bachelor of Commerce
     types:
@@ -1133,7 +1133,7 @@ programs:
   - id: L59WdKPlv9IL6TIYiOV7p
     title: Statistics
     acronym: STAT
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/statistics-stat/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/statistics-stat/
     degrees:
       - Bachelor of Arts
     types:
@@ -1148,7 +1148,7 @@ programs:
   - id: u19ONAHbQbaWnqJgM9Cxm
     title: Studio Art
     acronym: SART
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/studio-art-sart/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/studio-art-sart/
     degrees:
       - Bachelor of Arts
     types:
@@ -1158,7 +1158,7 @@ programs:
   - id: uy8xCwcuDQQ6jCdj4qzEA
     title: Sustainable Business
     acronym: SB
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/sustainable-business-sb/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/sustainable-business-sb/
     degrees: []
     types:
       - Minor
@@ -1166,7 +1166,7 @@ programs:
   - id: gfrRFG7anxZBT7ScVESFq
     title: Theatre Studies
     acronym: THST
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/theatre-studies-thst/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/theatre-studies-thst/
     degrees:
       - Bachelor of Arts
     types:
@@ -1177,7 +1177,7 @@ programs:
   - id: kH5_QQ9HE1a4vs8j40SrM
     title: Theoretical Physics
     acronym: THPY
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/theoretical-physics-thpy/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/theoretical-physics-thpy/
     degrees:
       - Bachelor of Science
     types:
@@ -1186,7 +1186,7 @@ programs:
   - id: dhGOv12RNoowD9HaF86du
     title: Veterinary Medicine
     acronym: VM
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/veterinary-medicine-vm/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/veterinary-medicine-vm/
     degrees:
       - Doctor of Veterinary Medicine
     types: []
@@ -1194,7 +1194,7 @@ programs:
   - id: -C40ussqFiywHohqUQUq2
     title: Water Resources Engineering
     acronym: WRE
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/water-resources-engineering-program-wre/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/water-resources-engineering-program-wre/
     degrees:
       - Bachelor of Engineering
     types:
@@ -1204,7 +1204,7 @@ programs:
   - id: z7zlCOMBOlISbMUO9B2hP
     title: Wildlife Biology and Conservation
     acronym: WBC
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/wildlife-biology-conservation-wbc/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/wildlife-biology-conservation-wbc/
     degrees:
       - Bachelor of Science
     types:
@@ -1214,7 +1214,7 @@ programs:
   - id: uMvnJ8yBb82-tZvmbFBB5
     title: Zoology
     acronym: ZOO
-    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-Majors-Minors/zoology-zoo/
+    url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/zoology-zoo/
     degrees:
       - Bachelor of Science
     types:
