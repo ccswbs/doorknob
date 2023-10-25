@@ -15,5 +15,12 @@
         visibility: hidden;
       }
     }
+
+    .program-tags {
+      margin-top: auto;
+      border-top: 1px solid rgba(0,0, 0, 0.125);
+      padding-top: 1rem;
+      font-size: 13px;
+    }
   }
 }
