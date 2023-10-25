@@ -25,7 +25,9 @@ programs:
       - Minor
       - Co-op
     tags:
+      - agriculture
       - botany
+      - bioscience
   - id: e1R0ZPaBsyvMefTekAEN5
     title: Animal Biology
     acronym: ABIO
@@ -34,7 +36,9 @@ programs:
       - Bachelor of Science
     types:
       - Major
-    tags: []
+    tags:
+      - biology
+      - science
   - id: 9cn85BWiuvlJhn0SKEH6a
     title: Animal Science
     acronym: ANSC
@@ -46,6 +50,7 @@ programs:
       - Co-op
     tags:
       - biology
+      - science
   - id: scALh9Udk2L2z3n31PISz
     title: Anthropology
     acronym: ANTH
@@ -66,7 +71,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - geography
+      - technology
   - id: CEy0N1dThIYdK_K_feZ8O
     title: Applied Human Nutrition
     acronym: AHN
@@ -78,6 +85,8 @@ programs:
     tags:
       - food
       - health
+      - biology
+      - science
   - id: TaAKlyqKPgnrerBYhRZZd
     title: Art History
     acronym: ARTH
@@ -89,6 +98,7 @@ programs:
       - Minor
     tags:
       - arts
+      - history
   - id: N3cAAFyTSg-saeVyovL4m
     title: Arts and Sciences
     acronym: AS
@@ -96,7 +106,9 @@ programs:
     degrees:
       - Bachelor of Arts and Sciences
     types: []
-    tags: []
+    tags:
+      - science
+      - arts
   - id: 8v0uXcx6vbAsoOowhH6yZ
     title: Arts Management
     acronym: AM
@@ -105,6 +117,7 @@ programs:
     types:
       - Minor
     tags:
+      - arts
       - business
   - id: 7Q8btIe02YSlmne9UefCF
     title: Bio-Medical Science
@@ -117,6 +130,8 @@ programs:
     tags:
       - biology
       - health
+      - medical
+      - science
   - id: vikVVXZWPJo7RkgHYd_-R
     title: Biochemistry
     acronym: BIOC
@@ -128,8 +143,9 @@ programs:
       - Co-op
       - Minor
     tags:
-      - chemistry
       - biology
+      - chemistry
+      - science
   - id: bJtrun4JW74_14MGFP50h
     title: Biodiversity
     acronym: BIOD
@@ -140,6 +156,7 @@ programs:
       - Major
     tags:
       - biology
+      - science
   - id: BJw2paGY9kgV94LZm-tLN
     title: Biological and Medical Physics
     acronym: BMPH
@@ -151,6 +168,10 @@ programs:
       - Co-op
     tags:
       - biology
+      - health
+      - medical
+      - physics
+      - science
   - id: hvWpInt9NF9SOtbhm44Lv
     title: Biological and Pharmaceutical Chemistry
     acronym: BPCH
@@ -164,6 +185,8 @@ programs:
       - biology
       - chemistry
       - health
+      - medical
+      - science
   - id: vqRsWo9ByhpxhuKh2R9wM
     title: Biological Engineering
     acronym: BIOE
@@ -175,6 +198,8 @@ programs:
       - Co-op
     tags:
       - biology
+      - engineering
+      - science
   - id: sLkTBljGIya8FeWmhBWlY
     title: Biological Science
     acronym: BIOS
@@ -185,6 +210,7 @@ programs:
       - Major
     tags:
       - biology
+      - science
   - id: TN6o7nu8IMTJncDTLFyxS
     title: Biology
     acronym: BIOL
@@ -193,6 +219,7 @@ programs:
     types:
       - Minor
     tags:
+      - biology
       - science
   - id: nf6jZj1kpARMQ94kWsYnj
     title: Biomedical Engineering
@@ -203,7 +230,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - engineering
+      - science
   - id: U2choqf0TyEHD-fqNYLS4
     title: Biomedical Toxicology
     acronym: BTOX
@@ -213,7 +243,11 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - health
+      - medical
+      - science
   - id: vYMgooCgJ89w88pK0oJAB
     title: Biotechnology
     acronym: BIOT
@@ -221,7 +255,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - biology
+      - science
+      - technology
   - id: 1o3c-PxAZ44k2mFgBVZWL
     title: Black Canadian Studies
     acronym: BLCK
@@ -229,7 +266,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - history
+      - culture
   - id: 096_UduP7ZB06HVqP1u35
     title: Business
     acronym: BUS
@@ -238,7 +278,9 @@ programs:
     types:
       - Minor
       - Certificate
-    tags: []
+    tags:
+      - business
+      - finance
   - id: nDn8xB3YTw3NZE9v3e_oL
     title: Business Data Analytics
     acronym: BDA
@@ -246,7 +288,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
+      - finance
+      - statistics
   - id: x_qCyysh6cdyfDpD8cH3_
     title: Business Economics
     acronym: BECN
@@ -254,7 +299,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
+      - finance
+      - economics
   - id: Z1gpRWQlpK76lzwdmZ1Zt
     title: Chemical Physics
     acronym: CHPY
@@ -264,7 +312,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - chemistry
+      - physics
+      - science
   - id: aeOxqMyrdXi-DSZUJlGGf
     title: Chemistry
     acronym: CHEM
@@ -275,7 +326,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - chemistry
+      - science
   - id: v-uj12QY7Zwp3H0VSSK3O
     title: Child Studies
     acronym: CSTU
@@ -284,7 +337,9 @@ programs:
       - Bachelor of Applied Science
     types:
       - Major
-    tags: []
+    tags:
+      - humanities
+      - health
   - id: o3x6wk8Lbrljjb_CR2ric
     title: Classical Studies
     acronym: CLAS
@@ -294,7 +349,10 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - history
+      - culture
   - id: i5HUzkTY6_B8Fcw-K6P71
     title: Communication Process
     acronym: CPTP
@@ -302,7 +360,8 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - humanities
   - id: ioh3XxhX32y5t9izFEwJQ
     title: Computer Engineering
     acronym: CENG
@@ -313,8 +372,9 @@ programs:
       - Major
       - Co-op
     tags:
+      - technology
+      - engineering
       - programming
-      - stem
   - id: M20Vp3poNNEEjW_Mp0SYu
     title: Computer Science
     acronym: CS
@@ -325,9 +385,8 @@ programs:
       - Major
       - Co-op
     tags:
+      - technology
       - programming
-      - stem
-      - coding
       - engineering
   - id: EA2IZ_wOh29AjpRzKgi4H
     title: Computing and Information Science
@@ -336,7 +395,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - technology
+      - programming
+      - engineering
   - id: BcWq6BOQsNBW0qdb5_CnO
     title: Creative Writing
     acronym: CW
@@ -346,7 +408,8 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - arts
   - id: 2CWGU68s4hfq51DlgTHsx
     title: Criminal Justice and Public Policy
     acronym: CJPP
@@ -357,7 +420,10 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - law
+      - politics
   - id: BUfbZf3Bv8xrIzGSnfqBG
     title: Crop Science
     acronym: CRSC
@@ -367,7 +433,11 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - agriculture
+      - botany
+      - bioscience
+      - science
   - id: uJqjHXv1qEAul79ra0RWA
     title: Culture and Technology Studies
     acronym: CTS
@@ -378,7 +448,10 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - technology
+      - culture
   - id: sJIcuBVAP0vBRlBE6eSTL
     title: Ecology
     acronym: ECOL
@@ -389,7 +462,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - biology
+      - science
   - id: zPpUhnpB-ecIUOomWRHoB
     title: Economics
     acronym: ECON
@@ -400,7 +475,10 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - business
+      - finance
+      - economics
   - id: nsFIJU9DoLFI3fjaicBpL
     title: Engineering Systems and Computing
     acronym: ESC
@@ -410,7 +488,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - technology
+      - engineering
+      - programming
   - id: QzCEuV9liJXenC0wMzPl-
     title: English
     acronym: ENGL
@@ -421,7 +502,9 @@ programs:
       - Major
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - language
   - id: vkGGkGsT__d4HQ_mU5xKQ
     title: Entrepreneurship
     acronym: ENT
@@ -429,7 +512,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
+      - finance
   - id: oNguNI4SypfMVng0wFgut
     title: Environment and Resource Management
     acronym: ERM
@@ -439,7 +524,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - science
   - id: uJkrVMeT3BrpCeuGLjdhq
     title: Environmental Biology
     acronym: ENVB
@@ -448,7 +535,9 @@ programs:
       - Bachelor of Science
     types:
       - Major
-    tags: []
+    tags:
+      - biology
+      - science
   - id: E3Hd5H6q-CKjXchlyEeT5
     title: Environmental Citizenship
     acronym: ECT
@@ -456,7 +545,9 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - humanities
+      - science
   - id: 6JJWP-TzeK8heaoyMSnxy
     title: Environmental Conservation
     acronym: ECV
@@ -464,7 +555,9 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - biology
+      - science
   - id: lBHT5nLFJotTRYDvUD0Ob
     title: Environmental Economics and Policy
     acronym: EEP
@@ -474,7 +567,11 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
+      - finance
+      - economics
+      - science
   - id: 0W0GXC0_hv8VozuUteO0o
     title: Environmental Engineering
     acronym: ENVE
@@ -485,7 +582,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - engineering
+      - science
   - id: OgW3Fck4OcJ4MhGEj8V3u
     title: Environmental Geomatics
     acronym: EG
@@ -495,7 +594,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - geography
+      - technology
+      - science
   - id: 5U5hokLQ6Zahf2hH25S69
     title: Environmental Governance
     acronym: EGOV
@@ -505,7 +607,8 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - humanities
   - id: -UNOpsxNXBE1W4yPJjzvM
     title: Environmental Management
     acronym: EM
@@ -515,7 +618,8 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
   - id: q4lrQO4fol8ZePXE1aLdd
     title: Environmental Sciences
     acronym: ENVS
@@ -525,7 +629,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - science
   - id: e3WqYKjewfKwxGW4Kjqd5
     title: Equine Management
     acronym: EQM
@@ -535,7 +641,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - science
   - id: FfJ2IWXDxt0xfBqmgZifx
     title: European Culture and Civilization
     acronym: ECC
@@ -543,7 +651,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - history
+      - culture
   - id: 2xG73enkM5zUUXuaWI30a
     title: European Studies
     acronym: EURS
@@ -552,7 +663,10 @@ programs:
       - Bachelor of Arts
     types:
       - Major
-    tags: []
+    tags:
+      - humanities
+      - history
+      - culture
   - id: kRrwq7G-7yjihrQxC79n5
     title: Family and Child Studies
     acronym: FCS
@@ -560,7 +674,8 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
   - id: aovnlFeeEsz4JcfDaTjuy
     title: Family Studies and Human Development
     acronym: FSHD
@@ -569,7 +684,8 @@ programs:
       - Bachelor of Applied Science
     types:
       - Major
-    tags: []
+    tags:
+      - humanities
   - id: HxGceo1xBVeT8_XwXw4d4
     title: Food and Agricultural Business
     acronym: FAB
@@ -579,7 +695,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - agriculture
+      - food
+      - business
   - id: XxOqQ3mMnCVH_rl-NDUp9
     title: Food Engineering
     acronym: FENG
@@ -587,7 +706,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - food
+      - engineering
   - id: -d1Y3c4nUYaD6aoIyquoh
     title: Food Industry Management
     acronym: FIM
@@ -597,7 +718,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - food
+      - business
+      - management
   - id: OlpFF7a6uFQYzZwdO9Gny
     title: Food Science
     acronym: FOOD
@@ -608,7 +732,9 @@ programs:
       - Major
       - Co-op
       - Certificate
-    tags: []
+    tags:
+      - food
+      - science
   - id: AO8oKioBHXN93XZ4b78RI
     title: Food, Agricultural and Resource Economics
     acronym: FARE
@@ -618,7 +744,11 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - agriculture
+      - food
+      - business
+      - economics
   - id: ZsNZNWVDf2GzqbbhBH9aY
     title: French Studies
     acronym: FREN
@@ -629,7 +759,9 @@ programs:
       - Major
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - language
   - id: kFChqjpvce_-yDT7QpQOo
     title: Geography
     acronym: GEOG
@@ -641,7 +773,9 @@ programs:
       - Co-op
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - geography
+      - science
   - id: cAtCR3OF_mgagyzGLij69
     title: German
     acronym: GERM
@@ -650,7 +784,9 @@ programs:
     types:
       - Minor
       - Certificate
-    tags: []
+    tags:
+      - humanities
+      - language
   - id: fYGSKc5nHyEFfvMXlecjF
     title: Government, Economics and Management
     acronym: GEM
@@ -660,7 +796,12 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
+      - economics
+      - politics
+      - management
+      - law
   - id: LJYouP7uBwJruBk5Ep2hW
     title: History
     acronym: HIST
@@ -672,7 +813,9 @@ programs:
       - Co-op
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - history
   - id: 6EfwFEmBbKL5hDfWaQWsL
     title: Horticulture
     acronym: HRT
@@ -682,7 +825,11 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - agriculture
+      - botany
+      - bioscience
+      - science
   - id: hgsQls9LKhXUMGYgP3wa1
     title: Hospitality and Tourism Management
     acronym: HTM
@@ -693,7 +840,10 @@ programs:
       - Major
       - Co-op
       - Certificate
-    tags: []
+    tags:
+      - business
+      - tourism
+      - management
   - id: g9t8TrAFiJWpzCwTfXtIH
     title: Human Kinetics
     acronym: HK
@@ -702,7 +852,9 @@ programs:
       - Bachelor of Science
     types:
       - Major
-    tags: []
+    tags:
+      - health
+      - science
   - id: gVS_dbPTdW-iwrT3tEkpP
     title: Human Resources
     acronym: HR
@@ -710,7 +862,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
+      - management
   - id: QNrmOJKJjEQv4LCipkNAA
     title: Indigenous Environmental Governance
     acronym: IEG
@@ -718,14 +872,19 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: GamvxtGE3EpjpNc4q4AF9
     title: Indigenous Environmental Science and Practice
     acronym: IESP
     url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/indigenous-environmental-sscience-practice-iesp/
     degrees: []
     types: []
-    tags: []
+    tags:
+      - humanities
+      - culture
+      - science
   - id: 6nKYoJnl2Px50ZORrvtvY
     title: International Business
     acronym: IB
@@ -733,7 +892,8 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
   - id: Cw6JnoZNKGrpgP3rbQTmE
     title: International Development Studies
     acronym: IDS
@@ -745,7 +905,11 @@ programs:
       - Co-op
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - politics
+      - culture
+      - economics
   - id: NYYBKdQL2FA_AefHVxOuy
     title: Italian
     acronym: ITAL
@@ -753,7 +917,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - language
   - id: UGj5la8l0mI1uzhX2AAvJ
     title: Justice and Legal Studies
     acronym: JLS
@@ -763,7 +929,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - humanities
+      - law
+      - politics
   - id: 7sVuzdZFwyG-rITHhfTfA
     title: Landscape Architecture
     acronym: LA
@@ -771,7 +940,9 @@ programs:
     degrees:
       - Bachelor of Landscape Architecture
     types: []
-    tags: []
+    tags:
+      - architecture
+      - design
   - id: 0RThCPYWRntnJvoshwLCD
     title: Leadership
     acronym: LEAD
@@ -779,7 +950,9 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - humanities
+      - management
   - id: 8pZNElylpWLGGSfTZOK2D
     title: Linguistics
     acronym: LING
@@ -787,7 +960,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - language
   - id: SgSsEFX_ojV-nsViPKjwX
     title: Management
     acronym: MGMT
@@ -797,7 +972,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
+      - management
   - id: 9TdUQ1tWlyOfHm4jClybN
     title: Management Economics and Finance
     acronym: MEF
@@ -807,7 +984,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
+      - finance
+      - economics
   - id: FyR1Auq-7F-ekkY53hxf5
     title: Marine and Freshwater Biology
     acronym: MFB
@@ -817,7 +997,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - science
   - id: ECfkX3ZumSuw_KJgNIpof
     title: Marketing
     acronym: MKTG
@@ -825,7 +1007,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
+      - marketing
   - id: N54Vplr9fmR_HUd2raon6
     title: Marketing Management
     acronym: MKMN
@@ -835,7 +1019,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
+      - marketing
   - id: Wa8228duuJi45e4Ryn11o
     title: Mathematical Economics
     acronym: MAEC
@@ -845,7 +1031,10 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - business
+      - economics
+      - mathematics
   - id: V3fAkHFL6Tsh_qM9m1ZJp
     title: Mathematical Science
     acronym: MSCI
@@ -856,7 +1045,8 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - mathematics
   - id: sb2hTGj5XlX9NpG1JvcOl
     title: Mathematics
     acronym: MATH
@@ -866,7 +1056,8 @@ programs:
     types:
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - mathematics
   - id: Q8N-JwPwLFetmfKTL7A6L
     title: Mechanical Engineering
     acronym: MECH
@@ -876,7 +1067,8 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - engineering
   - id: 0__UOv8M5yfEBp3A1gqII
     title: Media and Cinema Studies
     acronym: MCST
@@ -884,7 +1076,10 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - arts
+      - culture
   - id: rE5eDl3PkU9JweFUtEmYm
     title: Microbiology
     acronym: MICR
@@ -895,7 +1090,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - biology
+      - science
   - id: iYiE0yp9n7jOZzuKc8Wgc
     title: Molecular Biology and Genetics
     acronym: MBG
@@ -906,7 +1103,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - biology
+      - science
   - id: jUMopOwDUDvhWOMkJYX0o
     title: Museum Studies
     acronym: MS
@@ -914,7 +1113,11 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - arts
+      - culture
+      - history
   - id: FRKCe0DPQKZ2Tslp_UKh8
     title: Music
     acronym: MUSC
@@ -925,7 +1128,10 @@ programs:
       - Major
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - arts
+      - culture
   - id: wx0VQTC9BrHwf-J3AsRhp
     title: Nanoscience
     acronym: NANO
@@ -935,7 +1141,8 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - science
   - id: mPQguN-fJKgSCzRyyPUzk
     title: Neuroscience
     acronym: NEUR
@@ -946,7 +1153,10 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - biology
+      - science
+      - health
   - id: btRAtLhH_6HB8BY5RUsaf
     title: Nutritional and Nutraceutical Sciences
     acronym: NANS
@@ -957,7 +1167,11 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - food
+      - science
+      - health
+      - biology
   - id: bHuo7zbDS7NMhKtfHU1Vf
     title: One Health
     acronym: ONEH
@@ -967,7 +1181,10 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - health
+      - science
+      - biology
   - id: -wucmntuCbUsSNW244Us-
     title: Organic Agriculture
     acronym: OAGR
@@ -975,7 +1192,10 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - agriculture
+      - biology
+      - science
   - id: TOrH7TYLBfnoOVq2RjiGS
     title: Philosophy
     acronym: PHIL
@@ -986,7 +1206,8 @@ programs:
       - Major
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
   - id: 1eZyT88dvfSuWYYdKSQMm
     title: Physical Science
     acronym: PSCI
@@ -995,7 +1216,8 @@ programs:
       - Bachelor of Science
     types:
       - Major
-    tags: []
+    tags:
+      - science
   - id: da_TbgIIwEd4azYbK_A0X
     title: Physics
     acronym: PHYS
@@ -1006,7 +1228,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - physics
+      - science
   - id: bK8Gbhf4P0sYXcAr72v48
     title: Plant Science
     acronym: PLSC
@@ -1017,7 +1241,10 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - agriculture
+      - biology
+      - science
   - id: Xn2MIMAtBe9wGCFFsHlvU
     title: Political Science
     acronym: POLS
@@ -1029,7 +1256,9 @@ programs:
       - Co-op
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - politics
   - id: ktmVrwPSBLIGAqz9qDZ5J
     title: Project Management
     acronym: PM
@@ -1037,7 +1266,9 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
+      - management
   - id: AeVrwg28oFmD6e651V6yo
     title: Psychology
     acronym: PSYC
@@ -1049,7 +1280,8 @@ programs:
       - Co-op
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
   - id: zZWuDsGCkGsNORUpJiDOq
     title: Public Policy and Administration
     acronym: PPA
@@ -1057,7 +1289,10 @@ programs:
     degrees: []
     types:
       - Certificate
-    tags: []
+    tags:
+      - humanities
+      - politics
+      - law
   - id: ZkRxcdc0-WaLuUI5FNdMD
     title: Real Estate
     acronym: RE
@@ -1072,7 +1307,6 @@ programs:
       - business
       - finance
       - economics
-      - commerce
   - id: 6iQQM8ZmNY-n0j08hma1V
     title: Sexualities, Genders and Social Change
     acronym: SXGN
@@ -1082,7 +1316,9 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: VsmBaSjtPNRyEXT9QX24s
     title: Sociology
     acronym: SOC
@@ -1093,7 +1329,9 @@ programs:
       - Major
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: ZRdu4JoJrKJxRhm40ohzv
     title: Software Engineering
     acronym: SENG
@@ -1105,8 +1343,8 @@ programs:
       - Co-op
     tags:
       - programming
-      - stem
-      - coding
+      - technology
+      - engineering
   - id: 3SbuRM0yGJiUkg0AU7D3b
     title: Spanish and Hispanic Studies
     acronym: SPAH
@@ -1118,7 +1356,10 @@ programs:
       - Minor
       - Area of Concentration
       - Certificate
-    tags: []
+    tags:
+      - humanities
+      - language
+      - culture
   - id: JQFaHTyhLnEdLJbimZHss
     title: Sport and Event Management
     acronym: SPMT
@@ -1129,7 +1370,9 @@ programs:
       - Major
       - Co-op
       - Minor
-    tags: []
+    tags:
+      - business
+      - management
   - id: L59WdKPlv9IL6TIYiOV7p
     title: Statistics
     acronym: STAT
@@ -1141,10 +1384,8 @@ programs:
       - Area of Concentration
       - Diploma
     tags:
-      - stem
-      - math
-      - data
       - mathematics
+      - statistics
   - id: u19ONAHbQbaWnqJgM9Cxm
     title: Studio Art
     acronym: SART
@@ -1154,7 +1395,10 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - humanities
+      - arts
+      - culture
   - id: uy8xCwcuDQQ6jCdj4qzEA
     title: Sustainable Business
     acronym: SB
@@ -1162,7 +1406,8 @@ programs:
     degrees: []
     types:
       - Minor
-    tags: []
+    tags:
+      - business
   - id: gfrRFG7anxZBT7ScVESFq
     title: Theatre Studies
     acronym: THST
@@ -1173,7 +1418,10 @@ programs:
       - Major
       - Minor
       - Area of Concentration
-    tags: []
+    tags:
+      - humanities
+      - arts
+      - culture
   - id: kH5_QQ9HE1a4vs8j40SrM
     title: Theoretical Physics
     acronym: THPY
@@ -1182,7 +1430,9 @@ programs:
       - Bachelor of Science
     types:
       - Major
-    tags: []
+    tags:
+      - physics
+      - science
   - id: dhGOv12RNoowD9HaF86du
     title: Veterinary Medicine
     acronym: VM
@@ -1190,7 +1440,10 @@ programs:
     degrees:
       - Doctor of Veterinary Medicine
     types: []
-    tags: []
+    tags:
+      - health
+      - science
+      - biology
   - id: -C40ussqFiywHohqUQUq2
     title: Water Resources Engineering
     acronym: WRE
@@ -1200,7 +1453,8 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - engineering
   - id: z7zlCOMBOlISbMUO9B2hP
     title: Wildlife Biology and Conservation
     acronym: WBC
@@ -1210,7 +1464,9 @@ programs:
     types:
       - Major
       - Co-op
-    tags: []
+    tags:
+      - biology
+      - science
   - id: uMvnJ8yBb82-tZvmbFBB5
     title: Zoology
     acronym: ZOO
@@ -1220,4 +1476,6 @@ programs:
     types:
       - Major
       - Minor
-    tags: []
+    tags:
+      - biology
+      - science
