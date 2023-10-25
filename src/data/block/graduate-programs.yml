@@ -7,7 +7,9 @@ programs:
     degrees: []
     types:
       - Diploma
-    tags: []
+    tags:
+      - business
+      - finance
   - id: ULrjzYwDMdEYKoMoDGjM4
     title: Animal Biosciences
     acronym: ""
@@ -16,7 +18,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - biology
+      - science
   - id: g1OwzPi3VzP1wcCt_EcUk
     title: Art History and Visual Culture
     acronym: ""
@@ -24,7 +28,10 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - arts
+      - culture
+      - history
   - id: vypYImBnnuyZVoZHzd3U5
     title: Bioinformatics
     acronym: ""
@@ -34,7 +41,11 @@ programs:
       - MBINF
       - MSc
       - PhD
-    tags: []
+    tags:
+      - biology
+      - science
+      - technology
+      - statistics
   - id: 316pA7gctCT7kjkpaqOCO
     title: Biomedical Sciences
     acronym: ""
@@ -45,7 +56,11 @@ programs:
       - MSc
       - PhD
       - DVSc
-    tags: []
+    tags:
+      - biology
+      - science
+      - health
+      - medical
   - id: 7YRBGjKxVOqzH64xPZEg8
     title: Biophysics
     acronym: ""
@@ -54,7 +69,10 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - biology
+      - physics
+      - science
   - id: Z1YXw5-LTYnq0D4rLp926
     title: Biotechnology
     acronym: ""
@@ -62,7 +80,10 @@ programs:
     degrees: []
     types:
       - MBIOT
-    tags: []
+    tags:
+      - biology
+      - science
+      - technology
   - id: E57EE22hsTTNoGKwn6QAZ
     title: Business Administration
     acronym: ""
@@ -70,7 +91,8 @@ programs:
     degrees: []
     types:
       - MBA
-    tags: []
+    tags:
+      - business
   - id: lPZJZqnm7MXuiGl5zV4He
     title: Capacity Development and Extension
     acronym: ""
@@ -78,7 +100,8 @@ programs:
     degrees: []
     types:
       - MSc
-    tags: []
+    tags:
+      - humanities
   - id: q52QotRIwxb9V8tjMpSLH
     title: Chemistry
     acronym: ""
@@ -87,7 +110,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - chemistry
+      - science
   - id: uBHNmxIfgdnz5x-O1V0dp
     title: Clinical Studies
     acronym: ""
@@ -96,7 +121,11 @@ programs:
     types:
       - MSc
       - DVSc
-    tags: []
+    tags:
+      - biology
+      - science
+      - health
+      - medical
   - id: IZ1LR5BhLf1IMJ9I5YipX
     title: Computational Sciences
     acronym: ""
@@ -104,7 +133,10 @@ programs:
     degrees: []
     types:
       - PhD
-    tags: []
+    tags:
+      - technology
+      - science
+      - mathematics
   - id: 5_L1DEHJ3tYOkYhZjNewx
     title: Computer Science
     acronym: ""
@@ -113,7 +145,11 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - technology
+      - science
+      - mathematics
+      - programming
   - id: z1EtWkYH4oA5tw7-UrJrN
     title: Conservation Leadership
     acronym: ""
@@ -121,7 +157,8 @@ programs:
     degrees: []
     types:
       - MCL
-    tags: []
+    tags:
+      - humanities
   - id: G1LYh8F91Rz_cXoPxpGMH
     title: Creative Writing
     acronym: ""
@@ -129,7 +166,10 @@ programs:
     degrees: []
     types:
       - MFA
-    tags: []
+    tags:
+      - arts
+      - humanities
+      - culture
   - id: UV5ozvGcNvOAT2FzUoegy
     title: Criminology and Criminal Justice Policy
     acronym: ""
@@ -137,7 +177,10 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - humanities
+      - law
+      - politics
   - id: V13hR4AvgiRoVdpvUk9U6
     title: Critical Studies in Improvisation
     acronym: ""
@@ -146,7 +189,10 @@ programs:
     types:
       - MA
       - PhD
-    tags: []
+    tags:
+      - arts
+      - humanities
+      - culture
   - id: iCqFy7veBEC7SJRbRdiDq
     title: Cybersecurity and Threat Intelligence
     acronym: ""
@@ -154,7 +200,11 @@ programs:
     degrees: []
     types:
       - MCTI
-    tags: []
+    tags:
+      - technology
+      - science
+      - mathematics
+      - programming
   - id: PFSg1rbalNUiNDigSYqBD
     title: Dairy Technology Management
     acronym: ""
@@ -162,7 +212,11 @@ programs:
     degrees: []
     types:
       - MDTM
-    tags: []
+    tags:
+      - agriculture
+      - food
+      - science
+      - biology
   - id: AXs_zdLFdPXqc6vghHWyg
     title: Data Science
     acronym: ""
@@ -170,7 +224,11 @@ programs:
     degrees: []
     types:
       - MDS
-    tags: []
+    tags:
+      - technology
+      - statistics
+      - mathematics
+      - programming
   - id: yQizH4RMS2JWMdjRc6man
     title: Economics
     acronym: ""
@@ -179,7 +237,10 @@ programs:
     types:
       - MA
       - PhD
-    tags: []
+    tags:
+      - business
+      - economics
+      - finance
   - id: O_z8v_-BJeRmorx3hKpaE
     title: Engineering
     acronym: ""
@@ -189,7 +250,9 @@ programs:
       - MEng
       - MASc
       - PhD
-    tags: []
+    tags:
+      - technology
+      - engineering
   - id: UcNivTFb0Wl3lBaZRHbaI
     title: English
     acronym: ""
@@ -197,7 +260,10 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - arts
+      - humanities
+      - language
   - id: IGsjttQ066LfR3_UZg7CO
     title: Environmental Sciences
     acronym: ""
@@ -207,7 +273,9 @@ programs:
       - MES
       - MSc
       - PhD
-    tags: []
+    tags:
+      - biology
+      - science
   - id: siDhQ0I4QlPa7hxH5G5f8
     title: European Studies
     acronym: ""
@@ -215,7 +283,9 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: JBB5AoNOiDdRVAdSZys5i
     title: Family Relations and Applied Nutrition
     acronym: ""
@@ -225,7 +295,11 @@ programs:
       - MAN
       - MSc
       - PhD
-    tags: []
+    tags:
+      - health
+      - food
+      - humanities
+      - science
   - id: Leziq4QGuz0MRRWr1YvRM
     title: Food Safety and Quality Assurance
     acronym: ""
@@ -234,7 +308,9 @@ programs:
     types:
       - MSc
       - Diploma
-    tags: []
+    tags:
+      - food
+      - science
   - id: ko_-BAhrSoN3n3bUkkQup
     title: Food Science
     acronym: ""
@@ -243,7 +319,10 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - food
+      - science
+      - nutrition
   - id: WYLY_Cyt8JScmSfkbmCgn
     title: Food, Agricultural and Resource Economics
     acronym: ""
@@ -253,7 +332,11 @@ programs:
       - MFARE
       - MSc
       - PhD
-    tags: []
+    tags:
+      - food
+      - business
+      - agriculture
+      - economics
   - id: q27fW4T8wbeCWgKVNLdAv
     title: French
     acronym: ""
@@ -261,7 +344,9 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - humanities
+      - language
   - id: PA8hQ7t7LBWhjWJcGGiyo
     title: Geography
     acronym: ""
@@ -271,7 +356,9 @@ programs:
       - MA
       - MSc
       - PhD
-    tags: []
+    tags:
+      - geography
+      - science
   - id: qtmIj8gM9K3oUP9iNGYHC
     title: History - Tri-University Program
     acronym: ""
@@ -280,7 +367,9 @@ programs:
     types:
       - MA
       - PhD
-    tags: []
+    tags:
+      - humanities
+      - history
   - id: 4y--fkn2E-Fo8szNu19YH
     title: Human Health and Nutritional Sciences
     acronym: ""
@@ -289,7 +378,11 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - health
+      - food
+      - science
+      - nutrition
   - id: FtxFnpOc8IIwTU6tZfOzx
     title: Integrative Biology
     acronym: ""
@@ -298,7 +391,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - biology
+      - science
   - id: 80fRIyDL19dEr6BSeUHMq
     title: Landscape Architecture
     acronym: ""
@@ -306,7 +401,9 @@ programs:
     degrees: []
     types:
       - MLA
-    tags: []
+    tags:
+      - architecture
+      - design
   - id: XLg4OiDkIX4MaV_w0nXdb
     title: Latin American and Caribbean Studies
     acronym: ""
@@ -314,7 +411,10 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - humanities
+      - culture
+      - history
   - id: 7M-BJDw8fAbT8Z-4g9GDa
     title: Leadership
     acronym: ""
@@ -322,7 +422,9 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - humanities
+      - business
   - id: JHIx5qqq21qtIBsrrX00-
     title: Literary Studies/Theatre Studies in English
     acronym: ""
@@ -330,7 +432,9 @@ programs:
     degrees: []
     types:
       - PhD
-    tags: []
+    tags:
+      - arts
+      - humanities
   - id: 6-uRQS_ipvm1BLdjrg1ve
     title: Management
     acronym: ""
@@ -339,7 +443,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - business
+      - management
   - id: _6DqvyAzuydFvpwe77Hdx
     title: Marketing and Consumer Studies
     acronym: ""
@@ -348,7 +454,9 @@ programs:
     types:
       - MSc
       - Diploma
-    tags: []
+    tags:
+      - business
+      - marketing
   - id: Vnl6QqaZA4AdxfOMeTpMS
     title: Mathematics and Statistics
     acronym: ""
@@ -357,7 +465,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - mathematics
+      - statistics
   - id: cr7HFrrhxXhQtvIB328LQ
     title: Molecular and Cellular Biology
     acronym: ""
@@ -366,7 +476,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - biology
+      - science
   - id: sEy4TKUHp8YWPtW9Ztlcp
     title: Pathobiology
     acronym: ""
@@ -377,7 +489,11 @@ programs:
       - PhD
       - DVSc
       - Diploma
-    tags: []
+    tags:
+      - biology
+      - science
+      - health
+      - medical
   - id: A5kdE1SmjoLSJ1Hq5u4VN
     title: Philosophy
     acronym: ""
@@ -386,7 +502,9 @@ programs:
     types:
       - MA
       - PhD
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: ryF19Xym6qbW6JeRITS4T
     title: Physics
     acronym: ""
@@ -395,7 +513,9 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - physics
+      - science
   - id: ILAYMr50MioTHMEkdsVTU
     title: Plant Agriculture
     acronym: ""
@@ -404,7 +524,10 @@ programs:
     types:
       - MSc
       - PhD
-    tags: []
+    tags:
+      - agriculture
+      - biology
+      - science
   - id: 6VNnrAZ6llE-8a58syUsm
     title: Political Science
     acronym: ""
@@ -413,7 +536,9 @@ programs:
     types:
       - MA
       - PhD
-    tags: []
+    tags:
+      - humanities
+      - politics
   - id: SSewE8frEeAQFJrA3Kz0c
     title: Population Medicine
     acronym: ""
@@ -423,7 +548,11 @@ programs:
       - MSc
       - PhD
       - DVSc
-    tags: []
+    tags:
+      - biology
+      - science
+      - health
+      - medical
   - id: zhgDvdL02lvc2oBVLDmW8
     title: Project Management
     acronym: ""
@@ -432,7 +561,9 @@ programs:
     types:
       - MPM
       - Diploma
-    tags: []
+    tags:
+      - business
+      - management
   - id: 8YouMhjs0xEnaXfrJyfUV
     title: Psychology
     acronym: ""
@@ -442,7 +573,8 @@ programs:
       - MA
       - MSc
       - PhD
-    tags: []
+    tags:
+      - humanities
   - id: JgRQ_nVcJnll8nBZY8nji
     title: Public Health
     acronym: ""
@@ -452,7 +584,11 @@ programs:
       - MPH
       - DVM/MPH Combined Degree
       - Diploma
-    tags: []
+    tags:
+      - health
+      - medical
+      - science
+      - biology
   - id: 11oE0aSj0WLgPLJFsNOtc
     title: Public Issues Anthropology
     acronym: ""
@@ -460,7 +596,10 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - humanities
+      - culture
+      - history
   - id: Q93bkR2Sngud1BL-RVN7p
     title: Rural Planning and Development
     acronym: ""
@@ -469,7 +608,8 @@ programs:
     types:
       - MSc
       - MPLAN
-    tags: []
+    tags:
+      - humanities
   - id: XffBwwpIV-mz58JayTCCP
     title: Rural Studies
     acronym: ""
@@ -477,7 +617,8 @@ programs:
     degrees: []
     types:
       - PhD
-    tags: []
+    tags:
+      - humanities
   - id: 3C8jyq7bZ5czsK3C2GErl
     title: Social Practice and Transformational Change
     acronym: ""
@@ -485,7 +626,9 @@ programs:
     degrees: []
     types:
       - PhD
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: eqf-L1HxS3shcaK0zudck
     title: Sociology
     acronym: ""
@@ -494,7 +637,9 @@ programs:
     types:
       - MA
       - PhD
-    tags: []
+    tags:
+      - humanities
+      - culture
   - id: lE2poH1EqTSwhjSa9Mjl4
     title: Studio Art
     acronym: ""
@@ -502,7 +647,10 @@ programs:
     degrees: []
     types:
       - MFA
-    tags: []
+    tags:
+      - arts
+      - humanities
+      - culture
   - id: on8aABXhijDtgvO0Sbstd
     title: Theatre Studies
     acronym: ""
@@ -510,7 +658,10 @@ programs:
     degrees: []
     types:
       - MA
-    tags: []
+    tags:
+      - arts
+      - humanities
+      - culture
   - id: SFLtRp_G98RKuMmdgciXD
     title: Tourism and Hospitality
     acronym: ""
@@ -519,7 +670,9 @@ programs:
     types:
       - MSc
       - Diploma
-    tags: []
+    tags:
+      - business
+      - marketing
   - id: zq56jJXduYWByxhlplg1b
     title: Wildlife Biology
     acronym: ""
@@ -527,7 +680,9 @@ programs:
     degrees: []
     types:
       - MWB
-    tags: []
+    tags:
+      - biology
+      - science
   - id: e1sOiaqcu3-DfJ4DnxKBj
     title: Veterinary Science
     acronym: ""
@@ -535,4 +690,8 @@ programs:
     degrees: []
     types:
       - DVSc
-    tags: []
+    tags:
+      - biology
+      - science
+      - health
+      - medical
