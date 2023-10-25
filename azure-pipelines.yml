@@ -6,6 +6,8 @@
 trigger:
 - main
 
+pr: none
+
 schedules:
 - cron: "0 4 * * *"
   displayName: Daily midnight EST build (4am UTC)
