@@ -4,7 +4,7 @@ import React from "react"
 export const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [] }) => (
   <div className="card">
     <div className="card-body">
-      <h5 className="card-title">{acronym ? `${title} (${acronym})` : title}</h5>
+      <a href={url} className="card-title stretched-link text-decoration-none fw-bold fs-5">{acronym ? `${title} (${acronym})` : title}</a>
       <p className="card-text">
         {degrees.map(degree => (
           <span className="d-block" key={degree}>
@@ -12,7 +12,6 @@ export const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [
           </span>
         ))}
       </p>
-      <a href={url} className="stretched-link"></a>
     </div>
 
     <div className="card-footer text-muted bg-info bg-opacity-10">{types.join(", ")}</div>

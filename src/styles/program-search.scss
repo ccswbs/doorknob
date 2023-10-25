@@ -4,7 +4,7 @@
   gap: 3rem;
 
   .card:hover .card-body,
-  .card:focus .card-body {
+  .card:focus-within .card-body {
     background-color: rgba(0, 110, 183, 0.15) !important;
   }
 
