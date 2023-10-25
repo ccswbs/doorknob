@@ -12,7 +12,7 @@ export const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [
           </span>
         ))}
       </p>
-      <span className="d-block program-tags">{tags.map(tag => toTitleCase(tag)).join(", ")}</span>
+      <span className="d-block program-tags">{tags.map(tag => toTitleCase(tag)).sort((a, b) => a.localeCompare(b)).join(", ")}</span>
     </div>
 
     <div className="card-footer text-muted bg-info bg-opacity-10">{types.join(", ")}</div>
