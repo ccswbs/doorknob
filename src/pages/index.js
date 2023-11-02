@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import AppArmorAlert from "../components/appArmorAlert"
 import BECookieBar from "../components/beCookieBar"
 import Seo from "../components/seo"
@@ -14,7 +13,7 @@ import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
 import BERelatedLinks from "../components/beRelatedLinks"
 import { useHeroData } from "../hooks/yaml/use-hero-data"
 
-export default function IndexTemplate({ data, children }) {
+export default function Home({ data, children }) {
   const spotlightData = useSpotlightData();
   const heroData = useHeroData();
 
@@ -42,13 +41,3 @@ export default function IndexTemplate({ data, children }) {
     </>
   )
 }
-
-export const query = graphql`
-  query ($slug: String) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-      }
-    }
-  }
-`
