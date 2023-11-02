@@ -121,7 +121,7 @@ export const useSpotlightData = () => {
       imageSrc: item?.node?.relationships.field_hero_image?.relationships.field_media_image.gatsbyImage,
       imageAlt: item?.node?.relationships.field_hero_image?.field_media_image.alt,
       imageAlignment: item?.node?.field_spotlight_image_alignment,
-      title: item?.node?.field_spotlight_url.title,
+      title: item?.node?.title,
       url: getLink(item?.node?.field_spotlight_url)
     })
   });
