@@ -156,8 +156,8 @@ Statistic.Gradient = ({ stats }) => {
   return (
     <Gradient
       className="row d-flex flex-column w-100 mx-auto"
-      gradientStyle={gradientStyle}
-      stackedGradientStyle={stackedGradientStyle}
+      gradientstyle={gradientStyle}
+      stackedgradientstyle={stackedGradientStyle}
     >
       <div className="p-0">
         <Container className="px-0">
