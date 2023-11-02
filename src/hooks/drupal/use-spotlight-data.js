@@ -68,6 +68,7 @@ export const useSpotlightData = () => {
           edges {
             node {
               drupal_id
+              title
               field_spotlight_image_alignment
               field_spotlight_rank
               field_spotlight_url {
