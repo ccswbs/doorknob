@@ -12,7 +12,7 @@ const NotFoundPage = () => {
   return (
     <div className="container-fluid">
       <div className="container content-block">
-        <h1>HTTP 404 — File not found</h1>
+        <h1 className="text-primary mt-5 mb-5">HTTP 404 — File not found</h1>
           <p>
             <h3 class="text-dark">Possible reasons for this error:</h3>
           </p>
