@@ -14,7 +14,7 @@ const NotFoundPage = () => {
       <div className="container content-block">
         <h1 className="text-primary mt-5 mb-5">HTTP 404 — File not found</h1>
           <h2 className="text-dark">Possible reasons for this error:</h2>
-          <ol type="a">
+          <ol>
             <li>
               You have clicked on an out-of-date bookmark. Once you find the correct page, please update your bookmark to avoid this error in the future.
             </li>
