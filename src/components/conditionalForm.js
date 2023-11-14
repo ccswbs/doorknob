@@ -39,6 +39,32 @@ const SelectInput = ({ id, name, label, required, helpText, onChange, options })
   </FormGroup>
 )
 
+const RadioInput = ({ id, name, label, required, helpText, onChange, options }) => {
+  return (
+    <FormGroup controlId={id}>
+      <Form.Label>{label}</Form.Label>
+      {options.map((option, index) => {
+        const checkboxID = `${id}-${option.value}`
+        return (
+          <FormGroup controlId={checkboxID} key={checkboxID}>
+            <Form.Check
+              key={index}
+              type="radio"
+              name={name}
+              label={option.label}
+              value={option.value}
+              onChange={onChange}
+              required={required}
+              defaultChecked={option.default}
+            />
+          </FormGroup>
+        )
+      })}
+      {helpText && <Form.Text>{helpText}</Form.Text>}
+    </FormGroup>
+  )
+}
+
 const checkDependenciesAreMet = (toCheck, controls, formData) => {
   if (Array.isArray(toCheck.dependencies)) {
     for (const dependency of toCheck.dependencies) {
@@ -58,26 +84,42 @@ const checkDependenciesAreMet = (toCheck, controls, formData) => {
   return true
 }
 
-const StyledForm = ({ onSubmit, controls, submitButtonText = "Submit" }) => {
+const ConditionalForm = ({ onSubmit, controls, submitButtonText = "Submit" }) => {
   const ref = useRef(null)
   const [formData, setFormData] = useState(null)
 
   const updateFormData = () => {
     if (ref.current) {
       const data = new FormData(ref.current)
-      setFormData(data)
+
+      // check if form data has changed
+      let stale = false
+      for (const [key, value] of data.entries()) {
+        if (formData?.get(key) !== value) {
+          stale = true
+          break
+        }
+      }
+
+      // Only update form data if it has changed
+      if (stale) {
+        setFormData(data)
+      }
     }
   }
 
+  // After every render, we need to ensure that the form data is up to date.
   useEffect(() => {
     updateFormData()
-  }, [controls])
+  })
 
   const handleSubmit = e => {
     e.preventDefault()
     updateFormData()
-    console.log("submitting", formData)
-    //onSubmit(formData);
+
+    if (typeof onSubmit === "function") {
+      onSubmit(e, formData)
+    }
   }
 
   return (
@@ -93,6 +135,8 @@ const StyledForm = ({ onSubmit, controls, submitButtonText = "Submit" }) => {
               return <SelectInput key={control.name} onChange={updateFormData} {...control} />
             case "text":
               return <TextInput key={control.name} onChange={updateFormData} {...control} />
+            case "radio":
+              return <RadioInput key={control.name} onChange={updateFormData} {...control} />
             default:
               return null
           }
@@ -106,4 +150,4 @@ const StyledForm = ({ onSubmit, controls, submitButtonText = "Submit" }) => {
   )
 }
 
-export default StyledForm
+export default ConditionalForm
