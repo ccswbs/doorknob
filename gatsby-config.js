@@ -41,9 +41,8 @@ module.exports = {
         options: {
         baseUrl: process.env.DRUPAL_BASEURL,
         apiBase: process.env.DRUPAL_APIBASE,
-        basicAuth: {
-          username: process.env.BASIC_AUTH_USERNAME,
-          password: process.env.BASIC_AUTH_PASSWORD,
+        headers: {
+          'api-key': process.env.API_KEY,
         },
         fastBuilds: true,
         disallowedLinkTypes: [
@@ -53,6 +52,8 @@ module.exports = {
             `block_content--widget_block`,
             `block_content--yaml_block`,
             `block_content_type--block_content_type`,
+            `build_hooks_deployment--doorknob_preview`,
+            `build_hooks_deployment--netlify_preview`,
             `consumer--consumer`,
             `domain--domain`,
             `feeds_feed--event_categories_import`,
