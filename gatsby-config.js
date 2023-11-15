@@ -130,7 +130,7 @@ module.exports = {
             `taxonomy_vocabulary--taxonomy_vocabulary`,
         ],
         skipFileDownloads: true,
-        requestTimeoutMS: 300000,
+        requestTimeoutMS: 360000,
       },
     },
     {
