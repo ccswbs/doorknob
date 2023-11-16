@@ -49,38 +49,6 @@ const UndergraduateRequirementsPage = ({ data }) => {
       ],
     },
     {
-      id: "requirements-high-school-ap-ib",
-      name: "high-school-ap-ib",
-      label: "I am taking/have taken...",
-      type: "radio",
-      required: true,
-      dependencies: [
-        {
-          name: "high-school-location",
-          values: [
-            "ontario",
-            "alberta",
-            "british-columbia",
-            "manitoba",
-            "new-brunswick",
-            "newfoundland-and-labrador",
-            "northwest-territories",
-            "nova-scotia",
-            "nunavut",
-            "prince-edward-island",
-            "quebec",
-            "saskatchewan",
-            "yukon",
-          ],
-        },
-      ],
-      options: [
-        { value: "advanced-placement", label: "Advanced Placement (AP) courses" },
-        { value: "international-baccalaureate", label: "International Baccalaureate (IB) courses/diploma" },
-        { value: "none", label: "Not Applicable", default: true },
-      ],
-    },
-    {
       id: "requirements-high-school-country-curriculum",
       name: "high-school-country-curriculum",
       label: "My country/curriculum is...",
@@ -125,45 +93,64 @@ const UndergraduateRequirementsPage = ({ data }) => {
         { value: "international", label: "Another University/College outside of Canada" },
       ],
     },
+    {
+      id: "requirements-post-degree",
+      name: "post-degree",
+      label: "I have already completed a post-secondary degree.",
+      dependencies: [
+        {
+          name: "transfer-type",
+          values: ["external", "international"],
+        },
+      ],
+      type: "checkbox",
+    },
   ]
+
+  const getRequirementsURL = (e, data) => {
+    let url = "/admission/undergraduate-requirements/"
+
+    url += data.get("student-type")
+
+    switch (data.get("student-type")) {
+      case "high-school":
+        url += `/${data.get("high-school-location")}`
+
+        if (data.get("high-school-location") === "international") {
+          url += `/${slugify(data.get("high-school-country-curriculum"))}`
+        } else if (data.get("high-school-ap-ib") !== "none") {
+          url += `/${data.get("high-school-ap-ib")}`
+        }
+
+        if (data.get("interested-major")) {
+          url += `/${slugify(data.get("interested-major"))}`
+        }
+        break
+      case "transfer":
+        url += `/${data.get("transfer-type")}`
+
+        switch (data.get("transfer-type")) {
+          case "external":
+          case "international":
+            if (data.get("post-degree")) {
+              url += "/post-degree"
+            }
+            break
+        }
+        break
+      default:
+        break
+    }
+
+    console.log(url)
+  }
 
   return (
     <Container className="content-block">
-      <h1 className="fs-2 mt-5 mb-3">Undergraduate Requirements</h1>
+      <h1 className="fs-2 mt-5 mb-3">Undergraduate Admission Requirements</h1>
       <Row>
         <Col md={6}>
-          <ConditionalForm
-            controls={controls}
-            submitButtonText="View Requirements"
-            onSubmit={(e, data) => {
-              let url = "/admission/undergraduate-requirements/"
-
-              url += data.get("student-type")
-
-              switch (data.get("student-type")) {
-                case "high-school":
-                  url += `/${data.get("high-school-location")}`
-
-                  if (data.get("high-school-location") === "international") {
-                    url += `/${slugify(data.get("high-school-country-curriculum"))}`
-                  } else if (data.get("high-school-ap-ib") !== "none") {
-                    url += `/${data.get("high-school-ap-ib")}`
-                  }
-
-                  if (data.get("interested-major")) {
-                    url += `/${slugify(data.get("interested-major"))}`
-                  }
-                  break
-                case "transfer":
-                  url += `/${data.get("transfer-type")}`
-                  break
-                default:
-                  break
-              }
-
-              console.log(url)
-            }}
-          />
+          <ConditionalForm controls={controls} submitButtonText="View Requirements" onSubmit={getRequirementsURL} />
         </Col>
         <Col md={4} className="ms-auto"></Col>
       </Row>
