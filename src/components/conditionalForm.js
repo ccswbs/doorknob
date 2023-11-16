@@ -39,31 +39,43 @@ const SelectInput = ({ id, name, label, required, helpText, onChange, options })
   </FormGroup>
 )
 
-const RadioInput = ({ id, name, label, required, helpText, onChange, options }) => {
-  return (
-    <FormGroup controlId={id}>
-      <Form.Label>{label}</Form.Label>
-      {options.map((option, index) => {
-        const checkboxID = `${id}-${option.value}`
-        return (
-          <FormGroup controlId={checkboxID} key={checkboxID}>
-            <Form.Check
-              key={index}
-              type="radio"
-              name={name}
-              label={option.label}
-              value={option.value}
-              onChange={onChange}
-              required={required}
-              defaultChecked={option.default}
-            />
-          </FormGroup>
-        )
-      })}
-      {helpText && <Form.Text>{helpText}</Form.Text>}
-    </FormGroup>
-  )
-}
+const RadioInput = ({ id, name, label, required, helpText, onChange, options }) => (
+  <FormGroup controlId={id}>
+    <Form.Label>{label}</Form.Label>
+    {options.map((option, index) => {
+      const checkboxID = `${id}-${option.value}`
+      return (
+        <FormGroup controlId={checkboxID} key={checkboxID}>
+          <Form.Check
+            key={index}
+            type="radio"
+            name={name}
+            label={option.label}
+            value={option.value}
+            onChange={onChange}
+            required={required}
+            defaultChecked={option.default}
+          />
+        </FormGroup>
+      )
+    })}
+    {helpText && <Form.Text>{helpText}</Form.Text>}
+  </FormGroup>
+)
+
+const CheckboxInput = ({ id, name, label, required, helpText, onChange, defaultChecked }) => (
+  <FormGroup controlId={id}>
+    <Form.Check
+      type="checkbox"
+      name={name}
+      label={label}
+      required={required}
+      onChange={onChange}
+      defaultChecked={defaultChecked}
+    />
+    {helpText && <Form.Text>{helpText}</Form.Text>}
+  </FormGroup>
+)
 
 const checkDependenciesAreMet = (toCheck, controls, formData) => {
   if (Array.isArray(toCheck.dependencies)) {
@@ -84,27 +96,37 @@ const checkDependenciesAreMet = (toCheck, controls, formData) => {
   return true
 }
 
-const ConditionalForm = ({ onSubmit, controls, submitButtonText = "Submit" }) => {
+const ConditionalForm = ({ action, method, onSubmit, controls, submitButtonText = "Submit" }) => {
   const ref = useRef(null)
   const [formData, setFormData] = useState(null)
 
   const updateFormData = () => {
-    if (ref.current) {
-      const data = new FormData(ref.current)
+    // Form hasn't been rendered yet, don't do anything
+    if (!ref.current) return
 
-      // check if form data has changed
-      let stale = false
-      for (const [key, value] of data.entries()) {
+    // Create form data object
+    const data = new FormData(ref.current)
+
+    // Check if form data has changed
+    let stale = false
+
+    const oldData = Array.from(formData?.entries() || [])
+    const newData = Array.from(data.entries())
+
+    if (oldData.length !== newData.length) {
+      stale = true
+    } else {
+      for (let [key, value] of newData) {
         if (formData?.get(key) !== value) {
           stale = true
           break
         }
       }
+    }
 
-      // Only update form data if it has changed
-      if (stale) {
-        setFormData(data)
-      }
+    // Only update form data if it has changed
+    if (stale) {
+      setFormData(data)
     }
   }
 
@@ -113,17 +135,21 @@ const ConditionalForm = ({ onSubmit, controls, submitButtonText = "Submit" }) =>
     updateFormData()
   })
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    updateFormData()
-
-    if (typeof onSubmit === "function") {
-      onSubmit(e, formData)
-    }
-  }
-
   return (
-    <Form className="d-flex flex-column gap-5" onSubmit={handleSubmit} ref={ref}>
+    <Form
+      action={action}
+      method={method}
+      className="d-flex flex-column gap-5"
+      onSubmit={e => {
+        e.preventDefault()
+        updateFormData()
+
+        if (typeof onSubmit === "function") {
+          onSubmit(e, formData)
+        }
+      }}
+      ref={ref}
+    >
       {controls
         .map(control => {
           if (!checkDependenciesAreMet(control, controls, formData)) {
@@ -137,6 +163,8 @@ const ConditionalForm = ({ onSubmit, controls, submitButtonText = "Submit" }) =>
               return <TextInput key={control.name} onChange={updateFormData} {...control} />
             case "radio":
               return <RadioInput key={control.name} onChange={updateFormData} {...control} />
+            case "checkbox":
+              return <CheckboxInput key={control.name} onChange={updateFormData} {...control} />
             default:
               return null
           }
