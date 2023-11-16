@@ -13,13 +13,13 @@ const UndergraduateRequirementsPage = ({ data }) => {
       type: "select",
       required: true,
       options: [
-        { value: "high-school", label: "High School Student/Graduate" },
-        { value: "transfer", label: "Transfer Student from a University/College" },
-        { value: "mature", label: "Mature Student (Out of High School for more than 2 years)" },
+        { value: "high-school-students", label: "High School Student/Graduate" },
+        { value: "transfer-students", label: "Transfer Student from a University/College" },
+        { value: "mature-students", label: "Mature Student (Out of High School for more than 2 years)" },
       ],
     },
     {
-      id: "requirements-high-school-location",
+      id: "requirements-high-school-students-location",
       name: "high-school-location",
       label: "I attend/attended high school in...",
       type: "select",
@@ -27,7 +27,7 @@ const UndergraduateRequirementsPage = ({ data }) => {
       dependencies: [
         {
           name: "student-type",
-          values: ["high-school"],
+          values: ["high-school-students"],
         },
       ],
       options: [
@@ -49,12 +49,12 @@ const UndergraduateRequirementsPage = ({ data }) => {
       ],
     },
     {
-      id: "requirements-high-school-country-curriculum",
+      id: "requirements-high-school-students-country-curriculum",
       name: "high-school-country-curriculum",
       label: "My country/curriculum is...",
       dependencies: [
         {
-          name: "high-school-location",
+          name: "high-school-students-location",
           values: ["international"],
         },
       ],
@@ -69,7 +69,7 @@ const UndergraduateRequirementsPage = ({ data }) => {
       dependencies: [
         {
           name: "student-type",
-          values: ["high-school"],
+          values: ["high-school-students"],
         },
       ],
       type: "text",
@@ -83,7 +83,7 @@ const UndergraduateRequirementsPage = ({ data }) => {
       dependencies: [
         {
           name: "student-type",
-          values: ["transfer"],
+          values: ["transfer-students"],
         },
       ],
       type: "select",
@@ -113,13 +113,13 @@ const UndergraduateRequirementsPage = ({ data }) => {
     url += data.get("student-type")
 
     switch (data.get("student-type")) {
-      case "high-school":
-        url += `/${data.get("high-school-location")}`
+      case "high-school-students":
+        url += `/${data.get("high-school-students-location")}`
 
-        if (data.get("high-school-location") === "international") {
-          url += `/${slugify(data.get("high-school-country-curriculum"))}`
-        } else if (data.get("high-school-ap-ib") !== "none") {
-          url += `/${data.get("high-school-ap-ib")}`
+        if (data.get("high-school-students-location") === "international") {
+          url += `/${slugify(data.get("high-school-students-country-curriculum"))}`
+        } else if (data.get("high-school-students-ap-ib") !== "none") {
+          url += `/${data.get("high-school-students-ap-ib")}`
         }
 
         if (data.get("interested-major")) {

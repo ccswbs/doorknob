@@ -69,37 +69,5 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const mdx = await graphql(`
-    query {
-      allMdx {
-        nodes {
-          id
-          body
-          frontmatter {
-            slug
-            template
-          }
-          internal {
-            contentFilePath
-          }
-        }
-      }
-    }
-  `)
 
-  if (mdx.errors) {
-    reporter.panicOnBuild("Error loading MDX result", mdx.errors)
-  }
-
-  mdx.data.allMdx.nodes.forEach(node => {
-    const template = path.resolve(`./src/templates/${node.frontmatter.template}`)
-
-    createPage({
-      path: node.frontmatter.slug,
-      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
-      context: {
-        id: node.id,
-      },
-    })
-  })
 }
