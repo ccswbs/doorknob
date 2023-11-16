@@ -1,8 +1,6 @@
 const path = require("path")
 
-
 exports.createSchemaCustomization = ({ actions, schema }) => {
-
   const { createTypes } = actions
 
   const typeDefs = [
@@ -60,7 +58,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         eventsCategories: `WpEventToEventsCategoryConnection`,
         isPast: {
           type: `Boolean`,
-          resolve: (source) => new Date(source.startDate) < new Date(),
+          resolve: source => new Date(source.startDate) < new Date(),
         },
       },
     }),
@@ -69,13 +67,14 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
-  const result = await graphql(`
+  const mdx = await graphql(`
     query {
       allMdx {
         nodes {
           id
+          body
           frontmatter {
             slug
             template
@@ -88,15 +87,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  if (result.errors) {
-    reporter.panicOnBuild('Error loading MDX result', result.errors)
+  if (mdx.errors) {
+    reporter.panicOnBuild("Error loading MDX result", mdx.errors)
   }
 
-  result.data.allMdx.nodes.forEach(node => {
-    let template = path.resolve(`./src/templates/${node.frontmatter.template}`);
+  mdx.data.allMdx.nodes.forEach(node => {
+    const template = path.resolve(`./src/templates/${node.frontmatter.template}`)
+
     createPage({
       path: node.frontmatter.slug,
       component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
+      context: {
+        id: node.id,
+      },
     })
   })
 }
