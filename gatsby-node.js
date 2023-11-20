@@ -69,5 +69,39 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  // Building requirements pages
+  const requirementsQuery = await graphql(`
+    query {
+      requirements: allRequirementsYaml(sort: { slug: ASC }) {
+        nodes {
+          slug
+        }
+      }
+    }
+  `)
 
+  if (requirementsQuery.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query for admission undergraduate requirements.`)
+    return
+  }
+
+  // F
+  const requirements = requirementsQuery.data.requirements.nodes
+    .map(requirement => ({ ...requirement, depth: (requirement.slug.match(/\//g) || []).length }))
+    .sort((a, b) => {
+      if (a.depth === b.depth) {
+        return a.slug.localeCompare(b.slug)
+      }
+
+      return a.depth - b.depth
+    })
+
+  requirements.forEach(node => {
+    const { slug, title, content } = node
+
+    // slugs with * are wildcards, and should be combined with all other slugs matching the pattern, but before we can do that we need to find all the slugs that are not wildcards.
+    if (!slug.includes("*")) {
+      const tokens = slug.split("/")
+    }
+  })
 }
