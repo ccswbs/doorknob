@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ConditionalForm from "../../../components/conditionalForm.js"
+import ConditionalForm from "../../../../components/conditionalForm.js"
 import { Col, Container, Row } from "react-bootstrap"
-import { slugify } from "../../../utils/slugify.js"
+import { slugify } from "../../../../utils/slugify.js"
 
 const UndergraduateRequirementsPage = ({ data }) => {
   const controls = [
