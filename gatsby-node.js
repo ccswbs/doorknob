@@ -1,4 +1,5 @@
 const path = require("path")
+const { SlugTree, SlugTreeNode } = require("./src/utils/slug-tree");
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
@@ -72,7 +73,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Building requirements pages
   const requirementsQuery = await graphql(`
     query {
-      requirements: allRequirementsYaml(sort: { slug: ASC }) {
+      requirements: allRequirementsYaml {
         nodes {
           slug
         }
@@ -85,23 +86,50 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  // F
-  const requirements = requirementsQuery.data.requirements.nodes
-    .map(requirement => ({ ...requirement, depth: (requirement.slug.match(/\//g) || []).length }))
-    .sort((a, b) => {
-      if (a.depth === b.depth) {
-        return a.slug.localeCompare(b.slug)
+  const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`)
+
+  activity.start()
+
+  const template = path.resolve('./src/templates/admission/undergraduate/requirements.js');
+  const requirements = new SlugTree()
+
+  // Parse all slugs from the query into a SlugTree
+  requirements.addSlugs(...requirementsQuery.data.requirements.nodes.map(node => node.slug))
+
+  // Traverse the SlugTree to create the pages
+  requirements.traverse((node, parents) => {
+    // Only create pages for leaf nodes
+    if (node.isLeaf) {
+      let path = ""
+      let slug = ""
+      const parentSlugs = []
+
+      for(const parent of parents) {
+        const part = parent.node?.part ?? parent.part
+
+        if(part === '') {
+          continue
+        }
+
+        path += `${part}/`;
+        slug += `${parent instanceof SlugTreeNode ? `${part}/` : "*/"}`
+
+        parentSlugs.push(path.slice(0, -1));
       }
 
-      return a.depth - b.depth
-    })
+      path += node.part
+      slug += node.part
 
-  requirements.forEach(node => {
-    const { slug, title, content } = node
-
-    // slugs with * are wildcards, and should be combined with all other slugs matching the pattern, but before we can do that we need to find all the slugs that are not wildcards.
-    if (!slug.includes("*")) {
-      const tokens = slug.split("/")
+      createPage({
+        path: `admission/undergraduate/requirements/${path}`,
+        component: template,
+        context: {
+          slug,
+          parents: parentSlugs
+        },
+      })
     }
   })
+
+  activity.end()
 }
