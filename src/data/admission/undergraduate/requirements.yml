@@ -6,30 +6,21 @@
 
 - slug: mature
   title: Mature Students
-  content: |
-    <div>test</div>
 
 - slug: high-school/ontario
   title: Ontario
-  content: |
-    <div>ontario pre</div>
 
 - slug: high-school/ontario/bachelor-of-computing
   title: Bachelor of Computing
-  content: |
-    <div>ontario pre</div>
+
+- slug: high-school/home-schooled
+  title: Home Schooled
 
 - slug: high-school/international
   title: International High School Students
-  content: |
-    <div>ontario pre</div>
 
 - slug: high-school/international/afghanistan
   title: Afghanistan
-  content: |
-    <div>ontario pre</div>
 
 - slug: high-school/international/*/bachelor-of-computing
   title: Bachelor of Computing
-  content: |
-    <div>ontario pre</div>

@@ -1,5 +1,7 @@
 const path = require("path")
-const { SlugTree, SlugTreeNode } = require("./src/utils/slug-tree");
+const fs = require("fs")
+const { SlugTree, SlugTreeNode } = require("./src/utils/slug-tree")
+const { findOne } = require("gatsby/dist/schema/resolvers")
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
@@ -90,7 +92,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   activity.start()
 
-  const template = path.resolve('./src/templates/admission/undergraduate/requirements.js');
+  const template = path.resolve("./src/templates/admission/undergraduate/requirements.js")
   const requirements = new SlugTree()
 
   // Parse all slugs from the query into a SlugTree
@@ -104,17 +106,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       let slug = ""
       const parentSlugs = []
 
-      for(const parent of parents) {
+      for (const parent of parents) {
         const part = parent.node?.part ?? parent.part
 
-        if(part === '') {
+        if (part === "") {
           continue
         }
 
-        path += `${part}/`;
+        path += `${part}/`
         slug += `${parent instanceof SlugTreeNode ? `${part}/` : "*/"}`
 
-        parentSlugs.push(path.slice(0, -1));
+        parentSlugs.push(path.slice(0, -1))
       }
 
       path += node.part
@@ -125,11 +127,68 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: template,
         context: {
           slug,
-          parents: parentSlugs
+          parents: parentSlugs,
         },
       })
     }
   })
 
   activity.end()
+}
+
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    RequirementsYaml: {
+      html: {
+        type: "Html",
+        async resolve(source, args, context, info) {
+          // Construct a query to find the corresponding HTML node
+          const slug = source.slug.replace("*", "wildcard")
+
+          const node = await context.nodeModel.findOne({
+            type: `Html`,
+            query: {
+              filter: {
+                relativePath: {
+                  in: [
+                    `admission/undergraduate/requirements/${slug}.html`,
+                    `admission/undergraduate/requirements/${slug}/index.html`,
+                  ],
+                },
+              },
+            },
+          })
+
+          return node
+        },
+      },
+    },
+  })
+}
+
+exports.onCreateNode = async ({ node, actions, createNodeId, createContentDigest }) => {
+  const { createNode } = actions
+
+  // Check if the node is a File and its extension is .html
+  if (node.internal.type === "File" && path.extname(node.absolutePath) === ".html") {
+    const content = fs.readFileSync(node.absolutePath, "utf-8")
+
+    // Create a new node with HTML content
+    const htmlNode = {
+      id: createNodeId(`${node.id} >>> HTML`),
+      parent: node.id,
+      children: [],
+      internal: {
+        type: "Html",
+        mediaType: "text/html",
+        content,
+        contentDigest: createContentDigest(content),
+      },
+      absolutePath: node.absolutePath,
+      relativePath: node.relativePath,
+    }
+
+    // Create the new node
+    createNode(htmlNode)
+  }
 }
