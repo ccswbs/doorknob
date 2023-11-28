@@ -50,7 +50,10 @@ export const useSpotlightData = () => {
                   }
                   relationships {
                     field_media_image {
-                      gatsbyImage(width: 1680, height: 640)
+                      gatsbyImage(
+                        width: 1680, 
+                        height: 640,
+                        formats: [AUTO, WEBP])
                     }
                   }
                 }
