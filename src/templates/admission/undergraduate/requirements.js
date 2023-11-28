@@ -33,7 +33,7 @@ export default function UndergraduateRequirements({ data, children, pageContext 
 
 export const query = graphql`
   query ($slug: String!, $parents: [String!]!) {
-    main: allRequirementsYaml(filter: { slug: { eq: $slug } }) {
+    main: allUndergraduateRequirements(filter: { slug: { eq: $slug } }) {
       nodes {
         slug
         title
@@ -44,7 +44,7 @@ export const query = graphql`
         }
       }
     }
-    parents: allRequirementsYaml(filter: { slug: { in: $parents } }, sort: { slug: DESC }) {
+    parents: allUndergraduateRequirements(filter: { slug: { in: $parents } }, sort: { slug: DESC }) {
       nodes {
         slug
         title

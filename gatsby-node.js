@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Building requirements pages
   const requirementsQuery = await graphql(`
     query {
-      requirements: allRequirementsYaml {
+      requirements: allUndergraduateRequirementsYaml {
         nodes {
           slug
         }
