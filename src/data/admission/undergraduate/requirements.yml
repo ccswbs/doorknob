@@ -1,17 +1,672 @@
 - slug: high-school
   title: High School Students
 
-- slug: transfer
-  title: Transfer Students
-
-- slug: mature
-  title: Mature Students
-
 - slug: high-school/ontario
   title: Ontario
 
+- slug: high-school/ontario/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/ontario/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/ontario/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/ontario/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/ontario/bachelor-of-commerce
+  title: Bachelor of Commerce
+
 - slug: high-school/ontario/bachelor-of-computing
   title: Bachelor of Computing
+
+- slug: high-school/ontario/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/ontario/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/ontario/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/ontario/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/ontario/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/ontario/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/ontario/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/ontario/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/ontario/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/ontario/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/alberta
+  title: Alberta
+
+- slug: high-school/alberta/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/alberta/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/alberta/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/alberta/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/alberta/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/alberta/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/alberta/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/alberta/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/alberta/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/alberta/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/alberta/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/alberta/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/alberta/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/alberta/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/alberta/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/alberta/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/british-columbia
+  title: British Columbia
+
+- slug: high-school/british-columbia/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/british-columbia/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/british-columbia/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/british-columbia/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/british-columbia/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/british-columbia/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/british-columbia/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/british-columbia/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/british-columbia/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/british-columbia/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/british-columbia/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/british-columbia/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/british-columbia/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/british-columbia/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/british-columbia/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/british-columbia/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/quebec
+  title: Quebec
+
+- slug: high-school/quebec/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/quebec/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/quebec/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/quebec/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/quebec/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/quebec/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/quebec/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/quebec/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/quebec/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/quebec/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/quebec/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/quebec/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/quebec/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/quebec/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/quebec/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/quebec/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/manitoba
+  title: Manitoba
+
+- slug: high-school/manitoba/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/manitoba/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/manitoba/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/manitoba/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/manitoba/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/manitoba/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/manitoba/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/manitoba/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/manitoba/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/manitoba/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/manitoba/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/manitoba/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/manitoba/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/manitoba/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/manitoba/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/manitoba/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+
+- slug: high-school/saskatchewan
+  title: Saskatchewan
+
+- slug: high-school/saskatchewan/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/saskatchewan/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/saskatchewan/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/saskatchewan/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/saskatchewan/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/saskatchewan/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/saskatchewan/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/saskatchewan/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/saskatchewan/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/saskatchewan/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/saskatchewan/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/saskatchewan/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/saskatchewan/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/saskatchewan/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/saskatchewan/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/saskatchewan/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+
+- slug: high-school/new-brunswick
+  title: New Brunswick
+
+- slug: high-school/new-brunswick/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/new-brunswick/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/new-brunswick/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/new-brunswick/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/new-brunswick/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/new-brunswick/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/new-brunswick/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/new-brunswick/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/new-brunswick/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/new-brunswick/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/new-brunswick/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/new-brunswick/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/new-brunswick/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/new-brunswick/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/new-brunswick/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/new-brunswick/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/nova-scotia
+  title: Nova Scotia
+
+- slug: high-school/nova-scotia/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/nova-scotia/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/nova-scotia/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/nova-scotia/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/nova-scotia/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/nova-scotia/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/nova-scotia/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/nova-scotia/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/nova-scotia/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/nova-scotia/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/nova-scotia/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/nova-scotia/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/nova-scotia/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/nova-scotia/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/nova-scotia/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/nova-scotia/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/prince-edward-island
+  title: Prince Edward Island
+
+- slug: high-school/prince-edward-island/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/prince-edward-island/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/prince-edward-island/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/prince-edward-island/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/prince-edward-island/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/prince-edward-island/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/prince-edward-island/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/prince-edward-island/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/prince-edward-island/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/prince-edward-island/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/prince-edward-island/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/prince-edward-island/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/prince-edward-island/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/prince-edward-island/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/prince-edward-island/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/prince-edward-island/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+
+- slug: high-school/newfoundland-and-labrador
+  title: Newfoundland and Labrador
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/newfoundland-and-labrador/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/newfoundland-and-labrador/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/yukon
+  title: Yukon
+
+- slug: high-school/yukon/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/yukon/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/yukon/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/yukon/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/yukon/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/yukon/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/yukon/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/yukon/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/yukon/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/yukon/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/yukon/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/yukon/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/yukon/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/yukon/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/yukon/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/yukon/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+
+- slug: high-school/nunavut
+  title: Nunavut
+
+- slug: high-school/nunavut/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/nunavut/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/nunavut/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/nunavut/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/nunavut/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/nunavut/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/nunavut/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/nunavut/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/nunavut/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/nunavut/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/nunavut/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/nunavut/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/nunavut/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/nunavut/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/nunavut/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/nunavut/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: high-school/northwest-territories
+  title: Northwest Territories
+
+- slug: high-school/northwest-territories/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/northwest-territories/bachelor-of-computing
+  title: Bachelor of Computing
+
+- slug: high-school/northwest-territories/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/northwest-territories/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/northwest-territories/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/northwest-territories/bachelor-of-commerce
+  title: Bachelor of Commerce
+
+- slug: high-school/northwest-territories/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/northwest-territories/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/northwest-territories/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/northwest-territories/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/northwest-territories/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/northwest-territories/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/northwest-territories/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/northwest-territories/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/northwest-territories/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/northwest-territories/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
 
 - slug: high-school/home-schooled
   title: Home Schooled
@@ -22,5 +677,62 @@
 - slug: high-school/international/afghanistan
   title: Afghanistan
 
+- slug: high-school/international/*/bachelor-of-applied-sciences
+  title: Bachelor of Applied Sciences
+
+- slug: high-school/international/*/bachelor-of-arts
+  title: Bachelor of Arts
+
+- slug: high-school/international/*/bachelor-of-arts-and-sciences
+  title: Bachelor of Arts and Sciences
+
+- slug: high-school/international/*/bachelor-of-bio-resource-management
+  title: Bachelor of Bio-Resource Management
+
+- slug: high-school/international/*/bachelor-of-commerce
+  title: Bachelor of Commerce
+
 - slug: high-school/international/*/bachelor-of-computing
   title: Bachelor of Computing
+
+- slug: high-school/international/*/bachelor-of-creative-arts-health-and-wellness
+  title: Bachelor of Creative Arts, Health and Wellness
+
+- slug: high-school/international/*/bachelor-of-engineering
+  title: Bachelor of Engineering
+
+- slug: high-school/international/*/bachelor-of-indigenous-environmental-science-and-practice
+  title: Bachelor of Indigenous Environmental Science and Practice
+
+- slug: high-school/international/*/bachelor-of-landscape-architecture
+  title: Bachelor of Landscape Architecture
+
+- slug: high-school/international/*/bachelor-of-mathematics
+  title: Bachelor of Mathematics
+
+- slug: high-school/international/*/bachelor-of-one-health
+  title: Bachelor of One Health
+
+- slug: high-school/international/*/bachelor-of-science
+  title: Bachelor of Science
+
+- slug: high-school/international/*/bachelor-of-science-in-agriculture
+  title: Bachelor of Science in Agriculture
+
+- slug: high-school/international/*/bachelor-of-science-in-environmental-sciences
+  title: Bachelor of Science in Environmental Sciences
+
+- slug: high-school/international/*/doctor-of-veterinary-medicine
+  title: Doctor of Veterinary Medicine
+
+- slug: transfer
+  title: Transfer Students
+
+- slug: transfer/internal
+  title: Internal
+
+- slug: transfer/external
+  title: External
+
+- slug: mature
+  title: Mature Students
