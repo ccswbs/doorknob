@@ -1,0 +1,23 @@
+- slug: undergraduate/ontario
+  title: Ontario Undergraduate Students
+  content:
+    requirements: "ontario general requirements"
+    before_applying: "ontario general before applying"
+    how_to_apply: "ontario general how to apply"
+    after_applying: "ontario general after applying"
+
+- slug: undergraduate/ontario/high-school
+  title: Ontario High School Students
+  content:
+    requirements: "ontario high school requirements"
+    before_applying: "ontario high school before applying"
+    how_to_apply: "ontario high school how to apply"
+    after_applying: "ontario high school after applying"
+
+- slug: undergraduate/ontario/internal-transfer
+  title: Ontario Internal Transfer Students
+  content:
+    requirements: "ontario internal transfer requirements"
+    before_applying: "ontario internal transfer before applying"
+    how_to_apply: "ontario internal transfer how to apply"
+    after_applying: "ontario internal transfer after applying"

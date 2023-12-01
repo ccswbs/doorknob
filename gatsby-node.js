@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Building requirements pages
   const requirementsQuery = await graphql(`
     query {
-      requirements: allUndergraduateRequirementsYaml {
+      requirements: allAdmissionRequirementsYaml {
         nodes {
           slug
         }
@@ -92,7 +92,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   activity.start()
 
-  const template = path.resolve("./src/templates/admission/undergraduate/requirements.js")
+  const template = path.resolve("./src/templates/admission/requirements.js")
   const requirements = new SlugTree()
 
   // Parse all slugs from the query into a SlugTree
@@ -123,7 +123,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       slug += node.part
 
       createPage({
-        path: `admission/undergraduate/requirements/${path}`,
+        path: `admission/requirements/${path}`,
         component: template,
         context: {
           slug,
@@ -134,61 +134,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   activity.end()
-}
-
-exports.createResolvers = ({ createResolvers }) => {
-  createResolvers({
-    RequirementsYaml: {
-      html: {
-        type: "Html",
-        async resolve(source, args, context, info) {
-          // Construct a query to find the corresponding HTML node
-          const slug = source.slug.replace("*", "wildcard")
-
-          const node = await context.nodeModel.findOne({
-            type: `Html`,
-            query: {
-              filter: {
-                relativePath: {
-                  in: [
-                    `admission/undergraduate/requirements/${slug}.html`,
-                    `admission/undergraduate/requirements/${slug}/index.html`,
-                  ],
-                },
-              },
-            },
-          })
-
-          return node
-        },
-      },
-    },
-  })
-}
-
-exports.onCreateNode = async ({ node, actions, createNodeId, createContentDigest }) => {
-  const { createNode } = actions
-
-  // Check if the node is a File and its extension is .html
-  if (node.internal.type === "File" && path.extname(node.absolutePath) === ".html") {
-    const content = fs.readFileSync(node.absolutePath, "utf-8")
-
-    // Create a new node with HTML content
-    const htmlNode = {
-      id: createNodeId(`${node.id} >>> HTML`),
-      parent: node.id,
-      children: [],
-      internal: {
-        type: "Html",
-        mediaType: "text/html",
-        content,
-        contentDigest: createContentDigest(content),
-      },
-      absolutePath: node.absolutePath,
-      relativePath: node.relativePath,
-    }
-
-    // Create the new node
-    createNode(htmlNode)
-  }
 }
