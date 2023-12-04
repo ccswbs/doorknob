@@ -1,18 +1,64 @@
-- slug: undergraduate/ontario
-  title: Ontario Undergraduate Students
+- slug: undergraduate/ontario/high-school
+  title: Ontario High School Students
   content:
-    requirements: "ontario general requirements"
+    requirements: |
+      <h3>Minimum Requirements</h3>
+
+      <p>Undergraduate program applicants from Ontario must present the following:</p>
+
+      <ol>
+        <li>Ontario Secondary School Diploma (OSSD)</li>
+        <li>A minimum of six 4U and/or 4M courses</li>
+        <li>The specific subject requirements for the degree program of interest</li>
+        <li>ENG4U (required for all degree programs)</li>
+      </ol>
+
+      <p> The non-academic component of 4U or 4M co-op course is not accepted for admission purposes.</p>
     before_applying: "ontario general before applying"
     how_to_apply: "ontario general how to apply"
     after_applying: "ontario general after applying"
 
-- slug: undergraduate/ontario/high-school
-  title: Ontario High School Students
+- slug: undergraduate/ontario/high-school/bachelor-of-engineering
+  title: Ontario High School Students in Bachelor of Engineering
   content:
-    requirements: "ontario high school requirements"
-    before_applying: "ontario high school before applying"
-    how_to_apply: "ontario high school how to apply"
-    after_applying: "ontario high school after applying"
+    requirements: |
+      <h3>Bachelor Degree Requirements:</h3>
+
+      <h4>Things to remember</h4>
+
+      <ul>
+        <li>Admission averages for co-op programs are typically in the high end of the estimated cut-off range.</li>
+        <li>Estimated cutoff ranges are based on admission averages from previous years and are provided as a point of reference.</li>
+        <li>The single asterisk * indicates that the program is offered with and without co-op.</li>
+        <li>The double asterisk ** indicates that the program has a mandatory co-op.</li>
+      </ul>
+
+      <h4>Majors</h4>
+
+      <ul>
+        <li>Biological Engineering*</li>
+        <li>Biomedical Engineering*</li>
+        <li>Computer Engineering*</li>
+        <li>Engineering Systems and Computing*</li>
+        <li>Environmental Engineering*</li>
+        <li>Mechanical Engineering*</li>
+        <li>Water Resources Engineering*</li>
+        <li>Undeclared (first year only)</li>
+      </ul>
+
+      <h4>Required Courses</h4>
+
+      <ul>
+        <li>English (ENG4U)</li>
+        <li>Advanced Functions (MHF4U)</li>
+        <li>Calculus and Vectors (MCV4U)</li>
+        <li>Chemistry (SCH4U)</li>
+        <li>Physics (SPH4U)</li>
+        <li>One additional 4U or 4M course</li>
+      </ul>
+      
+      <h4>Estimated Cut-off Ranges</h4>
+      <p>84% - 89%</p>
 
 - slug: undergraduate/ontario/internal-transfer
   title: Ontario Internal Transfer Students
