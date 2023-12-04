@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { Container, Tab, Tabs } from "react-bootstrap"
+import "../../styles/admission/requirements.scss"
 
 export default function UndergraduateRequirements({ data, children, pageContext }) {
   const main = data.main.nodes[0]
