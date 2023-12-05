@@ -188,6 +188,69 @@ h1 {
   color: black !important;
 }
 
+.nav {
+  border-bottom: 5px solid var(--bs-warning);
+  gap: 0.5rem;
+
+  .nav-link {
+    background-color: var(--bs-gray-200);
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem;
+    height: 100%;
+
+    &.active {
+      background-color: var(--bs-warning);
+    }
+  }
+}
+
+ol {
+  counter-reset: list-counter;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    &:before {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      content: counter(list-counter);
+      counter-increment: list-counter;
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      color: #000;
+      background: var(--bs-warning);
+      padding: 0.25rem 0.75rem;
+      margin-right: 0.5em;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+}
+
+ul:not(.nav) {
+  padding-left: 1rem;
+
+  li {
+    padding-left: 0.75rem;
+
+    &::marker {
+      content: "";
+      font-size: 1.8rem;
+      color: var(--bs-warning);
+      font-family: "Font Awesome 6 Pro";
+    }
+  }
+}
+
 @media (min-width: 768px) {
   #rotator img {
     aspect-ratio: 21 / 9;
