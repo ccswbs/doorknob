@@ -1,14 +1,41 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { useEffect, useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { slugify } from "../../../utils/slugify.js"
 
 const RequirementsPage = ({ data }) => {
   const getRequirementsURL = e => {
-    e.preventDefault();
+    e.preventDefault()
   }
 
-  const [page, setPage] = "/";
+  const query = useStaticQuery(graphql`
+    query {
+      undergraduate: allSitePage(filter: { path: { regex: "/^/admission/requirements/undergraduate/.+/" } }) {
+        nodes {
+          path
+        }
+      }
+    }
+  `)
+
+  const provinces = new Set()
+  const studentTypes = new Set()
+  const programs = new Set()
+
+  query.undergraduate.nodes.forEach(value => {
+    const tokens = value.path.split("/")
+
+    provinces.add(tokens[4])
+    studentTypes.add(tokens[5])
+    programs.add(tokens[6])
+  })
+
+  useEffect(() => {
+    console.log(provinces)
+  }, [])
+
+  const [page, setPage] = useState("")
+  const [filled, setFilled] = useState(false)
 
   return (
     <Container className="content-block">
@@ -16,8 +43,34 @@ const RequirementsPage = ({ data }) => {
       <Row>
         <Col md={6}>
           <Form className="d-flex flex-column gap-5" method="GET" action={page}>
-            <Button className="w-fit" type="submit">
-              Get Requirements
+            <Form.Group controlId="admission-requirements-provinces">
+              <Form.Label>I live in:</Form.Label>
+              <Form.Select name="province" required>
+                {Array.from(provinces).map(value => (
+                  <option key={value} value={value}>
+                    {value.replace("-", " ")}
+                  </option>
+                ))}
+              </Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="admission-requirements-student-type">
+              <Form.Label>I am a(n):</Form.Label>
+              <Form.Select name="student-type" required></Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="admission-requirements-degree-type">
+              <Form.Label>I am interested in:</Form.Label>
+              <Form.Select name="degree-type" required></Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="admission-requirements-program">
+              <Form.Label>Choose your desired field:</Form.Label>
+              <Form.Select name="program-type" required></Form.Select>
+            </Form.Group>
+
+            <Button variant={filled ? "outline-primary" : "outline-secondary"} className="w-fit" type="submit">
+              View Requirements
             </Button>
           </Form>
         </Col>
