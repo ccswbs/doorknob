@@ -20,14 +20,27 @@ const RequirementsPage = ({ data }) => {
 
   const provinces = new Set()
   const studentTypes = new Set()
+  const degreeTypes = new Set()
   const programs = new Set()
 
   query.undergraduate.nodes.forEach(value => {
     const tokens = value.path.split("/")
 
-    provinces.add(tokens[4])
-    studentTypes.add(tokens[5])
-    programs.add(tokens[6])
+    if (tokens[4]) {
+      provinces.add(tokens[4])
+    }
+
+    if (tokens[5]) {
+      studentTypes.add(tokens[5])
+    }
+
+    if (tokens[6]) {
+      degreeTypes.add(tokens[6])
+    }
+
+    if (tokens[7]) {
+      programs.add(tokens[7])
+    }
   })
 
   useEffect(() => {
