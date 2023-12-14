@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { Container, Tab, Tabs } from "react-bootstrap"
 
-export default function UndergraduateRequirements({ data, children, pageContext }) {
+export default function Requirements({ data, children, pageContext }) {
   const main = data.main.nodes[0]
   const parents = data.parents.nodes
 
@@ -50,6 +50,7 @@ export default function UndergraduateRequirements({ data, children, pageContext 
   )
 }
 
+/*
 export const query = graphql`
   query ($slug: String!, $parents: [String!]!) {
     main: allAdmissionRequirementsYaml(filter: { slug: { eq: $slug } }) {
@@ -78,3 +79,4 @@ export const query = graphql`
     }
   }
 `
+*/
