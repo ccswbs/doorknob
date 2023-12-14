@@ -1,4 +1,4 @@
-export const toTitleCase = str => {
+const toTitleCase = str => {
   const lowercaseWords = [
     "a",
     "an",
@@ -20,4 +20,8 @@ export const toTitleCase = str => {
   return str.toLowerCase().replace(/\w+(?:-\w+)*/g, word => {
     return lowercaseWords.includes(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)
   })
+}
+
+module.exports = {
+  toTitleCase
 }
