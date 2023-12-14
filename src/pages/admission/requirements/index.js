@@ -2,102 +2,112 @@ import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { toTitleCase } from "../../../utils/to-title-case.js"
+import { SlugTree } from "../../../utils/slug-tree.js"
+import { navigate } from "gatsby"
+
+const RequirementsPageSelect = ({ id, name, label, options, required, onChange }) => {
+  return (
+    <Form.Group controlId={id}>
+      <Form.Label>{label}</Form.Label>
+      <Form.Select onChange={onChange} name={name} required={required} defaultValue="null">
+        <option disabled value="null">
+          Please select an option
+        </option>
+
+        {options.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.text}
+          </option>
+        ))}
+      </Form.Select>
+    </Form.Group>
+  )
+}
 
 const RequirementsPage = ({ data }) => {
   const getRequirementsURL = e => {
     e.preventDefault()
   }
 
-  const query = useStaticQuery(graphql`
-    query {
-      undergraduate: allSitePage(filter: { path: { regex: "/^/admission/requirements/undergraduate/.+/" } }) {
-        nodes {
-          path
-        }
-      }
-    }
-  `)
+  const requirements = new SlugTree()
 
-  const provinces = new Set()
-  const studentTypes = new Set()
-  const degreeTypes = new Set()
-  const programs = new Set()
-
-  query.undergraduate.nodes.forEach(value => {
-    const tokens = value.path.split("/")
-
-    if (tokens[4]) {
-      provinces.add(tokens[4])
-    }
-
-    if (tokens[5]) {
-      studentTypes.add(tokens[5])
-    }
-
-    if (tokens[6]) {
-      degreeTypes.add(tokens[6])
-    }
-
-    if (tokens[7]) {
-      programs.add(tokens[7])
-    }
+  data.requirements.nodes.forEach(val => {
+    requirements.addSlugs({ slug: val.slug, name: val.name })
   })
 
-  useEffect(() => {
-    console.log(provinces)
-  }, [])
+  const [values, setValues] = useState({})
+  const [isFilled, setIsFilled] = useState(false)
 
-  const [page, setPage] = useState("")
-  const [filled, setFilled] = useState(false)
+  const handleFormControlChange = e => {
+    setValues(old => ({ ...old, [e.target.name]: e.target.value }))
+
+    setIsFilled(
+      Array.from(e.currentTarget.querySelectorAll("select")).every(
+        select => typeof select.value === "string" && select.value !== "null",
+      ),
+    )
+  }
+
+  const handleFormSubmit = e => {
+    e.preventDefault()
+
+    if (isFilled) {
+      navigate(`undergraduate/${values.location}/${values.studentType}/${values.degreeType}/${values.program}`)?.catch(
+        e => console.error(e),
+      )
+    }
+  }
+
+  const getOptions = (...parts) => {
+    const node = requirements.getNode(...parts)
+
+    console.log(node)
+
+    return node?.children.map(node => ({ value: node.part, text: node.name })) ?? []
+  }
 
   return (
     <Container className="content-block">
       <h1 className="fs-2 mt-5 mb-3">Admission Requirements</h1>
       <Row>
         <Col md={6}>
-          <Form className="d-flex flex-column gap-5" method="GET" action={page}>
-            <Form.Group controlId="admission-requirements-provinces">
-              <Form.Label>I live in:</Form.Label>
-              <Form.Select name="province" required>
-                {Array.from(provinces).map(value => (
-                  <option key={value} value={value}>
-                    {toTitleCase(value.replaceAll("-", " "))}
-                  </option>
-                ))}
-              </Form.Select>
-            </Form.Group>
+          <Form className="d-flex flex-column gap-5" onChange={handleFormControlChange} onSubmit={handleFormSubmit}>
+            <RequirementsPageSelect
+              id="requirements-location"
+              name="location"
+              label="I live in:"
+              required
+              options={getOptions("undergraduate")}
+            />
 
-            <Form.Group controlId="admission-requirements-student-type">
-              <Form.Label>I am a(n):</Form.Label>
-              <Form.Select name="student-type" required>
-                {Array.from(studentTypes).map(value => (
-                  <option key={value} value={value}>
-                    {toTitleCase(value.replaceAll("-", " "))}
-                  </option>
-                ))}
-              </Form.Select>
-            </Form.Group>
+            <RequirementsPageSelect
+              id="requirements-student-type"
+              name="studentType"
+              label="I am a(n):"
+              required
+              options={getOptions("undergraduate", values.location)}
+            />
 
-            <Form.Group controlId="admission-requirements-degree-type">
-              <Form.Label>I am interested in:</Form.Label>
-              <Form.Select name="degree-type" required></Form.Select>
-            </Form.Group>
+            <RequirementsPageSelect
+              id="requirements-degree-type"
+              name="degreeType"
+              label="I'm interested in:"
+              required
+              options={getOptions("undergraduate", values.location, values.studentType)}
+            />
 
-            <Form.Group controlId="admission-requirements-program">
-              <Form.Label>Choose your desired field:</Form.Label>
-              <Form.Select name="program-type" required>
-                {Array.from(programs).map(value => (
-                  <option key={value} value={value}>
-                    {toTitleCase(value.replaceAll("-", " "))}
-                  </option>
-                ))}
-              </Form.Select>
-            </Form.Group>
+            <RequirementsPageSelect
+              id="requirements-program"
+              name="program"
+              label="Choose your desired field:"
+              options={getOptions("undergraduate", values.location, values.studentType, values.degreeType)}
+            />
 
             <Button
-              variant={filled ? "outline-primary" : "outline-secondary"}
+              variant={isFilled ? "outline-primary" : "outline-secondary"}
               className="w-fit px-5 py-3"
               type="submit"
+              disabled={!isFilled}
             >
               View Requirements
             </Button>
@@ -108,5 +118,16 @@ const RequirementsPage = ({ data }) => {
     </Container>
   )
 }
+
+export const query = graphql`
+  query {
+    requirements: allAdmissionRequirementsYaml {
+      nodes {
+        slug
+        name
+      }
+    }
+  }
+`
 
 export default RequirementsPage

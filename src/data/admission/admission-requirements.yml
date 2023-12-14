@@ -1,4 +1,15 @@
+- slug: undergraduate
+  name: Undergraduate
+  title: Undergraduate Students
+
+- slug: undergraduate/ontario
+  name: Ontario
+
+- slug: undergraduate/quebec
+  name: Quebec
+
 - slug: undergraduate/ontario/high-school
+  name: High School Students/Graduates
   title: Ontario High School Students
   content:
     requirements: |
@@ -18,7 +29,11 @@
     how_to_apply: "ontario general how to apply"
     after_applying: "ontario general after applying"
 
+- slug: undergraduate/ontario/high-school/bachelors-degree
+  name: Bachelor's Degree
+
 - slug: undergraduate/ontario/high-school/bachelors-degree/bachelor-of-engineering
+  name: Bachelor of Engineering
   title: Ontario High School Students in Bachelor of Engineering
   content:
     requirements: |
@@ -61,9 +76,5 @@
       <p>84% - 89%</p>
 
 - slug: undergraduate/ontario/internal-transfer
+  name: Internal Transfer Student
   title: Ontario Internal Transfer Students
-  content:
-    requirements: "ontario internal transfer requirements"
-    before_applying: "ontario internal transfer before applying"
-    how_to_apply: "ontario internal transfer how to apply"
-    after_applying: "ontario internal transfer after applying"

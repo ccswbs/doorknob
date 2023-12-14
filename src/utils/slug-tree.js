@@ -1,9 +1,13 @@
+const { toTitleCase } = require("./to-title-case.js")
+
 class SlugTreeNode {
-  constructor(part) {
+  constructor(part, name) {
     this.part = part ?? ""
     this._children = {}
     this._isLeaf = true
     this._parent = null
+    this._slug = ""
+    this._name = name ?? toTitleCase(this.part.replaceAll("-", " "))
   }
   add(...nodes) {
     for (let node of nodes) {
@@ -11,6 +15,7 @@ class SlugTreeNode {
         this._children[node.part] = node
         this._isLeaf = false
         node._parent = this
+        node._slug = this.part === "" ? node.part : `${this._slug}/${node.part}`
       }
     }
   }
@@ -36,23 +41,29 @@ class SlugTreeNode {
   get parent() {
     return this._parent
   }
+  get slug() {
+    return this._slug
+  }
+  get name() {
+    return this._name
+  }
 }
 
 class SlugTree {
   constructor() {
     this.root = new SlugTreeNode()
-    this._stack = [];
+    this._stack = []
   }
   addSlugs(...slugs) {
     for (const slug of slugs) {
-      const parts = slug.split("/")
+      const parts = typeof slug === "string" ? slug.split("/") : slug.slug.split("/")
       let current = this.root
 
       for (const part of parts) {
         let next = current.getChild(part)
 
-        if (!(next instanceof SlugTreeNode)) {
-          const newNode = new SlugTreeNode(part)
+        if (!(next instanceof SlugTreeNode) && part !== "") {
+          const newNode = new SlugTreeNode(part, typeof slug === "object" && slug.name)
           current.add(newNode)
           next = newNode
         }
@@ -61,6 +72,16 @@ class SlugTree {
       }
     }
   }
+  getNode(...parts) {
+    let current = this.root
+    for (const part of parts) {
+      current = current.getChild(part)
+      if (!current) {
+        return null
+      }
+    }
+    return current
+  }
   stringify(space = 0) {
     return JSON.stringify(this.root, ["part", "children"], space)
   }
@@ -68,36 +89,36 @@ class SlugTree {
     if (typeof callback !== "function") {
       throw new TypeError("callback must be a function")
     }
-    
+
     const _traverse = (node, stack) => {
-      const isWildcard = node.part === '*';
-      
+      const isWildcard = node.part === "*"
+
       if (isWildcard) {
-        for(const sibling of node.parent?.children) {
-          if(sibling !== node) {
-            for(const child of node.children) {
-              this._stack.push({ node: sibling, wildcard: true });
+        for (const sibling of node.parent?.children) {
+          if (sibling !== node) {
+            for (const child of node.children) {
+              this._stack.push({ node: sibling, wildcard: true })
               _traverse(child, this._stack)
-              this._stack.pop();
+              this._stack.pop()
             }
           }
         }
       } else {
         for (const child of node.children) {
-          this._stack.push(node);
+          this._stack.push(node)
           _traverse(child, this._stack)
-          this._stack.pop();
+          this._stack.pop()
         }
       }
-      
-      callback(node, stack);
+
+      callback(node, stack)
     }
-    
+
     _traverse(this.root, this._stack)
   }
 }
 
 module.exports = {
   SlugTree,
-  SlugTreeNode
+  SlugTreeNode,
 }
