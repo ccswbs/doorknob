@@ -5,9 +5,6 @@
 - slug: undergraduate/ontario
   name: Ontario
 
-- slug: undergraduate/quebec
-  name: Quebec
-
 - slug: undergraduate/ontario/high-school
   name: High School Students/Graduates
   title: Ontario High School Students
@@ -78,3 +75,39 @@
 - slug: undergraduate/ontario/internal-transfer
   name: Internal Transfer Student
   title: Ontario Internal Transfer Students
+
+- slug: undergraduate/alberta
+  name: Alberta
+
+- slug: undergraduate/british-columbia
+  name: British Columbia
+
+- slug: undergraduate/quebec
+  name: Quebec
+
+- slug: undergraduate/manitoba
+  name: Manitoba
+
+- slug: undergraduate/saskatchewan
+  name: Saskatchewan
+
+- slug: undergraduate/nova-scotia
+  name: Nova Scotia
+
+- slug: undergraduate/new-brunswick
+  name: New Brunswick
+
+- slug: undergraduate/newfoundland-and-labrador
+  name: Newfoundland and Labrador
+
+- slug: undergraduate/prince-edward-island
+  name: Prince Edward Island
+
+- slug: undergraduate/northwest-territories
+  name: Northwest Territories
+
+- slug: undergraduate/yukon
+  name: Yukon
+
+- slug: undergraduate/nunavut
+  name: Nunavut

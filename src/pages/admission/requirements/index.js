@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
-import { toTitleCase } from "../../../utils/to-title-case.js"
 import { SlugTree } from "../../../utils/slug-tree.js"
 import { navigate } from "gatsby"
 
