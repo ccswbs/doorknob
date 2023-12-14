@@ -1,113 +1,19 @@
-- slug: undergraduate
-  name: Undergraduate
-  title: Undergraduate Students
-
-- slug: undergraduate/ontario
-  name: Ontario
-
-- slug: undergraduate/ontario/high-school
-  name: High School Students/Graduates
-  title: Ontario High School Students
+- location: ontario
+  student-type: high-school
+  degree-type: bachelors-degree
+  field-of-study: bachelor-of-engineering
   content:
-    requirements: |
-      <h3>Minimum Requirements</h3>
+    requirements: bachelor of engineering requirements
+    before-applying: bachelor of engineering before applying
+    how-to-apply: bachelor of engineering how to apply
+    after-applying: bachelor of engineering after applying
 
-      <p>Undergraduate program applicants from Ontario must present the following:</p>
-
-      <ol>
-        <li>Ontario Secondary School Diploma (OSSD)</li>
-        <li>A minimum of six 4U and/or 4M courses</li>
-        <li>The specific subject requirements for the degree program of interest</li>
-        <li>ENG4U (required for all degree programs)</li>
-      </ol>
-
-      <p> The non-academic component of 4U or 4M co-op course is not accepted for admission purposes.</p>
-    before_applying: "ontario general before applying"
-    how_to_apply: "ontario general how to apply"
-    after_applying: "ontario general after applying"
-
-- slug: undergraduate/ontario/high-school/bachelors-degree
-  name: Bachelor's Degree
-
-- slug: undergraduate/ontario/high-school/bachelors-degree/bachelor-of-engineering
-  name: Bachelor of Engineering
-  title: Ontario High School Students in Bachelor of Engineering
+- location: ontario
+  student-type: high-school
+  degree-type: *
+  field-of-study: *
   content:
-    requirements: |
-      <h3>Bachelor Degree Requirements:</h3>
-
-      <h4>Things to remember</h4>
-
-      <ul>
-        <li>Admission averages for co-op programs are typically in the high end of the estimated cut-off range.</li>
-        <li>Estimated cutoff ranges are based on admission averages from previous years and are provided as a point of reference.</li>
-        <li>The single asterisk * indicates that the program is offered with and without co-op.</li>
-        <li>The double asterisk ** indicates that the program has a mandatory co-op.</li>
-      </ul>
-
-      <h4>Majors</h4>
-
-      <ul>
-        <li>Biological Engineering*</li>
-        <li>Biomedical Engineering*</li>
-        <li>Computer Engineering*</li>
-        <li>Engineering Systems and Computing*</li>
-        <li>Environmental Engineering*</li>
-        <li>Mechanical Engineering*</li>
-        <li>Water Resources Engineering*</li>
-        <li>Undeclared (first year only)</li>
-      </ul>
-
-      <h4>Required Courses</h4>
-
-      <ul>
-        <li>English (ENG4U)</li>
-        <li>Advanced Functions (MHF4U)</li>
-        <li>Calculus and Vectors (MCV4U)</li>
-        <li>Chemistry (SCH4U)</li>
-        <li>Physics (SPH4U)</li>
-        <li>One additional 4U or 4M course</li>
-      </ul>
-      
-      <h4>Estimated Cut-off Ranges</h4>
-      <p>84% - 89%</p>
-
-- slug: undergraduate/ontario/internal-transfer
-  name: Internal Transfer Student
-  title: Ontario Internal Transfer Students
-
-- slug: undergraduate/alberta
-  name: Alberta
-
-- slug: undergraduate/british-columbia
-  name: British Columbia
-
-- slug: undergraduate/quebec
-  name: Quebec
-
-- slug: undergraduate/manitoba
-  name: Manitoba
-
-- slug: undergraduate/saskatchewan
-  name: Saskatchewan
-
-- slug: undergraduate/nova-scotia
-  name: Nova Scotia
-
-- slug: undergraduate/new-brunswick
-  name: New Brunswick
-
-- slug: undergraduate/newfoundland-and-labrador
-  name: Newfoundland and Labrador
-
-- slug: undergraduate/prince-edward-island
-  name: Prince Edward Island
-
-- slug: undergraduate/northwest-territories
-  name: Northwest Territories
-
-- slug: undergraduate/yukon
-  name: Yukon
-
-- slug: undergraduate/nunavut
-  name: Nunavut
+    requirements: ontario high school requirements
+    before-applying: ontario high school before applying
+    how-to-apply: ontario high school how to apply
+    after-applying: ontario high school after applying
