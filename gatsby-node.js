@@ -75,37 +75,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Building requirements pages
   const requirementsQuery = await graphql(`
     query {
-      locations: allRequirementsLocationsYaml {
-        nodes {
-          yamlId
-          name
-        }
-      }
-      studentTypes: allRequirementsStudentTypesYaml {
-        nodes {
-          yamlId
-          name
-        }
-      }
-      degreeTypes: allRequirementsDegreeTypesYaml {
-        nodes {
-          yamlId
-          name
-        }
-      }
-      fieldsOfStudy: allRequirementsFieldsOfStudyYaml {
-        nodes {
-          yamlId
-          name
-          degree_type
-        }
-      }
       requirements: allAdmissionRequirementsYaml {
         nodes {
-          location
-          student_type
-          degree_type
-          field_of_study
+          slug
         }
       }
     }
@@ -121,6 +93,45 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   activity.start()
 
   const template = path.resolve("./src/templates/admission/requirements.js")
+  const requirements = new SlugTree()
+
+  // Parse all slugs from the query into a SlugTree
+  requirements.addSlugs(...requirementsQuery.data.requirements.nodes.map(node => node.slug))
+
+  // Traverse the SlugTree to create the pages
+  requirements.traverse((node, parents) => {
+    // Only create pages for leaf nodes
+    if (node.isLeaf) {
+      let path = ""
+      let slug = ""
+      const parentSlugs = []
+
+      for (const parent of parents) {
+        const part = parent.node?.part ?? parent.part
+
+        if (part === "") {
+          continue
+        }
+
+        path += `${part}/`
+        slug += `${parent instanceof SlugTreeNode ? `${part}/` : "*/"}`
+
+        parentSlugs.push(path.slice(0, -1))
+      }
+
+      path += node.part
+      slug += node.part
+
+      createPage({
+        path: `admission/requirements/${path}`,
+        component: template,
+        context: {
+          slug,
+          parents: parentSlugs,
+        },
+      })
+    }
+  })
 
   activity.end()
 }

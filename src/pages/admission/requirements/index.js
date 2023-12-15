@@ -24,10 +24,15 @@ const RequirementsPageSelect = ({ id, name, label, options, required, onChange }
 }
 
 const RequirementsPage = ({ data }) => {
-  const locations = data.locations.nodes;
-  const studentTypes = data.studentTypes.nodes;
-  const degreeTypes = data.degreeTypes.nodes;
-  const fieldsOfStudy = data.fieldsOfStudy.nodes;
+  const getRequirementsURL = e => {
+    e.preventDefault()
+  }
+
+  const requirements = new SlugTree()
+
+  data.requirements.nodes.forEach(val => {
+    requirements.addSlugs({ slug: val.slug, name: val.name })
+  })
 
   const [values, setValues] = useState({})
   const [isFilled, setIsFilled] = useState(false)
@@ -46,8 +51,18 @@ const RequirementsPage = ({ data }) => {
     e.preventDefault()
 
     if (isFilled) {
-      navigate(`undergraduate/${values.location}/${values.studentType}/${values.degreeType}/${values.fieldOfStudy}`)
+      navigate(`undergraduate/${values.location}/${values.studentType}/${values.degreeType}/${values.program}`)?.catch(
+        e => console.error(e),
+      )
     }
+  }
+
+  const getOptions = (...parts) => {
+    const node = requirements.getNode(...parts)
+
+    console.log(node)
+
+    return node?.children.map(node => ({ value: node.part, text: node.name })) ?? []
   }
 
   return (
@@ -61,7 +76,7 @@ const RequirementsPage = ({ data }) => {
               name="location"
               label="I live in:"
               required
-              options={locations}
+              options={getOptions("undergraduate")}
             />
 
             <RequirementsPageSelect
@@ -69,7 +84,7 @@ const RequirementsPage = ({ data }) => {
               name="studentType"
               label="I am a(n):"
               required
-              options={studentTypes}
+              options={getOptions("undergraduate", values.location)}
             />
 
             <RequirementsPageSelect
@@ -77,14 +92,14 @@ const RequirementsPage = ({ data }) => {
               name="degreeType"
               label="I'm interested in:"
               required
-              options={degreeTypes}
+              options={getOptions("undergraduate", values.location, values.studentType)}
             />
 
             <RequirementsPageSelect
-              id="requirements-field-of-study"
-              name="fieldOfStudy"
+              id="requirements-program"
+              name="program"
               label="Choose your desired field:"
-              options={fieldsOfStudy.filter(node => node.degreeType === values.degreeType)}
+              options={getOptions("undergraduate", values.location, values.studentType, values.degreeType)}
             />
 
             <Button
@@ -105,29 +120,10 @@ const RequirementsPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    locations: allAdmissionRequirementsLocationsYaml {
+    requirements: allAdmissionRequirementsYaml {
       nodes {
-        value: yamlId
-        text: name
-      }
-    }
-    studentTypes: allAdmissionRequirementsStudentTypesYaml {
-      nodes {
-        value: yamlId
-        text: name
-      }
-    }
-    degreeTypes: allAdmissionRequirementsDegreeTypesYaml {
-      nodes {
-        value: yamlId
-        text: name
-      }
-    }
-    fieldsOfStudy: allAdmissionRequirementsFieldsOfStudyYaml {
-      nodes {
-        value: yamlId
-        text: name
-        degreeType: degree_type
+        slug
+        name
       }
     }
   }

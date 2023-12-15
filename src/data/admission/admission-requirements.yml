@@ -10,8 +10,8 @@
 
 - location: ontario
   student-type: high-school
-  degree-type: any
-  field-of-study: any
+  degree-type: *
+  field-of-study: *
   content:
     requirements: ontario high school requirements
     before-applying: ontario high school before applying
