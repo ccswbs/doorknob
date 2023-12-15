@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require("fs")
-const { SlugTree, SlugTreeNode } = require("./src/utils/slug-tree")
 const { findOne } = require("gatsby/dist/schema/resolvers")
+const { slugify } = require("./src/utils/slugify.js")
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
@@ -73,54 +73,111 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Building requirements pages
-  const requirementsQuery = await graphql(`
+  const query = await graphql(`
     query {
-      locations: allRequirementsLocationsYaml {
+      locations: allAdmissionRequirementsLocationsYaml {
         nodes {
           yamlId
-          name
         }
       }
-      studentTypes: allRequirementsStudentTypesYaml {
+      studentTypes: allAdmissionRequirementsStudentTypesYaml {
         nodes {
           yamlId
-          name
         }
       }
-      degreeTypes: allRequirementsDegreeTypesYaml {
+      degreeTypes: allAdmissionRequirementsDegreeTypesYaml {
         nodes {
           yamlId
-          name
         }
       }
-      fieldsOfStudy: allRequirementsFieldsOfStudyYaml {
+      fieldsOfStudy: allAdmissionRequirementsFieldsOfStudyYaml {
         nodes {
           yamlId
-          name
-          degree_type
+          degreeType: degree_type
         }
       }
       requirements: allAdmissionRequirementsYaml {
         nodes {
+          id
           location
-          student_type
-          degree_type
-          field_of_study
+          studentType: student_type
+          degreeType: degree_type
+          fieldOfStudy: field_of_study
         }
       }
     }
   `)
 
-  if (requirementsQuery.errors) {
+  if (query.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query for admission undergraduate requirements.`)
     return
+  }
+
+  const toMap = (acc, curr) => {
+    acc.set(curr.yamlId, { ...curr, applicableRequirements: [] })
+    return acc
   }
 
   const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`)
 
   activity.start()
 
+  const requirements = query.data.requirements.nodes;
+
+
+
+  /*
+  const locations = query.data.locations.nodes.reduce(toMap, new Map())
+  const studentTypes = query.data.studentTypes.nodes.reduce(toMap, new Map())
+  const degreeTypes = query.data.degreeTypes.nodes.reduce(toMap, new Map())
+  const fieldsOfStudy = query.data.fieldsOfStudy.nodes.reduce(toMap, new Map())
+
+  const updateApplicableRequirements = (requirement, key, map) => {
+    if (requirement[key] !== "any") {
+      map.get(requirement[key])?.applicableRequirements?.push(requirement)
+    }
+  }
+
+  // First pass
+  for (const requirement of query.data.requirements.nodes) {
+    updateApplicableRequirements(requirement, "location", locations)
+    updateApplicableRequirements(requirement, "studentType", studentTypes)
+    updateApplicableRequirements(requirement, "degreeType", degreeTypes)
+    updateApplicableRequirements(requirement, "fieldOfStudy", fieldsOfStudy)
+  }
+
+  const processRequirementPart = (requirement, key, map, array, slug) => {
+    if (requirement[key] !== "any") {
+      array.push(...(map.get(requirement[key])?.applicableRequirements ?? []))
+      return slug + `/${requirement[key]}`
+    }
+
+    return slug
+  }
+
   const template = path.resolve("./src/templates/admission/requirements.js")
+
+  // Second pass
+  for (const requirement of query.data.requirements.nodes) {
+    let slug = "/admission/requirements/undergraduate"
+    let requirements = []
+
+    slug = processRequirementPart(requirement, "location", locations, requirements, slug)
+    slug = processRequirementPart(requirement, "studentType", studentTypes, requirements, slug)
+    slug = processRequirementPart(requirement, "degreeType", degreeTypes, requirements, slug)
+    slug = processRequirementPart(requirement, "fieldOfStudy", fieldsOfStudy, requirements, slug)
+
+    requirements = [...new Set(requirements)].map(val => val.id);
+
+    actions.createPage({
+      path: slug,
+      component: require.resolve(template),
+      context: { requirements: requirements },
+    })
+  }
+
+   */
+
 
   activity.end()
 }
