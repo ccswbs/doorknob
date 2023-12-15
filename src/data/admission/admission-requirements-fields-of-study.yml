@@ -1,0 +1,83 @@
+- id: bachelor-of-applied-sciences
+  name: Bachelor of Applied Sciences
+  degree-type: bachelors-degree
+
+- id: bachelor-of-arts
+  name: Bachelor of Arts
+  degree-type: bachelors-degree
+
+- id: bachelor-of-arts-and-sciences
+  name: Bachelor of Arts and Sciences
+  degree-type: bachelors-degree
+
+- id: bachelor-of-bio-resource-management
+  name: Bachelor of Bio-Resource Management
+  degree-type: bachelors-degree
+
+- id: bachelor-of-commerce
+  name: Bachelor of Commerce
+  degree-type: bachelors-degree
+
+- id: bachelor-of-computing
+  name: Bachelor of Computing
+  degree-type: bachelors-degree
+
+- id: bachelor-of-creative-arts-health-and-wellness
+  name: Bachelor of Creative Arts, Health and Wellness
+  degree-type: bachelors-degree
+
+- id: bachelor-of-engineering
+  name: Bachelor of Engineering
+  degree-type: bachelors-degree
+
+- id: bachelor-of-indigenous-environmental-science-and-practice
+  name: Bachelor of Indigenous Environmental Science and Practice
+  degree-type: bachelors-degree
+
+- id: bachelor-of-landscape-architecture
+  name: Bachelor of Landscape Architecture
+  degree-type: bachelors-degree
+
+- id: bachelor-of-mathematics
+  name: Bachelor of Mathematics
+  degree-type: bachelors-degree
+
+- id: bachelor-of-one-health
+  name: Bachelor of One Health
+  degree-type: bachelors-degree
+
+- id: bachelor-of-science
+  name: Bachelor of Science
+  degree-type: bachelors-degree
+
+- id: bachelor-of-science-in-agriculture
+  name: Bachelor of Science in Agriculture
+  degree-type: bachelors-degree
+
+- id: bachelor-of-science-in-environmental-sciences
+  name: Bachelor of Science in Environmental Sciences
+  degree-type: bachelors-degree
+
+- id: doctor-of-veterinary-medicine
+  name: Doctor of Veterinary Medicine
+  degree-type: bachelors-degree
+
+- id: associate-diploma-in-agriculture
+  name: Associate Diploma in Agriculture
+  degree-type: associate-diplomas
+
+- id: associate-diploma-in-environmental-technician
+  name: Associate Diploma in Environmental Technician
+  degree-type: associate-diplomas
+
+- id: associate-diploma-in-equine-care-and-management
+  name: Associate Diploma in Equine Care and Management
+  degree-type: associate-diplomas
+
+- id: associate-diploma-in-horticulture
+  name: Associate Diploma in Horticulture
+  degree-type: associate-diplomas
+
+- id: associate-diploma-in-veterinary-technology
+  name: Associate Diploma in Veterinary Technology
+  degree-type: associate-diplomas

@@ -1,13 +1,5 @@
-- slug: undergraduate
-  name: Undergraduate
-  title: Undergraduate Students
-
-- slug: undergraduate/ontario
-  name: Ontario
-
-- slug: undergraduate/ontario/high-school
+- slug: undergraduate/ontario/high-school/bachelors-degree
   name: High School Students/Graduates
-  title: Ontario High School Students
   content:
     requirements: |
       <h3>Minimum Requirements</h3>
@@ -22,16 +14,12 @@
       </ol>
 
       <p> The non-academic component of 4U or 4M co-op course is not accepted for admission purposes.</p>
-    before_applying: "ontario general before applying"
-    how_to_apply: "ontario general how to apply"
-    after_applying: "ontario general after applying"
-
-- slug: undergraduate/ontario/high-school/bachelors-degree
-  name: Bachelor's Degree
+    before_applying: "Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum."
+    how_to_apply: "Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum."
+    after_applying: "Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum."
 
 - slug: undergraduate/ontario/high-school/bachelors-degree/bachelor-of-engineering
   name: Bachelor of Engineering
-  title: Ontario High School Students in Bachelor of Engineering
   content:
     requirements: |
       <h3>Bachelor Degree Requirements:</h3>
@@ -68,46 +56,6 @@
         <li>Physics (SPH4U)</li>
         <li>One additional 4U or 4M course</li>
       </ul>
-      
+
       <h4>Estimated Cut-off Ranges</h4>
       <p>84% - 89%</p>
-
-- slug: undergraduate/ontario/internal-transfer
-  name: Internal Transfer Student
-  title: Ontario Internal Transfer Students
-
-- slug: undergraduate/alberta
-  name: Alberta
-
-- slug: undergraduate/british-columbia
-  name: British Columbia
-
-- slug: undergraduate/quebec
-  name: Quebec
-
-- slug: undergraduate/manitoba
-  name: Manitoba
-
-- slug: undergraduate/saskatchewan
-  name: Saskatchewan
-
-- slug: undergraduate/nova-scotia
-  name: Nova Scotia
-
-- slug: undergraduate/new-brunswick
-  name: New Brunswick
-
-- slug: undergraduate/newfoundland-and-labrador
-  name: Newfoundland and Labrador
-
-- slug: undergraduate/prince-edward-island
-  name: Prince Edward Island
-
-- slug: undergraduate/northwest-territories
-  name: Northwest Territories
-
-- slug: undergraduate/yukon
-  name: Yukon
-
-- slug: undergraduate/nunavut
-  name: Nunavut

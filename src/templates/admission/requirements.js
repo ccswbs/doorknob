@@ -50,7 +50,6 @@ export const query = graphql`
     requirements: allAdmissionRequirementsYaml(filter: { slug: { in: $slugs } }) {
       nodes {
         slug
-        title
         content {
           requirements
           before_applying
