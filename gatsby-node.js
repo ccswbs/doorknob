@@ -69,15 +69,53 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   createTypes(typeDefs)
 }
 
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    AdmissionRequirementsYaml: {
+      parents: {
+        type: ["AdmissionRequirementsYaml"],
+        resolve: async (source, args, context, info) => {
+          const parents = []
+          let current = source.slug
+
+          while (current !== "") {
+            parents.unshift(current)
+            current = current.substring(0, current.lastIndexOf("/"))
+          }
+
+          parents.pop()
+
+          const { entries } = await context.nodeModel.findAll({
+            query: {
+              filter: { slug: { in: parents } },
+            },
+            type: "AdmissionRequirementsYaml",
+          })
+
+          return entries
+        },
+      },
+    },
+  }
+
+  createResolvers(resolvers)
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Building requirements pages
+  const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`)
+  activity.start()
+
   const requirementsQuery = await graphql(`
     query {
       requirements: allAdmissionRequirementsYaml {
         nodes {
           slug
+          parents {
+            slug
+          }
         }
       }
     }
@@ -88,50 +126,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`)
-
-  activity.start()
-
   const template = path.resolve("./src/templates/admission/requirements.js")
-  const requirements = new SlugTree()
 
-  // Parse all slugs from the query into a SlugTree
-  requirements.addSlugs(...requirementsQuery.data.requirements.nodes.map(node => node.slug))
-
-  // Traverse the SlugTree to create the pages
-  requirements.traverse((node, parents) => {
-    // Only create pages for leaf nodes
-    if (node.isLeaf) {
-      let path = ""
-      let slug = ""
-      const parentSlugs = []
-
-      for (const parent of parents) {
-        const part = parent.node?.part ?? parent.part
-
-        if (part === "") {
-          continue
-        }
-
-        path += `${part}/`
-        slug += `${parent instanceof SlugTreeNode ? `${part}/` : "*/"}`
-
-        parentSlugs.push(path.slice(0, -1))
-      }
-
-      path += node.part
-      slug += node.part
-
-      createPage({
-        path: `admission/requirements/${path}`,
-        component: template,
-        context: {
-          slug,
-          parents: parentSlugs,
-        },
-      })
-    }
-  })
+  for (const requirement of requirementsQuery.data.requirements.nodes) {
+    createPage({
+      path: `admission/requirements/${requirement.slug}`,
+      component: template,
+      context: {
+        slugs: [...requirement.parents.map(parent => parent.slug), requirement.slug],
+      },
+    })
+  }
 
   activity.end()
 }

@@ -51,9 +51,9 @@ const RequirementsPage = ({ data }) => {
     e.preventDefault()
 
     if (isFilled) {
-      navigate(`undergraduate/${values.location}/${values.studentType}/${values.degreeType}/${values.program}`)?.catch(
-        e => console.error(e),
-      )
+      navigate(
+        `undergraduate/${values.location}/${values.studentType}/${values.degreeType}/${values.fieldOfStudy}`,
+      )?.catch(e => console.error(e))
     }
   }
 
@@ -96,8 +96,8 @@ const RequirementsPage = ({ data }) => {
             />
 
             <RequirementsPageSelect
-              id="requirements-program"
-              name="program"
+              id="requirements-field-of-study"
+              name="fieldOfStudy"
               label="Choose your desired field:"
               options={getOptions("undergraduate", values.location, values.studentType, values.degreeType)}
             />
@@ -124,6 +124,11 @@ export const query = graphql`
       nodes {
         slug
         name
+      }
+    }
+    pages: allSitePage(filter: { path: { regex: "/^/admission/requirements(/[^/]+)+/$/" } }) {
+      nodes {
+        path
       }
     }
   }
