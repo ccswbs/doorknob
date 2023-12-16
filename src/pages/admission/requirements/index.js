@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
-import { SlugTree } from "../../../utils/slug-tree.js"
 import { navigate } from "gatsby"
 
 const RequirementsPageSelect = ({ id, name, label, options, required, onChange }) => {
@@ -24,10 +23,10 @@ const RequirementsPageSelect = ({ id, name, label, options, required, onChange }
 }
 
 const RequirementsPage = ({ data }) => {
-  const locations = data.locations.nodes;
-  const studentTypes = data.studentTypes.nodes;
-  const degreeTypes = data.degreeTypes.nodes;
-  const fieldsOfStudy = data.fieldsOfStudy.nodes;
+  const locations = data.locations.nodes
+  const studentTypes = data.studentTypes.nodes
+  const degreeTypes = data.degreeTypes.nodes
+  const fieldsOfStudy = data.fieldsOfStudy.nodes
 
   const [values, setValues] = useState({})
   const [isFilled, setIsFilled] = useState(false)
@@ -104,33 +103,33 @@ const RequirementsPage = ({ data }) => {
 }
 
 export const query = graphql`
-    query {
-        locations: allAdmissionRequirementsLocationsYaml {
-            nodes {
-                value: yamlId
-                text: name
-            }
-        }
-        studentTypes: allAdmissionRequirementsStudentTypesYaml {
-            nodes {
-                value: yamlId
-                text: name
-            }
-        }
-        degreeTypes: allAdmissionRequirementsDegreeTypesYaml {
-            nodes {
-                value: yamlId
-                text: name
-            }
-        }
-        fieldsOfStudy: allAdmissionRequirementsFieldsOfStudyYaml {
-            nodes {
-                value: yamlId
-                text: name
-                degreeType: degree_type
-            }
-        }
+  query {
+    locations: allAdmissionRequirementsLocationsYaml {
+      nodes {
+        value: yamlId
+        text: name
+      }
     }
+    studentTypes: allAdmissionRequirementsStudentTypesYaml {
+      nodes {
+        value: yamlId
+        text: name
+      }
+    }
+    degreeTypes: allAdmissionRequirementsDegreeTypesYaml {
+      nodes {
+        value: yamlId
+        text: name
+      }
+    }
+    fieldsOfStudy: allAdmissionRequirementsFieldsOfStudyYaml {
+      nodes {
+        value: yamlId
+        text: name
+        degreeType: degree_type
+      }
+    }
+  }
 `
 
 export default RequirementsPage
