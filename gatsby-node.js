@@ -184,12 +184,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const template = path.resolve("./src/templates/admission/requirements.js")
 
   for (const requirement of requirementsQuery.data.requirements.nodes) {
+    let title = "Admission Requirements";
+
     createPage({
       path: `admission/requirements/${requirement.fields.slug}`,
       component: template,
       context: {
         ids: [...requirement.parents.map(parent => parent.id), requirement.id],
-        title: "test"
+        title: title
       },
     })
   }
