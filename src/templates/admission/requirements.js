@@ -2,16 +2,14 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { Container, Tab, Tabs } from "react-bootstrap"
 
-export default function UndergraduateRequirements({ data, children, pageContext }) {
+export default function AdmissionRequirements({ data, children, pageContext }) {
   const requirements = data.requirements.nodes
-
-  console.log(requirements)
 
   const renderRequirementContent = content => (
     <>
       {requirements.map(requirement => (
         <div
-          key={requirement.slug}
+          key={requirement.id}
           className="mt-5"
           dangerouslySetInnerHTML={{ __html: requirement?.content?.[content] }}
         ></div>
@@ -21,7 +19,7 @@ export default function UndergraduateRequirements({ data, children, pageContext 
 
   return (
     <Container className="my-5">
-      <h1 className="my-5">{`Admission Requirements`}</h1>
+      <h1 className="my-5">{pageContext.title}</h1>
 
       <Tabs defaultActiveKey="requirements" id="admission-requirements-tabs" justify>
         <Tab eventKey="requirements" title="Academic Requirements">
@@ -46,10 +44,10 @@ export default function UndergraduateRequirements({ data, children, pageContext 
 }
 
 export const query = graphql`
-  query ($slugs: [String!]!) {
-    requirements: allAdmissionRequirementsYaml(filter: { slug: { in: $slugs } }) {
+  query ($ids: [String!]!) {
+    requirements: allAdmissionRequirementsYaml(filter: { id: { in: $ids } }) {
       nodes {
-        slug
+        id
         content {
           requirements
           before_applying

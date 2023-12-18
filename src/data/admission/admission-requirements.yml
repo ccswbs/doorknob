@@ -1,5 +1,7 @@
-- slug: undergraduate/ontario/high-school/bachelors-degree
-  name: High School Students/Graduates
+- student-type: high-school
+  location: ontario
+  degree-type: bachelors-degree
+  field-of-study: ~
   content:
     requirements: |
       <h3>Minimum Requirements</h3>
@@ -14,12 +16,17 @@
       </ol>
 
       <p> The non-academic component of 4U or 4M co-op course is not accepted for admission purposes.</p>
-    before_applying: "Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum."
-    how_to_apply: "Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum."
-    after_applying: "Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum."
+    before_applying: | 
+      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
+    how_to_apply: | 
+      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
+    after_applying: | 
+      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
 
-- slug: undergraduate/ontario/high-school/bachelors-degree/bachelor-of-engineering
-  name: Bachelor of Engineering
+- student-type: high-school
+  location: ontario
+  degree-type: bachelors-degree
+  field-of-study: bachelor-of-engineering
   content:
     requirements: |
       <h3>Bachelor Degree Requirements:</h3>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import { navigate } from "gatsby"
+import { requirementToSlug } from "../../../utils/requirementToSlug.js"
 
 const RequirementsPageSelect = ({ id, name, label, options, required, onChange }) => {
   return (
@@ -27,9 +28,39 @@ const RequirementsPage = ({ data }) => {
   const studentTypes = data.studentTypes.nodes
   const degreeTypes = data.degreeTypes.nodes
   const fieldsOfStudy = data.fieldsOfStudy.nodes
-
+  const requirements = data.requirements.nodes
   const [values, setValues] = useState({})
   const [isFilled, setIsFilled] = useState(false)
+
+  const doesRequirementExist = slug => {
+    let start = 0,
+      end = requirements.length - 1
+
+    while (start <= end) {
+      let mid = Math.floor((start + end) / 2)
+      if (requirements[mid].fields.slug === slug) {
+        return true
+      } else if (requirements[mid].fields.slug < slug) {
+        start = mid + 1
+      } else {
+        end = mid - 1
+      }
+    }
+
+    return false
+  }
+
+  const getRequirementPageURL = slug => {
+    let url = slug
+    const tokens = slug.split("/")
+
+    while (doesRequirementExist(url) === false && tokens.length > 0) {
+      tokens.pop()
+      url = tokens.join("/")
+    }
+
+    return url
+  }
 
   const handleFormControlChange = e => {
     setValues(old => ({ ...old, [e.target.name]: e.target.value }))
@@ -45,7 +76,8 @@ const RequirementsPage = ({ data }) => {
     e.preventDefault()
 
     if (isFilled) {
-      navigate(`undergraduate/${values.location}/${values.studentType}/${values.degreeType}/${values.fieldOfStudy}`)
+      const url = getRequirementPageURL(requirementToSlug(values))
+      navigate(url)
     }
   }
 
@@ -56,19 +88,19 @@ const RequirementsPage = ({ data }) => {
         <Col md={6}>
           <Form className="d-flex flex-column gap-5" onChange={handleFormControlChange} onSubmit={handleFormSubmit}>
             <RequirementsPageSelect
-              id="requirements-location"
-              name="location"
-              label="I live in:"
-              required
-              options={locations}
-            />
-
-            <RequirementsPageSelect
               id="requirements-student-type"
               name="studentType"
               label="I am a(n):"
               required
               options={studentTypes}
+            />
+
+            <RequirementsPageSelect
+              id="requirements-location"
+              name="location"
+              label="I live in:"
+              required
+              options={locations}
             />
 
             <RequirementsPageSelect
@@ -127,6 +159,13 @@ export const query = graphql`
         value: yamlId
         text: name
         degreeType: degree_type
+      }
+    }
+    requirements: allAdmissionRequirementsYaml(sort: { fields: { slug: ASC } }) {
+      nodes {
+        fields {
+          slug
+        }
       }
     }
   }
