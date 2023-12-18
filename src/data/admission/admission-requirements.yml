@@ -3,11 +3,14 @@
   degree-type: ~
   field-of-study: ~
   content:
+    requirements: ""
+    before-applying: ""
     how-to-apply: |
       <p>
-      Apply online through the Ontario Universities Application Centre
-      at <a href="http://ouac.on.ca">ouac.on.ca</a>.
+        Apply online through the Ontario Universities Application Centre
+        at <a href="http://ouac.on.ca">ouac.on.ca</a>.
       </p>
+    after-applying: ""
 
 - student-type: mature-student
   location: ~
@@ -31,12 +34,6 @@
       <p>
         Note: If you don't meet the normal University admission requirements, you may be interested in The Academic Transition Program. Learn more <a href="https://www.uoguelph.ca/arts/students/ATP" target="_blank" title="https://www.uoguelph.ca/arts/students/ATP">here</a>.
       </p>
-    before-applying: |
-      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
-    how-to-apply: |
-      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
-    after-applying: |
-      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
 
 - student-type: home-school
   location: ~
@@ -89,22 +86,17 @@
         <li>Length of homeschool study</li>
         <li>Future goals and career aspirations</li>
       </ul>
-      
+
       <p>
         Contact Admission Services for more information regarding admission criteria.
       </p>
-      
+
       <h3>Deadlines:</h3>
-      
+
       <ul>
         <li>January 15 (early consideration)</li>
         <li>April 15: (documents)</li>
       </ul>
-    how-to-apply: |
-      <p>
-        Apply online through the Ontario Universities Application Centre
-        at <a href="http://ouac.on.ca">ouac.on.ca</a>.
-      </p>
 
 - student-type: high-school
   location: ontario
@@ -124,12 +116,6 @@
       </ol>
 
       <p> The non-academic component of 4U or 4M co-op course is not accepted for admission purposes.</p>
-    before-applying: |
-      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
-    how-to-apply: |
-      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
-    after-applying: |
-      Commodi temporibus unde perferendis optio dicta eaque incidunt nulla. Hic omnis autem. Maxime voluptates culpa facilis aliquam ipsa autem cumque voluptatibus ipsum. Nesciunt voluptatem rerum.
 
 - student-type: high-school
   location: ontario
