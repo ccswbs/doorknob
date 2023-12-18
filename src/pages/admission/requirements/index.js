@@ -85,7 +85,7 @@ const RequirementsPage = ({ data }) => {
     <Container className="content-block">
       <h1 className="my-5">Admission Requirements</h1>
       <Row>
-        <Col md={6}>
+        <Col md={8}>
           <Form className="d-flex flex-column gap-5" onChange={handleFormControlChange} onSubmit={handleFormSubmit}>
             <RequirementsPageSelect
               id="requirements-student-type"
