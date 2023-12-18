@@ -88,19 +88,19 @@ const RequirementsPage = ({ data }) => {
         <Col md={8}>
           <Form className="d-flex flex-column gap-5" onChange={handleFormControlChange} onSubmit={handleFormSubmit}>
             <RequirementsPageSelect
-              id="requirements-student-type"
-              name="studentType"
-              label="I am a(n):"
-              required
-              options={studentTypes}
-            />
-
-            <RequirementsPageSelect
               id="requirements-location"
               name="location"
               label="I live in:"
               required
               options={locations}
+            />
+
+            <RequirementsPageSelect
+              id="requirements-student-type"
+              name="studentType"
+              label="I am a(n):"
+              required
+              options={studentTypes}
             />
 
             <RequirementsPageSelect
