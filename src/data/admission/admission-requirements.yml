@@ -14,21 +14,25 @@
   field-of-study: ~
   content:
     requirements: |
-      <p>Important Information:</p>
-      <p>
-        Estimated cut-off ranges are based on the admission averages from previous
-        years and are provided solely as a point of reference. Exact cut-offs for the
-        current cycle will be determined by the quantity and quality of applications
-        received and the number of places available in the program. Co-op averages
-        will often exceed the estimated cut-off ranges. Students not admissible to
-        co-op will be automatically considered for the regular program
-      </p>
-      <p>
-        The University of Guelph will treat courses previously completed through Summer School, Night School, 
-        or Correspondence in the same manner as those completed through day school. They will be considered equally in 
-        determining your admission average. The University of Guelph will use the highest grade reported for any 
-        repeated courses.
-      </p>
+      <p>Important things to remember:</p>
+      <ul>
+        <li>
+          Estimated cut-off ranges are based on the admission averages from previous
+          years and are provided solely as a point of reference. Exact cut-offs for the
+          current cycle will be determined by the quantity and quality of applications
+          received and the number of places available in the program. Co-op averages
+          will often exceed the estimated cut-off ranges. Students not admissible to
+          co-op will be automatically considered for the regular program
+        </li>
+        <li>
+          The University of Guelph will treat courses previously completed through Summer School, Night School, 
+          or Correspondence in the same manner as those completed through day school. They will be considered equally in 
+          determining your admission average. The University of Guelph will use the highest grade reported for any 
+          repeated courses.
+        </li>
+        <li>The single asterisk * indicates that the program is offered with and without co-op.</li>
+        <li>The double asterisk ** indicates that the program has a mandatory co-op.</li>
+      </ul>
 
 - student-type: high-school
   location: ontario
@@ -64,7 +68,7 @@
 
       <p>Note: Two 3 credit courses can be used to equal one 5 credit course.</p>
 
-      <a href="https://admission.uoguelph.ca/acceptable-courses-alberta">View a list of accepted course from Alberta</a>
+      <a href="https://admission.uoguelph.ca/acceptable-courses-alberta">View a list of accepted courses from Alberta</a>
 
 - student-type: high-school
   location: british-columbia
@@ -177,20 +181,49 @@
 - student-type: high-school
   location: ontario
   degree-type: bachelors-degree
-  field-of-study: bachelor-of-engineering
+  field-of-study: bachelor-of-applied-science
   content:
     requirements: |
       <h3>Bachelor Degree Requirements:</h3>
 
-      <h4>Things to remember</h4>
+      <h4>Majors</h4>
 
       <ul>
-        <li>Admission averages for co-op programs are typically in the high end of the estimated cut-off range.</li>
-        <li>Estimated cutoff ranges are based on admission averages from previous years and are provided as a point of reference.</li>
-        <li>The single asterisk * indicates that the program is offered with and without co-op.</li>
-        <li>The double asterisk ** indicates that the program has a mandatory co-op.</li>
+        <li>Applied Human Nutrition</li>
+        <li>Child Studies</li>
+        <li>Family Studies and Human Development</li>
       </ul>
 
+      <h4>Required Courses</h4>
+
+      <p>For Applied Human Nutrition:</p>
+      <ul>
+        <li>English (ENG4U)</li>
+        <li>1 4U math course</li>
+        <li>Biology (SBI4U)</li>
+        <li>Chemistry (SCH4U)</li>
+        <li>2 additional 4U or 4M courses</li>
+      </ul>
+      
+      <p>For Child Studies & Family Studies and Human Development:</p>
+      <ul>
+        <li>English (ENG4U)</li>
+        <li>1 4U math course</li>
+        <li>1 of biology (SBI4U), chemistry (SCH4U) or introductory kinesiology (PSK4U)</li>
+        <li>3 additional 4U or 4M courses (4U biology is recommended)</li>
+      </ul>
+
+      <h4>Estimated Cut-off Ranges</h4>
+      <p>78 - 83%</p>
+
+- student-type: high-school
+  location: ontario
+  degree-type: bachelors-degree
+  field-of-study: bachelor-of-engineering
+  content:
+    requirements: |
+      <h3>Bachelor Degree Requirements:</h3>
+      
       <h4>Majors</h4>
 
       <ul>
