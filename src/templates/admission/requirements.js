@@ -10,7 +10,6 @@ export default function AdmissionRequirements({ data, children, pageContext }) {
       {requirements.map(requirement => (
         <div
           key={requirement.id}
-          className="mt-5"
           dangerouslySetInnerHTML={{ __html: requirement?.content?.[content] }}
         ></div>
       ))}
@@ -18,7 +17,7 @@ export default function AdmissionRequirements({ data, children, pageContext }) {
   )
 
   return (
-    <Container className="my-5">
+    <Container className="my-5" id="admission-requirements-page">
       <h1 className="my-5">{pageContext.title}</h1>
 
       <Tabs defaultActiveKey="requirements" id="admission-requirements-tabs" justify>

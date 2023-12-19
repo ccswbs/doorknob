@@ -29,6 +29,18 @@ h6,
   font-family: "Roboto Condensed", "Roboto", Arial, sans-serif;
 }
 
+#admission-requirements-page {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
