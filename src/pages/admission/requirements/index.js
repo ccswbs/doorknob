@@ -9,8 +9,8 @@ const RequirementsPageSelect = ({ id, name, label, options, required, onChange }
     <Form.Group controlId={id}>
       <Form.Label>{label}</Form.Label>
       <Form.Select onChange={onChange} name={name} required={required} defaultValue="null">
-        <option disabled value="null">
-          Please select an option
+        <option disabled={options.length !== 0} value="null">
+          {options.length === 0 ? "N/A" : "Please select an option"}
         </option>
 
         {options.map(option => (
