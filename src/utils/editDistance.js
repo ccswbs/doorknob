@@ -1,3 +1,4 @@
+// A function to compute the Levenshtein distance of two strings (useful for fuzzy string matching)
 export const editDistance = (a, b) => {
   if (typeof a != "string" || typeof b != "string") return Infinity
 
