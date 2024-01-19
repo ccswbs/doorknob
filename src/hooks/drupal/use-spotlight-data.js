@@ -1,18 +1,18 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 function getLink(url) {
   // Assume internal URL by default
-  let spotlightLink = "https://www.uoguelph.ca" + url.url
+  let spotlightLink = "https://www.uoguelph.ca" + url.url;
 
   // Check if Spotlight URL is external
   if (url?.url === url?.uri) {
-    spotlightLink = url.url
+    spotlightLink = url.url;
   }
-  return spotlightLink
+  return spotlightLink;
 }
 
 export const useSpotlightData = () => {
-  let spotlightData = {}
+  let spotlightData = {};
 
   /* -------
   // hero
@@ -86,10 +86,10 @@ export const useSpotlightData = () => {
         }
       }
     }
-  `)
+  `);
 
-  const hero = data.hero
-  let heroData = []
+  const hero = data.hero;
+  let heroData = [];
 
   hero.edges.forEach(item => {
     heroData.push({
@@ -101,11 +101,11 @@ export const useSpotlightData = () => {
       captionText: item?.node?.field_spotlight_caption,
       title: item?.node?.title,
       url: getLink(item?.node?.field_spotlight_url),
-    })
-  })
+    });
+  });
 
-  const cards = data.cards
-  let cardsData = []
+  const cards = data.cards;
+  let cardsData = [];
 
   cards.edges.forEach(item => {
     cardsData.push({
@@ -115,16 +115,16 @@ export const useSpotlightData = () => {
       imageAlignment: item?.node?.field_spotlight_image_alignment,
       title: item?.node?.field_spotlight_url.title,
       url: getLink(item?.node?.field_spotlight_url),
-    })
-  })
+    });
+  });
 
   // Remove first item of array (a.k.a. the hero)
-  cardsData.shift()
+  cardsData.shift();
 
   spotlightData = {
     hero: heroData,
     cards: cardsData,
-  }
+  };
 
-  return spotlightData
-}
+  return spotlightData;
+};
