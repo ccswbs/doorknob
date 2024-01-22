@@ -54,7 +54,8 @@ h6,
   width: 66.666% !important;
 }
 
-#rotator img {
+#rotator .gatsby-image-wrapper {
+  max-height: 75vh;
   aspect-ratio: 5/3;
 }
 
@@ -264,13 +265,17 @@ ul:not(.nav) {
 }
 
 @media (min-width: 768px) {
-  #rotator img {
-    aspect-ratio: 21 / 9;
+  #rotator .gatsby-image-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .spotlight-hero-content {
+    max-width: unset;
   }
 }
 
 @media (min-width: 992px) {
-  #rotator img {
+  #rotator .gatsby-image-wrapper {
     aspect-ratio: auto;
   }
 
