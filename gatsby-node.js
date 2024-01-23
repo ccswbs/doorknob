@@ -1,10 +1,10 @@
-const path = require("path")
-const fs = require("fs")
-const { findOne } = require("gatsby/dist/schema/resolvers")
-const { requirementToSlug } = require("./src/utils/requirementToSlug.js")
+const path = require("path");
+const fs = require("fs");
+const { findOne } = require("gatsby/dist/schema/resolvers");
+const { Requirement } = require("./src/utils/requirement.js");
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   const typeDefs = [
     `
@@ -65,136 +65,86 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         },
       },
     }),
-  ]
-  createTypes(typeDefs)
-}
-
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === "AdmissionRequirementsYaml") {
-    createNodeField({
-      node,
-      name: "slug",
-      value: requirementToSlug({
-        studentType: node["student-type"],
-        location: node.location,
-        degreeType: node["degree-type"],
-        fieldOfStudy: node["field-of-study"]
-      })
-    })
-  }
-}
+  ];
+  createTypes(typeDefs);
+};
 
 exports.createResolvers = ({ createResolvers }) => {
-  const getRequirementCategories = async (source, context) => {
-    return {
-      location: await context.nodeModel.findOne({
-        query: {
-          filter: { id: source.location },
-        },
-        type: "AdmissionRequirementsLocationsYaml",
-      }),
-      studentType: await context.nodeModel.findOne({
-        query: {
-          filter: { id: source.student_type },
-        },
-        type: "AdmissionRequirementsStudentTypesYaml",
-      }),
-      degreeType: await context.nodeModel.findOne({
-        query: {
-          filter: { id: source.degree_type },
-        },
-        type: "AdmissionRequirementsDegreeTypesYaml",
-      }),
-      fieldOfStudy: await context.nodeModel.findOne({
-        query: {
-          filter: { id: source.field_of_study },
-        },
-        type: "AdmissionRequirementsFieldsOfStudyYaml",
-      }),
-    }
-  }
-
   const resolvers = {
     AdmissionRequirementsYaml: {
       title: {
         type: "String",
         resolve: async (source, args, context, info) => {
-          return "test"
+          return "Admission Requirements";
         },
       },
       parents: {
         type: ["AdmissionRequirementsYaml"],
         resolve: async (source, args, context, info) => {
-          const parents = []
-          let current = source.fields.slug
+          const requirement = new Requirement(source);
+          const parents = requirement.parents.map(parent => {
+            const filter = {};
 
-          while (current !== "") {
-            parents.unshift(current)
-            current = current.substring(0, current.lastIndexOf("/"))
-          }
+            for (const key in parent) {
+              filter[key] = { eq: parent[key] };
+            }
 
-          parents.pop()
-
-          const { entries } = await context.nodeModel.findAll({
-            query: {
-              filter: { fields: { slug: { in: parents } } },
-            },
-            type: "AdmissionRequirementsYaml",
+            return context.nodeModel.findOne({
+              query: {
+                filter: filter,
+              },
+              type: "AdmissionRequirementsYaml",
+            });
           })
 
-          return entries
+          return (await Promise.all(parents)).filter(value => Boolean(value));
         },
       },
     },
-  }
+  };
 
-  createResolvers(resolvers)
-}
+  createResolvers(resolvers);
+};
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   // Building requirements pages
-  const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`)
-  activity.start()
+  const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`);
+  activity.start();
 
   const requirementsQuery = await graphql(`
     query {
       requirements: allAdmissionRequirementsYaml {
         nodes {
           id
-          fields {
-            slug
-          }
-          parents {
-            id
-          }
+          student_type
+          location
+          degree_type
+          field_of_study
         }
       }
     }
-  `)
+  `);
 
   if (requirementsQuery.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query for admission undergraduate requirements.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query for admission undergraduate requirements.`);
+    return;
   }
 
-  const template = path.resolve("./src/templates/admission/requirements.js")
+  const template = path.resolve("./src/templates/admission/requirements.js");
 
-  for (const requirement of requirementsQuery.data.requirements.nodes) {
-    let title = "Admission Requirements";
+  for (const req of requirementsQuery.data.requirements.nodes) {
+    const requirement = new Requirement(req);
 
     createPage({
-      path: `admission/requirements/${requirement.fields.slug}`,
+      path: `admission/requirements/${requirement.slug}`,
       component: template,
       context: {
-        ids: [...requirement.parents.map(parent => parent.id), requirement.id],
-        title: title
+        id: req.id,
       },
-    })
+    });
   }
 
-  activity.end()
-}
+  activity.end();
+};

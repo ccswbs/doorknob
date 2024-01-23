@@ -1,23 +1,23 @@
-- id: high-school
+- id: high_school
   name: High School Student
 
-- id: internal-transfer
+- id: internal_transfer
   name: Transfer Student - Internal
 
-- id: external-transfer
+- id: external_transfer
   name: Transfer Student - External
 
-- id: home-school
+- id: home_school
   name: Home Schooled Student
 
-- id: ib-ap
+- id: ib_ap
   name: International Baccalaureate & Advanced Placement
 
-- id: mature-student
+- id: mature_student
   name: Mature Student
 
-- id: visiting-student
+- id: visiting_student
   name: Visiting Student
 
-- id: post-degree
+- id: post_degree
   name: Post Degree Applicant

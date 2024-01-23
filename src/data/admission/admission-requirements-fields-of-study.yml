@@ -1,83 +1,83 @@
-- id: bachelor-of-applied-sciences
+- id: bachelor_of_applied_sciences
   name: Bachelor of Applied Sciences
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-arts
+- id: bachelor_of_arts
   name: Bachelor of Arts
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-arts-and-sciences
+- id: bachelor_of_arts_and_sciences
   name: Bachelor of Arts and Sciences
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-bio-resource-management
-  name: Bachelor of Bio-Resource Management
-  degree-type: bachelors-degree
+- id: bachelor_of_bio_resource_management
+  name: Bachelor of Bio_Resource Management
+  degree_type: bachelors_degree
 
-- id: bachelor-of-commerce
+- id: bachelor_of_commerce
   name: Bachelor of Commerce
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-computing
+- id: bachelor_of_computing
   name: Bachelor of Computing
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-creative-arts-health-and-wellness
+- id: bachelor_of_creative_arts_health_and_wellness
   name: Bachelor of Creative Arts, Health and Wellness
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-engineering
+- id: bachelor_of_engineering
   name: Bachelor of Engineering
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-indigenous-environmental-science-and-practice
+- id: bachelor_of_indigenous_environmental_science_and_practice
   name: Bachelor of Indigenous Environmental Science and Practice
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-landscape-architecture
+- id: bachelor_of_landscape_architecture
   name: Bachelor of Landscape Architecture
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-mathematics
+- id: bachelor_of_mathematics
   name: Bachelor of Mathematics
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-one-health
+- id: bachelor_of_one_health
   name: Bachelor of One Health
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-science
+- id: bachelor_of_science
   name: Bachelor of Science
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-science-in-agriculture
+- id: bachelor_of_science_in_agriculture
   name: Bachelor of Science in Agriculture
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: bachelor-of-science-in-environmental-sciences
+- id: bachelor_of_science_in_environmental_sciences
   name: Bachelor of Science in Environmental Sciences
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: doctor-of-veterinary-medicine
+- id: doctor_of_veterinary_medicine
   name: Doctor of Veterinary Medicine
-  degree-type: bachelors-degree
+  degree_type: bachelors_degree
 
-- id: associate-diploma-in-agriculture
+- id: associate_diploma_in_agriculture
   name: Associate Diploma in Agriculture
-  degree-type: associate-diplomas
+  degree_type: associate_diplomas
 
-- id: associate-diploma-in-environmental-technician
+- id: associate_diploma_in_environmental_technician
   name: Associate Diploma in Environmental Technician
-  degree-type: associate-diplomas
+  degree_type: associate_diplomas
 
-- id: associate-diploma-in-equine-care-and-management
+- id: associate_diploma_in_equine_care_and_management
   name: Associate Diploma in Equine Care and Management
-  degree-type: associate-diplomas
+  degree_type: associate_diplomas
 
-- id: associate-diploma-in-horticulture
+- id: associate_diploma_in_horticulture
   name: Associate Diploma in Horticulture
-  degree-type: associate-diplomas
+  degree_type: associate_diplomas
 
-- id: associate-diploma-in-veterinary-technology
+- id: associate_diploma_in_veterinary_technology
   name: Associate Diploma in Veterinary Technology
-  degree-type: associate-diplomas
+  degree_type: associate_diplomas

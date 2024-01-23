@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { Button, Col, Container, Form, Row } from "react-bootstrap"
-import { navigate } from "gatsby"
-import { requirementToSlug } from "../../../utils/requirementToSlug.js"
+import React, { useEffect, useState } from "react";
+import { graphql, navigate, useStaticQuery } from "gatsby";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { getParentRequirements, Requirement, requirementToSlug } from "../../../utils/requirement.js";
 
 const RequirementsPageSelect = ({ id, name, label, options, required, onChange }) => {
   return (
@@ -10,7 +9,7 @@ const RequirementsPageSelect = ({ id, name, label, options, required, onChange }
       <Form.Label>{label}</Form.Label>
       <Form.Select onChange={onChange} name={name} required={required} defaultValue="null">
         <option disabled={options.length !== 0} value="null">
-          {options.length === 0 ? "N/A" : "Please select an option"}
+          Please select an option
         </option>
 
         {options.map(option => (
@@ -20,66 +19,53 @@ const RequirementsPageSelect = ({ id, name, label, options, required, onChange }
         ))}
       </Form.Select>
     </Form.Group>
-  )
-}
+  );
+};
 
 const RequirementsPage = ({ data }) => {
-  const locations = data.locations.nodes
-  const studentTypes = data.studentTypes.nodes
-  const degreeTypes = data.degreeTypes.nodes
-  const fieldsOfStudy = data.fieldsOfStudy.nodes
-  const requirements = data.requirements.nodes
-  const [values, setValues] = useState({})
-  const [isFilled, setIsFilled] = useState(false)
-
-  const doesRequirementExist = slug => {
-    let start = 0,
-      end = requirements.length - 1
-
-    while (start <= end) {
-      let mid = Math.floor((start + end) / 2)
-      if (requirements[mid].fields.slug === slug) {
-        return true
-      } else if (requirements[mid].fields.slug < slug) {
-        start = mid + 1
-      } else {
-        end = mid - 1
-      }
-    }
-
-    return false
-  }
-
-  const getRequirementPageURL = slug => {
-    let url = slug
-    const tokens = slug.split("/")
-
-    while (doesRequirementExist(url) === false && tokens.length > 0) {
-      tokens.pop()
-      url = tokens.join("/")
-    }
-
-    return url
-  }
+  const locations = data.locations.nodes;
+  const student_types = data.student_types.nodes;
+  const degree_types = data.degree_types.nodes;
+  const fields_of_study = data.fields_of_study.nodes;
+  const requirements = data.requirements.nodes?.map(req => new Requirement(req));
+  const [values, setValues] = useState({});
+  const [isFilled, setIsFilled] = useState(false);
 
   const handleFormControlChange = e => {
-    setValues(old => ({ ...old, [e.target.name]: e.target.value }))
+    setValues(old => ({ ...old, [e.target.name]: e.target.value }));
 
     setIsFilled(
       Array.from(e.currentTarget.querySelectorAll("select")).every(
         select => typeof select.value === "string" && select.value !== "null",
       ),
-    )
-  }
+    );
+  };
+
+  const getClosestRequirement = requirement => {
+    // We will try to find the requirement the user is looking for.
+    // If it doesn't exist then, we can navigate them to the page for one of the parent requirements.
+    const valid = [requirement, ...getParentRequirements(requirement)];
+    const found = [];
+
+    for (const other of requirements) {
+      for (let i = 0; i < valid.length; i++) {}
+    }
+  };
 
   const handleFormSubmit = e => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (isFilled) {
-      const url = getRequirementPageURL(requirementToSlug(values))
-      navigate(url)
+    if (!isFilled) {
+      return;
     }
-  }
+
+    const requirement = new Requirement(values);
+    const closest = Requirement.findClosest(requirement, requirements);
+
+    if (closest) {
+      navigate(`/admission/requirements/${closest.slug}`);
+    }
+  };
 
   return (
     <Container className="content-block">
@@ -97,25 +83,25 @@ const RequirementsPage = ({ data }) => {
 
             <RequirementsPageSelect
               id="requirements-student-type"
-              name="studentType"
+              name="student_type"
               label="I am a(n):"
               required
-              options={studentTypes}
+              options={student_types}
             />
 
             <RequirementsPageSelect
               id="requirements-degree-type"
-              name="degreeType"
+              name="degree_type"
               label="I'm interested in:"
               required
-              options={degreeTypes}
+              options={degree_types}
             />
 
             <RequirementsPageSelect
               id="requirements-field-of-study"
-              name="fieldOfStudy"
+              name="field_of_study"
               label="Choose your desired field:"
-              options={fieldsOfStudy.filter(node => node.degreeType === values.degreeType)}
+              options={fields_of_study.filter(node => node.degree_type === values.degree_type)}
             />
 
             <Button
@@ -131,8 +117,8 @@ const RequirementsPage = ({ data }) => {
         <Col md={4} className="ms-auto"></Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -142,33 +128,34 @@ export const query = graphql`
         text: name
       }
     }
-    studentTypes: allAdmissionRequirementsStudentTypesYaml {
+    student_types: allAdmissionRequirementsStudentTypesYaml {
       nodes {
         value: yamlId
         text: name
       }
     }
-    degreeTypes: allAdmissionRequirementsDegreeTypesYaml {
+    degree_types: allAdmissionRequirementsDegreeTypesYaml {
       nodes {
         value: yamlId
         text: name
       }
     }
-    fieldsOfStudy: allAdmissionRequirementsFieldsOfStudyYaml {
+    fields_of_study: allAdmissionRequirementsFieldsOfStudyYaml {
       nodes {
         value: yamlId
         text: name
-        degreeType: degree_type
+        degree_type
       }
     }
-    requirements: allAdmissionRequirementsYaml(sort: { fields: { slug: ASC } }) {
+    requirements: allAdmissionRequirementsYaml {
       nodes {
-        fields {
-          slug
-        }
+        student_type
+        location
+        degree_type
+        field_of_study
       }
     }
   }
-`
+`;
 
-export default RequirementsPage
+export default RequirementsPage;

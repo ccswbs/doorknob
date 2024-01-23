@@ -1,17 +1,17 @@
-- student-type: ~
+- student_type: ~
   location: ~
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: ""
-    before-applying: ""
-    how-to-apply: ""
-    after-applying: ""
+    before_applying: ""
+    how_to_apply: ""
+    after_applying: ""
 
-- student-type: high-school
+- student_type: high_school
   location: ~
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <p>Important things to remember:</p>
@@ -34,10 +34,10 @@
         <li>The double asterisk ** indicates that the program has a mandatory co-op.</li>
       </ul>
 
-- student-type: high-school
+- student_type: high_school
   location: ontario
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
@@ -53,10 +53,10 @@
 
       <p> The non-academic component of 4U or 4M co-op course is not accepted for admission purposes.</p>
 
-- student-type: high-school
+- student_type: high_school
   location: alberta
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
@@ -70,10 +70,10 @@
 
       <a href="https://admission.uoguelph.ca/acceptable-courses-alberta">View a list of accepted courses from Alberta</a>
 
-- student-type: high-school
-  location: british-columbia
-  degree-type: ~
-  field-of-study: ~
+- student_type: high_school
+  location: british_columbia
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
@@ -83,75 +83,75 @@
         (including required courses for the program you are applying to).
       </p>
 
-- student-type: high-school
+- student_type: high_school
   location: manitoba
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses at the 40 S level, including required subjects.</p>
 
-- student-type: high-school
-  location: new-brunswick
-  degree-type: ~
-  field-of-study: ~
+- student_type: high_school
+  location: new_brunswick
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>Grade 12 Diploma, including 5 academic courses numbered 120, 121, or 122 including required subjects.</p>
 
-- student-type: high-school
-  location: newfoundland-and-labrador
-  degree-type: ~
-  field-of-study: ~
+- student_type: high_school
+  location: newfoundland_and_labrador
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses (2 credit) at 3000 level, including required subjects.</p>
 
-- student-type: high-school
-  location: northwest-territories
-  degree-type: ~
-  field-of-study: ~
+- student_type: high_school
+  location: northwest_territories
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses at the 30 or 31 level (5 credit), including required subjects.</p>
       <p>Note: Two 3 credit courses can be used to equal one 5 credit course.</p>
 
-- student-type: high-school
-  location: nova-scotia
-  degree-type: ~
-  field-of-study: ~
+- student_type: high_school
+  location: nova_scotia
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses at the Grade 12 level, including required subjects.</p>
 
-- student-type: high-school
+- student_type: high_school
   location: nunavut
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses at the 30 or 31 level (5 credit), including required subjects.</p>
       <p>Note: Two 3 credit courses can be used to equal one 5 credit course.</p>
 
-- student-type: high-school
-  location: prince-edward-island
-  degree-type: ~
-  field-of-study: ~
+- student_type: high_school
+  location: prince_edward_island
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses at the 611 or 621 level, including required subjects.</p>
 
-- student-type: high-school
+- student_type: high_school
   location: quebec
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements (Grade 12)</h3>
@@ -160,28 +160,28 @@
       <h3>General Requirements (CEGEP)
       <p>One year of CEGEP with 12 academic courses, including required subjects.</p>
 
-- student-type: high-school
+- student_type: high_school
   location: saskatchewan
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 6 courses at the 30 level, including required subjects.</p>
 
-- student-type: high-school
+- student_type: high_school
   location: yukon
-  degree-type: ~
-  field-of-study: ~
+  degree_type: ~
+  field_of_study: ~
   content:
     requirements: |
       <h3>General Requirements</h3>
       <p>High school diploma with 5 academic courses at the 30 or 31 level (5 credit), including required subjects.</p>
 
-- student-type: high-school
+- student_type: high_school
   location: ontario
-  degree-type: bachelors-degree
-  field-of-study: bachelor-of-applied-science
+  degree_type: bachelors_degree
+  field_of_study: bachelor_of_applied_science
   content:
     requirements: |
       <h3>Bachelor Degree Requirements:</h3>
@@ -216,10 +216,10 @@
       <h4>Estimated Cut-off Ranges</h4>
       <p>78 - 83%</p>
 
-- student-type: high-school
+- student_type: high_school
   location: ontario
-  degree-type: bachelors-degree
-  field-of-study: bachelor-of-engineering
+  degree_type: bachelors_degree
+  field_of_study: bachelor_of_engineering
   content:
     requirements: |
       <h3>Bachelor Degree Requirements:</h3>

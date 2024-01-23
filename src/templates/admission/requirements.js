@@ -1,24 +1,21 @@
-import React, { useEffect } from "react"
-import { graphql } from "gatsby"
-import { Container, Tab, Tabs } from "react-bootstrap"
+import React, { useEffect } from "react";
+import { graphql } from "gatsby";
+import { Container, Tab, Tabs } from "react-bootstrap";
 
 export default function AdmissionRequirements({ data, children, pageContext }) {
-  const requirements = data.requirements.nodes
+  const requirements = [...(data?.requirement?.parents ?? []), data?.requirement];
 
   const renderRequirementContent = content => (
     <>
       {requirements.map(requirement => (
-        <div
-          key={requirement.id}
-          dangerouslySetInnerHTML={{ __html: requirement?.content?.[content] }}
-        ></div>
+        <div key={requirement.id} dangerouslySetInnerHTML={{ __html: requirement?.content?.[content] }}></div>
       ))}
     </>
-  )
+  );
 
   return (
     <Container className="my-5" id="admission-requirements-page">
-      <h1 className="my-5">{pageContext.title}</h1>
+      <h1 className="my-5">{data.requirement.title}</h1>
 
       <Tabs defaultActiveKey="requirements" id="admission-requirements-tabs" justify>
         <Tab eventKey="requirements" title="Academic Requirements">
@@ -39,13 +36,21 @@ export default function AdmissionRequirements({ data, children, pageContext }) {
         </Tab>
       </Tabs>
     </Container>
-  )
+  );
 }
 
 export const query = graphql`
-  query ($ids: [String!]!) {
-    requirements: allAdmissionRequirementsYaml(filter: { id: { in: $ids } }) {
-      nodes {
+  query ($id: String!) {
+    requirement: admissionRequirementsYaml(id: { eq: $id }) {
+      id
+      title
+      content {
+        requirements
+        before_applying
+        how_to_apply
+        after_applying
+      }
+      parents {
         id
         content {
           requirements
@@ -56,4 +61,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

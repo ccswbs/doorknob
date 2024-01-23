@@ -1,17 +1,17 @@
-- id: bachelors-degree
+- id: bachelors_degree
   name: Bachelor's Degrees
 
-- id: associate-diplomas
+- id: associate_diplomas
   name: Associate Diplomas
 
-- id: undergraduate-and-diploma
+- id: undergraduate_and_diploma
   name: Undergraduate + Diploma
 
-- id: apprenticeship-programs
+- id: apprenticeship_programs
   name: Apprenticeship Programs
 
-- id: certificates-and-diplomas
+- id: certificates_and_diplomas
   name: Certificates & Diplomas
 
-- id: open-education
+- id: open_education
   name: Open Education Courses
