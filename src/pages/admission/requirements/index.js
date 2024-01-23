@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { graphql, navigate, useStaticQuery } from "gatsby";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { getParentRequirements, Requirement, requirementToSlug } from "../../../utils/requirement.js";
+import { Requirement } from "../../../utils/requirement.js";
 
 const RequirementsPageSelect = ({ id, name, label, options, required, onChange }) => {
   return (
@@ -39,17 +39,6 @@ const RequirementsPage = ({ data }) => {
         select => typeof select.value === "string" && select.value !== "null",
       ),
     );
-  };
-
-  const getClosestRequirement = requirement => {
-    // We will try to find the requirement the user is looking for.
-    // If it doesn't exist then, we can navigate them to the page for one of the parent requirements.
-    const valid = [requirement, ...getParentRequirements(requirement)];
-    const found = [];
-
-    for (const other of requirements) {
-      for (let i = 0; i < valid.length; i++) {}
-    }
   };
 
   const handleFormSubmit = e => {

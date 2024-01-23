@@ -102,37 +102,4 @@ class Requirement {
 
 module.exports = {
   Requirement,
-  requirementToSlug: requirement => {
-    let slug = "undergraduate";
-
-    for (let i = hierarchy.length - 1; i >= 0; i--) {
-      const attribute = hierarchy[i];
-
-      if (requirement[attribute]) {
-        slug += `/${requirement[attribute]?.replaceAll("_", "-")}`;
-      }
-    }
-
-    return slug;
-  },
-
-  getParentRequirements: requirement => {
-    const parents = [];
-
-    for (let i = 0; i < hierarchy.length; i++) {
-      const attribute = hierarchy[i];
-      const parent = { ...requirement };
-
-      if (requirement[attribute]) {
-        for (let j = i; j >= 0; j--) {
-          const removedAttribute = hierarchy[j];
-          parent[removedAttribute] = null;
-        }
-
-        parents.push(parent);
-      }
-    }
-
-    return parents;
-  },
 };
