@@ -215,4 +215,96 @@
   name: Certificate in Public Policy and Administration
   degree_type: certificate
 
+# Certificates
 
+- id: advanced_certificate_in_couple_and_family_therapy_studies
+  name: Advanced Certificate in Couple and Family Therapy Studies
+  degree_type: certificate
+
+- id: certificate_in_advanced_interpersonal_skills_for_psw_practice
+  name: Certificate in Advanced Interpersonal Skills for PSW Practice
+  degree_type: certificate
+
+- id: certificate_in_disability_management
+  name: Certificate in Disability Management
+  degree_type: certificate
+
+- id: certificate_in_equine_business_management
+  name: Certificate in Equine Business Management
+  degree_type: certificate
+
+- id: certificate_in_facilities_management
+  name: Certificate in Facilities Management
+  degree_type: certificate
+
+- id: certificate_in_human_resources_management_for_school_board_administration
+  name: Certificate in Human Resources Management for School Board Administration
+  degree_type: certificate
+
+- id: certificate_in_information_management_privacy_and_access
+  name: Certificate in Information Management, Privacy, and Access
+  degree_type: certificate
+
+- id: certificate_in_information_and_communication_technology_management
+  name: Certificate in Information and Communication Technology Management
+  degree_type: certificate
+
+- id: certificate_in_knowledge_mobilization
+  name: Certificate in Knowledge Mobilization
+  degree_type: certificate
+
+- id: certificate_in_pupil_transportation_management
+  name: Certificate in Pupil Transportation Management
+  degree_type: certificate
+
+- id: certificate_in_supply_chain_management_for_public_procurement
+  name: Certificate in Supply Chain Management for Public Procurement
+  degree_type: certificate
+
+- id: cheese_maker_certificate
+  name: Cheese Maker Certificate
+  degree_type: certificate
+
+- id: creative_writing_certificate
+  name: Creative Writing Certificate
+  degree_type: certificate
+
+- id: data_science_certificate
+  name: Data Science Certificate
+  degree_type: certificate
+
+- id: maintaining_golf_courses_certificate
+  name: Maintaining Golf Courses Certificate
+  degree_type: certificate
+
+- id: plant_based_nutrition_certificate
+  name: Plant-Based Nutrition Certificate
+  degree_type: certificate
+
+- id: sustainable_urban_agriculture_certificate
+  name: Sustainable Urban Agriculture Certificate
+  degree_type: certificate
+
+- id: sustainable_urban_horticulture_certificate
+  name: Sustainable Urban Horticulture Certificate
+  degree_type: certificate
+
+- id: turf_managers_short_course_certificate
+  name: Turf Managers' Short Course Certificate
+  degree_type: certificate
+
+- id: equine_science_certificate
+  name: Equine Science Certificate
+  degree_type: certificate
+
+- id: equine_welfare_certificate
+  name: Equine Welfare Certificate
+  degree_type: certificate
+
+- id: horticulture_certificate
+  name: Horticulture Certificate
+  degree_type: certificate
+
+- id: landscape_design_certificate
+  name: Landscape Design Certificate
+  degree_type: certificate
