@@ -161,3 +161,23 @@
 - id: cannabis_regulations_and_quality_assurance_3101021
   name: Cannabis Regulations and Quality Assurance (3101021)
   degree_type: open-education
+
+- id: diploma_in_equine_studies
+  name: Diploma in Equine Studies
+  degree_type: diplomas
+
+- id: diploma_in_human_resources_management
+  name: Diploma in Human Resources Management
+  degree_type: diplomas
+
+- id: diploma_in_school_board_administration
+  name: Diploma in School Board Administration
+  degree_type: diplomas
+
+- id: horticulture_diploma
+  name: Horticulture Diploma
+  degree_type: diplomas
+
+- id: landscape_design_diploma
+  name: Landscape Design Diploma
+  degree_type: diplomas
