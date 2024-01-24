@@ -182,3 +182,37 @@
   name: Landscape Design Diploma
   degree_type: diplomas
 
+- id: certificate_in_accounting
+  name: Certificate in Accounting
+  degree_type: certificate
+
+# Degree Credit Certificates
+- id: certificate_in_business
+  name: Certificate in Business
+  degree_type: certificate
+
+- id: certificate_in_environmental_citizenship
+  name: Certificate in Environmental Citizenship
+  degree_type: certificate
+
+- id: certificate_in_environmental_conservation
+  name: Certificate in Environmental Conservation
+  degree_type: certificate
+
+- id: certificate_in_food_science
+  name: Certificate in Food Science
+  degree_type: certificate
+
+- id: certificate_in_hospitality_studies
+  name: Certificate in Hospitality Studies
+  degree_type: certificate
+
+- id: certificate_in_leadership
+  name: Certificate in Leadership
+  degree_type: certificate
+
+- id: certificate_in_public_policy_and_administration
+  name: Certificate in Public Policy and Administration
+  degree_type: certificate
+
+
