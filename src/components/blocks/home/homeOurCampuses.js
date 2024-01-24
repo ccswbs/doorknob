@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Container, Row, Col, Card } from "react-bootstrap"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import classNames from "classnames"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import classNames from "classnames";
 
 const query = graphql`
   query {
@@ -21,12 +21,12 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 export const HomeOurCampuses = () => {
-  const links = useStaticQuery(query).blockYaml.links
-  const rowClasses = classNames("row", "row-cols-1", "g-4", "row-cols-md-3")
-  const cardClasses = classNames("h-100", "border-0", "bg-info", "bg-opacity-10")
+  const links = useStaticQuery(query).blockYaml.links;
+  const rowClasses = classNames("row", "row-cols-1", "g-4", "row-cols-md-3");
+  const cardClasses = classNames("h-100", "border-0", "bg-info", "bg-opacity-10");
 
   return (
     <Container className="content-block position-relative">
@@ -50,7 +50,7 @@ export const HomeOurCampuses = () => {
         ))}
       </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default HomeOurCampuses
+export default HomeOurCampuses;

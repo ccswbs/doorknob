@@ -1,19 +1,19 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import Overlay from "../../shared/overlay"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Col, Container, Row } from "react-bootstrap"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import Overlay from "../../shared/overlay";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import { Col, Container, Row } from "react-bootstrap";
 
 const QuoteMark = styled.i`
   color: var(--bs-yellow);
-`
+`;
 
 const ForegroundImage = styled(GatsbyImage)`
   @media (min-width: 1200px) {
     margin-top: -5rem;
   }
-`
+`;
 
 const query = graphql`
   query {
@@ -45,12 +45,12 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 export default function HomeStory() {
-  const data = useStaticQuery(query)
-  const content = data.blockYaml.content
-  const background = data.blockYaml.background
+  const data = useStaticQuery(query);
+  const content = data.blockYaml.content;
+  const background = data.blockYaml.background;
 
   return (
     <div className="bg-black content-block">
@@ -80,11 +80,13 @@ export default function HomeStory() {
           <Row>
             <Col lg={12} className="align-items-center d-flex fs-5 justify-content-center p-3 text-white">
               <p className="mb-0">{content.cta.body}</p>
-              <a className="btn btn-primary ms-4 my-4 fs-5" href={content.cta.url}>{content.cta.button}</a>
+              <a className="btn btn-primary ms-4 my-4 fs-5" href={content.cta.url}>
+                {content.cta.button}
+              </a>
             </Col>
           </Row>
         </Container>
       </div>
     </div>
-  )
+  );
 }

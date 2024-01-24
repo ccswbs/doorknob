@@ -1,5 +1,5 @@
-import React from "react"
-import { Script } from "gatsby"
+import React from "react";
+import { Script } from "gatsby";
 
 const AppArmorAlert = ({ id = "163" }) => {
   return (
@@ -10,7 +10,7 @@ const AppArmorAlert = ({ id = "163" }) => {
         strategy="post-hydrate"
       ></Script>
     </>
-  )
-}
+  );
+};
 
-export default AppArmorAlert
+export default AppArmorAlert;

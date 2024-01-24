@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const HomeTagline = () => (
   <div className="container text-center d-flex flex-column home-tagline">
@@ -6,6 +6,6 @@ export const HomeTagline = () => (
     <p className="lead text-dark ps-4 display-1 fs-4 mx-auto">Improve Life</p>
     <hr className="w-75 mx-auto"></hr>
   </div>
-)
+);
 
-export default HomeTagline
+export default HomeTagline;

@@ -4,33 +4,31 @@ import { useStaticQuery, graphql } from "gatsby";
 export const useSpotlightData = () => {
   let spotlightData = {};
 
-  const data = useStaticQuery(
-    graphql`
-      query {
-        blockYaml(yamlId: { eq: "home_cards_spotlight" }) {
-          heading
-          cards {
-            title
-            url
-            image {
-              src {
-                childImageSharp {
-                  gatsbyImageData( width: 640 )
-                }
+  const data = useStaticQuery(graphql`
+    query {
+      blockYaml(yamlId: { eq: "home_cards_spotlight" }) {
+        heading
+        cards {
+          title
+          url
+          image {
+            src {
+              childImageSharp {
+                gatsbyImageData(width: 640)
               }
-              alt
-              alignment
             }
+            alt
+            alignment
           }
         }
       }
-
-  `)
+    }
+  `);
 
   const cards = data.blockYaml.cards;
   let cardsData = [];
 
-  cards.forEach((item) => {
+  cards.forEach(item => {
     cardsData.push({
       key: `spotlight-cards-${item?.title}`,
       imageSrc: item?.image?.src,
@@ -38,12 +36,12 @@ export const useSpotlightData = () => {
       imageAlignment: item?.image?.alignment,
       title: item?.title,
       url: item?.url,
-    })
+    });
   });
 
   spotlightData = {
-    cards: cardsData
-  }
+    cards: cardsData,
+  };
 
   return spotlightData;
-}
+};

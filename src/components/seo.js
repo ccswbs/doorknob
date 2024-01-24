@@ -1,22 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
 function Seo({ description, img, imgAlt, lang, meta, keywords, title }) {
-    
   let imgURL = img ? "https://cdn.uoguelph.ca" + img : ``;
-    
+
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description	
-        const metaImage = 
-          imgURL || data.site.siteMetadata.ogImage
-        const metaImageAlt = 
-          imgAlt || data.site.siteMetadata.ogImageAlt
+        const metaDescription = description || data.site.siteMetadata.description;
+        const metaImage = imgURL || data.site.siteMetadata.ogImage;
+        const metaImageAlt = imgAlt || data.site.siteMetadata.ogImageAlt;
         return (
           <Helmet
             htmlAttributes={{
@@ -80,21 +76,21 @@ function Seo({ description, img, imgAlt, lang, meta, keywords, title }) {
                       name: `keywords`,
                       content: keywords.join(`, `),
                     }
-                  : []
+                  : [],
               )
               .concat(meta)}
           />
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-}
+};
 
 Seo.propTypes = {
   description: PropTypes.string,
@@ -104,9 +100,9 @@ Seo.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string,
   imgAlt: PropTypes.string,
-}
+};
 
-export default Seo
+export default Seo;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -120,4 +116,4 @@ const detailsQuery = graphql`
       }
     }
   }
-`
+`;

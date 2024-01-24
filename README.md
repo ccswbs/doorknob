@@ -1,5 +1,5 @@
-
 # Introduction
+
 This repository contains the source code for the University of Guelph homepage (https://www.uoguelph.ca).
 
 ## 🚀 Quick start
@@ -54,4 +54,3 @@ templates define the page layout. Content is defined by components under
 ## Front-end Framework
 
 This repository uses [Snowdrop](https://github.com/ccswbs/snowdrop), a University of Guelph themed front-end framework based on Bootstrap.
-

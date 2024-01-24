@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SkipLink = ({ mainContent }) => (
   <nav aria-label="Skip links">
@@ -6,6 +6,6 @@ const SkipLink = ({ mainContent }) => (
       Skip to main content
     </a>
   </nav>
-)
+);
 
-export default SkipLink
+export default SkipLink;

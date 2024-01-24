@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
+import React from "react";
+import styled from "styled-components";
+import { Container } from "react-bootstrap";
 
 const Gradient = styled.div`
   background: ${props => props.gradientStyle ?? "none"};
@@ -12,7 +12,7 @@ const Gradient = styled.div`
       min-height: 300px;
     }
   }
-`
+`;
 const gradientColourOptions = [
   { background: "var(--bs-black)", colour: "#FFFFFF" },
   { background: "var(--bs-red)", colour: "#FFFFFF" },
@@ -22,7 +22,7 @@ const gradientColourOptions = [
   { background: "var(--bs-black)", colour: "#FFFFFF" },
   { background: "var(--bs-blue)", colour: "#000000" },
   { background: "var(--bs-red)", colour: "#FFFFFF" },
-]
+];
 
 /* Accessible definition lists can only have one nested div.
 In order to achieve gap between bordered stats, use grid instead of row-cols-* */
@@ -32,7 +32,7 @@ const StatisticGrid = styled.dl`
   @media (min-width: 992px) {
     grid-template-columns: repeat(${props => props.columns ?? "3"}, 1fr);
   }
-`
+`;
 const StatCard = styled.div`
   background: #f5f7fa;
   padding: 3rem;
@@ -43,11 +43,11 @@ const StatCard = styled.div`
   @media (min-width: 992px) and (max-width: 1415px), (min-width: 576px) and (max-width: 768px) {
     padding: 2rem;
   }
-`
+`;
 const StatBorderCard = styled(StatCard)`
   border-left: 1rem solid ${props => props.border ?? "#000000"};
   text-align: left;
-`
+`;
 const StatSolidCard = styled(StatCard)`
   background: ${props => props.background ?? "#000000"};
   color: ${props => props.colour ?? "#ffffff"};
@@ -57,7 +57,7 @@ const StatSolidCard = styled(StatCard)`
   & > dt {
     color: ${props => props.colour ?? "#ffffff"};
   }
-`
+`;
 const StatValue = styled.dt`
   color: #000;
   font-size: ${props => props.fontsize ?? "3rem"};
@@ -67,7 +67,7 @@ const StatValue = styled.dt`
   @media (min-width: 992px) and (max-width: 1415px), (min-width: 576px) and (max-width: 768px) {
     font-size: 2.6rem;
   }
-`
+`;
 const StatType = styled.dd`
   font-size: 1.8rem;
   line-height: 1.58;
@@ -79,46 +79,46 @@ const StatType = styled.dd`
   & > a:focus {
     color: #ffffff !important;
   }
-`
+`;
 const StatIcon = styled.i`
   color: ${props => props.colour ?? "#000"};
-`
+`;
 
 const Statistic = ({ id, children, className = "" }) => (
   <dl id={id} className={`${className}`}>
     {children}
   </dl>
-)
+);
 
 Statistic.Grid = ({ id, children, columns, className = "" }) => (
   <StatisticGrid id={id} columns={columns} className={`${className}`}>
     {children}
   </StatisticGrid>
-)
+);
 
-Statistic.Card = ({ children }) => <StatCard className="h-100">{children}</StatCard>
+Statistic.Card = ({ children }) => <StatCard className="h-100">{children}</StatCard>;
 
 Statistic.BorderCard = ({ border, children, className = "" }) => (
   <StatBorderCard border={border} className={`${className} h-100`}>
     {children}
   </StatBorderCard>
-)
+);
 
 Statistic.SolidCard = ({ background, colour, children, className = "" }) => (
   <StatSolidCard background={background} colour={colour} className={`${className} align-self-stretch`}>
     {children}
   </StatSolidCard>
-)
+);
 
-Statistic.Icon = ({ icon, colour }) => <StatIcon colour={colour} className={`${icon} mt-3 fa-4x`} aria-hidden="true" />
+Statistic.Icon = ({ icon, colour }) => <StatIcon colour={colour} className={`${icon} mt-3 fa-4x`} aria-hidden="true" />;
 
 Statistic.Value = ({ children, fontsize, className = "" }) => (
   <StatValue className={className} fontsize={fontsize}>
     {children}
   </StatValue>
-)
+);
 
-Statistic.Type = ({ children, className = "" }) => <StatType className={className}>{children}</StatType>
+Statistic.Type = ({ children, className = "" }) => <StatType className={className}>{children}</StatType>;
 
 /***
  *
@@ -131,26 +131,26 @@ Statistic.Type = ({ children, className = "" }) => <StatType className={classNam
  *    }
  */
 Statistic.Gradient = ({ stats }) => {
-  let numStats = stats.length
+  let numStats = stats.length;
 
   // default is displaying 3 colours in a row
-  let rowClasses = "row-cols-md-3"
-  let gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#ffc72a 60%,#ffc72a 100%)"
+  let rowClasses = "row-cols-md-3";
+  let gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#ffc72a 60%,#ffc72a 100%)";
   let stackedGradientStyle =
-    "repeating-conic-gradient(var(--bs-red) 0% 25%, var(--bs-blue) 0% 50%, var(--bs-yellow) 50% 75%, var(--bs-black) 75% 100%)"
+    "repeating-conic-gradient(var(--bs-red) 0% 25%, var(--bs-blue) 0% 50%, var(--bs-yellow) 50% 75%, var(--bs-black) 75% 100%)";
 
   if (numStats === 1) {
     // one colour
-    rowClasses = "row-cols-sm-1"
-    gradientStyle = "#000000"
+    rowClasses = "row-cols-sm-1";
+    gradientStyle = "#000000";
   } else if (numStats === 2) {
     // two colours
-    rowClasses = "row-cols-sm-2"
-    gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#c20430 60%,#c20430 100%)"
+    rowClasses = "row-cols-sm-2";
+    gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#c20430 60%,#c20430 100%)";
   } else if (numStats % 4 === 0) {
     // four colour
-    rowClasses = "row-cols-sm-2 row-cols-lg-4"
-    gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#69A3B9 60%,#69A3B9 100%)"
+    rowClasses = "row-cols-sm-2 row-cols-lg-4";
+    gradientStyle = "linear-gradient(to right,#000 0%,#000 60%,#69A3B9 60%,#69A3B9 100%)";
   }
 
   return (
@@ -163,9 +163,9 @@ Statistic.Gradient = ({ stats }) => {
         <Container className="px-0">
           <Statistic className={`row g-0 row-cols-1 ${rowClasses} justify-content-center mb-0`}>
             {stats.map((stat, index) => {
-              let type = stat.field_statistic_represents
-              let value = stat.field_statistic_value
-              let icon = stat.field_font_awesome_icon
+              let type = stat.field_statistic_represents;
+              let value = stat.field_statistic_value;
+              let icon = stat.field_font_awesome_icon;
 
               return (
                 <Statistic.SolidCard
@@ -187,13 +187,13 @@ Statistic.Gradient = ({ stats }) => {
                     <span dangerouslySetInnerHTML={{ __html: type }} />
                   </Statistic.Type>
                 </Statistic.SolidCard>
-              )
+              );
             })}
           </Statistic>
         </Container>
       </div>
     </Gradient>
-  )
-}
+  );
+};
 
-export default Statistic
+export default Statistic;

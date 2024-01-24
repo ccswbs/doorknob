@@ -1,11 +1,11 @@
-import React from "react"
-import classNames from "classnames"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Container } from "react-bootstrap"
-import { useWindowSize }  from "../../../hooks/use-window-size"
+import React from "react";
+import classNames from "classnames";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import { Container } from "react-bootstrap";
+import { useWindowSize } from "../../../hooks/use-window-size";
 
 export default function HomeHero(props) {
-  const { heroData } = props // Extract the heroData from props
+  const { heroData } = props; // Extract the heroData from props
   const windowSize = useWindowSize();
   const isDesktop = windowSize.width >= 992;
   const alignment = heroData.captionAlign ?? "left";
@@ -18,7 +18,7 @@ export default function HomeHero(props) {
     "w-100",
     "p-0",
     "spotlight-hero-content",
-  )
+  );
 
   let captionContainerClasses = classNames(
     { [classNames("bottom-0", "start-0")]: alignment === "left" && isDesktop },
@@ -29,7 +29,7 @@ export default function HomeHero(props) {
     "p-md-5",
     "p-4",
     "spotlight-hero-caption-container",
-  )
+  );
 
   let mainContainerClasses = classNames(
     "position-relative",
@@ -37,10 +37,10 @@ export default function HomeHero(props) {
     "spotlight-hero",
     { "left-align-image": imageAlignment === "left" },
     { "right-align-image": imageAlignment === "right" },
-  )
-  let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0", "spotlight-hero-caption")
-  let headingClasses = classNames("h3")
-  let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto")
+  );
+  let captionClasses = classNames("d-flex", "flex-column", "gap-4", "p-0", "spotlight-hero-caption");
+  let headingClasses = classNames("h3");
+  let linkClasses = classNames("btn", "btn-warning", "w-fit", "p-3", "fs-6", "me-auto");
 
   return (
     <div id="rotator" className={mainContainerClasses}>
@@ -57,5 +57,5 @@ export default function HomeHero(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }

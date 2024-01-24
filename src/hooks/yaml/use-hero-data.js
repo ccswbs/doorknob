@@ -1,7 +1,7 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 export const useHeroData = () => {
-  let heroData = []
+  let heroData = [];
 
   const data = useStaticQuery(graphql`
     query {
@@ -23,7 +23,7 @@ export const useHeroData = () => {
         }
       }
     }
-  `)
+  `);
   heroData.push({
     imageSrc: data.blockYaml.image.src.childImageSharp.gatsbyImageData,
     imageAlt: data.blockYaml.image.alt,
@@ -32,7 +32,7 @@ export const useHeroData = () => {
     captionText: data.blockYaml.body,
     title: data.blockYaml.title,
     url: data.blockYaml.link.url,
-  })
+  });
 
-  return heroData
-}
+  return heroData;
+};

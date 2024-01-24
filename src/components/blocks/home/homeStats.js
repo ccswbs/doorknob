@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Statistic from "../../../components/shared/statistic"
-import { Container } from "react-bootstrap"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Statistic from "../../../components/shared/statistic";
+import { Container } from "react-bootstrap";
 
 const query = graphql`
   query {
@@ -14,16 +14,16 @@ const query = graphql`
       }
     }
   }
-`
+`;
 export default function HomeStats() {
-  const stats = useStaticQuery(query).blockYaml.stats
+  const stats = useStaticQuery(query).blockYaml.stats;
   return (
     <>
-    <Container className="content-block">
-      <h2 className="mt-5 mb-5">How We Rank Among the World</h2>
+      <Container className="content-block">
+        <h2 className="mt-5 mb-5">How We Rank Among the World</h2>
 
-      <Statistic.Gradient stats={stats} />
-    </Container>
+        <Statistic.Gradient stats={stats} />
+      </Container>
     </>
-  )
+  );
 }
