@@ -2,11 +2,10 @@
 const hierarchy = ["field_of_study", "degree_type", "location", "student_type"];
 
 class Requirement {
-  constructor({ student_type, location, degree_type, field_of_study }) {
-    this.student_type = student_type;
-    this.location = location;
-    this.degree_type = degree_type;
-    this.field_of_study = field_of_study;
+  constructor(val) {
+    for (const attribute of hierarchy) {
+      this[attribute] = val[attribute] || null;
+    }
   }
   get slug() {
     let slug = "undergraduate";
@@ -43,6 +42,43 @@ class Requirement {
     }
 
     return this._parents;
+  }
+  permute() {
+    // To permute all possible combinations of nullified attributes for this requirement,
+    // we can treat the requirement as if it is a binary number.
+    // where each bit indicates whether the corresponding attribute has been nullified or equal to its original value
+    // with MSB being the most specific attribute in the hierarchy.
+
+    // Equivalent to Math.pow(2, hierarchy.length)
+    const n = 1 << hierarchy.length;
+    const initMask = 1 << (hierarchy.length - 1);
+    const permutations = [];
+
+    for (let i = 0; i < n; i++) {
+      const requirement = new Requirement({});
+
+      for (let j = 0; j < hierarchy.length; j++) {
+        const mask = initMask >> j;
+        const attribute = hierarchy[j];
+        requirement[attribute] = i & mask ? null : this[attribute];
+      }
+
+      permutations.push(requirement);
+    }
+
+    return permutations;
+  }
+  encode() {
+    let encoded = 0;
+
+    for (let i = 0; i < hierarchy.length; i++) {
+      const attribute = hierarchy[i];
+      const bit = this[attribute] ? 1 : 0;
+
+      encoded |= bit << (hierarchy.length - 1 - i);
+    }
+
+    return encoded;
   }
   static clone(requirement) {
     return new Requirement({
@@ -84,15 +120,21 @@ class Requirement {
     return Infinity;
   }
   static findClosest(needle, haystack) {
+    const permutations = needle.permute();
+
+    const relevant = haystack.filter(current => {
+      return permutations.some(p => Requirement.equal(p, current));
+    });
+
     let closest = null;
-    let closestDistance = Infinity;
+    let closestEncoding = 0;
 
-    for (const requirement of haystack) {
-      const distance = Requirement.distance(requirement, needle);
+    for (const requirement of relevant) {
+      const encoding = requirement.encode();
 
-      if (distance < closestDistance) {
+      if (encoding >= closestEncoding) {
         closest = requirement;
-        closestDistance = distance;
+        closestEncoding = encoding;
       }
     }
 

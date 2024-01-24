@@ -8,6 +8,27 @@
     how_to_apply: ""
     after_applying: ""
 
+- student_type: ~
+  location: ~
+  degree_type: certificates
+  field_of_study: ~
+  content:
+    requirements: "<h2>General Certificate Requirements</h2>"
+    before_applying: ""
+    how_to_apply: ""
+    after_applying: ""
+
+
+- student_type: ~
+  location: ~
+  degree_type: certificates
+  field_of_study: equine_welfare_certificate
+  content:
+    requirements: "<h2>Specific Requirements</h2>"
+    before_applying: ""
+    how_to_apply: ""
+    after_applying: ""
+
 - student_type: high_school
   location: ~
   degree_type: ~
