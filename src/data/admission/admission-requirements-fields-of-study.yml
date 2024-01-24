@@ -308,3 +308,11 @@
 - id: landscape_design_certificate
   name: Landscape Design Certificate
   degree_type: certificates
+
+- id: gapp
+  name: Guelph Arts Apprenticeship Program
+  degree_type: apprenticeship_programs
+
+- id: herds
+  name: Dairy Herdsperson Apprenticeship
+  degree_type: apprenticeship_programs
