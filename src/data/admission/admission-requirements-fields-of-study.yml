@@ -113,3 +113,51 @@
 - id: parttime_bachelor_justice_public_safety
   name: (Part-time) Bachelor of Applied Arts Specialization in Justice and Public Safety
   degree_type: undergraduate_and_diplomas
+
+- id: historical_perspective_of_911_HIST_2160
+  name: 9/11 in Historical Perspective (HIST*2160)
+  degree_type: open-education
+
+- id: administration_of_programs_for_children_FRHD_3190
+  name: Administration of Programs for Children (FRHD*3190)
+  degree_type: open-education
+
+- id: advanced_equine_behaviour_2200015
+  name: Advanced Equine Behaviour (2200015)
+  degree_type: open-education
+
+- id: advanced_marketing_MCS_3000
+  name: Advanced Marketing (MCS*3000)
+  degree_type: open-education
+
+- id: animals_and_society_HIST_2120
+  name: Animals and Society (HIST*2120)
+  degree_type: open-education
+
+- id: apiculture_and_honey_bee_biology_ENVS_2210
+  name: Apiculture and Honey Bee Biology (ENVS*2210)
+  degree_type: open-education
+
+- id: arboriculture_3101025
+  name: Arboriculture (3101025)
+  degree_type: open-education
+
+- id: business_and_consumer_law_MCS_3040
+  name: Business and Consumer Law (MCS*3040)
+  degree_type: open-education
+
+- id: business_communication_MCS_2000
+  name: Business Communication (MCS*2000)
+  degree_type: open-education
+
+- id: business_principles_in_horticulture_3101005
+  name: Business Principles in Horticulture (3101005)
+  degree_type: open-education
+
+- id: canada_and_the_second_world_war_HIST_3490
+  name: Canada and the Second World War (HIST*3490)
+  degree_type: open-education
+
+- id: cannabis_regulations_and_quality_assurance_3101021
+  name: Cannabis Regulations and Quality Assurance (3101021)
+  degree_type: open-education
