@@ -10,8 +10,11 @@
 - id: apprenticeship_programs
   name: Apprenticeship Programs
 
-- id: certificates_and_diplomas
-  name: Certificates & Diplomas
+- id: certificates
+  name: Certificates
+
+- id: diplomas
+  name: Diplomas
 
 - id: open_education
   name: Open Education Courses

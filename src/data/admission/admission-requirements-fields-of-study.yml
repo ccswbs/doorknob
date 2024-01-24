@@ -81,3 +81,35 @@
 - id: associate_diploma_in_veterinary_technology
   name: Associate Diploma in Veterinary Technology
   degree_type: associate_diplomas
+
+- id: honours_bachelor_business_administration
+  name: Honours Bachelor of Business Administration + Diploma in Business Administration
+  degree_type: undergraduate_and_diplomas
+
+- id: honours_bachelor_community_social_services
+  name: Honours Bachelor of Applied Science in Community Social Services + Social Service Worker Diploma
+  degree_type: undergraduate_and_diplomas
+
+- id: honours_bachelor_early_childhood_studies
+  name: Honours Bachelor of Applied Science in Early Childhood Studies + Diploma in Early Childhood Education
+  degree_type: undergraduate_and_diplomas
+
+- id: honours_bachelor_kinesiology
+  name: Honours Bachelor of Applied Science in Kinesiology + Diploma in Fitness & Health Promotion
+  degree_type: undergraduate_and_diplomas
+
+- id: honours_bachelor_media_communication_studies
+  name: Honours Bachelor of Applied Arts in Media and Communication Studies + Diploma in Media Communications
+  degree_type: undergraduate_and_diplomas
+
+- id: honours_bachelor_psychology
+  name: Honours Bachelor of Applied Science in Psychology + Diploma in General Arts and Science
+  degree_type: undergraduate_and_diplomas
+
+- id: fulltime_honours_bachelor_justice_studies
+  name: (Full-time) Honours Bachelor of Applied Science in Justice Studies + Diploma in Community and Justice Services or Police Foundations
+  degree_type: undergraduate_and_diplomas
+
+- id: parttime_bachelor_justice_public_safety
+  name: (Part-time) Bachelor of Applied Arts Specialization in Justice and Public Safety
+  degree_type: undergraduate_and_diplomas
