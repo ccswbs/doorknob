@@ -32,7 +32,7 @@ export default function Home({ data, children }) {
         title="University of Guelph - Improve Life"
         description="Discover excellence at the University of Guelph - a leading institution fostering innovation, world-class research, and personalized learning. Explore our diverse academic programs, cutting-edge facilities, and vibrant campus life. Join a community dedicated to shaping the future."
       />
-      <h1 className="visually-hidden">University of Guelph, Ontario, Canada</h1>
+      <h1 className="visually-hidden">University of Guelph - Ontario, Canada</h1>
       {renderHero}
       <HomeTagline />
       <HomeCardsSpotlight />
