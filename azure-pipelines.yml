@@ -5,6 +5,9 @@
 
 trigger:
 - main
+- next
+
+pr: none
 
 schedules:
 - cron: "0 4 * * *"
