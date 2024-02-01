@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import classNames from "classnames"
+import React from "react";
+import styled from "styled-components";
+import classNames from "classnames";
 
 /* Accessible definition lists can only have one nested div.
 In order to achieve gap between bordered stats, use grid instead of row-cols-* */
@@ -10,7 +10,7 @@ const StatisticGrid = styled.dl`
   @media (min-width: 992px) {
     grid-template-columns: repeat(${props => props.columns ?? "3"}, 1fr);
   }
-`
+`;
 const StatCard = styled.div`
   background: #f5f7fa;
   padding: 3rem;
@@ -21,11 +21,11 @@ const StatCard = styled.div`
   @media (min-width: 992px) and (max-width: 1415px), (min-width: 576px) and (max-width: 768px) {
     padding: 2rem;
   }
-`
+`;
 const StatBorderCard = styled(StatCard)`
   border-left: 1rem solid ${props => props.border ?? "#000000"};
   text-align: left;
-`
+`;
 const StatSolidCard = styled(StatCard)`
   background: ${props => props.background ?? "#000000"};
   color: ${props => props.colour ?? "#ffffff"};
@@ -35,7 +35,7 @@ const StatSolidCard = styled(StatCard)`
   & > dt {
     color: ${props => props.colour ?? "#ffffff"};
   }
-`
+`;
 const StatValue = styled.dt`
   color: #000;
   font-size: ${props => props.fontsize ?? "3rem"};
@@ -45,7 +45,7 @@ const StatValue = styled.dt`
   @media (min-width: 992px) and (max-width: 1415px), (min-width: 576px) and (max-width: 768px) {
     font-size: 2.6rem;
   }
-`
+`;
 const StatType = styled.dd`
   font-size: 1.8rem;
   line-height: 1.58;
@@ -57,46 +57,46 @@ const StatType = styled.dd`
   & > a:focus {
     color: #ffffff !important;
   }
-`
+`;
 const StatIcon = styled.i`
   color: ${props => props.colour ?? "#000"};
-`
+`;
 
 const Statistic = ({ id, children, className = "" }) => (
   <dl id={id} className={`${className}`}>
     {children}
   </dl>
-)
+);
 
 Statistic.Grid = ({ id, children, columns, className = "" }) => (
   <StatisticGrid id={id} columns={columns} className={`${className}`}>
     {children}
   </StatisticGrid>
-)
+);
 
-Statistic.Card = ({ children }) => <StatCard className="h-100">{children}</StatCard>
+Statistic.Card = ({ children }) => <StatCard className="h-100">{children}</StatCard>;
 
 Statistic.BorderCard = ({ border, children, className = "" }) => (
   <StatBorderCard border={border} className={`${className} h-100`}>
     {children}
   </StatBorderCard>
-)
+);
 
 Statistic.SolidCard = ({ background, colour, children, className = "" }) => (
   <StatSolidCard background={background} colour={colour} className={`${className} align-self-stretch`}>
     {children}
   </StatSolidCard>
-)
+);
 
-Statistic.Icon = ({ icon, colour }) => <StatIcon colour={colour} className={`${icon} mt-3 fa-4x`} aria-hidden="true" />
+Statistic.Icon = ({ icon, colour }) => <StatIcon colour={colour} className={`${icon} mt-3 fa-4x`} aria-hidden="true" />;
 
 Statistic.Value = ({ children, fontsize, className = "" }) => (
   <StatValue className={className} fontsize={fontsize}>
     {children}
   </StatValue>
-)
+);
 
-Statistic.Type = ({ children, className = "" }) => <StatType className={className}>{children}</StatType>
+Statistic.Type = ({ children, className = "" }) => <StatType className={className}>{children}</StatType>;
 
 /***
  *
@@ -109,9 +109,9 @@ Statistic.Type = ({ children, className = "" }) => <StatType className={classNam
  *    }
  */
 Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
-  const divisbleByTwo = stats.length % 2 === 0
-  const divisbleByThree = stats.length % 3 === 0
-  const divisbleByFour = stats.length % 4 === 0
+  const divisbleByTwo = stats.length % 2 === 0;
+  const divisbleByThree = stats.length % 3 === 0;
+  const divisbleByFour = stats.length % 4 === 0;
 
   const colorClasses = [
     {
@@ -130,7 +130,7 @@ Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
       bg: "tw-bg-uofg-blue",
       text: "tw-text-black",
     },
-  ]
+  ];
 
   const dlClasses = classNames(
     "tw-flex",
@@ -147,7 +147,7 @@ Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
     {
       "tw-grid tw-grid-cols-1 sm:tw-grid-cols-2": divisbleByTwo && !divisbleByFour,
     },
-  )
+  );
 
   const statClasses = classNames(
     "tw-flex-1",
@@ -157,6 +157,7 @@ Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
     "tw-gap-5",
     "tw-p-12",
     "tw-relative",
+    "md:tw-min-h-[285px]",
     fullWidthBG
       ? classNames(
           'sm:before:tw-content-[""]',
@@ -187,19 +188,26 @@ Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
           "last:after:tw-z-0",
         )
       : "",
-  )
+  );
 
-  const dtClasses = classNames("tw-text-center", "tw-font-normal", "tw-text-4xl", "tw-leading-tight")
+  const dtClasses = classNames(
+    "tw-text-center",
+    "tw-font-normal",
+    "tw-text-5xl",
+    "tw-leading-tight",
+    "tw-break-words",
+    "tw-hyphens-auto",
+  );
 
-  const ddClasses = classNames("tw-text-center", "tw-font-normal", "tw-text-3xl")
+  const ddClasses = classNames("tw-text-center", "tw-font-normal", "tw-text-3xl");
 
   return (
     <dl className={dlClasses}>
       {stats.map((stat, index) => {
-        const color = colorClasses[index % colorClasses.length]
-        const type = stat.field_statistic_represents
-        const value = stat.field_statistic_value
-        const icon = stat.field_font_awesome_icon
+        const color = colorClasses[index % colorClasses.length];
+        const type = stat.field_statistic_represents;
+        const value = stat.field_statistic_value;
+        const icon = stat.field_font_awesome_icon;
 
         return (
           <div key={value + type} className={classNames(statClasses, color.bg, color.text)}>
@@ -210,10 +218,10 @@ Statistic.Gradient = ({ stats, fullWidthBG = true }) => {
               <span dangerouslySetInnerHTML={{ __html: type }}></span>
             </dd>
           </div>
-        )
+        );
       })}
     </dl>
-  )
-}
+  );
+};
 
-export default Statistic
+export default Statistic;
