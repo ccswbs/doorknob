@@ -34,6 +34,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     {
