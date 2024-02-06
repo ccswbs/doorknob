@@ -15,9 +15,11 @@ export const toTitleCase = str => {
     "of",
     "in",
     "with",
-  ]
+  ];
 
-  return str.toLowerCase().replace(/\w+(?:-\w+)*/g, word => {
-    return lowercaseWords.includes(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)
-  })
-}
+  return str
+    .toLowerCase()
+    .split(/\s+|-|_+/)
+    .map(word => (lowercaseWords.includes(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)))
+    .join(' ')
+};

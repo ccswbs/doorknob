@@ -1,9 +1,7 @@
-const path = require("path")
-
+const path = require("path");
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   const typeDefs = [
     `
@@ -60,10 +58,55 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         eventsCategories: `WpEventToEventsCategoryConnection`,
         isPast: {
           type: `Boolean`,
-          resolve: (source) => new Date(source.startDate) < new Date(),
+          resolve: source => new Date(source.startDate) < new Date(),
         },
       },
     }),
-  ]
-  createTypes(typeDefs)
-}
+  ];
+  createTypes(typeDefs);
+};
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+
+  // Building program search pages
+  const programSearchTimer = reporter.activityTimer(`Building programs search pages.`);
+  programSearchTimer.start();
+
+  const programsSeachQuery = await graphql(`
+    query {
+      allProgramsYaml {
+        nodes {
+          level_of_education
+        }
+      }
+    }
+  `);
+
+  if (programsSeachQuery.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query for program search pages.`);
+    return;
+  }
+
+  const programSearchTemplate = path.resolve("./src/templates/programs-search.js");
+  const levelSet = new Set();
+
+  for (const node of programsSeachQuery.data.allProgramsYaml.nodes) {
+    levelSet.add(node.level_of_education);
+  }
+
+  const levels = Array.from(levelSet);
+
+  for (const level of levels) {
+    createPage({
+      path: `/programs/${level}`,
+      component: programSearchTemplate,
+      context: {
+        level,
+        all_levels: levels,
+      },
+    });
+  }
+
+  programSearchTimer.end();
+};
