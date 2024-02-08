@@ -1,26 +1,18 @@
 import React from "react"
-import classNames from "classnames"
 import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
-
-const LinkTab = ({ href, active, children }) => (
-  <li className="nav-item">
-    <Link className={classNames("nav-link p-3", { 'active': active })} to={href}>
-      {children}
-    </Link>
-  </li>
-)
+import Nav from 'react-bootstrap/Nav';
 
 export const LinkTabs = ({ tabs }) => {
   const location = useLocation()
 
   return (
-    <ul className="nav nav-tabs nav-fill fs-5">
+    <Nav fill variant="tabs" defaultActiveKey={location.pathname} as="ul">
       {tabs.map(({ href, content }) => (
-        <LinkTab href={href} key={href} active={location.pathname === href}>
-          {content}
-        </LinkTab>
+        <Nav.Item  key={href} as="li">
+          <Nav.Link eventKey={href} to={href} as={Link}>{content}</Nav.Link>
+        </Nav.Item>
       ))}
-    </ul>
+    </Nav>
   )
 }

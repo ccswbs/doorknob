@@ -10,7 +10,7 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
   return (
     <>
       <Container className="my-5">
-        <h1 className="my-5">Search for Programs</h1>
+        <h1 className="my-5">Search for Programs at the University of Guelph</h1>
 
         <LinkTabs
           tabs={pageContext.all_levels.map(level => ({ href: `/programs/${level}/`, content: toTitleCase(level) }))}

@@ -221,6 +221,47 @@ h1 {
   }
 }
 
+ul.nav-tabs {
+  display: flex;
+  border-bottom: 0.5rem solid #ffc72a !important;
+  padding: 0 !important;
+  gap: 0.5rem;
+}
+
+ul.nav-tabs li.nav-item {
+  margin-bottom: 0;
+}
+
+ul.nav-tabs li.nav-item::before {
+  content: none;
+}
+
+.nav-tabs .nav-link {
+  color: #000;
+  font-weight: 700;
+  background-color: #eee;
+  border-radius: 0.25rem 0.25rem 0 0;
+  margin: 0;
+  padding: 1.25rem;
+  border-bottom: 0.5rem solid #fff !important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  background-color: #ddd;
+}
+
+.nav-tabs .nav-link.active {
+  color: #000;
+  font-weight: 700;
+  background-color: #ffc72a;
+  border-bottom: 0.5rem solid #ffc72a !important;
+}
+
+.tab-content .tab-pane {
+  transition-duration: 250ms;
+}
+
 @media (min-width: 1200px) {
   .spotlight-hero-content {
     max-width: 1140px;
