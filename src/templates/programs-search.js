@@ -17,15 +17,16 @@ const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags
 );
 
 export default function ProgramSearchTemplate({ data, children, pageContext }) {
-  const [input, setInput] = useState("");
-  const filtered = useSearch(data.programs.nodes, input);
   const [programs, setPrograms] = useState(data.programs.nodes);
   const [checked, setChecked] = useState(false);
+  const [input, setInput] = useState("");
+  const filtered = useSearch(programs, input);
 
   useEffect(() => {
-    console.log("filtering");
-    setPrograms(checked ? filtered.filter(program => program.types.includes("Co-op")) : filtered);
-  }, [checked, filtered]);
+    checked
+      ? setPrograms(data.programs.nodes.filter(program => program.types.includes("Co-op")))
+      : setPrograms(data.programs.nodes);
+  }, [data.programs.nodes, checked]);
 
   return (
     <>
@@ -48,7 +49,7 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
           />
 
           {pageContext.level === "undergraduate" && (
-            <Form.Check // prettier-ignore
+            <Form.Check
               type="checkbox"
               id="program-search-co-op-checkbox"
               label="Only show co-op programs"
@@ -59,7 +60,7 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
         </div>
 
         <div id="program-search-grid" className="my-5">
-          {programs.map(program => (
+          {filtered.map(program => (
             <ProgramCard key={program.id} {...program} />
           ))}
         </div>
