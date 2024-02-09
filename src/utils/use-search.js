@@ -67,7 +67,7 @@ export const useSearch = (data, input, ranker = defaultRanker, parser = defaultP
       ?.map(node => node.data);
 
     setFiltered(filteredData || []);
-  }, [input, ranker, parser]);
+  }, [data, input, ranker, parser, sorter]);
 
   return filtered;
 };

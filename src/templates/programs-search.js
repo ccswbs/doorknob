@@ -1,68 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
-import { Container } from "react-bootstrap";
+import { Form, Container, InputGroup } from "react-bootstrap";
 import { LinkTabs } from "../components/linkTabs.js";
 import { toTitleCase } from "../utils/toTitleCase.js";
 import { useSearch } from "../utils/use-search.js";
 import "../styles/program-search.scss";
 
-export const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags = [] }) => (
+const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags = [] }) => (
   <div className="card">
     <div className="card-body d-flex flex-column">
-      <a href={url} className="card-title stretched-link text-decoration-none fw-bold fs-5">
-        {acronym ? `${title} (${acronym})` : title}
+      <a href={url} className="card-title stretched-link text-decoration-none fs-6">
+        {title}
       </a>
-      <p className="card-text">
-        {degrees.map(degree => (
-          <span className="d-block" key={degree}>
-            {degree}
-          </span>
-        ))}
-      </p>
-      <span className="d-block program-tags">
-        {tags
-          .map(tag => toTitleCase(tag))
-          .sort((a, b) => a.localeCompare(b))
-          .join(", ")}
-      </span>
     </div>
-
-    <div className="card-footer text-muted bg-info bg-opacity-10">{types.join(", ")}</div>
   </div>
 );
-
-export const ProgramSearch = ({ data }) => {
-  const [input, setInput] = useState("");
-  const filtered = useSearch(data, input);
-
-  return (
-    <Container>
-      <div className="row gap-5 gap-lg-0">
-        <div className="col-lg-9">
-          <label htmlFor="program-search-input" className="form-label">
-            What would you like to study?
-          </label>
-          <input
-            id="program-search-input"
-            className="form-control form-control-md"
-            type="text"
-            onChange={e => setInput(e.target.value)}
-          />
-        </div>
-      </div>
-
-      <div id="program-search-grid" className="my-5">
-        {filtered.map(program => (
-          <ProgramCard key={program.id} {...program} />
-        ))}
-      </div>
-    </Container>
-  );
-};
 
 export default function ProgramSearchTemplate({ data, children, pageContext }) {
   const [input, setInput] = useState("");
   const filtered = useSearch(data.programs.nodes, input);
+  const [programs, setPrograms] = useState(data.programs.nodes);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    console.log("filtering");
+    setPrograms(checked ? filtered.filter(program => program.types.includes("Co-op")) : filtered);
+  }, [checked, filtered]);
 
   return (
     <>
@@ -75,22 +38,28 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
       </Container>
 
       <Container>
-        <div className="row gap-5 gap-lg-0">
-          <div className="col-lg-9">
-            <label htmlFor="program-search-input" className="form-label">
-              What would you like to study?
-            </label>
-            <input
-              id="program-search-input"
-              className="form-control form-control-md"
-              type="text"
-              onChange={e => setInput(e.target.value)}
+        <div className="gap-5 gap-lg-0">
+          <Form.Label htmlFor="program-search-input">What do you want to study?</Form.Label>
+          <Form.Control
+            className={pageContext.level === "undergraduate" ? "col-lg-9" : "col-lg-12"}
+            type="text"
+            id="program-search-input"
+            onChange={e => setInput(e.target.value)}
+          />
+
+          {pageContext.level === "undergraduate" && (
+            <Form.Check // prettier-ignore
+              type="checkbox"
+              id="program-search-co-op-checkbox"
+              label="Only show co-op programs"
+              className="mt-2"
+              onChange={e => setChecked(e.target.checked)}
             />
-          </div>
+          )}
         </div>
 
         <div id="program-search-grid" className="my-5">
-          {filtered.map(program => (
+          {programs.map(program => (
             <ProgramCard key={program.id} {...program} />
           ))}
         </div>

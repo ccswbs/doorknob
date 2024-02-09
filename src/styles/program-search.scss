@@ -1,14 +1,18 @@
 #program-search-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 3rem;
 
   .card:hover .card-body,
   .card:focus-within .card-body {
-    background-color: rgba(0, 110, 183, 0.15) !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
   }
 
   .card {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
     .card-footer {
       &::after {
         content: "\200B";
