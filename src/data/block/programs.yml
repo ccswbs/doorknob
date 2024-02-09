@@ -2172,18 +2172,82 @@
     - health
     - medical
   level_of_education: graduate
-- title: Test
+- title: Agriculture
   acronym: ""
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/veterinary-science/
+  url: https://www.ridgetownc.com/future/dagr/
   degrees: []
   types:
-    - DVSc
+    - Associate Diploma
+    - Co-op
   tags:
-    - biology
-    - science
-    - health
-    - medical
+    - agriculture
+    - botany
   level_of_education: certificate-and-diploma
+- title: Environmental Technician
+  acronym: ""
+  url: https://www.ridgetownc.com/future/denm/
+  degrees: []
+  types:
+    - Associate Diploma
+    - Co-op
+  tags:
+    - agriculture
+    - botany
+    - environment
+  level_of_education: certificate-and-diploma
+
+- title: Equine Care & Management
+  acronym: ""
+  url: https://www.ridgetownc.com/future/denm/
+  degrees: []
+  types:
+    - Associate Diploma
+    - Co-op
+  tags:
+    - business
+    - nutrition
+    - animal
+    - management
+  level_of_education: certificate-and-diploma
+
+- title: Horticulture
+  acronym: ""
+  url: https://www.ridgetownc.com/future/dhrt/
+  degrees: []
+  types:
+    - Associate Diploma
+    - Co-op
+  tags:
+    - landscaping
+    - botany
+    - plant
+  level_of_education: certificate-and-diploma
+
+- title: Turfgrass Management
+  acronym: DTM
+  url: https://www.uoguelph.ca/programs/turfgrass-management/
+  degrees: []
+  types:
+    - Associate Diploma
+    - Co-op
+  tags:
+    - landscaping
+    - botany
+    - plant
+  level_of_education: certificate-and-diploma
+
+- title: Veterinary Technology
+  acronym: ""
+  url: https://www.ridgetownc.com/future/dvt/
+  degrees: []
+  types:
+    - Associate Diploma
+  tags:
+    - animal
+    - vet
+    - biology
+  level_of_education: certificate-and-diploma
+
 - title: Test
   acronym: ""
   url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/veterinary-science/

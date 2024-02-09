@@ -16,6 +16,8 @@ const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags
   </div>
 );
 
+const levelToTitle = level => `${toTitleCase(level)}${level === "continuing-education" ? "" : " Programs"}`;
+
 export default function ProgramSearchTemplate({ data, children, pageContext }) {
   const [programs, setPrograms] = useState(data.programs.nodes);
   const [checked, setChecked] = useState(false);
@@ -31,10 +33,10 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
   return (
     <>
       <Container className="my-5">
-        <h1 className="my-5">{toTitleCase(pageContext.level)} {pageContext.level === "continuing-education" ? "" : "Programs"} at the University of Guelph</h1>
+        <h1 className="my-5">{levelToTitle(pageContext.level)} at the University of Guelph</h1>
 
         <LinkTabs
-          tabs={pageContext.all_levels.map(level => ({ href: `/programs/${level}/`, content: toTitleCase(level) }))}
+          tabs={pageContext.all_levels.map(level => ({ href: `/programs/${level}/`, content: levelToTitle(level) }))}
         />
       </Container>
 
