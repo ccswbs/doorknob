@@ -274,6 +274,10 @@ ul.nav-tabs li.nav-item::before {
   ul.nav-tabs {
     grid-template-columns: 1fr 1fr;
   }
+
+  .nav-tabs .nav-item:nth-child(3) .nav-link.active {
+    border-bottom: 0.5rem solid #ffc72a !important;
+  }
 }
 
 @media (min-width: 1200px) {
