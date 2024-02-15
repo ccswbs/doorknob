@@ -78,3 +78,6 @@ yarn-error.log
 .flaskenv*
 !.env.project
 !.env.vault
+
+# JetBrains Fleet
+.fleet
