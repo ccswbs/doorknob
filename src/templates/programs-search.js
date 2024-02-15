@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { Form, Container, InputGroup } from "react-bootstrap";
 import { LinkTabs } from "../components/linkTabs.js";
 import { toTitleCase } from "../utils/toTitleCase.js";
-import { useSearch } from "../utils/use-search.js";
+import { useSearch } from "../hooks/use-search.js";
 import "../styles/program-search.scss";
 
 const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags = [] }) => (
