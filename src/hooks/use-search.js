@@ -5,7 +5,14 @@ const pattern = /\s+|\band\b|\bof\b|\bin\b/g;
 const defaultRanker = (node, keywords) => {
   // Split some of the program props into an array of words just like the keywords.
   const title = node?.title?.toLowerCase().split(pattern) || [];
-  const tags = node?.tags?.map(tag => tag.toLowerCase()) || [];
+  const tags = node?.tags || [];
+  const nonWildcardTags = [];
+  const wildcardTags = [];
+
+  for (const tag of tags) {
+    const value = tag.toLowerCase();
+    tag.endsWith("*") ? wildcardTags.push(value.slice(0, -1)) : nonWildcardTags.push(value);
+  }
 
   // We rank each keyword individually, then take the highest (lowest number) rank as the program's rank overall.
   // If any single keyword doesn't match (i.e. rank = -1), then the program as a whole doesn't match.
@@ -17,7 +24,10 @@ const defaultRanker = (node, keywords) => {
     if (title.some(word => word.startsWith(keyword))) return 0;
 
     // If the keyword is in the program's tags, return 2 if the none of the previous keywords had a higher rank.
-    if (tags.some(tag => tag.startsWith(keyword))) return isNaN(rank) ? 2 : Math.min(rank, 1);
+    if (nonWildcardTags.some(tag => tag.startsWith(keyword))) return isNaN(rank) ? 2 : Math.min(rank, 1);
+
+    // Some tags will be truncated with a wildcard (*) meaning we should match the keyword as long as it starts with the same characters as the tag up to that wildcard
+    if (wildcardTags.some(tag => keyword.startsWith(tag))) return isNaN(rank) ? 2 : Math.min(rank, 1);
 
     return -1;
   }, NaN);
