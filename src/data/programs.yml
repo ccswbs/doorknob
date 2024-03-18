@@ -60,7 +60,14 @@
     - Minor
     - Area of Concentration
   tags:
-    - humanities
+    - poli*
+    - cultur*
+    - human
+    - socio*
+    - antho*
+    - public
+    - affairs
+    - socio*
   level_of_education: undergraduate
 - title: Applied Geomatics
   acronym: AG
@@ -80,10 +87,11 @@
   types:
     - Major
   tags:
-    - food
     - health
-    - biology
-    - science
+    - diet*
+    - nutrition*
+    - food
+    - rd
   level_of_education: undergraduate
 - title: Art History
   acronym: ARTH
@@ -125,10 +133,43 @@
   types:
     - Major
   tags:
-    - biology
-    - health
-    - medical
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - medic*
+    - biomolecu*
+    - physi*
+    - kinesio*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - exercise
+    - nutri*
+    - sports
+    - biomechanic*
+    - athlet*
+    - movement
+    - rehab*
+    - anatom*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
+    - pharma*
+    - cogniti*
+    - diet*
   level_of_education: undergraduate
 - title: Biochemistry
   acronym: BIOC
@@ -140,9 +181,23 @@
     - Co-op
     - Minor
   tags:
-    - biology
-    - chemistry
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - chem*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - medic*
+    - biomolecu*
+    - disease
+    - clinic*
+    - patho*
+    - pharma*
   level_of_education: undergraduate
 - title: Biodiversity
   acronym: BIOD
@@ -206,8 +261,52 @@
   types:
     - Major
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - biomedic*
+    - health*
+    - molecu*
+    - natur*
+    - eco*
+    - wild*
+    - cell*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - medic*
+    - biomolecu*
+    - physi*
+    - kinesio*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - exercise
+    - nutri*
+    - sports
+    - biomechanic*
+    - athlet*
+    - movement
+    - rehab*
+    - anatom*
+    - sustain*
+    - mammal*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
+    - pharma*
+    - cogniti*
+    - diet*
   level_of_education: undergraduate
 - title: Biology
   acronym: BIOL
@@ -335,8 +434,20 @@
   types:
     - Major
   tags:
-    - humanities
+    - child*
+    - youth
+    - educat*
+    - teach*
+    - early
+    - relation*
+    - socio*
+    - social
+    - cultur*
+    - psych*
+    - sex*
     - health
+    - family
+    - pedagog*
   level_of_education: undergraduate
 - title: Classical Studies
   acronym: CLAS
@@ -418,9 +529,13 @@
     - Co-op
     - Minor
   tags:
-    - humanities
+    - poli*
+    - crim*
+    - govern*
     - law
-    - politics
+    - power
+    - affairs
+    - socio*
   level_of_education: undergraduate
 - title: Crop Science
   acronym: CRSC
@@ -522,7 +637,15 @@
     - Major
     - Co-op
   tags:
-    - biology
+    - geograph*
+    - environment
+    - climat*
+    - conserv*
+    - natur*
+    - resource
+    - land
+    - water
+    - sustain*
     - science
   level_of_education: undergraduate
 - title: Environmental Biology
@@ -605,7 +728,16 @@
     - Major
     - Co-op
   tags:
-    - humanities
+    - geograph*
+    - environment
+    - climat*
+    - conserv*
+    - natur*
+    - resource
+    - land
+    - water
+    - sustain*
+    - poli*
   level_of_education: undergraduate
 - title: Environmental Management
   acronym: EM
@@ -682,7 +814,19 @@
   types:
     - Major
   tags:
-    - humanities
+    - child*
+    - youth
+    - adult
+    - life
+    - relation*
+    - cultur*
+    - psych*
+    - socio*
+    - development
+    - gerontology
+    - aging
+    - sex*
+    - health
   level_of_education: undergraduate
 - title: Food and Agricultural Business
   acronym: FAB
@@ -771,7 +915,15 @@
     - Minor
     - Area of Concentration
   tags:
-    - geography
+    - geograph*
+    - environment
+    - climat*
+    - conserv*
+    - natur*
+    - resource
+    - land
+    - water
+    - sustain*
     - science
   level_of_education: undergraduate
 - title: German
@@ -850,8 +1002,35 @@
   types:
     - Major
   tags:
-    - health
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biomedic*
+    - health*
+    - cell*
+    - medic*
+    - physi*
+    - kinesio*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - exercise
+    - nutri*
+    - sports
+    - biomechanic*
+    - athlet*
+    - movement
+    - rehab*
+    - anatom*
+    - immun*
+    - virolog*
+    - virus
+    - infect*
+    - dna
+    - diet*
   level_of_education: undergraduate
 - title: Human Resources
   acronym: HR
@@ -905,10 +1084,16 @@
     - Minor
     - Area of Concentration
   tags:
-    - humanities
-    - politics
-    - culture
-    - economics
+    - poli*
+    - environment
+    - climat*
+    - conserv*
+    - natur*
+    - resource
+    - land
+    - water
+    - sustain*
+    - govern*
   level_of_education: undergraduate
 - title: Italian
   acronym: ITAL
@@ -929,9 +1114,14 @@
     - Major
     - Co-op
   tags:
-    - humanities
+    - poli*
+    - crim*
+    - govern*
     - law
-    - politics
+    - power
+    - public
+    - affairs
+    - socio*
   level_of_education: undergraduate
 - title: Landscape Architecture
   acronym: LA
@@ -997,8 +1187,26 @@
     - Major
     - Co-op
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - ocean*
+    - aqua*
+    - fish*
+    - sustain*
+    - mammal*
+    - sea*
+    - water*
+    - evolution*
   level_of_education: undergraduate
 - title: Marketing
   acronym: MKTG
@@ -1090,8 +1298,29 @@
     - Co-op
     - Minor
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - medic*
+    - biomolecu*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
   level_of_education: undergraduate
 - title: Molecular Biology and Genetics
   acronym: MBG
@@ -1103,8 +1332,31 @@
     - Co-op
     - Minor
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - biodivers*
+    - medic*
+    - biomolecu*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - micro*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
+    - pharma*
   level_of_education: undergraduate
 - title: Museum Studies
   acronym: MS
@@ -1153,9 +1405,12 @@
     - Co-op
     - Minor
   tags:
-    - biology
-    - science
-    - health
+    - psych*
+    - neuro*
+    - brain
+    - cogni*
+    - human
+    - behav*
   level_of_education: undergraduate
 - title: Nutritional and Nutraceutical Sciences
   acronym: NANS
@@ -1167,10 +1422,28 @@
     - Co-op
     - Minor
   tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biomedic*
+    - health*
+    - medic*
+    - biomolecu*
+    - physi*
+    - kinesio*
+    - disease
+    - clinic*
+    - patho*
+    - exercise
+    - nutri*
+    - micro*
+    - pharma*
+    - diet*
+    - nutraceut*
     - food
-    - science
-    - health
-    - biology
+    - supplement*
   level_of_education: undergraduate
 - title: One Health
   acronym: ONEH
@@ -1256,8 +1529,14 @@
     - Minor
     - Area of Concentration
   tags:
-    - humanities
-    - politics
+    - poli*
+    - crim*
+    - govern*
+    - law
+    - power
+    - justice
+    - affairs
+    - socio*
   level_of_education: undergraduate
 - title: Project Management
   acronym: PM
@@ -1280,7 +1559,13 @@
     - Minor
     - Area of Concentration
   tags:
-    - humanities
+    - psych*
+    - neuro*
+    - brain
+    - cogni*
+    - human
+    - behav*
+    - cultur*
   level_of_education: undergraduate
 - title: Public Policy and Administration
   acronym: PPA
@@ -1329,8 +1614,16 @@
     - Minor
     - Area of Concentration
   tags:
-    - humanities
-    - culture
+    - poli*
+    - crim*
+    - govern*
+    - law
+    - power
+    - institution*
+    - affairs
+    - socio*
+    - justice
+    - public
   level_of_education: undergraduate
 - title: Software Engineering
   acronym: SENG
@@ -1372,6 +1665,7 @@
   tags:
     - business
     - management
+    - sports
   level_of_education: undergraduate
 - title: Statistics
   acronym: STAT
@@ -1464,8 +1758,26 @@
     - Major
     - Co-op
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - ocean*
+    - aqua*
+    - fish*
+    - sustain*
+    - mammal*
+    - sea*
+    - water*
+    - evolution*
   level_of_education: undergraduate
 - title: Zoology
   acronym: ZOO
@@ -1476,8 +1788,23 @@
     - Major
     - Minor
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - fish*
+    - sustain*
+    - mammal*
+    - evolution*
+    - dna
   level_of_education: undergraduate
 - title: Accounting
   acronym: ""
@@ -1520,10 +1847,16 @@
     - MSc
     - PhD
   tags:
-    - biology
-    - science
-    - technology
-    - statistics
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - informat*
+    - data
+    - statistic*
+    - programming
+    - analys*
   level_of_education: graduate
 - title: Biomedical Sciences
   acronym: ""
@@ -1636,7 +1969,16 @@
   types:
     - MCL
   tags:
-    - humanities
+    - geograph*
+    - environment
+    - climat*
+    - conserv*
+    - natur*
+    - resource
+    - land
+    - water
+    - sustain*
+    - science
   level_of_education: graduate
 - title: Creative Writing
   acronym: ""
@@ -1656,9 +1998,14 @@
   types:
     - MA
   tags:
-    - humanities
+    - poli*
+    - crim*
+    - govern*
     - law
-    - politics
+    - power
+    - public
+    - affairs
+    - socio*
   level_of_education: graduate
 - title: Critical Studies in Improvisation
   acronym: ""
@@ -1857,10 +2204,39 @@
     - MSc
     - PhD
   tags:
-    - health
-    - food
-    - science
-    - nutrition
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biomedic*
+    - health*
+    - cell*
+    - medic*
+    - biomolecu*
+    - physi*
+    - kinesio*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - exercise
+    - nutri*
+    - sports
+    - biomechanic*
+    - athlet*
+    - movement
+    - rehab*
+    - anatom*
+    - micro*
+    - immun*
+    - virolog*
+    - virus
+    - infect*
+    - dna
+    - pharma*
+    - cogniti*
+    - diet*
   level_of_education: graduate
 - title: Integrative Biology
   acronym: ""
@@ -1870,8 +2246,21 @@
     - MSc
     - PhD
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - sustain*
+    - mammal*
+    - evolution*
   level_of_education: graduate
 - title: Landscape Architecture
   acronym: ""
@@ -1955,8 +2344,31 @@
     - MSc
     - PhD
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - medic*
+    - biomolecu*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
+    - pharma*
   level_of_education: graduate
 - title: Pathobiology
   acronym: ""
@@ -2075,9 +2487,12 @@
   types:
     - MA
   tags:
-    - humanities
-    - culture
-    - history
+    - poli*
+    - cultur*
+    - human
+    - antho*
+    - affairs
+    - socio*
   level_of_education: graduate
 - title: Rural Planning and Development
   acronym: ""
@@ -2105,8 +2520,24 @@
   types:
     - PhD
   tags:
-    - humanities
-    - culture
+    - poli*
+    - indigen*
+    - justice
+    - feminis*
+    - decolon*
+    - interdisciplinary
+    - sex*
+    - disab*
+    - gender
+    - lgb*
+    - psych*
+    - queer
+    - socio*
+    - anthro*
+    - geograph*
+    - family
+    - relation*
+    - critical
   level_of_education: graduate
 - title: Sociology
   acronym: ""
@@ -2159,8 +2590,21 @@
   types:
     - MWB
   tags:
-    - biology
-    - science
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - fish*
+    - sustain*
+    - mammal*
   level_of_education: graduate
 - title: Veterinary Science
   acronym: ""
@@ -2197,7 +2641,6 @@
     - botany
     - environment
   level_of_education: certificate-and-diploma
-
 - title: Equine Care & Management
   acronym: ""
   url: https://www.ridgetownc.com/future/denm/
@@ -2211,7 +2654,6 @@
     - animal
     - management
   level_of_education: certificate-and-diploma
-
 - title: Horticulture
   acronym: ""
   url: https://www.ridgetownc.com/future/dhrt/
@@ -2224,7 +2666,6 @@
     - botany
     - plant
   level_of_education: certificate-and-diploma
-
 - title: Turfgrass Management
   acronym: DTM
   url: https://www.uoguelph.ca/programs/turfgrass-management/
@@ -2237,7 +2678,6 @@
     - botany
     - plant
   level_of_education: certificate-and-diploma
-
 - title: Veterinary Technology
   acronym: ""
   url: https://www.ridgetownc.com/future/dvt/
@@ -2249,7 +2689,6 @@
     - vet
     - biology
   level_of_education: certificate-and-diploma
-
 - title: Test
   acronym: ""
   url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/veterinary-science/
