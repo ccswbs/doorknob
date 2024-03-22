@@ -1,83 +1,110 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
+import { editDistance } from "../utils/editDistance.js";
 
-const pattern = /\s+|\band\b|\bof\b|\bin\b/g;
-
-const defaultRanker = (node, keywords) => {
-  // Split some of the program props into an array of words just like the keywords.
-  const title = node?.title?.toLowerCase().split(pattern) || [];
-  const tags = node?.tags || [];
-  const nonWildcardTags = [];
-  const wildcardTags = [];
-
-  for (const tag of tags) {
-    const value = tag.toLowerCase();
-    tag.endsWith("*") ? wildcardTags.push(value.slice(0, -1)) : nonWildcardTags.push(value);
+export class BasicSearcher {
+  static parse(input) {
+    return (
+      input
+        .toLowerCase()
+        // Remove leading and trailing whitespace
+        .trim()
+        // Remove all non-alphabetic and non-whitespace characters
+        .replace(/[^a-zA-Z\s]/g, "")
+        // Split on whitespace and "and"
+        .split(/\s+|\band\b|\bof\b|\bin\b/g)
+        // Remove empty strings
+        .filter(word => word.length > 0)
+    );
   }
+  static process(data) {
+    return {
+      data,
+      keywords: BasicSearcher.parse(data.title),
+      tags: data.tags ?? [],
+    };
+  }
+  static rank(node, parsed) {
+    let rank = 0;
 
-  // We rank each keyword individually, then take the highest (lowest number) rank as the program's rank overall.
-  // If any single keyword doesn't match (i.e. rank = -1), then the program as a whole doesn't match.
-  return keywords.reduce((rank, keyword) => {
-    // The previous keyword didn't match, so this keyword can't match either, so we don't need to get its rank.
-    if (rank === -1) return -1;
+    for (const word of parsed) {
+      for (const keyword of node.keywords) {
 
-    // If any word in the title starts with or is equal to the keyword return 0 (highest rank).
-    if (title.some(word => word.startsWith(keyword))) return 0;
+        // If the keyword and the word are the same, add 10 to the rank.
+        // We test the length first to avoid the more expensive string comparison as it's not necessary if the lengths are different.
+        if (keyword.length === word.length && keyword === word) {
+          rank += 10;
+          continue;
+        }
 
-    // If the keyword is in the program's tags, return 2 if the none of the previous keywords had a higher rank.
-    if (nonWildcardTags.some(tag => tag.startsWith(keyword))) return isNaN(rank) ? 2 : Math.min(rank, 1);
+        // If the keyword and the word are within 2 characters of each other and have an edit distance of 2 or less (i.e. 2 or fewer changes), add 7 to the rank.
+        // This is to account for typos and minor spelling mistakes.
+        // We test the length difference first to avoid the more expensive editDistance function as it's not necessary if the length difference is too large.
+        if (Math.abs(keyword.length - word.length) <= 2 && editDistance(keyword, word) <= 2) {
+          rank += 7;
+          continue;
+        }
 
-    // Some tags will be truncated with a wildcard (*) meaning we should match the keyword as long as it starts with the same characters as the tag up to that wildcard
-    if (wildcardTags.some(tag => keyword.startsWith(tag))) return isNaN(rank) ? 2 : Math.min(rank, 1);
+        // If the keyword starts with the word, add 5 to the rank.
+        // This is to account for the user typing the beginning of a word.
+        if (keyword.startsWith(word)) {
+          rank += 5;
+        }
+      }
 
-    return -1;
-  }, NaN);
-};
+      for (const tag of node.tags) {
+        if (tag.length === word.length && tag === word) {
+          rank += 3;
+          continue;
+        }
 
-const defaultParser = input => {
-  return (
-    input
-      .toLowerCase()
-      // Remove leading and trailing whitespace
-      .trim()
-      // Remove all non-alphabetic and non-whitespace characters
-      .replace(/[^a-zA-Z\s]/g, "")
-      // Split on whitespace and "and"
-      .split(pattern)
-      // Remove empty strings
-      .filter(word => word.length > 0)
-  );
-};
+        if (Math.abs(tag.length - word.length) <= 2 && editDistance(tag, word) <= 2) {
+          rank += 2;
+          continue;
+        }
 
-const defaultSorter = (a, b) => a?.title?.localeCompare(b?.title);
+        if (tag.startsWith(word)) {
+          rank += 1;
+        }
+      }
+    }
 
-export const useSearch = (data, input, ranker = defaultRanker, parser = defaultParser, sorter = defaultSorter) => {
+    return rank;
+  }
+  static compare(a, b) {
+    return a?.title?.localeCompare(b?.title);
+  }
+}
+
+export const useSearch = (data, input, Searcher = BasicSearcher) => {
   if (!Array.isArray(data)) {
     throw new TypeError("data must be an array");
   }
 
-  const [filtered, setFiltered] = useState(data);
+  if (Searcher !== BasicSearcher && !(Searcher.prototype instanceof BasicSearcher)) {
+    throw new TypeError("Searcher must be a class that extends BasicSearcher or BasicSearcher itself.");
+  }
 
-  useEffect(() => {
-    if (!input) {
-      setFiltered(data);
-      return;
-    }
+  // Process the data once and store it in a memoized variable, so it doesn't have to be processed every time the input changes.
+  const processed = useMemo(() => data.map(Searcher.process), [data, Searcher.process]);
 
-    const keywords = parser(input);
-    const filteredData = data
-      ?.map(element => ({ data: element, rank: ranker(element, keywords) }))
-      ?.filter(node => node.rank >= 0)
-      ?.sort((a, b) => {
-        // Sort by rank
-        if (a.rank < b.rank) return -1;
-        if (a.rank > b.rank) return 1;
+  return useMemo(() => {
+    if (!input) return data;
 
-        return sorter(a, b);
-      })
-      ?.map(node => node.data);
+    return (
+      processed
+        // Add the rank based on the input and the Searcher's rank function to the processed data node.
+        ?.map(node => ({ ...node, rank: Searcher.rank(node, Searcher.parse(input)) }))
+        // Remove nodes with a rank of 0 or lower (i.e. no matches)
+        ?.filter(node => node.rank > 0)
+        // Sort by rank first, then by whatever the Searcher's compare function is
+        ?.sort((a, b) => {
+          if (a.rank > b.rank) return -1;
+          if (a.rank < b.rank) return 1;
 
-    setFiltered(filteredData || []);
-  }, [data, input, ranker, parser, sorter]);
-
-  return filtered;
+          return Searcher.compare(a.data, b.data);
+        })
+        // Map the array of objects back to an array of just the nodes
+        ?.map(node => node.data)
+    );
+  }, [input, Searcher, processed, data]);
 };
