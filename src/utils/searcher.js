@@ -22,33 +22,7 @@ export class Searcher {
 
   constructor(data) {
     this.tagTypeMap = new Map();
-    this.commonKeywords = new Map();
     this.processed = data.map(this.process.bind(this));
-
-    // Calculate the rarity (idf) of each keyword. This is used to determine common keywords which should play less of a role in determining the relevance of the user input. For example if a keyword is in every node then it's not very useful for searching, and we can ignore it in the users input.
-    this.commonKeywords.forEach((value, key) => {
-      this.commonKeywords.set(key, Math.log(this.processed.length / value));
-    });
-
-    // Calculate the IQR of the rarity values. This is used to determine the threshold for what is considered a common keyword.
-    const values = Array.from(this.commonKeywords.values()).sort((a, b) => a - b);
-    const q1 = values[Math.floor(values.length / 4)];
-    const q3 = values[Math.floor((values.length / 4) * 3)];
-    const iqr = q3 - q1;
-    const threshold = q1 - 1.5 * iqr;
-
-    console.log(threshold);
-
-    const itr = this.commonKeywords.entries();
-
-    // Remove all keywords that are above the threshold.
-    for (const [key, value] of itr) {
-      if (value >= threshold) {
-        this.commonKeywords.delete(key);
-      }
-    }
-
-    console.log(this.commonKeywords);
   }
 
   parse(input) {
@@ -67,16 +41,6 @@ export class Searcher {
   }
   process(node) {
     const keywords = this.parse(node.title);
-
-    const set = new Set();
-    for (const word of keywords) {
-      // If the word is already in the set, skip it.
-      if (set.has(word)) continue;
-
-      const value = this.commonKeywords.get(word) ?? 0;
-      this.commonKeywords.set(word, value + 1);
-      set.add(word);
-    }
 
     for (const tag of node.tags) {
       if (this.tagTypeMap.has(tag)) continue;
@@ -109,7 +73,7 @@ export class Searcher {
     return {
       data: node,
       keywords: keywords,
-      tags: node.tags.filter(tag => keywords.includes(tag)) ?? [],
+      tags: node.tags,
     };
   }
   rank(node, parsed) {
@@ -120,18 +84,15 @@ export class Searcher {
 
       // If the previous word in the user input didn't match then we can skip this node as we don't want partial matches.
       // This avoids matching things like "animal science" when the user types "computer science".
-      if(rank === 0 && i !== 0) {
+      if (rank === 0 && i !== 0) {
         return 0;
       }
 
       for (const keyword of node.keywords) {
-        const rarity = this.commonKeywords.get(keyword);
-        const correction = isNaN(rarity) ? 0 : Math.round(7 - rarity);
-
         // If the keyword and the word are the same.
         // We test the length first to avoid the more expensive string comparison as it's not necessary if the lengths are different.
         if (keyword.length === word.length && keyword === word) {
-          rank += Math.max(Searcher.RANKS.KEYWORD_EXACT - correction, 0);
+          rank += Searcher.RANKS.KEYWORD_EXACT;
           continue;
         }
 
@@ -146,7 +107,7 @@ export class Searcher {
         // If the keyword starts with the word.
         // This is to account for the user typing the beginning of a word.
         if (keyword.startsWith(word)) {
-          rank += Math.max(Searcher.RANKS.KEYWORD_STARTS_WITH - correction, 0);
+          rank += Searcher.RANKS.KEYWORD_STARTS_WITH;
         }
       }
 
