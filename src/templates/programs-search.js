@@ -4,16 +4,12 @@ import { Form, Container, InputGroup } from "react-bootstrap";
 import { LinkTabs } from "../components/linkTabs.js";
 import { toTitleCase } from "../utils/toTitleCase.js";
 import { useSearch } from "../hooks/use-search.js";
-import "../styles/program-search.scss";
+import * as styles from "../styles/program-search.module.css";
 
 const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags = [] }) => (
-  <div className="card">
-    <div className="card-body d-flex flex-column">
-      <a href={url} className="card-title stretched-link text-decoration-none fs-6">
-        {title}
-      </a>
-    </div>
-  </div>
+  <a href={url} className={`${styles.card}`}>
+    {title}
+  </a>
 );
 
 const levelToTitle = level => `${toTitleCase(level)}${level === "continuing-education" ? "" : " Programs"}`;
@@ -61,7 +57,7 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
           )}
         </div>
 
-        <div id="program-search-grid" className="my-5">
+        <div className={`${styles.grid} my-5`}>
           {filtered.map(program => (
             <ProgramCard key={program.id} {...program} />
           ))}

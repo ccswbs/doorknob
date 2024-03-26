@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: black;
+  background-color: #F5F7FA;
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transform: scale(1.05);
+}
+
