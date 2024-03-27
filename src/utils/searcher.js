@@ -9,19 +9,12 @@ export class Searcher {
     TAG_EXACT: 3,
     TAG_CLOSE: 2,
     TAG_STARTS_WITH: 1,
-    MULTI_WORD_TAG_EXACT: 12,
-    MULTI_WORD_TAG_CLOSE: 8,
-    MULTI_WORD_TAG_STARTS_WITH: 1,
-  };
-
-  static TAG_TYPES = {
-    NORMAL: 0b00,
-    WILDCARD: 0b01,
-    MULTI_WORD: 0b10,
+    MULTI_WORD_TAG_EXACT: 5,
+    MULTI_WORD_TAG_CLOSE: 4,
+    MULTI_WORD_TAG_STARTS_WITH: 3,
   };
 
   constructor(data) {
-    this.tagTypeMap = new Map();
     this.processed = data.map(this.process.bind(this));
   }
 
@@ -40,39 +33,9 @@ export class Searcher {
     );
   }
   process(node) {
-    const keywords = this.parse(node.title);
-
-    for (const tag of node.tags) {
-      if (this.tagTypeMap.has(tag)) continue;
-
-      let spaces = 0;
-      const wildcard = tag.includes("*");
-      let type = Searcher.TAG_TYPES.NORMAL;
-
-      for (let i = 0; i < tag.length; i++) {
-        if (tag[i] === " ") {
-          spaces++;
-        }
-      }
-
-      if (spaces > 0) {
-        type |= Searcher.TAG_TYPES.MULTI_WORD;
-      }
-
-      if (wildcard) {
-        type |= Searcher.TAG_TYPES.WILDCARD;
-      }
-
-      if ((type & Searcher.TAG_TYPES.MULTI_WORD) === Searcher.TAG_TYPES.MULTI_WORD) {
-        this.tagTypeMap.set(tag, { type, spaces });
-      } else {
-        this.tagTypeMap.set(tag, type);
-      }
-    }
-
     return {
       data: node,
-      keywords: keywords,
+      keywords: this.parse(node.title),
       tags: node.tags,
     };
   }
@@ -122,8 +85,13 @@ export class Searcher {
           continue;
         }
 
-        if (tag.startsWith(word)) {
+        if (tag.length >= word.length && tag.startsWith(word)) {
           rank += Searcher.RANKS.TAG_STARTS_WITH;
+        }
+
+        // Wildcard tags
+        if (tag.length - 1 < word.length && tag.endsWith("*") && word.startsWith(tag.slice(0, -1))) {
+          rank += Searcher.RANKS.MULTI_WORD_TAG_STARTS_WITH;
         }
       }
     }
