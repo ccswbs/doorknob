@@ -45,7 +45,7 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
               <Form.Check
                 type="checkbox"
                 id="program-search-majors-checkbox"
-                label="Only show majors"
+                label="Only show programs offered as a major"
                 className="mt-2"
                 onChange={e => setOnlyMajors(e.target.checked)}
               />
