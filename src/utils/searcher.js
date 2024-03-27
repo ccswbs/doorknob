@@ -87,11 +87,12 @@ export class Searcher {
 
         if (tag.length >= word.length && tag.startsWith(word)) {
           rank += Searcher.RANKS.TAG_STARTS_WITH;
+          continue;
         }
 
         // Wildcard tags
         if (tag.length - 1 < word.length && tag.endsWith("*") && word.startsWith(tag.slice(0, -1))) {
-          rank += Searcher.RANKS.MULTI_WORD_TAG_STARTS_WITH;
+          rank += Searcher.RANKS.TAG_EXACT;
         }
       }
     }
