@@ -15,16 +15,10 @@ const ProgramCard = ({ title, acronym, url = "#", degrees = [], types = [], tags
 const levelToTitle = level => `${toTitleCase(level)}${level === "continuing-education" ? "" : " Programs"}`;
 
 export default function ProgramSearchTemplate({ data, children, pageContext }) {
-  const [programs, setPrograms] = useState(data.programs.nodes);
-  const [checked, setChecked] = useState(false);
   const [input, setInput] = useState("");
-  const filtered = useSearch(programs, input);
-
-  useEffect(() => {
-    checked
-      ? setPrograms(data.programs.nodes.filter(program => program.types.includes("Co-op")))
-      : setPrograms(data.programs.nodes);
-  }, [data.programs.nodes, checked]);
+  const filtered = useSearch(data.programs.nodes, input);
+  const [onlyMajors, setOnlyMajors] = useState(false);
+  const [onlyCoop, setOnlyCoop] = useState(false);
 
   return (
     <>
@@ -47,20 +41,37 @@ export default function ProgramSearchTemplate({ data, children, pageContext }) {
           />
 
           {pageContext.level === "undergraduate" && (
-            <Form.Check
-              type="checkbox"
-              id="program-search-co-op-checkbox"
-              label="Only show co-op programs"
-              className="mt-2"
-              onChange={e => setChecked(e.target.checked)}
-            />
+            <div className="d-flex flex-column justify-content-between">
+              <Form.Check
+                type="checkbox"
+                id="program-search-majors-checkbox"
+                label="Only show majors"
+                className="mt-2"
+                onChange={e => setOnlyMajors(e.target.checked)}
+              />
+
+              <Form.Check
+                type="checkbox"
+                id="program-search-co-op-checkbox"
+                label="Only show programs offering co-op"
+                className="mt-2"
+                onChange={e => setOnlyCoop(e.target.checked)}
+              />
+            </div>
           )}
         </div>
 
         <div className={`${styles.grid} my-5`}>
-          {filtered.map(program => (
-            <ProgramCard key={program.id} {...program} />
-          ))}
+          {filtered
+            .filter(program => {
+              if (onlyMajors && !program.types.includes("Major")) return false;
+              if (onlyCoop && !program.types.includes("Co-op")) return false;
+
+              return true;
+            })
+            .map(program => (
+              <ProgramCard key={program.id} {...program} />
+            ))}
         </div>
       </Container>
     </>

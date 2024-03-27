@@ -44,6 +44,7 @@ export class Searcher {
 
     for (let i = 0; i < parsed.length; i++) {
       const word = parsed[i];
+      const previousRank = rank;
 
       // If the previous word in the user input didn't match then we can skip this node as we don't want partial matches.
       // This avoids matching things like "animal science" when the user types "computer science".
@@ -94,6 +95,12 @@ export class Searcher {
         if (tag.length - 1 < word.length && tag.endsWith("*") && word.startsWith(tag.slice(0, -1))) {
           rank += Searcher.RANKS.TAG_EXACT;
         }
+      }
+
+      // If after processing all the keywords and tags the rank hasn't changed, that means the word wasn't found in the keywords or tags, and we can skip this node.
+      // This avoids matching things like "animal science" when the user types "science computer".
+      if (previousRank === rank) {
+        return 0;
       }
     }
 

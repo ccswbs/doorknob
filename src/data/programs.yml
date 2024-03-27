@@ -496,6 +496,10 @@
     - technology
     - programming
     - engineering
+    - software development
+    - web development
+    - mathematics
+    - software design
   level_of_education: undergraduate
 - title: Computing and Information Science
   acronym: CIS
@@ -507,6 +511,9 @@
     - technology
     - programming
     - engineering
+    - computer science
+    - software development
+    - web development
   level_of_education: undergraduate
 - title: Creative Writing
   acronym: CW
@@ -2030,18 +2037,6 @@
     - science
     - mathematics
     - programming
-  level_of_education: graduate
-- title: Dairy Technology Management
-  acronym: ""
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/dairy-technology-management/
-  degrees: []
-  types:
-    - MDTM
-  tags:
-    - agriculture
-    - food
-    - science
-    - biology
   level_of_education: graduate
 - title: Data Science
   acronym: ""
