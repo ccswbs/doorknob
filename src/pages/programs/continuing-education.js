@@ -39,7 +39,7 @@ export default function ProgramsContinuingEducation({ data, children }) {
 
 export const query = graphql`
   query {
-    programs: allProgramsYaml(filter: { level_of_education: { eq: "continuing-education" } }) {
+    programs: allContinuingEducationProgramsYaml {
       nodes {
         id
         title

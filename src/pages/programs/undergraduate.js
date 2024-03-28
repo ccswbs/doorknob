@@ -71,7 +71,7 @@ export default function ProgramsUndergraduate({ data, children }) {
 
 export const query = graphql`
   query {
-    programs: allProgramsYaml(filter: { level_of_education: { eq: "undergraduate" } }) {
+    programs: allUndergraduateProgramsYaml {
       nodes {
         id
         title

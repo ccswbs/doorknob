@@ -39,7 +39,7 @@ export default function ProgramsGraduate({ data, children }) {
 
 export const query = graphql`
   query {
-    programs: allProgramsYaml(filter: { level_of_education: { eq: "graduate" } }) {
+    programs: allGraduateProgramsYaml {
       nodes {
         id
         title
