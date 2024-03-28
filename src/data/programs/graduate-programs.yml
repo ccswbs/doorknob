@@ -1,7 +1,7 @@
 - title: Accounting
   url: https://graduatestudies.uoguelph.ca/programs/accounting
   degrees:
-    - Diploma
+    - GDip
   types: []
   tags:
     - business
@@ -17,13 +17,14 @@
     - science
 - title: Applied Nutrition
   url: https://graduatestudies.uoguelph.ca/programs/applied-nutrition
-  degrees: []
+  degrees:
+    - MAN
   types: []
   tags:
     - health
     - food
 - title: Art History and Visual Culture
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/art-history-visual-culture/
+  url: https://graduatestudies.uoguelph.ca/programs/avc
   degrees:
     - MA
   types: []
@@ -31,8 +32,19 @@
     - arts
     - culture
     - history
+- title: Artificial Intelligence
+  url: https://graduatestudies.uoguelph.ca/programs/csai
+  degrees:
+    - MSc
+    - MASc
+  types: []
+  tags:
+    - technology
+    - science
+    - mathematics
+    - programming
 - title: Bioinformatics
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/bioinformatics/
+  url: https://graduatestudies.uoguelph.ca/programs/binf
   degrees:
     - MBINF
     - MSc
@@ -50,7 +62,7 @@
     - programming
     - analys*
 - title: Biomedical Sciences
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/biomedical-sciences/
+  url: https://graduatestudies.uoguelph.ca/programs/biom
   degrees:
     - MBS
     - MSc
@@ -63,7 +75,7 @@
     - health
     - medical
 - title: Biophysics
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/biophysics/
+  url: https://graduatestudies.uoguelph.ca/programs/biop
   degrees:
     - MSc
     - PhD
@@ -73,7 +85,7 @@
     - physics
     - science
 - title: Biotechnology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/biotechnology/
+  url: https://graduatestudies.uoguelph.ca/programs/biotechnology
   degrees:
     - MBIOT
   types: []
@@ -82,21 +94,21 @@
     - science
     - technology
 - title: Business Administration
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/business-administration/
+  url: https://graduatestudies.uoguelph.ca/programs/bus
   degrees:
     - MBA
   types: []
   tags:
     - business
 - title: Capacity Development and Extension
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/capacity-development-extension/
+  url: https://graduatestudies.uoguelph.ca/programs/cde
   degrees:
     - MSc
   types: []
   tags:
     - humanities
 - title: Chemistry
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/chemistry/
+  url: https://graduatestudies.uoguelph.ca/programs/chbi
   degrees:
     - MSc
     - PhD
@@ -105,7 +117,7 @@
     - chemistry
     - science
 - title: Clinical Studies
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/clinical-studies/
+  url: https://graduatestudies.uoguelph.ca/programs/clin
   degrees:
     - MSc
     - DVSc
@@ -116,7 +128,7 @@
     - health
     - medical
 - title: Computational Sciences
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/computational-sciences/
+  url: https://graduatestudies.uoguelph.ca/programs/computational-science-phd
   degrees:
     - PhD
   types: []
@@ -125,7 +137,7 @@
     - science
     - mathematics
 - title: Computer Science
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/computer-science/
+  url: https://graduatestudies.uoguelph.ca/programs/cis
   degrees:
     - MSc
     - PhD
@@ -136,7 +148,7 @@
     - mathematics
     - programming
 - title: Conservation Leadership
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/conservation-leadership/
+  url: https://graduatestudies.uoguelph.ca/Programs/ConservationLeadership
   degrees:
     - MCL
   types: []
@@ -152,7 +164,7 @@
     - sustain*
     - science
 - title: Creative Writing
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/creative-writing/
+  url: https://graduatestudies.uoguelph.ca/programs/crwr
   degrees:
     - MFA
   types: []
@@ -161,7 +173,7 @@
     - humanities
     - culture
 - title: Criminology and Criminal Justice Policy
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/criminology-criminal-justice-policy/
+  url: https://graduatestudies.uoguelph.ca/programs/ccjp
   degrees:
     - MA
   types: []
@@ -175,7 +187,7 @@
     - affairs
     - socio*
 - title: Critical Studies in Improvisation
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/critical-studies-improvisation/
+  url: https://graduatestudies.uoguelph.ca/programs/impr
   degrees:
     - MA
     - PhD
@@ -185,7 +197,7 @@
     - humanities
     - culture
 - title: Cybersecurity and Threat Intelligence
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/cybersecurity-threat-intelligence/
+  url: https://graduatestudies.uoguelph.ca/programs/mcti
   degrees:
     - MCTI
   types: []
@@ -194,8 +206,17 @@
     - science
     - mathematics
     - programming
+
+- title: Dairy Technology Management
+  url: https://graduatestudies.uoguelph.ca/programs/mdtm
+  degrees:
+    - MDTM
+  types: []
+  tags:
+    - food
+    - science
 - title: Data Science
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/data-science/
+  url: https://graduatestudies.uoguelph.ca/programs/data-science
   degrees:
     - MDS
   types: []
@@ -205,7 +226,7 @@
     - mathematics
     - programming
 - title: Economics
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/economics/
+  url: https://graduatestudies.uoguelph.ca/programs/econ
   degrees:
     - MA
     - PhD
@@ -215,7 +236,7 @@
     - economics
     - finance
 - title: Engineering
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/engineering/
+  url: https://graduatestudies.uoguelph.ca/programs/engg
   degrees:
     - MEng
     - MASc
@@ -225,7 +246,7 @@
     - technology
     - engineering
 - title: English
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/english/
+  url: https://graduatestudies.uoguelph.ca/programs/engl
   degrees:
     - MA
   types: []
@@ -234,7 +255,7 @@
     - humanities
     - language
 - title: Environmental Sciences
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/environmental-sciences/
+  url: https://graduatestudies.uoguelph.ca/programs/envs
   degrees:
     - MES
     - MSc
@@ -244,7 +265,7 @@
     - biology
     - science
 - title: European Studies
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/european-studies/
+  url: https://graduatestudies.uoguelph.ca/programs/eurs
   degrees:
     - MA
   types: []
@@ -252,7 +273,7 @@
     - humanities
     - culture
 - title: Family Relations and Applied Nutrition
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/family-relations-applied-nutrition/
+  url: https://graduatestudies.uoguelph.ca/programs/fran
   degrees:
     - MAN
     - MSc
@@ -264,16 +285,16 @@
     - humanities
     - science
 - title: Food Safety and Quality Assurance
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/food-safety-quality-assurance/
+  url: https://graduatestudies.uoguelph.ca/programs/fsqu
   degrees:
     - MSc
-    - Diploma
+    - GDip
   types: []
   tags:
     - food
     - science
 - title: Food Science
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/food-science/
+  url: https://graduatestudies.uoguelph.ca/programs/food
   degrees:
     - MSc
     - PhD
@@ -283,7 +304,7 @@
     - science
     - nutrition
 - title: Food, Agricultural and Resource Economics
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/food-agricultural-resource-economics/
+  url: https://graduatestudies.uoguelph.ca/programs/fare
   degrees:
     - MFARE
     - MSc
@@ -295,7 +316,7 @@
     - agriculture
     - economics
 - title: French
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/french/
+  url: https://graduatestudies.uoguelph.ca/programs/fren
   degrees:
     - MA
   types: []
@@ -303,7 +324,7 @@
     - humanities
     - language
 - title: Geography
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/geography/
+  url: https://graduatestudies.uoguelph.ca/programs/geog
   degrees:
     - MA
     - MSc
@@ -312,8 +333,8 @@
   tags:
     - geography
     - science
-- title: History - Tri-University Program
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/history-tri-university-program/
+- title: History
+  url: https://graduatestudies.uoguelph.ca/programs/hist
   degrees:
     - MA
     - PhD
@@ -322,7 +343,7 @@
     - humanities
     - history
 - title: Human Health and Nutritional Sciences
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/human-health-nutritional-sciences/
+  url: https://graduatestudies.uoguelph.ca/programs/hhns
   degrees:
     - MSc
     - PhD
@@ -362,7 +383,7 @@
     - cogniti*
     - diet*
 - title: Integrative Biology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/integrative-biology/
+  url: https://graduatestudies.uoguelph.ca/programs/ibio
   degrees:
     - MSc
     - PhD
@@ -383,8 +404,18 @@
     - sustain*
     - mammal*
     - evolution*
+- title: International Development Studies
+  url: https://graduatestudies.uoguelph.ca/programs/idev
+  degrees:
+    - PhD
+    - MSc
+    - MA
+  types: []
+  tags:
+    - humanities
+    - culture
 - title: Landscape Architecture
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/landscape-architecture/
+  url: https://graduatestudies.uoguelph.ca/programs/ldar
   degrees:
     - MLA
   types: []
@@ -392,7 +423,7 @@
     - architecture
     - design
 - title: Latin American and Caribbean Studies
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/latin-american-caribbean-studies/
+  url: https://graduatestudies.uoguelph.ca/programs/lacs
   degrees:
     - MA
   types: []
@@ -401,7 +432,7 @@
     - culture
     - history
 - title: Leadership
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/leadership/
+  url: https://graduatestudies.uoguelph.ca/programs/lead
   degrees:
     - MA
   types: []
@@ -409,7 +440,7 @@
     - humanities
     - business
 - title: Literary Studies/Theatre Studies in English
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/literary-studies-theatre-studies-english/
+  url: https://graduatestudies.uoguelph.ca/programs/sets
   degrees:
     - PhD
   types: []
@@ -417,7 +448,7 @@
     - arts
     - humanities
 - title: Management
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/management/
+  url: https://graduatestudies.uoguelph.ca/programs/mgmt
   degrees:
     - MSc
     - PhD
@@ -425,17 +456,25 @@
   tags:
     - business
     - management
+- title: Market Research
+  url: https://graduatestudies.uoguelph.ca/programs/marketresearch
+  degrees:
+    - GDip
+  types: []
+  tags:
+    - business
+    - marketing
 - title: Marketing and Consumer Studies
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/marketing-consumer-studies/
+  url: https://graduatestudies.uoguelph.ca/programs/cost
   degrees:
     - MSc
-    - Diploma
+    - GDip
   types: []
   tags:
     - business
     - marketing
 - title: Mathematics and Statistics
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/mathematics-statistics/
+  url: https://graduatestudies.uoguelph.ca/programs/math
   degrees:
     - MSc
     - PhD
@@ -444,7 +483,7 @@
     - mathematics
     - statistics
 - title: Molecular and Cellular Biology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/molecular-cellular-biology/
+  url: https://graduatestudies.uoguelph.ca/programs/mcb
   degrees:
     - MSc
     - PhD
@@ -475,13 +514,69 @@
     - infect*
     - dna
     - pharma*
+- title: Neuroscience
+  url: https://graduatestudies.uoguelph.ca/programs/neur
+  degrees:
+    - MSc
+    - PhD
+    - MBS
+  types: []
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - neuro*
+    - brain
+    - cogniti*
+- title: One Health
+  url: https://graduatestudies.uoguelph.ca/programs/onehealth
+  degrees:
+    - MSc
+    - PhD
+    - MES
+    - MA
+    - MASc
+    - MEng
+  types: []
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - sustain*
+    - mammal*
+    - evolution*
+    - health*
+    - medic*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - infect*
+    - dna
+    - pharma*
 - title: Pathobiology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/pathobiology/
+  url: https://graduatestudies.uoguelph.ca/programs/path
   degrees:
     - MSc
     - PhD
     - DVSc
-    - Diploma
+    - GDip
   types: []
   tags:
     - biology
@@ -489,7 +584,7 @@
     - health
     - medical
 - title: Philosophy
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/philosophy/
+  url: https://graduatestudies.uoguelph.ca/programs/phil
   degrees:
     - MA
     - PhD
@@ -498,7 +593,7 @@
     - humanities
     - culture
 - title: Physics
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/physics/
+  url: https://graduatestudies.uoguelph.ca/programs/phys
   degrees:
     - MSc
     - PhD
@@ -507,7 +602,7 @@
     - physics
     - science
 - title: Plant Agriculture
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/plant-agriculture/
+  url: https://graduatestudies.uoguelph.ca/programs/plnt
   degrees:
     - MSc
     - PhD
@@ -517,7 +612,7 @@
     - biology
     - science
 - title: Political Science
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/political-science/
+  url: https://graduatestudies.uoguelph.ca/programs/pols
   degrees:
     - MA
     - PhD
@@ -526,7 +621,7 @@
     - humanities
     - politics
 - title: Population Medicine
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/population-medicine/
+  url: https://graduatestudies.uoguelph.ca/programs/popmed
   degrees:
     - MSc
     - PhD
@@ -538,16 +633,16 @@
     - health
     - medical
 - title: Project Management
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/project-management/
+  url: https://graduatestudies.uoguelph.ca/programs/project-management
   degrees:
     - MPM
-    - Diploma
+    - GDip
   types: []
   tags:
     - business
     - management
 - title: Psychology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/psychology/
+  url: https://graduatestudies.uoguelph.ca/programs/psyc
   degrees:
     - MA
     - MSc
@@ -556,11 +651,11 @@
   tags:
     - humanities
 - title: Public Health
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/public-health/
+  url: https://graduatestudies.uoguelph.ca/programs/phlt
   degrees:
     - MPH
     - DVM/MPH Combined Degree
-    - Diploma
+    - GDip
   types: []
   tags:
     - health
@@ -568,7 +663,7 @@
     - science
     - biology
 - title: Public Issues Anthropology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/public-issues-anthropology/
+  url: https://graduatestudies.uoguelph.ca/programs/pia
   degrees:
     - MA
   types: []
@@ -579,8 +674,54 @@
     - antho*
     - affairs
     - socio*
+- title: Regenerative Medicine
+  url: https://graduatestudies.uoguelph.ca/programs/regenerative-medicine
+  degrees:
+    - MSc
+    - PhD
+    - DVSc
+    - MASc
+    - MBS
+  types: []
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - medic*
+    - biomolecu*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
+    - pharma*
+- title: Relational and Psychotherapy Training Program
+  url: https://graduatestudies.uoguelph.ca/programs/relational-and-psychotherapy-training-program
+  degrees:
+    - MP
+    - MRFT
+    - MA
+  types: []
+  tags:
+    - health
+    - medical
+    - psychology
 - title: Rural Planning and Development
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/rural-planning-development/
+  url: https://graduatestudies.uoguelph.ca/programs/rpdprof
   degrees:
     - MSc
     - MPLAN
@@ -588,14 +729,28 @@
   tags:
     - humanities
 - title: Rural Studies
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/rural-studies/
+  url: https://graduatestudies.uoguelph.ca/programs/rpdprof-stu
   degrees:
     - PhD
   types: []
   tags:
     - humanities
+- title: Sexuality, Genders and Bodies
+  url: https://graduatestudies.uoguelph.ca/programs/Sexualities-Genders-And-Bodies
+  degrees:
+    - MA
+    - PhD
+    - MSc
+  types: []
+  tags:
+    - poli*
+    - indigen*
+    - justice
+    - feminis*
+    - decolon*
+    - interdisciplinary
 - title: Social Practice and Transformational Change
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/social-practice-transformational-change/
+  url: https://graduatestudies.uoguelph.ca/programs/sptc
   degrees:
     - PhD
   types: []
@@ -619,7 +774,7 @@
     - relation*
     - critical
 - title: Sociology
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/sociology/
+  url: https://graduatestudies.uoguelph.ca/programs/soca
   degrees:
     - MA
     - PhD
@@ -628,7 +783,7 @@
     - humanities
     - culture
 - title: Studio Art
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/studio-art/
+  url: https://graduatestudies.uoguelph.ca/programs/sart
   degrees:
     - MFA
   types: []
@@ -637,7 +792,7 @@
     - humanities
     - culture
 - title: Theatre Studies
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/theatre-studies/
+  url: https://graduatestudies.uoguelph.ca/programs/thst
   degrees:
     - MA
   types: []
@@ -646,14 +801,55 @@
     - humanities
     - culture
 - title: Tourism and Hospitality
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/tourism-hospitality/
+  url: https://graduatestudies.uoguelph.ca/programs/trmh
   degrees:
     - MSc
-    - Diploma
+    - GDip
   types: []
   tags:
     - business
     - marketing
+- title: Tourism Research
+  url: https://graduatestudies.uoguelph.ca/programs/tres
+  degrees:
+    - GDip
+  types: []
+  tags:
+    - business
+    - marketing
+- title: Toxicology
+  url: https://graduatestudies.uoguelph.ca/programs/tox
+  degrees:
+    - MSc
+    - PhD
+    - MBS
+  types: []
+  tags:
+    - biology
+    - science
+    - health
+    - medical
+- title: Veterinary Medicine / Public Health
+  url: https://graduatestudies.uoguelph.ca/programs/DVMMPH
+  degrees:
+    - DVM
+    - MPH
+  types: []
+  tags:
+    - biology
+    - science
+    - health
+    - medical
+- title: Veterinary Science
+  url: https://graduatestudies.uoguelph.ca/programs/vets
+  degrees:
+    - DVSc
+  types: []
+  tags:
+    - biology
+    - science
+    - health
+    - medical
 - title: Wildlife Biology
   url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/wildlife-biology/
   degrees:
@@ -675,13 +871,3 @@
     - fish*
     - sustain*
     - mammal*
-- title: Veterinary Science
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/veterinary-science/
-  degrees:
-    - DVSc
-  types: []
-  tags:
-    - biology
-    - science
-    - health
-    - medical
