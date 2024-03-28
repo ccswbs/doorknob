@@ -1,9 +1,7 @@
-const path = require("path")
-
+const path = require("path");
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   const typeDefs = [
     `
@@ -60,10 +58,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         eventsCategories: `WpEventToEventsCategoryConnection`,
         isPast: {
           type: `Boolean`,
-          resolve: (source) => new Date(source.startDate) < new Date(),
+          resolve: source => new Date(source.startDate) < new Date(),
         },
       },
     }),
-  ]
-  createTypes(typeDefs)
-}
+  ];
+  createTypes(typeDefs);
+};
