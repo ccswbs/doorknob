@@ -1,0 +1,740 @@
+- title: Accounting
+  acronym: ""
+  url: https://graduatestudies.uoguelph.ca/programs/accounting
+  degrees: []
+  types:
+    - Diploma
+  tags:
+    - business
+    - finance
+- title: Animal Biosciences
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/animal-biosciences/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - biology
+    - science
+- title: Art History and Visual Culture
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/art-history-visual-culture/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - arts
+    - culture
+    - history
+- title: Bioinformatics
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/bioinformatics/
+  degrees: []
+  types:
+    - MBINF
+    - MSc
+    - PhD
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - informat*
+    - data
+    - statistic*
+    - programming
+    - analys*
+- title: Biomedical Sciences
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/biomedical-sciences/
+  degrees: []
+  types:
+    - MBS
+    - MSc
+    - PhD
+    - DVSc
+  tags:
+    - biology
+    - science
+    - health
+    - medical
+- title: Biophysics
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/biophysics/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - biology
+    - physics
+    - science
+- title: Biotechnology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/biotechnology/
+  degrees: []
+  types:
+    - MBIOT
+  tags:
+    - biology
+    - science
+    - technology
+- title: Business Administration
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/business-administration/
+  degrees: []
+  types:
+    - MBA
+  tags:
+    - business
+- title: Capacity Development and Extension
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/capacity-development-extension/
+  degrees: []
+  types:
+    - MSc
+  tags:
+    - humanities
+- title: Chemistry
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/chemistry/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - chemistry
+    - science
+- title: Clinical Studies
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/clinical-studies/
+  degrees: []
+  types:
+    - MSc
+    - DVSc
+  tags:
+    - biology
+    - science
+    - health
+    - medical
+- title: Computational Sciences
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/computational-sciences/
+  degrees: []
+  types:
+    - PhD
+  tags:
+    - technology
+    - science
+    - mathematics
+- title: Computer Science
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/computer-science/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - technology
+    - science
+    - mathematics
+    - programming
+- title: Conservation Leadership
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/conservation-leadership/
+  degrees: []
+  types:
+    - MCL
+  tags:
+    - geograph*
+    - environment
+    - climat*
+    - conserv*
+    - natur*
+    - resource
+    - land
+    - water
+    - sustain*
+    - science
+- title: Creative Writing
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/creative-writing/
+  degrees: []
+  types:
+    - MFA
+  tags:
+    - arts
+    - humanities
+    - culture
+- title: Criminology and Criminal Justice Policy
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/criminology-criminal-justice-policy/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - poli*
+    - crim*
+    - govern*
+    - law
+    - power
+    - public
+    - affairs
+    - socio*
+- title: Critical Studies in Improvisation
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/critical-studies-improvisation/
+  degrees: []
+  types:
+    - MA
+    - PhD
+  tags:
+    - arts
+    - humanities
+    - culture
+- title: Cybersecurity and Threat Intelligence
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/cybersecurity-threat-intelligence/
+  degrees: []
+  types:
+    - MCTI
+  tags:
+    - technology
+    - science
+    - mathematics
+    - programming
+- title: Data Science
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/data-science/
+  degrees: []
+  types:
+    - MDS
+  tags:
+    - technology
+    - statistics
+    - mathematics
+    - programming
+- title: Economics
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/economics/
+  degrees: []
+  types:
+    - MA
+    - PhD
+  tags:
+    - business
+    - economics
+    - finance
+- title: Engineering
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/engineering/
+  degrees: []
+  types:
+    - MEng
+    - MASc
+    - PhD
+  tags:
+    - technology
+    - engineering
+- title: English
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/english/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - arts
+    - humanities
+    - language
+- title: Environmental Sciences
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/environmental-sciences/
+  degrees: []
+  types:
+    - MES
+    - MSc
+    - PhD
+  tags:
+    - biology
+    - science
+- title: European Studies
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/european-studies/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - humanities
+    - culture
+- title: Family Relations and Applied Nutrition
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/family-relations-applied-nutrition/
+  degrees: []
+  types:
+    - MAN
+    - MSc
+    - PhD
+  tags:
+    - health
+    - food
+    - humanities
+    - science
+- title: Food Safety and Quality Assurance
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/food-safety-quality-assurance/
+  degrees: []
+  types:
+    - MSc
+    - Diploma
+  tags:
+    - food
+    - science
+- title: Food Science
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/food-science/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - food
+    - science
+    - nutrition
+- title: Food, Agricultural and Resource Economics
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/food-agricultural-resource-economics/
+  degrees: []
+  types:
+    - MFARE
+    - MSc
+    - PhD
+  tags:
+    - food
+    - business
+    - agriculture
+    - economics
+- title: French
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/french/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - humanities
+    - language
+- title: Geography
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/geography/
+  degrees: []
+  types:
+    - MA
+    - MSc
+    - PhD
+  tags:
+    - geography
+    - science
+- title: History - Tri-University Program
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/history-tri-university-program/
+  degrees: []
+  types:
+    - MA
+    - PhD
+  tags:
+    - humanities
+    - history
+- title: Human Health and Nutritional Sciences
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/human-health-nutritional-sciences/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biomedic*
+    - health*
+    - cell*
+    - medic*
+    - biomolecu*
+    - physi*
+    - kinesio*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - exercise
+    - nutri*
+    - sports
+    - biomechanic*
+    - athlet*
+    - movement
+    - rehab*
+    - anatom*
+    - micro*
+    - immun*
+    - virolog*
+    - virus
+    - infect*
+    - dna
+    - pharma*
+    - cogniti*
+    - diet*
+- title: Integrative Biology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/integrative-biology/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - sustain*
+    - mammal*
+    - evolution*
+- title: Landscape Architecture
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/landscape-architecture/
+  degrees: []
+  types:
+    - MLA
+  tags:
+    - architecture
+    - design
+- title: Latin American and Caribbean Studies
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/latin-american-caribbean-studies/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - humanities
+    - culture
+    - history
+- title: Leadership
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/leadership/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - humanities
+    - business
+- title: Literary Studies/Theatre Studies in English
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/literary-studies-theatre-studies-english/
+  degrees: []
+  types:
+    - PhD
+  tags:
+    - arts
+    - humanities
+- title: Management
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/management/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - business
+    - management
+- title: Marketing and Consumer Studies
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/marketing-consumer-studies/
+  degrees: []
+  types:
+    - MSc
+    - Diploma
+  tags:
+    - business
+    - marketing
+- title: Mathematics and Statistics
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/mathematics-statistics/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - mathematics
+    - statistics
+- title: Molecular and Cellular Biology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/molecular-cellular-biology/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - biochem*
+    - biomedic*
+    - health*
+    - molecu*
+    - cell*
+    - medic*
+    - biomolecu*
+    - disease
+    - gene*
+    - clinic*
+    - patho*
+    - micro*
+    - bacteria*
+    - immun*
+    - virolog*
+    - virus
+    - evolution*
+    - infect*
+    - dna
+    - pharma*
+- title: Pathobiology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/pathobiology/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+    - DVSc
+    - Diploma
+  tags:
+    - biology
+    - science
+    - health
+    - medical
+- title: Philosophy
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/philosophy/
+  degrees: []
+  types:
+    - MA
+    - PhD
+  tags:
+    - humanities
+    - culture
+- title: Physics
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/physics/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - physics
+    - science
+- title: Plant Agriculture
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/plant-agriculture/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+  tags:
+    - agriculture
+    - biology
+    - science
+- title: Political Science
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/political-science/
+  degrees: []
+  types:
+    - MA
+    - PhD
+  tags:
+    - humanities
+    - politics
+- title: Population Medicine
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/population-medicine/
+  degrees: []
+  types:
+    - MSc
+    - PhD
+    - DVSc
+  tags:
+    - biology
+    - science
+    - health
+    - medical
+- title: Project Management
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/project-management/
+  degrees: []
+  types:
+    - MPM
+    - Diploma
+  tags:
+    - business
+    - management
+- title: Psychology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/psychology/
+  degrees: []
+  types:
+    - MA
+    - MSc
+    - PhD
+  tags:
+    - humanities
+- title: Public Health
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/public-health/
+  degrees: []
+  types:
+    - MPH
+    - DVM/MPH Combined Degree
+    - Diploma
+  tags:
+    - health
+    - medical
+    - science
+    - biology
+- title: Public Issues Anthropology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/public-issues-anthropology/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - poli*
+    - cultur*
+    - human
+    - antho*
+    - affairs
+    - socio*
+- title: Rural Planning and Development
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/rural-planning-development/
+  degrees: []
+  types:
+    - MSc
+    - MPLAN
+  tags:
+    - humanities
+- title: Rural Studies
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/rural-studies/
+  degrees: []
+  types:
+    - PhD
+  tags:
+    - humanities
+- title: Social Practice and Transformational Change
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/social-practice-transformational-change/
+  degrees: []
+  types:
+    - PhD
+  tags:
+    - poli*
+    - indigen*
+    - justice
+    - feminis*
+    - decolon*
+    - interdisciplinary
+    - sex*
+    - disab*
+    - gender
+    - lgb*
+    - psych*
+    - queer
+    - socio*
+    - anthro*
+    - geograph*
+    - family
+    - relation*
+    - critical
+- title: Sociology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/sociology/
+  degrees: []
+  types:
+    - MA
+    - PhD
+  tags:
+    - humanities
+    - culture
+- title: Studio Art
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/studio-art/
+  degrees: []
+  types:
+    - MFA
+  tags:
+    - arts
+    - humanities
+    - culture
+- title: Theatre Studies
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/theatre-studies/
+  degrees: []
+  types:
+    - MA
+  tags:
+    - arts
+    - humanities
+    - culture
+- title: Tourism and Hospitality
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/tourism-hospitality/
+  degrees: []
+  types:
+    - MSc
+    - Diploma
+  tags:
+    - business
+    - marketing
+- title: Wildlife Biology
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/wildlife-biology/
+  degrees: []
+  types:
+    - MWB
+  tags:
+    - biol*
+    - science*
+    - life*
+    - living
+    - research*
+    - natur*
+    - eco*
+    - wild*
+    - biodivers*
+    - conserva*
+    - animal*
+    - enviro*
+    - fish*
+    - sustain*
+    - mammal*
+- title: Veterinary Science
+  acronym: ""
+  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/veterinary-science/
+  degrees: []
+  types:
+    - DVSc
+  tags:
+    - biology
+    - science
+    - health
+    - medical
