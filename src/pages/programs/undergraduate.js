@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { LinkTabs } from "../../components/linkTabs.js";
 import { Form, Container } from "react-bootstrap";
 import ProgramSearch from "../../components/blocks/programs/programs-search.js";
@@ -7,6 +7,15 @@ import { graphql } from "gatsby";
 export default function ProgramsUndergraduate({ data, children }) {
   const [onlyMajors, setOnlyMajors] = useState(false);
   const [onlyCoop, setOnlyCoop] = useState(false);
+
+  const filterer = useMemo(
+    () => program => {
+      if (onlyMajors && !program.types.some(type => type.toLowerCase() === "major")) return false;
+      if (onlyCoop && !program.types.some(type => type.toLowerCase() === "co-op")) return false;
+      return true;
+    },
+    [onlyMajors, onlyCoop],
+  );
 
   return (
     <>
@@ -35,7 +44,7 @@ export default function ProgramsUndergraduate({ data, children }) {
         />
       </Container>
 
-      <ProgramSearch programs={data.programs.nodes}>
+      <ProgramSearch programs={data.programs.nodes} filterer={filterer}>
         {
           <>
             <Form.Check
