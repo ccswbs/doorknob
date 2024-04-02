@@ -58,9 +58,7 @@ export default function ProgramsGraduate({ data, children }) {
                 setType(e.target.value);
               }}
             >
-              <option defaultChecked={true} value="any">
-                Any
-              </option>
+              <option value="any">Any</option>
 
               {types?.map(type => (
                 <option key={type} value={type}>
