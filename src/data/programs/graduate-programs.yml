@@ -216,16 +216,6 @@
     - science
     - mathematics
     - programming
-
-- title: Dairy Technology Management
-  url: https://graduatestudies.uoguelph.ca/programs/mdtm
-  degrees:
-    - MDTM
-  types:
-    - course-based
-  tags:
-    - food
-    - science
 - title: Data Science
   url: https://graduatestudies.uoguelph.ca/programs/data-science
   degrees:
@@ -626,6 +616,17 @@
   tags:
     - physics
     - science
+- title: Planning
+  url: https://www.uoguelph.ca/programs/master-of-planning
+  degrees:
+    - MPlan
+  types:
+    - course-based
+  tags:
+    - humanities
+    - geography
+    - rural
+    - environmental design
 - title: Plant Agriculture
   url: https://graduatestudies.uoguelph.ca/programs/plnt
   degrees:
@@ -822,6 +823,16 @@
     - arts
     - humanities
     - culture
+- title: Sustainable Agriculture
+  url: https://www.uoguelph.ca/programs/master-sustainable-agriculture/
+  degrees:
+    - MSA
+  types:
+    - course-based
+  tags:
+    - agriculture
+    - biology
+    - science
 - title: Theatre Studies
   url: https://graduatestudies.uoguelph.ca/programs/thst
   degrees:
