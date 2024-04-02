@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { editDistance } from "../utils/string-utils.js";
-import { clamp } from "../utils/math-utils.js";
 
 const parse = input =>
   input
