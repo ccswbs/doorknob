@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { LinkTabs } from "../../components/linkTabs.js";
-import { Container } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 import ProgramSearch from "../../components/blocks/programs/programs-search.js";
 import { graphql } from "gatsby";
+import { toTitleCase } from "../../utils/toTitleCase.js";
 
 export default function ProgramsGraduate({ data, children }) {
+  const types = Array.from(new Set(data.programs.nodes.flatMap(program => program.types)));
+  const [type, setType] = useState("any");
+
+  const filterer = useMemo(
+    () => program => {
+      if (type === "any") return true;
+      return program.types.includes(type);
+    },
+    [type],
+  );
+
   return (
     <>
       <Container className="my-5">
@@ -32,7 +44,33 @@ export default function ProgramsGraduate({ data, children }) {
         />
       </Container>
 
-      <ProgramSearch programs={data.programs.nodes} />
+      <ProgramSearch
+        programs={data.programs.nodes}
+        filterer={filterer}
+        sidebar={
+          <>
+            <Form.Label htmlFor="program-search-graduate-type">Filter by type</Form.Label>
+
+            <Form.Select
+              id="program-search-graduate-type"
+              aria-label="Default select example"
+              onChange={e => {
+                setType(e.target.value);
+              }}
+            >
+              <option defaultChecked={true} value="any">
+                Any
+              </option>
+
+              {types?.map(type => (
+                <option key={type} value={type}>
+                  {toTitleCase(type.replaceAll("-", " "))}
+                </option>
+              ))}
+            </Form.Select>
+          </>
+        }
+      ></ProgramSearch>
     </>
   );
 }
@@ -45,6 +83,7 @@ export const query = graphql`
         title
         url
         tags
+        types
       }
     }
   }
