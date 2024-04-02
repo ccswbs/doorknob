@@ -3,7 +3,7 @@ import { LinkTabs } from "../../components/linkTabs.js";
 import { Container, Form } from "react-bootstrap";
 import ProgramSearch from "../../components/blocks/programs/programs-search.js";
 import { graphql } from "gatsby";
-import { toTitleCase } from "../../utils/toTitleCase.js";
+import { toTitleCase } from "../../utils/string-utils.js";
 
 export default function ProgramsGraduate({ data, children }) {
   const types = Array.from(new Set(data.programs.nodes.flatMap(program => program.types)));

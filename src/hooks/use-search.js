@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { editDistance } from "../utils/editDistance.js";
+import { editDistance } from "../utils/string-utils.js";
 
 const parse = input =>
   input
