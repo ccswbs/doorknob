@@ -4,10 +4,10 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Certificate
+    - major
+    - co-op
+    - minor
+    - certificate
   tags:
     - business
     - finance
@@ -17,9 +17,9 @@
   degrees:
     - Bachelor of Science in Agriculture
   types:
-    - Major
-    - Minor
-    - Co-op
+    - major
+    - minor
+    - co-op
   tags:
     - agriculture
     - botany
@@ -30,7 +30,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - biology
     - science
@@ -40,8 +40,8 @@
   degrees:
     - Bachelor of Science in Agriculture
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - science
@@ -51,10 +51,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Area of Concentration
+    - major
+    - co-op
+    - minor
+    - area-of-concentration
   tags:
     - poli*
     - cultur*
@@ -69,7 +69,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/applied-geomatics-ag/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - geography
     - technology
@@ -79,7 +79,7 @@
   degrees:
     - Bachelor of Applied Science
   types:
-    - Major
+    - major
   tags:
     - health
     - diet*
@@ -91,8 +91,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - arts
     - history
@@ -110,7 +110,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/arts-management-am/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - arts
     - business
@@ -120,7 +120,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - biol*
     - science*
@@ -165,9 +165,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - biol*
     - science*
@@ -192,7 +192,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - biology
     - science
@@ -202,8 +202,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - health
@@ -216,8 +216,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - chemistry
@@ -230,8 +230,8 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - engineering
@@ -242,7 +242,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - biol*
     - science*
@@ -295,7 +295,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biology-biol/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - biology
     - science
@@ -305,8 +305,8 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - engineering
@@ -317,8 +317,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - health
@@ -329,7 +329,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biotechnology-biot/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - biology
     - science
@@ -339,7 +339,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/black-canadian-studies-blck/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
     - history
@@ -349,8 +349,8 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/business-bus/
   degrees: []
   types:
-    - Minor
-    - Certificate
+    - minor
+    - certificate
   tags:
     - business
     - finance
@@ -359,7 +359,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/business-data-analytics-bda/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
     - finance
@@ -369,7 +369,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/business-economics-becn/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
     - finance
@@ -380,8 +380,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - chemistry
     - physics
@@ -392,9 +392,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - chemistry
     - science
@@ -404,7 +404,7 @@
   degrees:
     - Bachelor of Applied Science
   types:
-    - Major
+    - major
   tags:
     - child*
     - youth
@@ -426,8 +426,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - humanities
     - history
@@ -437,7 +437,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/communication-process-cptp/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - humanities
 - title: Computer Engineering
@@ -446,8 +446,8 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - technology
     - engineering
@@ -459,8 +459,8 @@
   degrees:
     - Bachelor of Computing
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - technology
     - programming
@@ -474,7 +474,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/computing-information-science-cis/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - technology
     - programming
@@ -488,8 +488,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - arts
 - title: Criminal Justice and Public Policy
@@ -498,9 +498,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - poli*
     - crim*
@@ -515,8 +515,8 @@
   degrees:
     - Bachelor of Science in Agriculture
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - agriculture
     - botany
@@ -528,9 +528,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - humanities
     - technology
@@ -541,9 +541,9 @@
   degrees:
     - Bachelor of Science in Environmental Sciences
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - biology
     - science
@@ -553,9 +553,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - business
     - finance
@@ -566,8 +566,8 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - technology
     - engineering
@@ -578,9 +578,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
+    - major
+    - minor
+    - area-of-concentration
   tags:
     - humanities
     - language
@@ -589,7 +589,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/entrepreneurship-ent/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
     - finance
@@ -599,8 +599,8 @@
   degrees:
     - Bachelor of Science in Environmental Sciences
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - geograph*
     - environment
@@ -618,7 +618,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - biology
     - science
@@ -627,7 +627,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-citizenship-ect/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - humanities
     - science
@@ -636,7 +636,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-conservation-ecv/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - biology
     - science
@@ -646,8 +646,8 @@
   degrees:
     - Bachelor of Science in Environmental Sciences
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
     - finance
@@ -659,9 +659,9 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - engineering
     - science
@@ -671,8 +671,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - geography
     - technology
@@ -683,8 +683,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - geograph*
     - environment
@@ -702,8 +702,8 @@
   degrees:
     - Bachelor of Bio-Resource Management
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
 - title: Environmental Sciences
@@ -712,8 +712,8 @@
   degrees:
     - Bachelor of Science in Environmental Sciences
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - science
@@ -723,8 +723,8 @@
   degrees:
     - Bachelor of Bio-Resource Management
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biology
     - science
@@ -733,7 +733,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/european-culture-civilization-ecc/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
     - history
@@ -744,7 +744,7 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
+    - major
   tags:
     - humanities
     - history
@@ -754,7 +754,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/family-child-studies-fcs/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
 - title: Family Studies and Human Development
@@ -763,7 +763,7 @@
   degrees:
     - Bachelor of Applied Science
   types:
-    - Major
+    - major
   tags:
     - child*
     - youth
@@ -784,8 +784,8 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - agriculture
     - food
@@ -795,7 +795,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/food-engineering-feng/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - food
     - engineering
@@ -805,8 +805,8 @@
   degrees:
     - Bachelor of Bio-Resource Management
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - food
     - business
@@ -817,9 +817,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Certificate
+    - major
+    - co-op
+    - certificate
   tags:
     - food
     - science
@@ -829,8 +829,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - agriculture
     - food
@@ -842,9 +842,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
+    - major
+    - minor
+    - area-of-concentration
   tags:
     - humanities
     - language
@@ -854,10 +854,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Area of Concentration
+    - major
+    - co-op
+    - minor
+    - area-of-concentration
   tags:
     - geograph*
     - environment
@@ -874,8 +874,8 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/german-germ/
   degrees: []
   types:
-    - Minor
-    - Certificate
+    - minor
+    - certificate
   tags:
     - humanities
     - language
@@ -885,8 +885,8 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
     - economics
@@ -899,10 +899,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Area of Concentration
+    - major
+    - co-op
+    - minor
+    - area-of-concentration
   tags:
     - humanities
     - history
@@ -912,8 +912,8 @@
   degrees:
     - Bachelor of Science in Agriculture
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - agriculture
     - botany
@@ -925,9 +925,9 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
-    - Certificate
+    - major
+    - co-op
+    - certificate
   tags:
     - business
     - tourism
@@ -938,7 +938,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - biol*
     - science*
@@ -974,7 +974,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/human-resources-hr/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
     - management
@@ -983,7 +983,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/indigenous-environmental-governance-ieg/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - humanities
     - culture
@@ -993,7 +993,7 @@
   degrees:
     - Bachelor of Indigenous Environmental Science and Practice
   types:
-    - Major
+    - major
   tags:
     - humanities
     - culture
@@ -1003,7 +1003,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/international-business-ib/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
 - title: International Development Studies
@@ -1012,10 +1012,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Area of Concentration
+    - major
+    - co-op
+    - minor
+    - area-of-concentration
   tags:
     - poli*
     - environment
@@ -1032,7 +1032,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/italian-ital/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
     - language
@@ -1042,8 +1042,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - poli*
     - crim*
@@ -1067,7 +1067,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/leadership-lead/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - humanities
     - management
@@ -1076,7 +1076,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/linguistics-ling/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
     - language
@@ -1086,8 +1086,8 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
     - management
@@ -1097,8 +1097,8 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
     - finance
@@ -1109,8 +1109,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biol*
     - science*
@@ -1137,7 +1137,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/marketing-mktg/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
     - marketing
@@ -1147,8 +1147,8 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
     - marketing
@@ -1158,21 +1158,20 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - business
     - economics
     - mathematics
-- title: Mathematical Science
-  acronym: MSCI
-  url: https://www.uoguelph.ca/programs/mathematical-science/
+- title: Bachelor of Mathematics
+  acronym: BMATH
+  url: https://www.uoguelph.ca/programs/bachelor-of-mathematics/
   degrees:
-    - Bachelor of Arts
-    - Bachelor of Science
+    - Bachelor of Mathematics
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - mathematics
 - title: Mathematics
@@ -1181,8 +1180,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Minor
-    - Area of Concentration
+    - minor
+    - area-of-concentration
   tags:
     - mathematics
 - title: Mechanical Engineering
@@ -1191,8 +1190,8 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - engineering
 - title: Media and Cinema Studies
@@ -1200,7 +1199,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/media-cinema-studies-mcst/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
     - arts
@@ -1211,9 +1210,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - biol*
     - science*
@@ -1244,9 +1243,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - biol*
     - science*
@@ -1278,7 +1277,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/museum-studies-ms/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - humanities
     - arts
@@ -1290,9 +1289,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
+    - major
+    - minor
+    - area-of-concentration
   tags:
     - humanities
     - arts
@@ -1303,8 +1302,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - science
 - title: Neuroscience
@@ -1313,9 +1312,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - psych*
     - neuro*
@@ -1329,9 +1328,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - biol*
     - science*
@@ -1361,8 +1360,8 @@
   degrees:
     - Bachelor of One Health
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - health
     - science
@@ -1372,7 +1371,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/organic-agriculture-oagr/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - agriculture
     - biology
@@ -1383,9 +1382,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
+    - major
+    - minor
+    - area-of-concentration
   tags:
     - humanities
 - title: Physical Science
@@ -1394,7 +1393,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - science
 - title: Physics
@@ -1403,9 +1402,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - physics
     - science
@@ -1415,9 +1414,9 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - agriculture
     - biology
@@ -1428,10 +1427,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Area of Concentration
+    - major
+    - co-op
+    - minor
+    - area-of-concentration
   tags:
     - poli*
     - crim*
@@ -1446,7 +1445,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/project-management-pm/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
     - management
@@ -1456,10 +1455,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Co-op
-    - Minor
-    - Area of Concentration
+    - major
+    - co-op
+    - minor
+    - area-of-concentration
   tags:
     - psych*
     - neuro*
@@ -1473,7 +1472,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/public-policy-administration-ppa/
   degrees: []
   types:
-    - Certificate
+    - certificate
   tags:
     - humanities
     - politics
@@ -1484,8 +1483,8 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - marketing
     - business
@@ -1497,8 +1496,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - humanities
     - culture
@@ -1508,9 +1507,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
+    - major
+    - minor
+    - area-of-concentration
   tags:
     - poli*
     - crim*
@@ -1528,8 +1527,8 @@
   degrees:
     - Bachelor of Computing
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - programming
     - technology
@@ -1540,10 +1539,10 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
-    - Certificate
+    - major
+    - minor
+    - area-of-concentration
+    - certificate
   tags:
     - humanities
     - language
@@ -1554,9 +1553,9 @@
   degrees:
     - Bachelor of Commerce
   types:
-    - Major
-    - Co-op
-    - Minor
+    - major
+    - co-op
+    - minor
   tags:
     - business
     - management
@@ -1567,8 +1566,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Minor
-    - Area of Concentration
+    - minor
+    - area-of-concentration
     - Diploma
   tags:
     - mathematics
@@ -1579,8 +1578,8 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - humanities
     - arts
@@ -1590,7 +1589,7 @@
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/sustainable-business-sb/
   degrees: []
   types:
-    - Minor
+    - minor
   tags:
     - business
 - title: Theatre Studies
@@ -1599,9 +1598,9 @@
   degrees:
     - Bachelor of Arts
   types:
-    - Major
-    - Minor
-    - Area of Concentration
+    - major
+    - minor
+    - area-of-concentration
   tags:
     - humanities
     - arts
@@ -1612,7 +1611,7 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
+    - major
   tags:
     - physics
     - science
@@ -1632,8 +1631,8 @@
   degrees:
     - Bachelor of Engineering
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - engineering
 - title: Wildlife Biology and Conservation
@@ -1642,8 +1641,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Co-op
+    - major
+    - co-op
   tags:
     - biol*
     - science*
@@ -1671,8 +1670,8 @@
   degrees:
     - Bachelor of Science
   types:
-    - Major
-    - Minor
+    - major
+    - minor
   tags:
     - biol*
     - science*
