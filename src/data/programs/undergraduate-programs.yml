@@ -7,7 +7,6 @@
     - major
     - co-op
     - minor
-    - certificate
   tags:
     - business
     - finance
@@ -350,7 +349,6 @@
   degrees: []
   types:
     - minor
-    - certificate
   tags:
     - business
     - finance
@@ -432,14 +430,6 @@
     - humanities
     - history
     - culture
-- title: Communication Process
-  acronym: CPTP
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/communication-process-cptp/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - humanities
 - title: Computer Engineering
   acronym: CENG
   url: https://www.uoguelph.ca/programs/computer-engineering/
@@ -622,24 +612,6 @@
   tags:
     - biology
     - science
-- title: Environmental Citizenship
-  acronym: ECT
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-citizenship-ect/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - humanities
-    - science
-- title: Environmental Conservation
-  acronym: ECV
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/environmental-conservation-ecv/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - biology
-    - science
 - title: Environmental Economics and Policy
   acronym: EEP
   url: https://www.uoguelph.ca/programs/environmental-economics-and-policy/
@@ -819,7 +791,6 @@
   types:
     - major
     - co-op
-    - certificate
   tags:
     - food
     - science
@@ -875,7 +846,6 @@
   degrees: []
   types:
     - minor
-    - certificate
   tags:
     - humanities
     - language
@@ -927,7 +897,6 @@
   types:
     - major
     - co-op
-    - certificate
   tags:
     - business
     - tourism
@@ -978,15 +947,6 @@
   tags:
     - business
     - management
-- title: Indigenous Environmental Governance
-  acronym: IEG
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/indigenous-environmental-governance-ieg/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - humanities
-    - culture
 - title: Indigenous Environmental Science and Practice
   acronym: IESP
   url: https://www.uoguelph.ca/programs/bachelor-of-indigenous-environmental-science-and-practice/
@@ -1062,15 +1022,6 @@
   tags:
     - architecture
     - design
-- title: Leadership
-  acronym: LEAD
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/leadership-lead/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - humanities
-    - management
 - title: Linguistics
   acronym: LING
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/linguistics-ling/
@@ -1366,16 +1317,6 @@
     - health
     - science
     - biology
-- title: Organic Agriculture
-  acronym: OAGR
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/organic-agriculture-oagr/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - agriculture
-    - biology
-    - science
 - title: Philosophy
   acronym: PHIL
   url: https://www.uoguelph.ca/programs/philosophy/
@@ -1467,16 +1408,6 @@
     - human
     - behav*
     - cultur*
-- title: Public Policy and Administration
-  acronym: PPA
-  url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/public-policy-administration-ppa/
-  degrees: []
-  types:
-    - certificate
-  tags:
-    - humanities
-    - politics
-    - law
 - title: Real Estate
   acronym: RE
   url: https://www.uoguelph.ca/programs/real-estate/
@@ -1542,7 +1473,6 @@
     - major
     - minor
     - area-of-concentration
-    - certificate
   tags:
     - humanities
     - language
@@ -1568,7 +1498,6 @@
   types:
     - minor
     - area-of-concentration
-    - Diploma
   tags:
     - mathematics
     - statistics
