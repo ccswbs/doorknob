@@ -127,7 +127,7 @@ export const useSearch = (data, input, searchFunc = defaultSearchFunc) => {
     );
   }
 
-  // Process the data once and store it in a memoized variable, so it doesn't have to be processed every time the input changes.
+  // Memoize the partial evaluation of the search function to avoid re-evaluating it on every render.
   const search = useMemo(() => searchFunc(data), [searchFunc, data]);
 
   return useMemo(() => {
