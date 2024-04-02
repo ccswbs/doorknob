@@ -2,7 +2,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/accounting
   degrees:
     - GDip
-  types: []
+  types:
+    - course-based
   tags:
     - business
     - finance
@@ -19,7 +20,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/applied-nutrition
   degrees:
     - MAN
-  types: []
+  types:
+    - course-based
   tags:
     - health
     - food
@@ -37,7 +39,8 @@
   degrees:
     - MSc
     - MASc
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - technology
     - science
@@ -49,7 +52,8 @@
     - MBINF
     - MSc
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - biol*
     - science*
@@ -68,7 +72,8 @@
     - MSc
     - PhD
     - DVSc
-  types: []
+  types:
+    - course-based
   tags:
     - biology
     - science
@@ -88,7 +93,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/biotechnology
   degrees:
     - MBIOT
-  types: []
+  types:
+    - course-based
   tags:
     - biology
     - science
@@ -97,7 +103,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/bus
   degrees:
     - MBA
-  types: []
+  types:
+    - course-based
   tags:
     - business
 - title: Capacity Development and Extension
@@ -151,7 +158,8 @@
   url: https://graduatestudies.uoguelph.ca/Programs/ConservationLeadership
   degrees:
     - MCL
-  types: []
+  types:
+    - course-based
   tags:
     - geograph*
     - environment
@@ -167,7 +175,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/crwr
   degrees:
     - MFA
-  types: []
+  types:
+    - course-based
   tags:
     - arts
     - humanities
@@ -200,7 +209,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/mcti
   degrees:
     - MCTI
-  types: []
+  types:
+    - course-based
   tags:
     - technology
     - science
@@ -211,7 +221,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/mdtm
   degrees:
     - MDTM
-  types: []
+  types:
+    - course-based
   tags:
     - food
     - science
@@ -219,7 +230,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/data-science
   degrees:
     - MDS
-  types: []
+  types:
+    - course-based
   tags:
     - technology
     - statistics
@@ -230,7 +242,8 @@
   degrees:
     - MA
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - business
     - economics
@@ -241,7 +254,8 @@
     - MEng
     - MASc
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - technology
     - engineering
@@ -260,7 +274,8 @@
     - MES
     - MSc
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - biology
     - science
@@ -289,7 +304,8 @@
   degrees:
     - MSc
     - GDip
-  types: []
+  types:
+    - course-based
   tags:
     - food
     - science
@@ -309,7 +325,8 @@
     - MFARE
     - MSc
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - food
     - business
@@ -410,7 +427,8 @@
     - PhD
     - MSc
     - MA
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - humanities
     - culture
@@ -418,7 +436,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/ldar
   degrees:
     - MLA
-  types: []
+  types:
+    - course-based
   tags:
     - architecture
     - design
@@ -426,7 +445,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/lacs
   degrees:
     - MA
-  types: []
+  types:
+    - course-based
   tags:
     - humanities
     - culture
@@ -435,7 +455,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/lead
   degrees:
     - MA
-  types: []
+  types:
+    - course-based
   tags:
     - humanities
     - business
@@ -452,7 +473,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - business
     - management
@@ -520,7 +542,8 @@
     - MSc
     - PhD
     - MBS
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - biol*
     - science*
@@ -539,7 +562,8 @@
     - MA
     - MASc
     - MEng
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - biol*
     - science*
@@ -588,7 +612,8 @@
   degrees:
     - MA
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - humanities
     - culture
@@ -637,7 +662,8 @@
   degrees:
     - MPM
     - GDip
-  types: []
+  types:
+    - course-based
   tags:
     - business
     - management
@@ -656,7 +682,8 @@
     - MPH
     - DVM/MPH Combined Degree
     - GDip
-  types: []
+  types:
+    - course-based
   tags:
     - health
     - medical
@@ -682,7 +709,8 @@
     - DVSc
     - MASc
     - MBS
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - biol*
     - science*
@@ -725,7 +753,8 @@
   degrees:
     - MSc
     - MPLAN
-  types: []
+  types:
+    - course-based
   tags:
     - humanities
 - title: Rural Studies
@@ -741,7 +770,8 @@
     - MA
     - PhD
     - MSc
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - poli*
     - indigen*
@@ -786,7 +816,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/sart
   degrees:
     - MFA
-  types: []
+  types:
+    - course-based
   tags:
     - arts
     - humanities
@@ -813,7 +844,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/tres
   degrees:
     - GDip
-  types: []
+  types:
+    - course-based
   tags:
     - business
     - marketing
@@ -823,7 +855,8 @@
     - MSc
     - PhD
     - MBS
-  types: []
+  types:
+    - collaborative-specialization
   tags:
     - biology
     - science
@@ -854,7 +887,8 @@
   url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/wildlife-biology/
   degrees:
     - MWB
-  types: []
+  types:
+    - course-based
   tags:
     - biol*
     - science*
