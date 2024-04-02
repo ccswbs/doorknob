@@ -71,7 +71,7 @@ export default function ProgramsUndergraduate({ data, children }) {
 
 export const query = graphql`
   query {
-    programs: allUndergraduateProgramsYaml {
+    programs: allUndergraduateProgramsYaml(sort: { fields: title, order: ASC }) {
       nodes {
         id
         title

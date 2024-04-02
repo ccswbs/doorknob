@@ -39,7 +39,7 @@ export default function ProgramsCertificateAndDiploma({ data, children }) {
 
 export const query = graphql`
   query {
-    programs: allCertificateAndDiplomaProgramsYaml {
+    programs: allCertificateAndDiplomaProgramsYaml(sort: { fields: title, order: ASC }) {
       nodes {
         id
         title

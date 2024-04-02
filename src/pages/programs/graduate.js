@@ -77,7 +77,7 @@ export default function ProgramsGraduate({ data, children }) {
 
 export const query = graphql`
   query {
-    programs: allGraduateProgramsYaml {
+    programs: allGraduateProgramsYaml(sort: { fields: title, order: ASC }) {
       nodes {
         id
         title
