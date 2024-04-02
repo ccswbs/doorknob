@@ -45,6 +45,7 @@ export const query = graphql`
         title
         url
         tags
+        types
       }
     }
   }

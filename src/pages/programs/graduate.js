@@ -6,17 +6,6 @@ import { graphql } from "gatsby";
 import { toTitleCase } from "../../utils/string-utils.js";
 
 export default function ProgramsGraduate({ data, children }) {
-  const types = Array.from(new Set(data.programs.nodes.flatMap(program => program.types)));
-  const [type, setType] = useState("any");
-
-  const filterer = useMemo(
-    () => program => {
-      if (type === "any") return true;
-      return program.types.includes(type);
-    },
-    [type],
-  );
-
   return (
     <>
       <Container className="my-5">
@@ -44,31 +33,7 @@ export default function ProgramsGraduate({ data, children }) {
         />
       </Container>
 
-      <ProgramSearch
-        programs={data.programs.nodes}
-        filterer={filterer}
-        sidebar={
-          <>
-            <Form.Label htmlFor="program-search-graduate-type">Filter by type</Form.Label>
-
-            <Form.Select
-              id="program-search-graduate-type"
-              aria-label="Default select example"
-              onChange={e => {
-                setType(e.target.value);
-              }}
-            >
-              <option value="any">Any</option>
-
-              {types?.map(type => (
-                <option key={type} value={type}>
-                  {toTitleCase(type.replaceAll("-", " "))}
-                </option>
-              ))}
-            </Form.Select>
-          </>
-        }
-      ></ProgramSearch>
+      <ProgramSearch programs={data.programs.nodes}></ProgramSearch>
     </>
   );
 }

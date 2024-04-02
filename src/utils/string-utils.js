@@ -17,11 +17,13 @@ export const toTitleCase = str => {
     "with",
   ];
 
-  return str
-    .toLowerCase()
-    .split(/\s+|-|_+/)
-    .map(word => (lowercaseWords.includes(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)))
-    .join(" ");
+  return (
+    str
+      ?.toLowerCase()
+      ?.split(/\s+|-|_+/)
+      ?.map(word => (lowercaseWords.includes(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)))
+      ?.join(" ") ?? ""
+  );
 };
 
 // A function to compute the Levenshtein distance of two strings (useful for fuzzy string matching)
@@ -47,4 +49,8 @@ export const editDistance = (a, b) => {
   }
 
   return distances[a.length][b.length];
+};
+
+export const stem = str => {
+  return str;
 };
