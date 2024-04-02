@@ -34,7 +34,7 @@ export default function ProgramSearch({ programs, children, filterer, sidebar })
 
               {types?.map(type => (
                 <option key={type} value={type}>
-                  {type === "co-op" ? "Co-op" : toTitleCase( type?.replaceAll("-", " "))}
+                  {type === "co-op" ? "Co-op" : toTitleCase(type?.replaceAll("-", " "))}
                 </option>
               ))}
             </Form.Select>
