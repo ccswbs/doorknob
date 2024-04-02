@@ -1,43 +1,35 @@
 - title: Agriculture
-  acronym: ""
   url: https://www.ridgetownc.com/future/dagr/
-  degrees: []
   types:
-    - Associate Diploma
-    - Co-op
+    - associate-diploma
+    - co-op
   tags:
     - agriculture
     - botany
 - title: Environmental Technician
-  acronym: ""
   url: https://www.ridgetownc.com/future/denm/
-  degrees: []
   types:
-    - Associate Diploma
-    - Co-op
+    - associate-diploma
+    - co-op
   tags:
     - agriculture
     - botany
     - environment
 - title: Equine Care & Management
-  acronym: ""
   url: https://www.ridgetownc.com/future/denm/
-  degrees: []
   types:
-    - Associate Diploma
-    - Co-op
+    - associate-diploma
+    - co-op
   tags:
     - business
     - nutrition
     - animal
     - management
 - title: Horticulture
-  acronym: ""
   url: https://www.ridgetownc.com/future/dhrt/
-  degrees: []
   types:
-    - Associate Diploma
-    - Co-op
+    - associate-diploma
+    - co-op
   tags:
     - landscaping
     - botany
@@ -45,20 +37,17 @@
 - title: Turfgrass Management
   acronym: DTM
   url: https://www.uoguelph.ca/programs/turfgrass-management/
-  degrees: []
   types:
-    - Associate Diploma
-    - Co-op
+    - associate-diploma
+    - co-op
   tags:
     - landscaping
     - botany
     - plant
 - title: Veterinary Technology
-  acronym: ""
   url: https://www.ridgetownc.com/future/dvt/
-  degrees: []
   types:
-    - Associate Diploma
+    - associate-diploma
   tags:
     - animal
     - vet
