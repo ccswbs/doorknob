@@ -1,11 +1,40 @@
-- title: Test
-  acronym: ""
-  url: https://calendar.uoguelph.ca/graduate-calendar/graduate-programs/veterinary-science/
-  degrees: []
+- title: Dairy Herdsperson Apprenticeship
+  url: https://www.ridgetownc.com/future/adh/
   types:
-    - DVSc
+    - apprenticeship
   tags:
-    - biology
-    - science
-    - health
-    - medical
+    - agriculture
+    - botany
+    - animal
+- title: Ice Cream Technology
+  url: https://www.uoguelph.ca/foodscience/ice-cream-technology-short-course
+  types:
+    - short-course
+  tags:
+    - food
+    - business
+    - management
+- title: Cheese Making Technology
+  url: https://www.uoguelph.ca/foodscience/cheese-making-courses
+  types:
+    - short-course
+  tags:
+    - food
+    - business
+    - management
+- title: Beer Brewing
+  url: https://www.uoguelph.ca/foodscience/brewing
+  types:
+    - short-course
+  tags:
+    - food
+    - business
+    - management
+- title: Chocolate Science
+  url: https://www.uoguelph.ca/foodscience/chocolate
+  types:
+    - short-course
+  tags:
+    - food
+    - business
+    - management
