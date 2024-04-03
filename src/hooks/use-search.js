@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { editDistance, strncmp } from "../utils/string-utils.js";
 import { stemmer } from "stemmer";
-import { partition } from "../utils/array-utils.js";
 
 const parse = input =>
   input
