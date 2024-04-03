@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { editDistance, strncmp } from "../utils/string-utils.js";
 import { stemmer } from "stemmer";
+import { partition } from "../utils/array-utils.js";
 
 const parse = input =>
   input
@@ -16,17 +17,36 @@ const parse = input =>
 
 const rank = (node, parsed) => {
   const RANKS = {
-    KEYWORD_EXACT: 10,
-    KEYWORD_CLOSE: 7,
-    KEYWORD_MATCHING_STEM: 6,
-    KEYWORD_STARTS_WITH: 5,
-    TAG_EXACT: 3,
-    TAG_CLOSE: 2,
-    TAG_STARTS_WITH: 1,
-    TAG_MATCHING_STEM: 1,
-    MULTI_WORD_TAG_EXACT: 5,
-    MULTI_WORD_TAG_CLOSE: 4,
-    MULTI_WORD_TAG_STARTS_WITH: 3,
+    EXACT: 10,
+    CLOSE: 8,
+    MATCHING_STEM: 6,
+    STARTS_WITH: 4,
+  };
+
+  const ranker = (a, b) => {
+    // If the keyword and the word are the same.
+    // We test the length first to avoid the more expensive string comparison as it's not necessary if the lengths are different.
+    if (a.length === b.length && a === b) {
+      // We check how close the keyword is to the word in the user input. This helps in situations where the user may have typed something like "biology", and we have two results "biology" and "animal biology". We want to rank "biology" higher than "animal biology" in this case as it's a closer match.
+      return RANKS.EXACT;
+    }
+
+    // If the keyword and the word are within 2 characters of each other and have an edit distance of 2 or less (i.e. 2 or fewer changes), add 7 to the rank. This is to account for typos and minor spelling mistakes. We test the length difference first to avoid the more expensive editDistance function as it's not necessary if the length difference is too large.
+    if (Math.abs(a.length - b.length) < 2 && editDistance(a, b) < 2) {
+      return RANKS.CLOSE;
+    }
+
+    // Stemming (the process of finding the root of a word ex. computer -> comput) can help with matching words that are similar but not exactly the same. For example, "computer" and "computing" are related words, and we may want to match them. We use the Porter stemming algorithm to achieve this. Since stemming is an expensive operation, we only do it if the first 3 characters of the keyword and the word are the same as words that don't match at least the first 3 characters will not have the same stem.
+    if (strncmp(a, b, 3) && stemmer(a) === stemmer(b)) {
+      return RANKS.MATCHING_STEM;
+    }
+
+    // If the keyword starts with the word. This is to account for the user typing the beginning of a word.
+    if (a.startsWith(b)) {
+      return RANKS.STARTS_WITH;
+    }
+
+    return 0;
   };
 
   let rank = 0;
@@ -40,60 +60,34 @@ const rank = (node, parsed) => {
       return 0;
     }
 
-    const keywords = node.keywords;
-
-    for (let j = 0; j < keywords.length; j++) {
-      const keyword = keywords[j];
-      // If the keyword and the word are the same.
-      // We test the length first to avoid the more expensive string comparison as it's not necessary if the lengths are different.
-      if (keyword.length === word.length && keyword === word) {
-        // We check how close the keyword is to the word in the user input. This helps in situations where the user may have typed something like "biology", and we have two results "biology" and "animal biology". We want to rank "biology" higher than "animal biology" in this case as it's a closer match.
-        rank += RANKS.KEYWORD_EXACT - Math.min(Math.abs(i - j), 2);
-        continue;
-      }
-
-      // If the keyword and the word are within 2 characters of each other and have an edit distance of 2 or less (i.e. 2 or fewer changes), add 7 to the rank. This is to account for typos and minor spelling mistakes. We test the length difference first to avoid the more expensive editDistance function as it's not necessary if the length difference is too large.
-      if (Math.abs(keyword.length - word.length) < 2 && editDistance(keyword, word) < 2) {
-        rank += RANKS.TAG_CLOSE;
-        continue;
-      }
-
-      // Stemming (the process of finding the root of a word ex. computer -> comput) can help with matching words that are similar but not exactly the same. For example, "computer" and "computing" are related words, and we may want to match them. We use the Porter stemming algorithm to achieve this.
-      if (stemmer(keyword) === stemmer(word)) {
-        rank += RANKS.KEYWORD_MATCHING_STEM;
-        continue;
-      }
-
-      // If the keyword starts with the word. This is to account for the user typing the beginning of a word.
-      if (keyword.startsWith(word)) {
-        rank += RANKS.KEYWORD_STARTS_WITH;
-      }
+    for (let j = 0; j < node.keywords.length; j++) {
+      // Get the rank but subtract the distance between the keyword and the word in the user input. This is to show results that are closer to the word in the user input first. For example, if the user types "Economics" we want to show "Economics" before "Business Economics" even though "Business Economics" has the same rank.
+      rank += Math.max(ranker(node.keywords[j], word) - Math.min(Math.abs(i - j), 1), 0);
     }
 
-    for (const tag of node.tags) {
-      if (tag.length === word.length && tag === word) {
-        rank += RANKS.TAG_EXACT;
-        continue;
-      }
+    // If the rank has changed, that means the word was found in the keywords, and we don't need to check the tags.
+    if (previousRank !== rank) {
+      continue;
+    }
 
-      if (Math.abs(tag.length - word.length) < 2 && editDistance(tag, word) < 2) {
-        rank += RANKS.TAG_CLOSE;
-        continue;
-      }
+    if (node.tags) {
+      for (const tag of node.tags) {
+        if (Array.isArray(tag)) {
+          // Process multi-word tags here
+        } else {
+          const partialRank = ranker(tag, word);
 
-      if (stemmer(tag) === stemmer(word)) {
-        rank += RANKS.TAG_MATCHING_STEM;
-        continue;
-      }
+          if (partialRank > 0) {
+            // Tags are less important than keywords, so we divide the rank by 2 to give them less weight.
+            rank += partialRank / 2;
+            continue;
+          }
 
-      if (tag.length >= word.length && tag.startsWith(word)) {
-        rank += RANKS.TAG_STARTS_WITH;
-        continue;
-      }
-
-      // Wildcard tags
-      if (tag.length - 1 < word.length && tag.endsWith("*") && word.startsWith(tag.slice(0, -1))) {
-        rank += RANKS.TAG_EXACT;
+          // Wildcard tags
+          if (tag.length - 1 < word.length && tag.endsWith("*") && word.startsWith(tag.slice(0, -1))) {
+            rank += RANKS.EXACT / 2;
+          }
+        }
       }
     }
 
@@ -107,11 +101,13 @@ const rank = (node, parsed) => {
 };
 
 export function defaultSearchFunc(data) {
-  const processed = data.map(node => ({
-    data: node,
-    keywords: parse(node.title),
-    tags: node.tags,
-  }));
+  const processed = data.map(node => {
+    return {
+      data: node,
+      keywords: parse(node.title),
+      tags: node.tags.map(tag => (tag.includes(" ") ? tag.split(" ") : tag)),
+    };
+  });
 
   return input => {
     const parsed = parse(input);
