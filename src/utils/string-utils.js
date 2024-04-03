@@ -51,6 +51,12 @@ export const editDistance = (a, b) => {
   return distances[a.length][b.length];
 };
 
-export const stem = str => {
-  return str;
+export const strncmp = (a, b, upto = 0) => {
+  if (typeof a != "string" || typeof b != "string") return false;
+
+  for (let i = 0; i < upto; i++) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
 };

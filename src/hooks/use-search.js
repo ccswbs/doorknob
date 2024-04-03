@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { editDistance } from "../utils/string-utils.js";
+import { editDistance, strncmp } from "../utils/string-utils.js";
+import { stemmer } from "stemmer";
 
 const parse = input =>
   input
@@ -17,6 +18,7 @@ const rank = (node, parsed) => {
   const RANKS = {
     KEYWORD_EXACT: 10,
     KEYWORD_CLOSE: 7,
+    KEYWORD_MATCHING_STEM: 6,
     KEYWORD_STARTS_WITH: 5,
     TAG_EXACT: 3,
     TAG_CLOSE: 2,
@@ -52,6 +54,12 @@ const rank = (node, parsed) => {
       // If the keyword and the word are within 2 characters of each other and have an edit distance of 2 or less (i.e. 2 or fewer changes), add 7 to the rank. This is to account for typos and minor spelling mistakes. We test the length difference first to avoid the more expensive editDistance function as it's not necessary if the length difference is too large.
       if (Math.abs(keyword.length - word.length) < 2 && editDistance(keyword, word) < 2) {
         rank += RANKS.TAG_CLOSE;
+        continue;
+      }
+
+      // Stemming (the process of finding the root of a word ex. computer -> comput) can help with matching words that are similar but not exactly the same. For example, "computer" and "computing" are related words, and we may want to match them. We use the Porter stemming algorithm to achieve this.
+      if (stemmer(keyword) === stemmer(word)) {
+        rank += RANKS.KEYWORD_MATCHING_STEM;
         continue;
       }
 
