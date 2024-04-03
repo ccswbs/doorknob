@@ -23,6 +23,7 @@ const rank = (node, parsed) => {
     TAG_EXACT: 3,
     TAG_CLOSE: 2,
     TAG_STARTS_WITH: 1,
+    TAG_MATCHING_STEM: 1,
     MULTI_WORD_TAG_EXACT: 5,
     MULTI_WORD_TAG_CLOSE: 4,
     MULTI_WORD_TAG_STARTS_WITH: 3,
@@ -77,6 +78,11 @@ const rank = (node, parsed) => {
 
       if (Math.abs(tag.length - word.length) < 2 && editDistance(tag, word) < 2) {
         rank += RANKS.TAG_CLOSE;
+        continue;
+      }
+
+      if (stemmer(tag) === stemmer(word)) {
+        rank += RANKS.TAG_MATCHING_STEM;
         continue;
       }
 
