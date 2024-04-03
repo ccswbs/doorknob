@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { LinkTabs } from "../../components/linkTabs.js";
-import { Form, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ProgramSearch from "../../components/blocks/programs/programs-search.js";
 import { graphql } from "gatsby";
-import { toTitleCase } from "../../utils/string-utils.js";
 
 export default function ProgramsUndergraduate({ data, children }) {
   return (
