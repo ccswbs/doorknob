@@ -50,31 +50,69 @@ const rank = (node, parsed) => {
   };
 
   const matches = new Map();
+  const updateMatches = (key, value) => {
+    // We only keep the best match for each parsed word.
 
-  main: for (let i = 0; i < parsed.length; i++) {
+    if (value.type === MATCH_TYPES.NONE) return;
+
+    const current = matches.get(key);
+    // If the current match is a keyword, we only want to replace it with another keyword. If it's a tag, it can be replaced by a keyword or another tag.
+    const isKeywordOrBothTags = value.isKeyword === true || value.isKeyword === Boolean(current?.isKeyword);
+
+    if (value.type > (current?.type ?? 0) && isKeywordOrBothTags) {
+      matches.set(key, value);
+    }
+  };
+
+  for (let i = 0; i < parsed.length; i++) {
     const parsedWord = parsed[i];
 
     for (let j = 0; j < node.keywords.length; j++) {
       const keyword = node.keywords[j];
       const match = isMatch(keyword, parsedWord);
 
-      if (match !== MATCH_TYPES.NONE) {
-        matches.set(parsedWord, {
-          type: match,
-          isKeyword: true,
-          distance: Math.abs(i - j),
-          word: keyword,
-        });
-
-        // If the parsed word matched a keyword, we don't need to bother checking the tags. We move on to the next parsed word.
-        continue main;
-      }
+      updateMatches(parsedWord, {
+        type: match,
+        isKeyword: true,
+        distance: Math.abs(i - j),
+        word: keyword,
+      });
     }
 
     for (let j = 0; j < node.tags.length; j++) {
       const tag = node.tags[j];
 
       if (Array.isArray(tag)) {
+        let match = MATCH_TYPES.NONE;
+        let index = NaN;
+
+        // Check each subtag for a match.
+        for (let k = 0; k < tag.length; k++) {
+          match = isMatch(tag[k], parsedWord);
+
+          if (match !== MATCH_TYPES.NONE) {
+            index = k;
+            break;
+          }
+        }
+
+        // If we found a match, we need to check the index of the match, as we will need to check whether the previous parsedWord matched the previous subtag.
+        if (match !== MATCH_TYPES.NONE) {
+          if (index > 0) {
+            const previousSubtag = tag[index - 1];
+            const previousParsedWord = parsed[i - 1];
+
+            if (matches.get(previousParsedWord)?.word !== previousSubtag) {
+              match = MATCH_TYPES.NONE;
+            }
+          }
+        }
+
+        updateMatches(parsedWord, {
+          type: match,
+          isKeyword: false,
+          word: tag[index],
+        });
       } else {
         let match = isMatch(tag, parsedWord);
 
@@ -85,14 +123,11 @@ const rank = (node, parsed) => {
           }
         }
 
-        if (match !== MATCH_TYPES.NONE) {
-          matches.set(parsedWord, {
-            type: match,
-            isKeyword: false,
-            distance: Math.abs(i - j),
-            word: tag,
-          });
-        }
+        updateMatches(parsedWord, {
+          type: match,
+          isKeyword: false,
+          word: tag,
+        });
       }
     }
   }
