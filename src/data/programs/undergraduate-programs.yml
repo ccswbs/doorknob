@@ -1,15 +1,4 @@
-- title: Accounting
-  acronym: ACCT
-  url: https://www.uoguelph.ca/programs/accounting/
-  degrees:
-    - Bachelor of Commerce
-  types:
-    - major
-    - co-op
-    - minor
-  tags:
-    - business
-    - finance
+- T
 - title: Agriculture
   acronym: AGRS
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/honours-agriculture-agrs/
@@ -235,6 +224,7 @@
     - biology
     - engineering
     - science
+    - chemistry
 - title: Biological Science
   acronym: BIOS
   url: https://www.uoguelph.ca/programs/biological-science/
@@ -323,6 +313,8 @@
     - health
     - medical
     - science
+    - biochemistry
+    - pharmacology
 - title: Biotechnology
   acronym: BIOT
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/biotechnology-biot/
@@ -443,6 +435,7 @@
     - engineering
     - programming
     - computer science
+    - artificial intelligence
 - title: Computer Science
   acronym: CS
   url: https://www.uoguelph.ca/programs/computer-science/
@@ -456,6 +449,8 @@
     - programming
     - engineering
     - software development
+    - software engineering
+    - software
     - web development
     - artificial intelligence
     - mathematics
@@ -563,6 +558,9 @@
     - technology
     - engineering
     - programming
+    - software
+    - software engineering
+    - artificial intelligence
 - title: English
   acronym: ENGL
   url: https://www.uoguelph.ca/programs/english/
@@ -1145,7 +1143,7 @@
     - major
     - co-op
   tags:
-    - engineering
+    - robotics
 - title: Media and Cinema Studies
   acronym: MCST
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/media-cinema-studies-mcst/
@@ -1258,6 +1256,8 @@
     - co-op
   tags:
     - science
+    - chemistry
+    - physics
 - title: Neuroscience
   acronym: NEUR
   url: https://www.uoguelph.ca/programs/neuroscience/
@@ -1338,6 +1338,13 @@
     - major
   tags:
     - science
+    - physics
+    - chemistry
+    - math
+    - space
+    - quantum
+    - quantum mechanics
+    - medical physics
 - title: Physics
   acronym: PHYS
   url: https://www.uoguelph.ca/programs/physics/
@@ -1350,6 +1357,11 @@
   tags:
     - physics
     - science
+    - math
+    - space
+    - quantum
+    - quantum mechanics
+    - medical physics
 - title: Plant Science
   acronym: PLSC
   url: https://www.uoguelph.ca/programs/plant-science/
@@ -1465,6 +1477,9 @@
     - programming
     - technology
     - engineering
+    - web development
+    - computer science
+    - artificial intelligence
 - title: Spanish and Hispanic Studies
   acronym: SPAH
   url: https://calendar.uoguelph.ca/undergraduate-calendar/programs-majors-minors/spanish-hispanic-studies-spah/

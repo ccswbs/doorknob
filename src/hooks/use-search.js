@@ -19,8 +19,8 @@ const rank = (node, parsed) => {
     EXACT: 10,
     CLOSE: 8,
     MATCHING_STEM: 6,
-    STARTS_WITH: 4,
     MATCHES_WILDCARD: 5,
+    STARTS_WITH: 4,
     NONE: 0,
   };
 
