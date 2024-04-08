@@ -145,13 +145,19 @@ const rank = (node, parsed) => {
 };
 
 export function defaultSearchFunc(data) {
-  const processed = data.map(node => {
-    return {
-      data: node,
-      keywords: parse(node?.title ?? ""),
-      tags: node.tags?.map(tag => (tag.includes(" ") ? tag.split(" ") : tag)) ?? [],
-    };
-  });
+  const processed = data
+    .map(node => {
+      if (typeof node.title !== "string") {
+        return null;
+      }
+
+      return {
+        data: node,
+        keywords: parse(node.title),
+        tags: node.tags?.map(tag => (tag.includes(" ") ? tag.split(" ") : tag)) ?? [],
+      };
+    })
+    .filter(Boolean);
 
   return input => {
     const parsed = parse(input);
