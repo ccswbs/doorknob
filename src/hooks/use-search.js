@@ -148,8 +148,8 @@ export function defaultSearchFunc(data) {
   const processed = data.map(node => {
     return {
       data: node,
-      keywords: parse(node.title),
-      tags: node.tags.map(tag => (tag.includes(" ") ? tag.split(" ") : tag)),
+      keywords: parse(node?.title ?? ""),
+      tags: node.tags?.map(tag => (tag.includes(" ") ? tag.split(" ") : tag)) ?? [],
     };
   });
 

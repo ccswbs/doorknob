@@ -41,7 +41,7 @@
 - title: Canadian Feed Industry Education Program
   url: https://courses.opened.uoguelph.ca/contentManagement.do?method=load&code=CM000063
   types:
-    - non-degree
+    - short-course
   tags:
     - livestock
     - animal
@@ -50,7 +50,7 @@
   url: https://courses.opened.uoguelph.ca/contentManagement.do?method=load&code=CM000025
   types:
     - certificate
-  tag: []
+  tags: []
 - title: Creative Writing
   url: https://courses.opened.uoguelph.ca/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=583604
   types:
