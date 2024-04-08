@@ -12,7 +12,9 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - biology
     - science
@@ -29,7 +31,9 @@
   url: https://graduatestudies.uoguelph.ca/programs/avc
   degrees:
     - MA
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - arts
     - culture
@@ -84,7 +88,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - biology
     - physics
@@ -111,7 +116,9 @@
   url: https://graduatestudies.uoguelph.ca/programs/cde
   degrees:
     - MSc
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - humanities
 - title: Chemistry
@@ -119,7 +126,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - chemistry
     - science
@@ -128,7 +136,9 @@
   degrees:
     - MSc
     - DVSc
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - biology
     - science
@@ -138,7 +148,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/computational-science-phd
   degrees:
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - technology
     - science
@@ -148,7 +159,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - technology
     - science
@@ -185,7 +197,9 @@
   url: https://graduatestudies.uoguelph.ca/programs/ccjp
   degrees:
     - MA
-  types: []
+  types:
+    - course-based
+    - research-based
   tags:
     - poli*
     - crim*
@@ -200,7 +214,8 @@
   degrees:
     - MA
     - PhD
-  types: []
+  types:
+    - course-based
   tags:
     - arts
     - humanities
@@ -273,7 +288,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/eurs
   degrees:
     - MA
-  types: []
+  types:
+    - course-based
   tags:
     - humanities
     - culture
@@ -304,7 +320,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - food
     - science
@@ -326,7 +343,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/fren
   degrees:
     - MA
-  types: []
+  types:
+    - course-based
   tags:
     - humanities
     - language
@@ -336,7 +354,9 @@
     - MA
     - MSc
     - PhD
-  types: []
+  types:
+    - course-based
+    - research-based
   tags:
     - geography
     - science
@@ -345,7 +365,8 @@
   degrees:
     - MA
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - humanities
     - history
@@ -354,7 +375,9 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - biol*
     - science*
@@ -394,7 +417,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - biol*
     - science*
@@ -472,7 +496,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/marketresearch
   degrees:
     - GDip
-  types: []
+  types:
+    - course-based
   tags:
     - business
     - marketing
@@ -481,7 +506,8 @@
   degrees:
     - MSc
     - GDip
-  types: []
+  types:
+    - research-based
   tags:
     - business
     - marketing
@@ -490,7 +516,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - mathematics
     - statistics
@@ -499,7 +526,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - biol*
     - science*
@@ -591,7 +619,8 @@
     - PhD
     - DVSc
     - GDip
-  types: []
+  types:
+    - research-based
   tags:
     - biology
     - science
@@ -632,7 +661,8 @@
   degrees:
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - agriculture
     - biology
@@ -642,7 +672,9 @@
   degrees:
     - MA
     - PhD
-  types: []
+  types:
+    - course-based
+    - research-based
   tags:
     - humanities
     - politics
@@ -652,7 +684,8 @@
     - MSc
     - PhD
     - DVSc
-  types: []
+  types:
+    - research-based
   tags:
     - biology
     - science
@@ -674,7 +707,8 @@
     - MA
     - MSc
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - humanities
 - title: Public Health
@@ -694,7 +728,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/pia
   degrees:
     - MA
-  types: []
+  types:
+    - research-based
   tags:
     - poli*
     - cultur*
@@ -762,7 +797,9 @@
   url: https://graduatestudies.uoguelph.ca/programs/rpdprof-stu
   degrees:
     - PhD
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - humanities
 - title: Sexuality, Genders and Bodies
@@ -784,7 +821,8 @@
   url: https://graduatestudies.uoguelph.ca/programs/sptc
   degrees:
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - poli*
     - indigen*
@@ -809,7 +847,8 @@
   degrees:
     - MA
     - PhD
-  types: []
+  types:
+    - research-based
   tags:
     - humanities
     - culture
@@ -837,7 +876,9 @@
   url: https://graduatestudies.uoguelph.ca/programs/thst
   degrees:
     - MA
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - arts
     - humanities
@@ -847,7 +888,9 @@
   degrees:
     - MSc
     - GDip
-  types: []
+  types:
+    - research-based
+    - course-based
   tags:
     - business
     - marketing
@@ -878,7 +921,8 @@
   degrees:
     - DVM
     - MPH
-  types: []
+  types:
+    - course-based
   tags:
     - biology
     - science
