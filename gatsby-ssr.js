@@ -5,8 +5,10 @@ export const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>;
 };
 
-const CDN_BASE = "https://cdn.jsdelivr.net/npm";
-const UOFG_WEB_COMPONENTS_BASE = "@uoguelph/web-components@1.x.x/dist/uofg-web-components";
+const CDN_BASE = process.env.UOFG_WC_CDN_BASE_URL?.trim() || "https://cdn.jsdelivr.net/npm";
+const UOFG_WEB_COMPONENTS_BASE = `@uoguelph/web-components@${
+  process.env.UOFG_WC_VERSION?.trim() || "1.x.x"
+}/dist/uofg-web-components`;
 
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   setHeadComponents([
