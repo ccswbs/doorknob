@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import '../styles/ug.scss'
-import '../styles/global.css';
+import '../styles/global.scss';
 import "@fontsource/roboto"
 import "@fontsource/roboto/700.css"
 import "@fontsource/roboto/300.css"

@@ -1,9 +1,10 @@
-const path = require("path")
-
+const path = require("path");
+const fs = require("fs");
+const { findOne } = require("gatsby/dist/schema/resolvers");
+const { Requirement } = require("./src/utils/requirement.js");
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   const typeDefs = [
     `
@@ -60,10 +61,90 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         eventsCategories: `WpEventToEventsCategoryConnection`,
         isPast: {
           type: `Boolean`,
-          resolve: (source) => new Date(source.startDate) < new Date(),
+          resolve: source => new Date(source.startDate) < new Date(),
         },
       },
     }),
-  ]
-  createTypes(typeDefs)
-}
+  ];
+  createTypes(typeDefs);
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    AdmissionRequirementsYaml: {
+      title: {
+        type: "String",
+        resolve: async (source, args, context, info) => {
+          return "Admission Requirements";
+        },
+      },
+      parents: {
+        type: ["AdmissionRequirementsYaml"],
+        resolve: async (source, args, context, info) => {
+          const requirement = new Requirement(source);
+          const parents = requirement.parents.map(parent => {
+            const filter = {};
+
+            for (const key in parent) {
+              filter[key] = { eq: parent[key] };
+            }
+
+            return context.nodeModel.findOne({
+              query: {
+                filter: filter,
+              },
+              type: "AdmissionRequirementsYaml",
+            });
+          })
+
+          return (await Promise.all(parents)).filter(value => Boolean(value));
+        },
+      },
+    },
+  };
+
+  createResolvers(resolvers);
+};
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+
+  // Building requirements pages
+  const activity = reporter.activityTimer(`Building undergraduate admission requirements pages.`);
+  activity.start();
+
+  const requirementsQuery = await graphql(`
+    query {
+      requirements: allAdmissionRequirementsYaml {
+        nodes {
+          id
+          student_type
+          location
+          degree_type
+          field_of_study
+        }
+      }
+    }
+  `);
+
+  if (requirementsQuery.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query for admission undergraduate requirements.`);
+    return;
+  }
+
+  const template = path.resolve("./src/templates/admission/requirements.js");
+
+  for (const req of requirementsQuery.data.requirements.nodes) {
+    const requirement = new Requirement(req);
+
+    createPage({
+      path: `admission/requirements/${requirement.slug}`,
+      component: template,
+      context: {
+        id: req.id,
+      },
+    });
+  }
+
+  activity.end();
+};
