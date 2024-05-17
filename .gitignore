@@ -74,3 +74,13 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/settings.json
+
+.flaskenv*
+!.env.project
+!.env.vault
+
+# JetBrains Fleet
+.fleet
+/.run/build.run.xml
+/.run/clean.run.xml
+/.run/develop.run.xml
