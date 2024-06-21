@@ -1,11 +1,11 @@
 id: home_story
 content:
-  blockquote: Change happens at the community level. Small groups put in small efforts and those efforts add up to something big.
+  blockquote: Pieces of experiential learning allow an opportunity for students to engage with their community, beyond the academic sphere, and for me that became pivotal….in shaping my life. ~ Asha Edwin, BA '21
   foreground:
-    src: ../../images/home/meal-care-students.png
-    alt: Kiana Gibson and David Sahai, co-founders of MealCare Guelph
+    src: ../../images/home/asha-edwin.png
+    alt: Asha Edwin smiling
   cta:
-    body: Learn more about how the University of Guelph is working to
+    body: Learn how real-world education and experience will
     button: Improve Life
     url: https://www.uoguelph.ca/improve-life/
 background:

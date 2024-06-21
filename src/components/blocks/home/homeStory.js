@@ -58,7 +58,7 @@ export default function HomeStory() {
         <Container>
           <Row className="bg-transparent h-100 text-white pb-0 px-5 pt-5">
             <Col xl={6} className="mb-4 d-flex flex-column justify-content-center">
-              <blockquote className="display-4 text-white text-center">
+              <blockquote className="display-5 text-white text-center">
                 <QuoteMark className="fa-solid fa-quote-left pe-2" aria-hidden="true" />
                 <em>{content.blockquote}</em>
                 <QuoteMark className="fa-solid fa-quote-right ps-2" aria-hidden="true" />
