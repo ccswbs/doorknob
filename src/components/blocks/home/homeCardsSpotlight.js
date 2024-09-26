@@ -32,7 +32,6 @@ export default function HomeCardsSpotlight() {
               "bg-info",
               "bg-opacity-10",
               "spotlight-card",
-              `spotlight-card-rank-${index + 2}`,
               { "left-align-image": imageAlignment === "left" },
               { "right-align-image": imageAlignment === "right" },
             );
@@ -45,7 +44,10 @@ export default function HomeCardsSpotlight() {
                     <Card.Title
                       as="a"
                       href={item.url}
-                      className="h5 spotlight link-dark stretched-link text-decoration-none fw-bold text-center"
+                      className={classNames(
+                        "h5 spotlight link-dark stretched-link text-decoration-none fw-bold text-center",
+                        `spotlight-card-rank-${index + 2}`,
+                      )}
                     >
                       {item.title}
                     </Card.Title>
