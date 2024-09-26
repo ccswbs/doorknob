@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Seo from "../components/seo";
+import Layout from "../components/layout";
 
 const NotFoundPage = () => {
   const [archiveLink, setArchiveLink] = useState("https://www.uoguelph.ca/search");
