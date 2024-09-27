@@ -13,6 +13,7 @@
   height: fit-content;
   color: black;
   background-color: rgb(221 221 221);
+  font-family: "Roboto Condensed", sans-serif;
 
   @media (min-width: 768px) {
     padding-top: 0.5rem;
@@ -33,6 +34,7 @@
 
   > i {
     font-size: 1.25em;
+    color: #c20430;
   }
 }
 
