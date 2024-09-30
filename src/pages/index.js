@@ -1,6 +1,5 @@
 import React from "react";
 import AppArmorAlert from "../components/appArmorAlert";
-import BECookieBar from "../components/beCookieBar";
 import Seo from "../components/seo";
 import HomeCardsSpotlight from "../components/blocks/home/homeCardsSpotlight";
 import HomeHero from "../components/blocks/home/homeHero";
@@ -10,7 +9,6 @@ import HomeStory from "../components/blocks/home/homeStory";
 import HomeStudyHere from "../components/blocks/home/homeStudyHere";
 import HomeOurCampuses from "../components/blocks/home/homeOurCampuses";
 import { useSpotlightData } from "../hooks/drupal/use-spotlight-data";
-import BERelatedLinks from "../components/beRelatedLinks";
 import { useHeroData } from "../hooks/yaml/use-hero-data";
 import HomeNotification from "../components/blocks/home/homeNotification";
 import Layout from "../components/layout";
@@ -28,7 +26,6 @@ export default function Home({ data, children }) {
 
   return (
     <>
-      <BECookieBar />
       <AppArmorAlert id="163" />
       <Seo
         title="University of Guelph - Improve Life"
@@ -44,7 +41,6 @@ export default function Home({ data, children }) {
         <HomeStats />
         <HomeOurCampuses />
         <HomeStory />
-        <BERelatedLinks />
       </Layout>
     </>
   );
