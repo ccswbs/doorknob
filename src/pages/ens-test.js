@@ -9,22 +9,39 @@ import HomeStory from "../components/blocks/home/homeStory"
 import HomeStudyHere from "../components/blocks/home/homeStudyHere"
 import HomeOurCampuses from "../components/blocks/home/homeOurCampuses"
 import { useSpotlightData } from "../hooks/drupal/use-spotlight-data"
+import { useHeroData } from "../hooks/yaml/use-hero-data";
+import HomeNotification from "../components/blocks/home/homeNotification";
+import Layout from "../components/layout";
 
-export default function IndexTemplate({ data, children }) {
+export default function EnsTest({ data, children }) {
   const spotlightData = useSpotlightData();
+  const heroData = useHeroData();
+
+  const renderHero =
+    spotlightData && spotlightData.hero?.length > 0 ? (
+      <HomeHero heroData={spotlightData.hero[0]} />
+    ) : (
+      <HomeHero heroData={heroData[0]} />
+    );
 
   return (
     <>
       <AppArmorAlert id="162" />
-      <Seo title="University of Guelph - Improve Life" description="Discover excellence at the University of Guelph - a leading institution fostering innovation, world-class research, and personalized learning. Explore our diverse academic programs, cutting-edge facilities, and vibrant campus life. Join a community dedicated to shaping the future." />
-      <h1 className="visually-hidden">University of Guelph, Ontario, Canada</h1>
-      <HomeHero heroData={spotlightData.hero[0]} />
-      <HomeTagline />
-      <HomeCardsSpotlight />
-      <HomeStudyHere />
-      <HomeStats />
-      <HomeOurCampuses />
-      <HomeStory />
+      <Seo
+        title="University of Guelph - Improve Life"
+        description="Discover excellence at the University of Guelph - a leading institution fostering innovation, world-class research, and personalized learning. Explore our diverse academic programs, cutting-edge facilities, and vibrant campus life. Join a community dedicated to shaping the future."
+      />
+      <HomeNotification />
+      <Layout>
+        <h1 className="visually-hidden">University of Guelph, Ontario, Canada</h1>
+        {renderHero}
+        <HomeTagline />
+        <HomeCardsSpotlight />
+        <HomeStudyHere />
+        <HomeStats />
+        <HomeOurCampuses />
+        <HomeStory />
+      </Layout>
     </>
-  )
+  );
 }
