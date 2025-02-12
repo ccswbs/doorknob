@@ -1,7 +1,7 @@
 id: home_our_campuses
 links:
   - title: Guelph Campus
-    url: "https://admission.uoguelph.ca/campus-tour-highlights"
+    url: https://www.uoguelph.ca/admission/undergraduate/tours/
     image:
       src: ../../images/home/guelph.png
       alt: An aerial view of Johnston Hall and the University of Guelph campus
